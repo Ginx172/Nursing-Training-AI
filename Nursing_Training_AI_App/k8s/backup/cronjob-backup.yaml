@@ -1,0 +1,182 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: database-backup
+  namespace: nursing-training-ai
+spec:
+  # Run daily at 2 AM UTC
+  schedule: "0 2 * * *"
+  successfulJobsHistoryLimit: 30
+  failedJobsHistoryLimit: 10
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: backup
+            image: postgres:15-alpine
+            env:
+            - name: PGHOST
+              value: postgres-service
+            - name: PGDATABASE
+              value: nursing_training_ai
+            - name: PGUSER
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: POSTGRES_USER
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: POSTGRES_PASSWORD
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: access_key_id
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: secret_access_key
+            - name: S3_BUCKET
+              value: nursing-ai-backups
+            command:
+            - /bin/sh
+            - -c
+            - |
+              #!/bin/sh
+              set -e
+              
+              # Generate backup filename with timestamp
+              BACKUP_FILE="backup-$(date +%Y%m%d-%H%M%S).sql.gz"
+              
+              echo "Starting database backup: $BACKUP_FILE"
+              
+              # Create backup
+              pg_dump | gzip > /tmp/$BACKUP_FILE
+              
+              # Upload to S3 (or Azure Blob, Google Cloud Storage)
+              # Install AWS CLI first
+              apk add --no-cache aws-cli
+              
+              aws s3 cp /tmp/$BACKUP_FILE s3://$S3_BUCKET/postgres/$BACKUP_FILE
+              
+              echo "✅ Backup completed and uploaded to S3"
+              
+              # Cleanup old backups (keep last 30 days)
+              aws s3 ls s3://$S3_BUCKET/postgres/ | \
+                awk '{print $4}' | \
+                sort -r | \
+                tail -n +31 | \
+                xargs -I {} aws s3 rm s3://$S3_BUCKET/postgres/{}
+              
+              echo "✅ Old backups cleaned up"
+              
+              # Verify backup integrity
+              gunzip -t /tmp/$BACKUP_FILE
+              
+              echo "✅ Backup integrity verified"
+              
+              # Send notification
+              # TODO: Send Slack/Email notification of successful backup
+            volumeMounts:
+            - name: backup-storage
+              mountPath: /tmp
+          volumes:
+          - name: backup-storage
+            emptyDir: {}
+
+---
+# Backup PersistentVolumeClaim for local storage
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: backup-pvc
+  namespace: nursing-training-ai
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: standard
+
+---
+# Disaster Recovery Script (Manual Restore)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: restore-script
+  namespace: nursing-training-ai
+data:
+  restore.sh: |
+    #!/bin/bash
+    set -e
+    
+    echo "🔄 Nursing Training AI - Disaster Recovery"
+    echo "==========================================="
+    
+    # List available backups
+    echo "Available backups:"
+    aws s3 ls s3://$S3_BUCKET/postgres/ | tail -n 10
+    
+    # Prompt for backup file
+    read -p "Enter backup filename to restore: " BACKUP_FILE
+    
+    # Download backup
+    echo "Downloading backup from S3..."
+    aws s3 cp s3://$S3_BUCKET/postgres/$BACKUP_FILE /tmp/$BACKUP_FILE
+    
+    # Stop application
+    echo "Scaling down application..."
+    kubectl scale deployment backend --replicas=0 -n nursing-training-ai
+    
+    # Wait for pods to terminate
+    sleep 30
+    
+    # Drop existing database
+    echo "⚠️ Dropping existing database..."
+    kubectl exec -it postgres-0 -n nursing-training-ai -- psql -U nursing_user -d postgres -c "DROP DATABASE IF EXISTS nursing_training_ai;"
+    
+    # Create new database
+    echo "Creating new database..."
+    kubectl exec -it postgres-0 -n nursing-training-ai -- psql -U nursing_user -d postgres -c "CREATE DATABASE nursing_training_ai;"
+    
+    # Restore backup
+    echo "Restoring backup..."
+    gunzip -c /tmp/$BACKUP_FILE | kubectl exec -i postgres-0 -n nursing-training-ai -- psql -U nursing_user -d nursing_training_ai
+    
+    # Restart application
+    echo "Scaling up application..."
+    kubectl scale deployment backend --replicas=3 -n nursing-training-ai
+    
+    # Wait for pods to be ready
+    kubectl wait --for=condition=ready pod -l app=backend -n nursing-training-ai --timeout=300s
+    
+    echo "✅ Disaster recovery completed successfully!"
+    echo "==========================================="
+    
+    # Verify restoration
+    echo "Verifying database..."
+    kubectl exec -it postgres-0 -n nursing-training-ai -- psql -U nursing_user -d nursing_training_ai -c "SELECT COUNT(*) FROM users;"
+    
+    echo "✅ Verification complete"
+
+---
+# Backup monitoring
+apiVersion: v1
+kind: Service
+metadata:
+  name: backup-monitor
+  namespace: nursing-training-ai
+spec:
+  selector:
+    app: backup-monitor
+  ports:
+  - port: 8080
+    targetPort: 8080
+

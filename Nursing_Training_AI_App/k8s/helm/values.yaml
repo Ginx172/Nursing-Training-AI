@@ -1,0 +1,145 @@
+# Default values for nursing-training-ai
+# This is a YAML-formatted file.
+
+# Global settings
+global:
+  environment: production
+  domain: nursingtrainingai.com
+
+# Backend API Configuration
+backend:
+  replicaCount: 3
+  image:
+    repository: nursingai/backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  
+  service:
+    type: ClusterIP
+    port: 8000
+  
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "2Gi"
+      cpu: "1000m"
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 20
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    DEBUG: "false"
+    LOG_LEVEL: "INFO"
+    WORKERS: "4"
+
+# PostgreSQL Configuration
+postgresql:
+  enabled: true
+  image:
+    tag: "15-alpine"
+  
+  auth:
+    database: nursing_training_ai
+    username: nursing_user
+    # Password should be set via --set or secrets
+  
+  primary:
+    persistence:
+      enabled: true
+      size: 50Gi
+      storageClass: "fast-ssd"
+    
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+      limits:
+        memory: "4Gi"
+        cpu: "2000m"
+  
+  # Read Replicas for scaling
+  readReplicas:
+    replicaCount: 2
+    persistence:
+      enabled: true
+      size: 50Gi
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+
+# Redis Configuration
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: false
+  
+  master:
+    persistence:
+      enabled: true
+      size: 10Gi
+    
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
+      limits:
+        memory: "1Gi"
+        cpu: "500m"
+
+# Ingress Configuration
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/rate-limit: "100"
+  
+  hosts:
+    - host: api.nursingtrainingai.com
+      paths:
+        - path: /
+          pathType: Prefix
+  
+  tls:
+    - secretName: nursing-ai-tls
+      hosts:
+        - api.nursingtrainingai.com
+
+# Monitoring
+monitoring:
+  enabled: true
+  prometheus:
+    enabled: true
+    retention: 30d
+  grafana:
+    enabled: true
+    adminPassword: "changeme"
+
+# Backup Configuration
+backup:
+  enabled: true
+  schedule: "0 2 * * *"  # Daily at 2 AM
+  retention: 30  # Keep 30 days
+
+# Security
+security:
+  podSecurityPolicy:
+    enabled: true
+  networkPolicy:
+    enabled: true
+  
+  # Pod Security Context
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    fsGroup: 1000
+

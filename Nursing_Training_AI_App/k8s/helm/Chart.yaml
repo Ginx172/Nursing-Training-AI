@@ -1,0 +1,19 @@
+apiVersion: v2
+name: nursing-training-ai
+description: Complete UK Healthcare Training Platform - Enterprise Edition
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - healthcare
+  - training
+  - nursing
+  - nhs
+  - education
+maintainers:
+  - name: Nursing Training AI Team
+    email: devops@nursingtrainingai.com
+home: https://nursingtrainingai.com
+sources:
+  - https://github.com/Ginx172/Nursing-Training-AI
+

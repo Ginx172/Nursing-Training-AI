@@ -1,0 +1,299 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nursing-training-ai
+  labels:
+    name: nursing-training-ai
+    environment: production
+
+---
+# ConfigMap for environment variables
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: nursing-training-ai
+data:
+  DATABASE_HOST: postgres-service
+  REDIS_HOST: redis-service
+  REDIS_PORT: "6379"
+  ENVIRONMENT: "production"
+
+---
+# Secret for sensitive data
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secrets
+  namespace: nursing-training-ai
+type: Opaque
+stringData:
+  DATABASE_URL: "postgresql://user:password@postgres-service:5432/nursing_ai"
+  SECRET_KEY: "your-secret-key-here"
+  STRIPE_SECRET_KEY: "sk_live_your_key"
+  ENCRYPTION_MASTER_KEY: "your-encryption-key"
+
+---
+# PostgreSQL StatefulSet
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: nursing-training-ai
+spec:
+  serviceName: postgres-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15-alpine
+        ports:
+        - containerPort: 5432
+          name: postgres
+        env:
+        - name: POSTGRES_DB
+          value: nursing_training_ai
+        - name: POSTGRES_USER
+          value: nursing_user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: DATABASE_PASSWORD
+        volumeMounts:
+        - name: postgres-storage
+          mountPath: /var/lib/postgresql/data
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+  volumeClaimTemplates:
+  - metadata:
+      name: postgres-storage
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 50Gi
+
+---
+# PostgreSQL Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  namespace: nursing-training-ai
+spec:
+  selector:
+    app: postgres
+  ports:
+  - port: 5432
+    targetPort: 5432
+  clusterIP: None
+
+---
+# Redis StatefulSet
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+  namespace: nursing-training-ai
+spec:
+  serviceName: redis-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+          name: redis
+        volumeMounts:
+        - name: redis-storage
+          mountPath: /data
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+  volumeClaimTemplates:
+  - metadata:
+      name: redis-storage
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi
+
+---
+# Redis Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+  namespace: nursing-training-ai
+spec:
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+  clusterIP: None
+
+---
+# Backend API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: nursing-training-ai
+spec:
+  replicas: 3  # Start with 3 replicas for HA
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: v1
+    spec:
+      containers:
+      - name: backend
+        image: nursingai/backend:latest
+        ports:
+        - containerPort: 8000
+          name: http
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: DATABASE_URL
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: REDIS_HOST
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: SECRET_KEY
+        - name: STRIPE_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: STRIPE_SECRET_KEY
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+
+---
+# Backend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: nursing-training-ai
+spec:
+  selector:
+    app: backend
+  type: ClusterIP
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+
+---
+# Horizontal Pod Autoscaler for Backend
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: backend-hpa
+  namespace: nursing-training-ai
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: backend
+  minReplicas: 3
+  maxReplicas: 20
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80
+
+---
+# Ingress for external access
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nursing-ai-ingress
+  namespace: nursing-training-ai
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+spec:
+  tls:
+  - hosts:
+    - api.nursingtrainingai.com
+    secretName: nursing-ai-tls
+  rules:
+  - host: api.nursingtrainingai.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 8000
+

@@ -47,6 +47,11 @@ cryptography==41.0.7
 strawberry-graphql[fastapi]==0.214.0
 httpx==0.25.2
 
+# Multi-Tenancy & BI Integration
+dnspython==2.4.2
+pandas==2.1.3
+pyarrow==14.0.1
+
 # Testare
 pytest==7.4.3
 pytest-asyncio==0.21.1

@@ -1,0 +1,555 @@
+{
+  "uk_healthcare_sectors": {
+    "nhs": {
+      "sector_name": "NHS (National Health Service)",
+      "description": "Public healthcare system in the UK",
+      "band_structure": "AFC Bands 2-9",
+      "typical_employers": [
+        "NHS Trusts",
+        "Foundation Trusts",
+        "NHS England",
+        "Integrated Care Boards"
+      ],
+      "pay_structure": "Agenda for Change (AFC)",
+      "status": "implemented"
+    },
+    "private_healthcare": {
+      "sector_name": "Private Healthcare Sector",
+      "description": "Private hospitals, clinics, and healthcare providers",
+      "band_structure": "Company-specific, often mapped to NHS bands",
+      "typical_employers": [
+        "Spire Healthcare",
+        "BMI Healthcare",
+        "Nuffield Health",
+        "HCA Healthcare UK",
+        "Circle Health Group",
+        "Ramsay Health Care UK",
+        "The Priory Group"
+      ],
+      "pay_structure": "Negotiated salary packages, often 10-30% above NHS",
+      "key_differences": {
+        "patient_ratios": "Often better than NHS (1:4 vs 1:8)",
+        "resources": "Generally better resourced",
+        "autonomy": "More autonomous practice",
+        "specialization": "Often more specialized procedures",
+        "expectations": [
+          "Excellent customer service skills",
+          "Flexible working patterns",
+          "Private insurance knowledge",
+          "Cosmetic procedures (some settings)",
+          "High patient satisfaction focus"
+        ]
+      },
+      "typical_roles": [
+        "Theatre Nurse",
+        "Recovery Nurse",
+        "Ward Nurse",
+        "Endoscopy Nurse",
+        "Pre-assessment Nurse",
+        "Cosmetic Nurse Practitioner"
+      ],
+      "qualifications_required": [
+        "NMC Registration",
+        "Minimum 1-2 years experience",
+        "Specialty-specific training",
+        "Customer service orientation"
+      ],
+      "typical_interview_questions": [
+        "Why do you want to move from NHS to private sector?",
+        "How would you handle a demanding private patient?",
+        "What is your experience with private insurance?",
+        "How do you ensure excellent customer service?",
+        "Describe your experience with high-net-worth patients"
+      ]
+    },
+    "care_homes": {
+      "sector_name": "Care Homes & Residential Care",
+      "description": "Residential care for elderly and vulnerable adults",
+      "band_structure": "Company-specific, no standard banding",
+      "typical_employers": [
+        "Bupa Care Homes",
+        "HC-One",
+        "Care UK",
+        "Four Seasons Health Care",
+        "Barchester Healthcare",
+        "Anchor Hanover",
+        "Independent care homes"
+      ],
+      "pay_structure": "Hourly rates or salary, varies significantly",
+      "role_levels": {
+        "care_assistant": {
+          "qualifications": "Care Certificate, NVQ Level 2 in Health & Social Care",
+          "responsibilities": [
+            "Personal care and hygiene",
+            "Assisting with meals and nutrition",
+            "Mobility support",
+            "Social activities and companionship",
+            "Basic observations (BP, temp, pulse)",
+            "Documentation"
+          ],
+          "typical_pay": "£10.50-£12.50 per hour",
+          "key_skills": [
+            "Compassion and empathy",
+            "Patience",
+            "Communication with elderly",
+            "Manual handling",
+            "Dementia awareness"
+          ]
+        },
+        "senior_care_assistant": {
+          "qualifications": "NVQ Level 3 in Health & Social Care",
+          "responsibilities": [
+            "All care assistant duties",
+            "Supervising junior staff",
+            "Medication administration (with training)",
+            "Care planning",
+            "Family liaison",
+            "Safeguarding lead"
+          ],
+          "typical_pay": "£11.50-£14.00 per hour",
+          "key_skills": [
+            "Leadership",
+            "Medication management",
+            "Care planning",
+            "Safeguarding",
+            "Mentoring"
+          ]
+        },
+        "care_home_nurse": {
+          "qualifications": "NMC Registration, experience in elderly care",
+          "responsibilities": [
+            "Clinical assessment and care",
+            "Medication management",
+            "Wound care",
+            "End of life care",
+            "Staff supervision and training",
+            "CQC compliance",
+            "Family liaison",
+            "GP liaison"
+          ],
+          "typical_pay": "£35,000-£45,000 per annum",
+          "key_skills": [
+            "Elderly care expertise",
+            "Clinical leadership",
+            "Medication management",
+            "End of life care",
+            "CQC standards",
+            "Family communication"
+          ]
+        },
+        "deputy_manager": {
+          "qualifications": "NMC Registration + NVQ Level 5 in Leadership/Management",
+          "responsibilities": [
+            "Clinical management",
+            "Staff management and rotas",
+            "Budget management",
+            "CQC compliance",
+            "Quality assurance",
+            "Recruitment",
+            "Family meetings",
+            "Covering manager absence"
+          ],
+          "typical_pay": "£40,000-£50,000 per annum"
+        },
+        "care_home_manager": {
+          "qualifications": "NMC Registration + Level 5 Diploma in Leadership for Health and Social Care",
+          "responsibilities": [
+            "Overall home management",
+            "Financial management",
+            "CQC registration and compliance",
+            "Staff recruitment and management",
+            "Quality and safety",
+            "Strategic planning",
+            "Stakeholder management"
+          ],
+          "typical_pay": "£45,000-£65,000 per annum"
+        }
+      },
+      "key_differences": {
+        "focus": "Long-term residential care vs acute medical care",
+        "pace": "Generally slower, relationship-based",
+        "medical_complexity": "Chronic conditions, end of life, dementia",
+        "regulations": "CQC regulated, different standards than hospitals",
+        "documentation": "Care plans, risk assessments, safeguarding"
+      },
+      "typical_conditions": [
+        "Dementia and Alzheimer's",
+        "Parkinson's Disease",
+        "Stroke rehabilitation",
+        "Diabetes management",
+        "Pressure ulcers",
+        "End of life care",
+        "Falls prevention",
+        "Nutrition and hydration"
+      ],
+      "typical_interview_questions": [
+        "What is your experience with dementia care?",
+        "How do you handle challenging behaviors?",
+        "Describe your approach to end of life care",
+        "How do you ensure dignity and respect for residents?",
+        "What is your understanding of the Mental Capacity Act?",
+        "How do you manage safeguarding concerns?",
+        "Describe your experience with CQC inspections"
+      ]
+    },
+    "community_healthcare": {
+      "sector_name": "Community Healthcare Services",
+      "description": "Healthcare delivered in patients' homes and community settings",
+      "band_structure": "NHS AFC Bands (often Band 5-7)",
+      "typical_employers": [
+        "NHS Community Trusts",
+        "Private community providers",
+        "Social care organizations",
+        "Integrated care systems"
+      ],
+      "roles": {
+        "district_nurse": {
+          "band": "Band 6-7",
+          "qualifications": "NMC Registration + District Nursing Qualification (SPQ)",
+          "responsibilities": [
+            "Home visits for complex patients",
+            "Wound care and dressings",
+            "Medication management",
+            "Catheter care",
+            "End of life care at home",
+            "Chronic disease management",
+            "Caseload management",
+            "Supervising community nursing team"
+          ],
+          "typical_caseload": "20-30 patients",
+          "key_skills": [
+            "Autonomous practice",
+            "Clinical assessment",
+            "Time management",
+            "Lone working",
+            "Safeguarding",
+            "Multi-agency working",
+            "Driving essential"
+          ],
+          "typical_conditions": [
+            "Leg ulcers and wound care",
+            "Palliative care",
+            "Diabetes management",
+            "COPD and respiratory conditions",
+            "Post-operative care",
+            "Catheter and stoma care"
+          ]
+        },
+        "community_staff_nurse": {
+          "band": "Band 5-6",
+          "qualifications": "NMC Registration, community experience beneficial",
+          "responsibilities": [
+            "Home visits",
+            "Basic wound care",
+            "Medication administration",
+            "Observations and monitoring",
+            "Supporting district nurses",
+            "Documentation"
+          ]
+        },
+        "health_visitor": {
+          "band": "Band 6-7",
+          "qualifications": "NMC Registration + Specialist Community Public Health Nurse (SCPHN)",
+          "responsibilities": [
+            "Child health and development 0-5 years",
+            "Safeguarding children",
+            "Health promotion",
+            "Supporting new parents",
+            "Immunization programs",
+            "Family health assessments"
+          ]
+        },
+        "community_mental_health_nurse": {
+          "band": "Band 6-7",
+          "qualifications": "NMC Registration + Mental Health Nursing background",
+          "responsibilities": [
+            "Mental health assessments in community",
+            "Care coordination",
+            "Medication management",
+            "Crisis intervention",
+            "Supporting recovery",
+            "Multi-agency working"
+          ]
+        },
+        "community_matron": {
+          "band": "Band 7-8",
+          "qualifications": "NMC Registration + Advanced Practice qualification",
+          "responsibilities": [
+            "Case management of complex patients",
+            "Prescribing (if qualified)",
+            "Admission avoidance",
+            "Chronic disease management",
+            "Service development",
+            "Strategic planning"
+          ]
+        }
+      },
+      "key_differences": {
+        "environment": "Patients' homes, community clinics, GP practices",
+        "autonomy": "High level of autonomous practice",
+        "travel": "Significant travel time between patients",
+        "safety": "Lone working and personal safety considerations",
+        "equipment": "Limited resources compared to hospitals",
+        "relationships": "Long-term relationships with patients/families"
+      },
+      "typical_interview_questions": [
+        "What is your experience of lone working?",
+        "How do you manage your time with a large caseload?",
+        "Describe a safeguarding concern you've managed",
+        "How do you work with other agencies (social services, GPs)?",
+        "What is your approach to end of life care at home?",
+        "How do you ensure your own safety during home visits?",
+        "Describe your experience with complex wound care"
+      ]
+    },
+    "primary_care": {
+      "sector_name": "Primary Care / GP Practices",
+      "description": "First point of contact healthcare in GP surgeries",
+      "band_structure": "Practice-specific, often aligned with NHS bands",
+      "typical_employers": [
+        "GP Practices",
+        "Primary Care Networks (PCNs)",
+        "GP Federations",
+        "Private GP practices"
+      ],
+      "roles": {
+        "practice_nurse": {
+          "band_equivalent": "Band 5-7",
+          "qualifications": "NMC Registration, often additional qualifications (asthma, COPD, diabetes)",
+          "responsibilities": [
+            "Chronic disease management (asthma, COPD, diabetes)",
+            "Immunizations and vaccinations",
+            "Cervical screening",
+            "Wound care and dressings",
+            "Blood tests and ECGs",
+            "Health checks (NHS Health Check)",
+            "Travel health",
+            "Minor illness management",
+            "Contraception and family planning"
+          ],
+          "typical_clinic_types": [
+            "Asthma clinic",
+            "Diabetes clinic",
+            "COPD clinic",
+            "Immunization clinic",
+            "Cervical screening",
+            "Baby immunizations",
+            "Travel vaccines"
+          ],
+          "key_skills": [
+            "Chronic disease management",
+            "Patient education",
+            "Time management",
+            "Computer skills (EMIS, SystmOne)",
+            "Protocol-driven care",
+            "Working within GP team"
+          ],
+          "typical_pay": "£28,000-£42,000 depending on experience and qualifications"
+        },
+        "advanced_nurse_practitioner": {
+          "band_equivalent": "Band 7-8a",
+          "qualifications": "NMC Registration + MSc Advanced Practice + Non-Medical Prescribing",
+          "responsibilities": [
+            "Autonomous patient consultations",
+            "Diagnosis and treatment",
+            "Prescribing medications",
+            "Ordering investigations",
+            "Minor procedures",
+            "Managing acute and chronic conditions",
+            "Reducing GP workload"
+          ],
+          "typical_pay": "£45,000-£60,000"
+        },
+        "healthcare_assistant_primary_care": {
+          "band_equivalent": "Band 2-3",
+          "qualifications": "Care Certificate, phlebotomy training",
+          "responsibilities": [
+            "Phlebotomy (blood tests)",
+            "ECGs",
+            "Blood pressure monitoring",
+            "Urine tests",
+            "Wound dressings (simple)",
+            "Height, weight, BMI",
+            "New patient health checks",
+            "Admin support"
+          ],
+          "typical_pay": "£20,000-£24,000"
+        },
+        "practice_manager": {
+          "qualifications": "Management qualification, healthcare background beneficial",
+          "responsibilities": [
+            "Practice operations",
+            "Staff management",
+            "Financial management",
+            "CQC compliance",
+            "Contract management",
+            "IT systems",
+            "Premises management",
+            "Strategic planning"
+          ],
+          "typical_pay": "£35,000-£55,000"
+        }
+      },
+      "key_differences": {
+        "environment": "GP surgery, outpatient setting",
+        "pace": "Appointment-based, structured",
+        "hours": "Generally Monday-Friday, 8am-6pm (some evening/weekend)",
+        "focus": "Prevention, chronic disease management, minor illness",
+        "patient_contact": "Short consultations (10-20 minutes)",
+        "continuity": "Long-term relationships with patients"
+      },
+      "typical_conditions_managed": [
+        "Asthma and COPD",
+        "Diabetes Type 1 and 2",
+        "Hypertension",
+        "Cardiovascular disease",
+        "Minor infections",
+        "Contraception and sexual health",
+        "Immunizations",
+        "Health screening",
+        "Mental health (mild-moderate)"
+      ],
+      "typical_interview_questions": [
+        "What is your experience with chronic disease management?",
+        "How do you manage your clinic appointments and time?",
+        "Describe your knowledge of QOF (Quality and Outcomes Framework)",
+        "What is your experience with EMIS/SystmOne?",
+        "How do you handle a patient who disagrees with your advice?",
+        "What is your approach to patient education?",
+        "Describe your experience with immunizations and vaccinations"
+      ]
+    },
+    "agency_nursing": {
+      "sector_name": "Agency and Bank Nursing",
+      "description": "Flexible nursing work through agencies",
+      "typical_agencies": [
+        "NHS Bank",
+        "ID Medical",
+        "Maxxima Nursing",
+        "Medicspro",
+        "Florence (app-based)",
+        "Nurses Direct"
+      ],
+      "key_features": {
+        "flexibility": "Choose your own shifts and locations",
+        "pay": "Higher hourly rates (£20-£50+ per hour)",
+        "variety": "Work in different settings",
+        "requirements": [
+          "NMC Registration",
+          "Minimum 6-12 months post-registration experience",
+          "References",
+          "Enhanced DBS",
+          "Mandatory training up to date",
+          "Professional indemnity insurance"
+        ]
+      },
+      "sectors_worked": [
+        "NHS hospitals",
+        "Private hospitals",
+        "Care homes",
+        "Community settings",
+        "Mental health units",
+        "Prisons"
+      ]
+    }
+  },
+  "regulatory_bodies": {
+    "nmc": {
+      "name": "Nursing and Midwifery Council",
+      "applies_to": "All registered nurses and midwives",
+      "requirements": [
+        "Annual registration fee",
+        "Revalidation every 3 years",
+        "Professional indemnity insurance",
+        "CPD requirements"
+      ]
+    },
+    "cqc": {
+      "name": "Care Quality Commission",
+      "applies_to": "All healthcare providers (NHS, private, care homes)",
+      "standards": [
+        "Safe",
+        "Effective",
+        "Caring",
+        "Responsive",
+        "Well-led"
+      ]
+    }
+  },
+  "key_differences_summary": {
+    "nhs_vs_private": {
+      "nhs": {
+        "pros": ["Job security", "Pension scheme", "Training opportunities", "Career progression"],
+        "cons": ["Lower pay", "Higher patient ratios", "More pressure", "Limited resources"]
+      },
+      "private": {
+        "pros": ["Higher pay", "Better ratios", "Better resources", "Less pressure"],
+        "cons": ["Less job security", "Fewer training opportunities", "Limited specialties"]
+      }
+    },
+    "hospital_vs_community": {
+      "hospital": {
+        "pros": ["Team support", "Immediate backup", "Clear structure", "Varied cases"],
+        "cons": ["Shift work", "High pressure", "Limited continuity"]
+      },
+      "community": {
+        "pros": ["Autonomy", "Continuity of care", "Regular hours", "Relationship-based"],
+        "cons": ["Lone working", "Travel time", "Limited resources", "Safety concerns"]
+      }
+    },
+    "hospital_vs_care_home": {
+      "hospital": {
+        "focus": "Acute illness and cure",
+        "pace": "Fast-paced",
+        "medical_complexity": "High acuity"
+      },
+      "care_home": {
+        "focus": "Chronic conditions and quality of life",
+        "pace": "Slower, person-centered",
+        "medical_complexity": "Long-term management"
+      }
+    }
+  },
+  "interview_preparation_by_sector": {
+    "private_healthcare": [
+      "Research the specific provider",
+      "Understand private insurance models",
+      "Emphasize customer service skills",
+      "Prepare for patient satisfaction questions",
+      "Know about common private procedures"
+    ],
+    "care_homes": [
+      "Understand CQC standards",
+      "Know about Mental Capacity Act",
+      "Prepare dementia care examples",
+      "Understand safeguarding",
+      "Know about end of life care"
+    ],
+    "community": [
+      "Emphasize autonomous practice",
+      "Prepare lone working examples",
+      "Know about safeguarding in community",
+      "Understand multi-agency working",
+      "Have driving license ready"
+    ],
+    "primary_care": [
+      "Know about QOF indicators",
+      "Understand chronic disease management",
+      "Familiarize with GP computer systems",
+      "Know about immunization schedules",
+      "Understand primary care structure"
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-10-18",
+    "coverage": "All major UK healthcare sectors",
+    "sources": [
+      "NHS Employers",
+      "Skills for Care",
+      "CQC Standards",
+      "Private Healthcare Providers",
+      "Job descriptions from Indeed, TotalJobs, NHS Jobs"
+    ]
+  }
+}

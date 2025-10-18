@@ -1,0 +1,2559 @@
+{
+  "band": "band_4",
+  "specialty": "cardiology",
+  "bank_id": "cardiology_band_4_enhanced",
+  "version": "2.0",
+  "total_questions": 49,
+  "question_type_distribution": {
+    "multiple_choice": 15,
+    "scenario": 15,
+    "calculation": 10,
+    "case_study": 7,
+    "leadership": 2
+  },
+  "difficulty_level": "intermediate",
+  "competencies_covered": [
+    "ECG interpretation",
+    "Mentoring",
+    "Cardiac assessment",
+    "Leadership",
+    "Quality improvement",
+    "Medication management",
+    "Patient education"
+  ],
+  "created_date": "2025-10-18T01:54:12.388698",
+  "enhancement_features": [
+    "Band-specific difficulty levels",
+    "Comprehensive competencies mapping",
+    "Evidence-based references",
+    "Detailed learning outcomes",
+    "Progressive skill development",
+    "NICE guidelines integration"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 2,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 3,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 4,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 5,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 6,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 7,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 8,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 9,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 10,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 11,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 12,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 13,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 14,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 15,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "multiple_choice",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Cardiology Band 4",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in cardiology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in cardiology nursing at Band 4 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 16,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 17,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 18,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 19,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 20,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 21,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 22,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 23,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 24,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 25,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 26,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 27,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 28,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 29,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 30,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Scenario - Cardiology Band 4",
+      "question_text": "Describe your approach to managing a complex patient situation in cardiology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "cardiology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in cardiology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 31,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 32,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 33,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 34,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 35,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 36,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 37,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 38,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 39,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 40,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "calculation",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Clinical Calculation - Cardiology Band 4",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in cardiology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 41,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 42,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.387699",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 43,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 44,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 45,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 46,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 47,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "case_study",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Case Study - Cardiology Band 4",
+      "question_text": "Analyze this complex case in cardiology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 48,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "leadership",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Leadership Challenge - Cardiology Band 4",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in cardiology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 4 level leadership skills appropriate for cardiology nursing."
+    },
+    {
+      "id": 49,
+      "specialty": "cardiology",
+      "band": "band_4",
+      "question_type": "leadership",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Cardiac assessment",
+        "ECG interpretation",
+        "Medication management",
+        "Patient education",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG181 - Chest Pain",
+        "NICE CG95 - Heart Failure"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in cardiology nursing at Band 4 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities"
+      ],
+      "created_date": "2025-10-18T01:54:12.388698",
+      "version": "2.0",
+      "title": "Leadership Challenge - Cardiology Band 4",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in cardiology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 4 level leadership skills appropriate for cardiology nursing."
+    }
+  ]
+}

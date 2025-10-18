@@ -1,0 +1,3267 @@
+{
+  "band": "band_9",
+  "specialty": "oncology",
+  "bank_id": "oncology_band_9_enhanced",
+  "version": "2.0",
+  "total_questions": 49,
+  "question_type_distribution": {
+    "multiple_choice": 7,
+    "scenario": 10,
+    "calculation": 5,
+    "case_study": 12,
+    "leadership": 10,
+    "governance": 5
+  },
+  "difficulty_level": "expert",
+  "competencies_covered": [
+    "Cancer care",
+    "Strategic planning",
+    "Mentoring",
+    "Organizational leadership",
+    "Audit",
+    "Chemotherapy management",
+    "Governance",
+    "Leadership",
+    "Palliative care",
+    "Quality improvement",
+    "Policy development",
+    "Team management",
+    "Family support"
+  ],
+  "created_date": "2025-10-18T01:54:12.798225",
+  "enhancement_features": [
+    "Band-specific difficulty levels",
+    "Comprehensive competencies mapping",
+    "Evidence-based references",
+    "Detailed learning outcomes",
+    "Progressive skill development",
+    "NICE guidelines integration"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 2,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 3,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 4,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 5,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 6,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 7,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "multiple_choice",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Oncology Band 9",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in oncology?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in oncology nursing at Band 9 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 8,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 9,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 10,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 11,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 12,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 13,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 14,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 15,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 16,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 17,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "scenario",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Scenario - Oncology Band 9",
+      "question_text": "Describe your approach to managing a complex patient situation in oncology where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "oncology department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in oncology nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 18,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "calculation",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Calculation - Oncology Band 9",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in oncology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 19,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "calculation",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Calculation - Oncology Band 9",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in oncology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 20,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "calculation",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Calculation - Oncology Band 9",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in oncology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 21,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "calculation",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Calculation - Oncology Band 9",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in oncology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 22,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "calculation",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Clinical Calculation - Oncology Band 9",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in oncology with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 23,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 24,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 25,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 26,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 27,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 28,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 29,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 30,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 31,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 32,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 33,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 34,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "case_study",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Case Study - Oncology Band 9",
+      "question_text": "Analyze this complex case in oncology and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 35,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 36,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 37,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 38,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 39,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 40,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 41,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 42,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 43,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 44,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "leadership",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Leadership Challenge - Oncology Band 9",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in oncology.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 9 level leadership skills appropriate for oncology nursing."
+    },
+    {
+      "id": 45,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "governance",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Governance and Quality - Oncology Band 9",
+      "question_text": "How would you implement a quality improvement initiative in oncology to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    },
+    {
+      "id": 46,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "governance",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Governance and Quality - Oncology Band 9",
+      "question_text": "How would you implement a quality improvement initiative in oncology to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    },
+    {
+      "id": 47,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "governance",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Governance and Quality - Oncology Band 9",
+      "question_text": "How would you implement a quality improvement initiative in oncology to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    },
+    {
+      "id": 48,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "governance",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Governance and Quality - Oncology Band 9",
+      "question_text": "How would you implement a quality improvement initiative in oncology to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    },
+    {
+      "id": 49,
+      "specialty": "oncology",
+      "band": "band_9",
+      "question_type": "governance",
+      "difficulty": "expert",
+      "competencies": [
+        "Cancer care",
+        "Chemotherapy management",
+        "Palliative care",
+        "Family support",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit",
+        "Strategic planning",
+        "Policy development",
+        "Organizational leadership"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills",
+        "Exhibit strategic thinking",
+        "Lead organizational change"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG81 - Cancer Services",
+        "NICE CG142 - Cancer of Unknown Primary"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in oncology nursing at Band 9 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills",
+        "Exhibit strategic leadership and organizational development"
+      ],
+      "created_date": "2025-10-18T01:54:12.798225",
+      "version": "2.0",
+      "title": "Governance and Quality - Oncology Band 9",
+      "question_text": "How would you implement a quality improvement initiative in oncology to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    }
+  ]
+}

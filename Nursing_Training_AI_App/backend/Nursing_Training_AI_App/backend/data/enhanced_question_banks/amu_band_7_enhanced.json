@@ -1,0 +1,2911 @@
+{
+  "band": "band_7",
+  "specialty": "amu",
+  "bank_id": "amu_band_7_enhanced",
+  "version": "2.0",
+  "total_questions": 48,
+  "question_type_distribution": {
+    "multiple_choice": 10,
+    "scenario": 12,
+    "calculation": 7,
+    "case_study": 10,
+    "leadership": 7,
+    "governance": 2
+  },
+  "difficulty_level": "advanced",
+  "competencies_covered": [
+    "Leadership",
+    "Acute care",
+    "Mentoring",
+    "Audit",
+    "Communication",
+    "Governance",
+    "Assessment",
+    "Patient care",
+    "Safety",
+    "Quality improvement",
+    "Team management"
+  ],
+  "created_date": "2025-10-18T01:54:12.353699",
+  "enhancement_features": [
+    "Band-specific difficulty levels",
+    "Comprehensive competencies mapping",
+    "Evidence-based references",
+    "Detailed learning outcomes",
+    "Progressive skill development",
+    "NICE guidelines integration"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 2,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 3,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 4,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 5,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 6,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 7,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 8,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 9,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 10,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Amu Band 7",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in amu?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in amu nursing at Band 7 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 11,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 12,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 13,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 14,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 15,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 16,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 17,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 18,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 19,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 20,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 21,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 22,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Scenario - Amu Band 7",
+      "question_text": "Describe your approach to managing a complex patient situation in amu where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "amu department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in amu nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 23,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 24,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 25,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 26,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 27,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 28,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 29,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "calculation",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Clinical Calculation - Amu Band 7",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in amu with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 30,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 31,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 32,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 33,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 34,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 35,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 36,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 37,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 38,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 39,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Case Study - Amu Band 7",
+      "question_text": "Analyze this complex case in amu and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 40,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 41,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 42,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 43,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 44,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 45,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 46,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Demonstrate leadership skills",
+        "Manage team dynamics",
+        "Resolve conflicts effectively",
+        "Support staff development",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Leadership Challenge - Amu Band 7",
+      "question_text": "Describe how you would lead your team through [specific leadership challenge] in amu.",
+      "leadership_scenario": {
+        "situation": "Team conflict, change management, or crisis",
+        "stakeholders": "Team members, patients, families, management",
+        "constraints": "Time, resources, policies",
+        "desired_outcome": "Improved team performance, patient care"
+      },
+      "leadership_competencies": [
+        "Communication",
+        "Conflict resolution",
+        "Team building",
+        "Change management",
+        "Decision making"
+      ],
+      "expected_approach": "Demonstrate Band 7 level leadership skills appropriate for amu nursing."
+    },
+    {
+      "id": 47,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "governance",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Governance and Quality - Amu Band 7",
+      "question_text": "How would you implement a quality improvement initiative in amu to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    },
+    {
+      "id": 48,
+      "specialty": "amu",
+      "band": "band_7",
+      "question_type": "governance",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Leadership",
+        "Mentoring",
+        "Quality improvement",
+        "Team management",
+        "Governance",
+        "Audit"
+      ],
+      "expected_points": [
+        "Understand governance principles",
+        "Implement quality improvements",
+        "Conduct audits effectively",
+        "Develop policies",
+        "Show advanced clinical reasoning",
+        "Demonstrate management skills"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG127 - Hypertension Management",
+        "NICE NG51 - Sepsis Recognition"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in amu nursing at Band 7 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards",
+        "Show leadership and mentoring capabilities",
+        "Demonstrate management and governance skills"
+      ],
+      "created_date": "2025-10-18T01:54:12.352697",
+      "version": "2.0",
+      "title": "Governance and Quality - Amu Band 7",
+      "question_text": "How would you implement a quality improvement initiative in amu to address [specific issue]?",
+      "governance_scenario": {
+        "issue": "Quality or safety concern",
+        "current_state": "Baseline performance",
+        "target_state": "Desired improvement",
+        "stakeholders": "Staff, patients, management, regulators"
+      },
+      "governance_components": [
+        "Audit and monitoring",
+        "Policy development",
+        "Staff education",
+        "Performance measurement",
+        "Continuous improvement"
+      ],
+      "implementation_plan": [
+        "Assessment phase",
+        "Planning phase",
+        "Implementation phase",
+        "Evaluation phase"
+      ]
+    }
+  ]
+}

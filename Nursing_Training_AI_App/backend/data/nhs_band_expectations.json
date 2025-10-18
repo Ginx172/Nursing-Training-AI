@@ -1,0 +1,350 @@
+{
+  "nhs_band_expectations": {
+    "band_2": {
+      "job_title": "Healthcare Assistant / Support Worker",
+      "typical_responsibilities": [
+        "Assist registered nurses with basic patient care",
+        "Take and record vital signs under supervision",
+        "Help patients with personal care and mobility",
+        "Maintain clean and safe environment",
+        "Report concerns to senior staff",
+        "Follow established protocols and procedures"
+      ],
+      "key_competencies": [
+        "Basic clinical skills",
+        "Communication with patients and families",
+        "Teamwork and collaboration",
+        "Following instructions accurately",
+        "Basic record keeping",
+        "Infection prevention and control"
+      ],
+      "autonomy_level": "Minimal - Works under direct supervision",
+      "decision_making": "Limited - Follows established procedures",
+      "leadership_expectations": "None",
+      "typical_experience": "New to healthcare or limited experience",
+      "education_requirements": "Care Certificate or equivalent",
+      "example_interview_questions": [
+        "Why do you want to work as a Healthcare Assistant?",
+        "How would you help a patient with limited mobility?",
+        "What would you do if you noticed a patient was unwell?",
+        "How do you ensure patient dignity?"
+      ]
+    },
+    "band_3": {
+      "job_title": "Senior Healthcare Assistant / Assistant Practitioner",
+      "typical_responsibilities": [
+        "Provide care for patients with complex needs",
+        "Assist with clinical procedures",
+        "Support newly qualified nurses",
+        "Contribute to patient assessments",
+        "Maintain accurate documentation",
+        "Participate in quality improvement activities"
+      ],
+      "key_competencies": [
+        "Enhanced clinical skills",
+        "Basic supervision of Band 2 staff",
+        "Patient assessment basics",
+        "Clinical documentation",
+        "Supporting student learning",
+        "Quality improvement awareness"
+      ],
+      "autonomy_level": "Low - Works with minimal supervision for routine tasks",
+      "decision_making": "Limited - Can make routine decisions, escalates complex issues",
+      "leadership_expectations": "Minimal - May support junior staff",
+      "typical_experience": "1-2 years in healthcare",
+      "education_requirements": "NVQ Level 3 or Foundation Degree",
+      "example_interview_questions": [
+        "How do you prioritize your workload?",
+        "Describe a time you supported a junior colleague",
+        "How would you handle a challenging patient?",
+        "What is your understanding of safeguarding?"
+      ]
+    },
+    "band_4": {
+      "job_title": "Associate Practitioner / Specialist Healthcare Assistant",
+      "typical_responsibilities": [
+        "Perform specific clinical procedures",
+        "Undertake patient assessments",
+        "Mentor junior staff and students",
+        "Contribute to care planning",
+        "Participate in audits and quality improvement",
+        "Lead specific patient groups or conditions"
+      ],
+      "key_competencies": [
+        "Advanced clinical skills in specialty",
+        "Basic leadership and mentoring",
+        "Patient assessment and care planning",
+        "Quality improvement participation",
+        "Teaching and supervision",
+        "Evidence-based practice awareness"
+      ],
+      "autonomy_level": "Moderate - Independent practice in defined areas",
+      "decision_making": "Moderate - Makes routine clinical decisions",
+      "leadership_expectations": "Basic - Supervises junior staff, mentors students",
+      "typical_experience": "3-4 years in specialty",
+      "education_requirements": "Foundation Degree or equivalent",
+      "example_interview_questions": [
+        "How do you ensure your practice is evidence-based?",
+        "Describe your experience mentoring others",
+        "How would you contribute to quality improvement?",
+        "Give an example of leading a project or initiative"
+      ]
+    },
+    "band_5": {
+      "job_title": "Staff Nurse / Registered Nurse",
+      "typical_responsibilities": [
+        "Provide autonomous nursing care",
+        "Assess, plan, implement and evaluate patient care",
+        "Mentor students and junior staff",
+        "Participate in quality improvement projects",
+        "Contribute to service development",
+        "Maintain professional development",
+        "Act as shift coordinator when required"
+      ],
+      "key_competencies": [
+        "Comprehensive clinical expertise",
+        "Leadership and mentoring",
+        "Critical thinking and clinical reasoning",
+        "Quality improvement and audit",
+        "Teaching and education",
+        "Professional accountability",
+        "Effective communication and advocacy"
+      ],
+      "autonomy_level": "High - Autonomous professional practice",
+      "decision_making": "Independent - Makes clinical decisions within scope of practice",
+      "leadership_expectations": "Moderate - Mentors students, may coordinate shifts",
+      "typical_experience": "Newly qualified to 3+ years post-registration",
+      "education_requirements": "NMC Registration, BSc Nursing or equivalent",
+      "example_interview_questions": [
+        "Describe your approach to patient assessment",
+        "How do you prioritize competing demands?",
+        "Give an example of leadership in your practice",
+        "How do you maintain your professional development?",
+        "Describe a complex patient you cared for"
+      ]
+    },
+    "band_6": {
+      "job_title": "Senior Staff Nurse / Sister / Charge Nurse / Team Leader",
+      "typical_responsibilities": [
+        "Lead and manage a team of nurses",
+        "Supervise and develop junior staff",
+        "Lead quality improvement initiatives",
+        "Manage clinical governance",
+        "Conduct audits and implement changes",
+        "Deputize for Ward Manager",
+        "Manage shift coordination and resources",
+        "Handle complaints and incidents"
+      ],
+      "key_competencies": [
+        "Advanced clinical practice",
+        "Team leadership and management",
+        "Clinical governance and audit",
+        "Staff development and appraisal",
+        "Quality improvement leadership",
+        "Budget and resource management",
+        "Policy implementation",
+        "Change management"
+      ],
+      "autonomy_level": "Very High - Leads clinical area",
+      "decision_making": "Senior - Makes complex clinical and management decisions",
+      "leadership_expectations": "Advanced - Leads team, develops staff, manages shift",
+      "typical_experience": "3-5 years post-registration with leadership experience",
+      "education_requirements": "NMC Registration, often post-graduate qualification",
+      "example_interview_questions": [
+        "How would you manage a underperforming team member?",
+        "Describe your experience with clinical governance",
+        "How do you lead quality improvement?",
+        "Give an example of managing change",
+        "How would you manage competing priorities as a team leader?",
+        "Describe your approach to staff development"
+      ]
+    },
+    "band_7": {
+      "job_title": "Ward Manager / Matron / Clinical Nurse Specialist / Advanced Practitioner",
+      "typical_responsibilities": [
+        "Manage clinical service or ward",
+        "Develop and implement service strategy",
+        "Manage budget and resources",
+        "Lead service improvement programs",
+        "Develop policies and procedures",
+        "Manage team performance and development",
+        "Ensure clinical governance standards",
+        "Strategic planning and service development",
+        "Represent service at organizational level"
+      ],
+      "key_competencies": [
+        "Strategic leadership",
+        "Service management and development",
+        "Financial management and budgeting",
+        "Policy development and implementation",
+        "Advanced clinical expertise",
+        "Performance management",
+        "Stakeholder engagement",
+        "Project management",
+        "Organizational development"
+      ],
+      "autonomy_level": "Executive - Manages entire service",
+      "decision_making": "Strategic - Makes strategic service decisions",
+      "leadership_expectations": "Strategic - Leads service, develops strategy",
+      "typical_experience": "5-7 years with significant leadership experience",
+      "education_requirements": "NMC Registration, Master's degree often required",
+      "example_interview_questions": [
+        "How would you develop a service improvement strategy?",
+        "Describe your experience managing budgets",
+        "How do you ensure clinical governance?",
+        "Give an example of leading organizational change",
+        "How would you manage a service in financial difficulty?",
+        "Describe your approach to policy development",
+        "How do you balance clinical and management responsibilities?"
+      ]
+    },
+    "band_8": {
+      "job_title": "Matron / Clinical Director / Senior Nurse Manager",
+      "typical_responsibilities": [
+        "Lead multiple clinical services",
+        "Develop organizational strategy",
+        "Manage significant budgets (£1M+)",
+        "Lead transformation programs",
+        "Develop organizational policies",
+        "Manage senior leadership teams",
+        "Board-level reporting",
+        "External stakeholder engagement",
+        "Strategic workforce planning"
+      ],
+      "key_competencies": [
+        "Executive leadership",
+        "Strategic planning and vision",
+        "Financial management at scale",
+        "Organizational development",
+        "Policy creation and influence",
+        "Change leadership",
+        "Political awareness",
+        "Board-level communication",
+        "System-wide thinking",
+        "Innovation and transformation"
+      ],
+      "autonomy_level": "Executive - Sets organizational direction",
+      "decision_making": "Executive - Makes organizational strategic decisions",
+      "leadership_expectations": "Executive - Leads multiple services, influences organization",
+      "typical_experience": "8-10+ years with extensive senior leadership",
+      "education_requirements": "NMC Registration, Master's or Doctorate often required",
+      "example_interview_questions": [
+        "How would you develop an organizational strategy?",
+        "Describe your experience leading transformation",
+        "How do you influence at Board level?",
+        "Give an example of managing significant change",
+        "How would you address system-wide challenges?",
+        "Describe your approach to innovation",
+        "How do you manage competing stakeholder interests?"
+      ]
+    },
+    "band_9": {
+      "job_title": "Director of Nursing / Chief Nurse / Executive Nurse Director",
+      "typical_responsibilities": [
+        "Executive Board member",
+        "Set organizational nursing strategy",
+        "Manage directorate budgets (£5M+)",
+        "Lead organizational transformation",
+        "External representation and influence",
+        "National policy engagement",
+        "Professional leadership across organization",
+        "Quality and safety governance",
+        "Strategic partnerships"
+      ],
+      "key_competencies": [
+        "Executive leadership",
+        "Strategic vision and planning",
+        "Organizational transformation",
+        "Policy influence and creation",
+        "Board-level governance",
+        "External stakeholder management",
+        "System leadership",
+        "Innovation and research leadership",
+        "Professional advocacy",
+        "National profile and influence"
+      ],
+      "autonomy_level": "Executive - Sets organizational direction",
+      "decision_making": "Executive - Makes board-level strategic decisions",
+      "leadership_expectations": "Executive - Leads profession, influences system",
+      "typical_experience": "10+ years extensive senior executive experience",
+      "education_requirements": "NMC Registration, Master's/Doctorate, executive qualifications",
+      "example_interview_questions": [
+        "How would you set nursing strategy for the organization?",
+        "Describe your approach to system leadership",
+        "How do you influence at national level?",
+        "Give an example of leading transformational change",
+        "How would you address workforce challenges?",
+        "Describe your vision for nursing profession",
+        "How do you balance quality, safety and finance?"
+      ]
+    }
+  },
+  "assessment_criteria_by_band": {
+    "band_2_3": {
+      "knowledge": "Basic clinical knowledge, safety awareness",
+      "skills": "Fundamental clinical skills, communication",
+      "attitudes": "Caring, teamwork, following procedures",
+      "pass_threshold": "60%",
+      "excellence_threshold": "80%"
+    },
+    "band_4_5": {
+      "knowledge": "Comprehensive clinical knowledge, evidence-based practice",
+      "skills": "Advanced clinical skills, assessment, mentoring",
+      "attitudes": "Leadership, professionalism, continuous improvement",
+      "pass_threshold": "70%",
+      "excellence_threshold": "85%"
+    },
+    "band_6_7": {
+      "knowledge": "Expert clinical knowledge, governance, policy",
+      "skills": "Leadership, management, quality improvement, audit",
+      "attitudes": "Strategic thinking, innovation, change management",
+      "pass_threshold": "75%",
+      "excellence_threshold": "90%"
+    },
+    "band_8_9": {
+      "knowledge": "Executive knowledge, organizational strategy, system leadership",
+      "skills": "Strategic leadership, transformation, influence",
+      "attitudes": "Visionary, innovative, system-wide perspective",
+      "pass_threshold": "80%",
+      "excellence_threshold": "95%"
+    }
+  },
+  "progressive_skill_development": {
+    "clinical_practice": {
+      "band_2_3": "Basic patient care under supervision",
+      "band_4_5": "Autonomous professional practice",
+      "band_6_7": "Advanced practice and clinical leadership",
+      "band_8_9": "Professional leadership and strategic oversight"
+    },
+    "leadership": {
+      "band_2_3": "None to minimal",
+      "band_4_5": "Mentoring and basic team leadership",
+      "band_6_7": "Team management and service leadership",
+      "band_8_9": "Strategic and executive leadership"
+    },
+    "governance": {
+      "band_2_3": "Awareness of safety and quality",
+      "band_4_5": "Participation in quality improvement",
+      "band_6_7": "Leading governance and quality programs",
+      "band_8_9": "Executive governance responsibility"
+    },
+    "decision_making": {
+      "band_2_3": "Following procedures",
+      "band_4_5": "Independent clinical decisions",
+      "band_6_7": "Complex clinical and service decisions",
+      "band_8_9": "Strategic organizational decisions"
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "last_updated": "2025-10-18",
+    "sources": [
+      "NHS Job Descriptions",
+      "AFC Pay Scales",
+      "NMC Standards",
+      "NICE Guidelines",
+      "NHS Employers Guidance"
+    ],
+    "notes": "Based on typical NHS job descriptions and expectations. May vary by Trust and specialty."
+  }
+}

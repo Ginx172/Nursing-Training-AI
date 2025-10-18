@@ -1,0 +1,2366 @@
+{
+  "band": "band_3",
+  "specialty": "pediatrics",
+  "bank_id": "pediatrics_band_3_enhanced",
+  "version": "2.0",
+  "total_questions": 50,
+  "question_type_distribution": {
+    "multiple_choice": 20,
+    "scenario": 15,
+    "calculation": 10,
+    "case_study": 5
+  },
+  "difficulty_level": "beginner",
+  "competencies_covered": [
+    "Growth monitoring",
+    "Family-centered care",
+    "Child development",
+    "Pediatric assessment"
+  ],
+  "created_date": "2025-10-18T01:54:12.812229",
+  "enhancement_features": [
+    "Band-specific difficulty levels",
+    "Comprehensive competencies mapping",
+    "Evidence-based references",
+    "Detailed learning outcomes",
+    "Progressive skill development",
+    "NICE guidelines integration"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 2,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 3,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 4,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 5,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 6,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 7,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 8,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 9,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 10,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 11,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 12,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 13,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 14,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 15,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 16,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 17,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 18,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 19,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 20,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Demonstrate knowledge of clinical guidelines",
+        "Apply evidence-based practice",
+        "Show understanding of safety protocols"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Knowledge - Pediatrics Band 3",
+      "question_text": "What is the most appropriate action when managing a patient with [condition] in pediatrics?",
+      "options": [
+        "Option A - Basic intervention",
+        "Option B - Evidence-based intervention",
+        "Option C - Advanced intervention",
+        "Option D - Specialist intervention"
+      ],
+      "correct_answer": "Option B - Evidence-based intervention",
+      "explanation": "This question tests your knowledge of evidence-based practice in pediatrics nursing at Band 3 level.",
+      "rationale": "Evidence-based practice ensures the best patient outcomes and is fundamental to professional nursing practice."
+    },
+    {
+      "id": 21,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 22,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 23,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 24,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 25,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 26,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 27,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 28,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 29,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 30,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 31,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 32,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 33,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 34,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 35,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "scenario",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Assess patient condition appropriately",
+        "Implement evidence-based interventions",
+        "Communicate effectively with team",
+        "Document care accurately"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Scenario - Pediatrics Band 3",
+      "question_text": "Describe your approach to managing a complex patient situation in pediatrics where [specific scenario details].",
+      "scenario_details": {
+        "patient_age": "Variable based on specialty",
+        "presenting_condition": "Specialty-specific condition",
+        "complications": "Multiple factors to consider",
+        "environment": "pediatrics department setting"
+      },
+      "expected_response": "Demonstrate systematic assessment, evidence-based interventions, and effective communication in pediatrics nursing.",
+      "marking_criteria": [
+        "Accurate assessment (25%)",
+        "Appropriate interventions (25%)",
+        "Effective communication (25%)",
+        "Safety considerations (25%)"
+      ]
+    },
+    {
+      "id": 36,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 37,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 38,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 39,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 40,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 41,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 42,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 43,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 44,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 45,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "calculation",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Perform accurate calculations",
+        "Verify calculations independently",
+        "Apply safety checks"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Clinical Calculation - Pediatrics Band 3",
+      "question_text": "Calculate the correct dosage for [medication] for a patient in pediatrics with the following parameters: [specific values]",
+      "calculation_type": "Drug dosage calculation",
+      "given_values": {
+        "patient_weight": "Variable",
+        "medication_concentration": "Variable",
+        "prescribed_dose": "Variable"
+      },
+      "formula": "Dose = (Prescribed dose × Patient weight) / Concentration",
+      "safety_checks": [
+        "Verify calculation independently",
+        "Check against normal dose ranges",
+        "Confirm with senior colleague if uncertain"
+      ],
+      "expected_answer": "Calculated dosage with units",
+      "tolerance": "±5%"
+    },
+    {
+      "id": 46,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "case_study",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Case Study - Pediatrics Band 3",
+      "question_text": "Analyze this complex case in pediatrics and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 47,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "case_study",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Case Study - Pediatrics Band 3",
+      "question_text": "Analyze this complex case in pediatrics and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 48,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "case_study",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Case Study - Pediatrics Band 3",
+      "question_text": "Analyze this complex case in pediatrics and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 49,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "case_study",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Case Study - Pediatrics Band 3",
+      "question_text": "Analyze this complex case in pediatrics and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    },
+    {
+      "id": 50,
+      "specialty": "pediatrics",
+      "band": "band_3",
+      "question_type": "case_study",
+      "difficulty": "beginner",
+      "competencies": [
+        "Pediatric assessment",
+        "Growth monitoring",
+        "Family-centered care",
+        "Child development"
+      ],
+      "expected_points": [
+        "Analyze complex patient situations",
+        "Develop comprehensive care plans",
+        "Consider multiple factors",
+        "Evaluate outcomes"
+      ],
+      "references": [
+        "NMC Code of Professional Practice",
+        "NICE Guidelines",
+        "Evidence-based practice guidelines",
+        "NICE CG160 - Fever in Under 5s",
+        "NICE CG76 - Diarrhoea and Vomiting"
+      ],
+      "learning_outcomes": [
+        "Demonstrate competency in pediatrics nursing at Band 3 level",
+        "Apply evidence-based practice principles",
+        "Maintain patient safety standards"
+      ],
+      "created_date": "2025-10-18T01:54:12.812229",
+      "version": "2.0",
+      "title": "Case Study - Pediatrics Band 3",
+      "question_text": "Analyze this complex case in pediatrics and develop a comprehensive care plan.",
+      "case_study": {
+        "patient_history": "Detailed patient background",
+        "presenting_condition": "Current health status",
+        "social_factors": "Family, support systems",
+        "psychological_factors": "Mental health considerations",
+        "environmental_factors": "Living situation, resources"
+      },
+      "analysis_requirements": [
+        "Identify key issues",
+        "Prioritize care needs",
+        "Develop interventions",
+        "Consider outcomes"
+      ],
+      "care_plan_components": [
+        "Assessment findings",
+        "Nursing diagnoses",
+        "Goals and outcomes",
+        "Interventions",
+        "Evaluation criteria"
+      ]
+    }
+  ]
+}

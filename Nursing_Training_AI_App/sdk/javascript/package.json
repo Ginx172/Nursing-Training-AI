@@ -1,0 +1,47 @@
+{
+  "name": "@nursing-ai/sdk",
+  "version": "1.0.0",
+  "description": "Official JavaScript/TypeScript SDK for Nursing Training AI API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "nursing",
+    "healthcare",
+    "training",
+    "ai",
+    "nhs",
+    "enterprise",
+    "sdk",
+    "api-client"
+  ],
+  "author": "Nursing Training AI <developers@nursingtrainingai.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ginx172/Nursing-Training-AI.git"
+  },
+  "homepage": "https://docs.nursingtrainingai.com/sdk/javascript",
+  "bugs": {
+    "url": "https://github.com/Ginx172/Nursing-Training-AI/issues"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
+

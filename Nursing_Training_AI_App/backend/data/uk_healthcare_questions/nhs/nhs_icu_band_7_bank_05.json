@@ -1,0 +1,508 @@
+{
+  "sector": "nhs",
+  "sector_name": "NHS Hospitals",
+  "specialty": "icu",
+  "band": "band_7",
+  "band_level": "Advanced Practitioner",
+  "bank_number": 5,
+  "bank_id": "nhs_icu_band_7_bank_05",
+  "version": "1.0",
+  "total_questions": 26,
+  "created_date": "2025-10-18T02:10:25.654451",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 21,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 22,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 23,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 24,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 25,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 26,
+      "sector": "nhs",
+      "specialty": "icu",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.654451",
+      "title": "NHS Icu - Band 7",
+      "question_text": "Clinical question for icu at band_7 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    }
+  ]
+}

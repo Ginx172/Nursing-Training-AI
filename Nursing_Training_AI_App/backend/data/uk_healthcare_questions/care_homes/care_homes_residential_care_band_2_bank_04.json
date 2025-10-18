@@ -1,0 +1,284 @@
+{
+  "sector": "care_homes",
+  "sector_name": "Care Homes & Residential Care",
+  "specialty": "residential_care",
+  "band": "band_2",
+  "band_level": "Foundation",
+  "bank_number": 4,
+  "bank_id": "care_homes_residential_care_band_2_bank_04",
+  "version": "1.0",
+  "total_questions": 11,
+  "created_date": "2025-10-18T02:10:29.074604",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home Scenario - Residential Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home Scenario - Residential Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home Scenario - Residential Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Calculation",
+      "question_text": "Question about residential_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Calculation",
+      "question_text": "Question about residential_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "care_homes",
+      "specialty": "residential_care",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.074604",
+      "title": "Care Home - Residential Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    }
+  ]
+}

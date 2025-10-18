@@ -1,0 +1,204 @@
+{
+  "sector": "nhs",
+  "sector_name": "NHS Hospitals",
+  "specialty": "emergency",
+  "band": "band_2",
+  "band_level": "Foundation",
+  "bank_number": 3,
+  "bank_id": "nhs_emergency_band_2_bank_03",
+  "version": "1.0",
+  "total_questions": 10,
+  "created_date": "2025-10-18T02:10:25.303842",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "nhs",
+      "specialty": "emergency",
+      "band": "band_2",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:25.303842",
+      "title": "NHS Emergency - Band 2",
+      "question_text": "Clinical question for emergency at band_2 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    }
+  ]
+}

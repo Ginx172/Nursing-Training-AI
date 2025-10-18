@@ -1,0 +1,522 @@
+{
+  "sector": "community",
+  "sector_name": "Community Healthcare",
+  "specialty": "district_nursing",
+  "band": "band_7",
+  "band_level": "Advanced Practitioner",
+  "bank_number": 10,
+  "bank_id": "community_district_nursing_band_7_bank_10",
+  "version": "1.0",
+  "total_questions": 23,
+  "created_date": "2025-10-18T02:10:30.082396",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Scenario - District Nursing",
+      "question_text": "You have 8 home visits scheduled but receive urgent referral for palliative patient. How do you manage your caseload?",
+      "expected_response": "Assess urgency of all visits, reprioritize, contact patients to reschedule non-urgent, arrange colleague support if needed, ensure palliative patient seen same day, document decisions",
+      "competencies": [
+        "Caseload management",
+        "Prioritization",
+        "Communication",
+        "Time management",
+        "Clinical judgment"
+      ],
+      "sector_specific": [
+        "Autonomous decision-making",
+        "Lone working",
+        "Resource management"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Case Study",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Case Study",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Case Study",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Case Study",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Leadership - District Nursing",
+      "question_text": "As {band.replace('_', ' ')}, how do you support a newly qualified community nurse struggling with lone working?",
+      "expected_response": "Regular supervision, joint visits, debrief sessions, assess confidence levels, gradual independence, peer support, access to senior advice, safety procedures",
+      "competencies": [
+        "Mentoring",
+        "Clinical supervision",
+        "Leadership",
+        "Staff development"
+      ],
+      "sector_specific": [
+        "Lone working support",
+        "Community nursing competencies"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Leadership - District Nursing",
+      "question_text": "As {band.replace('_', ' ')}, how do you support a newly qualified community nurse struggling with lone working?",
+      "expected_response": "Regular supervision, joint visits, debrief sessions, assess confidence levels, gradual independence, peer support, access to senior advice, safety procedures",
+      "competencies": [
+        "Mentoring",
+        "Clinical supervision",
+        "Leadership",
+        "Staff development"
+      ],
+      "sector_specific": [
+        "Lone working support",
+        "Community nursing competencies"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Leadership - District Nursing",
+      "question_text": "As {band.replace('_', ' ')}, how do you support a newly qualified community nurse struggling with lone working?",
+      "expected_response": "Regular supervision, joint visits, debrief sessions, assess confidence levels, gradual independence, peer support, access to senior advice, safety procedures",
+      "competencies": [
+        "Mentoring",
+        "Clinical supervision",
+        "Leadership",
+        "Staff development"
+      ],
+      "sector_specific": [
+        "Lone working support",
+        "Community nursing competencies"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community Leadership - District Nursing",
+      "question_text": "As {band.replace('_', ' ')}, how do you support a newly qualified community nurse struggling with lone working?",
+      "expected_response": "Regular supervision, joint visits, debrief sessions, assess confidence levels, gradual independence, peer support, access to senior advice, safety procedures",
+      "competencies": [
+        "Mentoring",
+        "Clinical supervision",
+        "Leadership",
+        "Staff development"
+      ],
+      "sector_specific": [
+        "Lone working support",
+        "Community nursing competencies"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Governance",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - Governance",
+      "question_text": "Question about district_nursing in community setting",
+      "competencies": [
+        "Autonomous practice",
+        "Home visiting",
+        "Multi-agency working"
+      ]
+    },
+    {
+      "id": 21,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 22,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    },
+    {
+      "id": 23,
+      "sector": "community",
+      "specialty": "district_nursing",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.082396",
+      "title": "Community - District Nursing",
+      "question_text": "During a home visit, you notice signs of potential abuse. What is your IMMEDIATE action?",
+      "options": [
+        "A) Confront the family member immediately",
+        "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+        "C) Call police immediately from the home",
+        "D) Leave and discuss with manager next day"
+      ],
+      "correct_answer": "B) Complete visit, document concerns, follow safeguarding procedure, contact safeguarding lead",
+      "explanation": "Safeguarding is priority but must follow procedure and ensure own safety",
+      "competencies": [
+        "Safeguarding adults",
+        "Professional judgment",
+        "Documentation",
+        "Multi-agency working"
+      ],
+      "sector_specific": [
+        "Lone working safety",
+        "Safeguarding referral process"
+      ]
+    }
+  ]
+}

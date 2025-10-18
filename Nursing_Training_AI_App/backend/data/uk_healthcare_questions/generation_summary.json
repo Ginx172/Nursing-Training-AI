@@ -1,0 +1,125 @@
+{
+  "generation_date": "2025-10-18T02:10:32.175139",
+  "total_question_banks": 2140,
+  "sectors": {
+    "nhs": {
+      "name": "NHS Hospitals",
+      "specialties": [
+        "amu",
+        "emergency",
+        "icu",
+        "maternity",
+        "mental_health",
+        "pediatrics",
+        "cardiology",
+        "neurology",
+        "oncology"
+      ],
+      "applicable_bands": [
+        "band_2",
+        "band_3",
+        "band_4",
+        "band_5",
+        "band_6",
+        "band_7",
+        "band_8a",
+        "band_8b",
+        "band_8c",
+        "band_8d"
+      ],
+      "banks_generated": 900
+    },
+    "private_healthcare": {
+      "name": "Private Healthcare",
+      "specialties": [
+        "theatre",
+        "recovery",
+        "ward",
+        "endoscopy",
+        "cosmetic",
+        "pre_assessment"
+      ],
+      "applicable_bands": [
+        "band_2",
+        "band_3",
+        "band_4",
+        "band_5",
+        "band_6",
+        "band_7"
+      ],
+      "banks_generated": 360
+    },
+    "care_homes": {
+      "name": "Care Homes & Residential Care",
+      "specialties": [
+        "residential_care",
+        "nursing_home",
+        "dementia_care",
+        "palliative_care"
+      ],
+      "applicable_bands": [
+        "band_2",
+        "band_3",
+        "band_4",
+        "band_5",
+        "band_6",
+        "band_7",
+        "band_8a"
+      ],
+      "banks_generated": 280
+    },
+    "community": {
+      "name": "Community Healthcare",
+      "specialties": [
+        "district_nursing",
+        "health_visiting",
+        "community_mental_health",
+        "school_nursing",
+        "community_matron"
+      ],
+      "applicable_bands": [
+        "band_4",
+        "band_5",
+        "band_6",
+        "band_7",
+        "band_8a"
+      ],
+      "banks_generated": 250
+    },
+    "primary_care": {
+      "name": "Primary Care / GP Surgeries",
+      "specialties": [
+        "practice_nursing",
+        "advanced_practitioner",
+        "hca_primary_care",
+        "chronic_disease",
+        "immunizations"
+      ],
+      "applicable_bands": [
+        "band_2",
+        "band_3",
+        "band_4",
+        "band_5",
+        "band_6",
+        "band_7",
+        "band_8a"
+      ],
+      "banks_generated": 350
+    }
+  },
+  "band_structure": {
+    "bands": [
+      "band_2",
+      "band_3",
+      "band_4",
+      "band_5",
+      "band_6",
+      "band_7",
+      "band_8a",
+      "band_8b",
+      "band_8c",
+      "band_8d"
+    ],
+    "note": "No Band 9 - does not exist in practice in NHS"
+  }
+}

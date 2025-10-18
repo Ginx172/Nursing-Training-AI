@@ -1,0 +1,574 @@
+{
+  "sector": "private_healthcare",
+  "sector_name": "Private Healthcare",
+  "specialty": "ward",
+  "band": "band_7",
+  "band_level": "Advanced Practitioner",
+  "bank_number": 5,
+  "bank_id": "private_healthcare_ward_band_7_bank_05",
+  "version": "1.0",
+  "total_questions": 26,
+  "created_date": "2025-10-18T02:10:28.378600",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Scenario - Ward",
+      "question_text": "A private patient's insurance company declines coverage for their procedure. How do you handle this situation?",
+      "expected_response": "Explain situation sensitively, provide written breakdown of costs, discuss self-pay options, refer to finance team, maintain professional relationship",
+      "competencies": [
+        "Communication",
+        "Financial awareness",
+        "Patient advocacy",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Insurance knowledge",
+        "Self-pay procedures",
+        "Financial counseling"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Case Study - Ward",
+      "question_text": "Manage a VIP patient with high expectations undergoing elective surgery",
+      "case_details": {
+        "patient_type": "High-net-worth individual",
+        "expectations": "Extremely high",
+        "challenges": "Demanding family, media interest, special requirements"
+      },
+      "competencies": [
+        "VIP patient management",
+        "Discretion",
+        "Excellence in care",
+        "Media awareness"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Case Study - Ward",
+      "question_text": "Manage a VIP patient with high expectations undergoing elective surgery",
+      "case_details": {
+        "patient_type": "High-net-worth individual",
+        "expectations": "Extremely high",
+        "challenges": "Demanding family, media interest, special requirements"
+      },
+      "competencies": [
+        "VIP patient management",
+        "Discretion",
+        "Excellence in care",
+        "Media awareness"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Case Study - Ward",
+      "question_text": "Manage a VIP patient with high expectations undergoing elective surgery",
+      "case_details": {
+        "patient_type": "High-net-worth individual",
+        "expectations": "Extremely high",
+        "challenges": "Demanding family, media interest, special requirements"
+      },
+      "competencies": [
+        "VIP patient management",
+        "Discretion",
+        "Excellence in care",
+        "Media awareness"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Case Study - Ward",
+      "question_text": "Manage a VIP patient with high expectations undergoing elective surgery",
+      "case_details": {
+        "patient_type": "High-net-worth individual",
+        "expectations": "Extremely high",
+        "challenges": "Demanding family, media interest, special requirements"
+      },
+      "competencies": [
+        "VIP patient management",
+        "Discretion",
+        "Excellence in care",
+        "Media awareness"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare Case Study - Ward",
+      "question_text": "Manage a VIP patient with high expectations undergoing elective surgery",
+      "case_details": {
+        "patient_type": "High-net-worth individual",
+        "expectations": "Extremely high",
+        "challenges": "Demanding family, media interest, special requirements"
+      },
+      "competencies": [
+        "VIP patient management",
+        "Discretion",
+        "Excellence in care",
+        "Media awareness"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Leadership",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Leadership",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Leadership",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 21,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Leadership",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 22,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Leadership",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 23,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Governance",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 24,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Governance",
+      "question_text": "Question about ward in private healthcare context",
+      "competencies": [
+        "Clinical excellence",
+        "Customer service",
+        "Private sector knowledge"
+      ]
+    },
+    {
+      "id": 25,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    },
+    {
+      "id": 26,
+      "sector": "private_healthcare",
+      "specialty": "ward",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:28.378600",
+      "title": "Private Healthcare - Ward",
+      "question_text": "A private patient is dissatisfied with their post-operative care. What is the MOST appropriate response?",
+      "options": [
+        "A) Apologize and escalate to consultant immediately",
+        "B) Listen to concerns, document, and follow private hospital complaints procedure",
+        "C) Explain that standards are same as NHS",
+        "D) Refer to hospital manager"
+      ],
+      "correct_answer": "B) Listen to concerns, document, and follow private hospital complaints procedure",
+      "explanation": "Private healthcare requires excellent customer service while following proper procedures",
+      "competencies": [
+        "Customer service",
+        "Communication",
+        "Complaints management",
+        "Patient satisfaction"
+      ],
+      "sector_specific": [
+        "Private insurance knowledge",
+        "Patient expectations management"
+      ]
+    }
+  ]
+}

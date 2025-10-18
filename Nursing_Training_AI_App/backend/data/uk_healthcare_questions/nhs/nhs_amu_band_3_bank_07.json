@@ -1,0 +1,261 @@
+{
+  "sector": "nhs",
+  "sector_name": "NHS Hospitals",
+  "specialty": "amu",
+  "band": "band_3",
+  "band_level": "Foundation+",
+  "bank_number": 7,
+  "bank_id": "nhs_amu_band_3_bank_07",
+  "version": "1.0",
+  "total_questions": 13,
+  "created_date": "2025-10-18T02:10:25.086166",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.086166",
+      "title": "NHS Amu - Band 3",
+      "question_text": "Clinical question for amu at band_3 level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    }
+  ]
+}

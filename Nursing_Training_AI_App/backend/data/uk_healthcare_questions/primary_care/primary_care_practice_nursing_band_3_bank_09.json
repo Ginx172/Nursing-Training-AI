@@ -1,0 +1,323 @@
+{
+  "sector": "primary_care",
+  "sector_name": "Primary Care / GP Surgeries",
+  "specialty": "practice_nursing",
+  "band": "band_3",
+  "band_level": "Foundation+",
+  "bank_number": 9,
+  "bank_id": "primary_care_practice_nursing_band_3_bank_09",
+  "version": "1.0",
+  "total_questions": 12,
+  "created_date": "2025-10-18T02:10:30.827296",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care Scenario - Practice Nursing",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care Scenario - Practice Nursing",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care Scenario - Practice Nursing",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care Calculation - Practice Nursing",
+      "question_text": "Calculate correct child immunization dosage for 2-month-old baby weighing 5.2kg",
+      "calculation_type": "Pediatric immunization dosage",
+      "competencies": [
+        "Immunization knowledge",
+        "Safe practice",
+        "Calculation accuracy"
+      ],
+      "sector_specific": [
+        "Green Book guidelines",
+        "Immunization schedule"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "calculation",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care Calculation - Practice Nursing",
+      "question_text": "Calculate correct child immunization dosage for 2-month-old baby weighing 5.2kg",
+      "calculation_type": "Pediatric immunization dosage",
+      "competencies": [
+        "Immunization knowledge",
+        "Safe practice",
+        "Calculation accuracy"
+      ],
+      "sector_specific": [
+        "Green Book guidelines",
+        "Immunization schedule"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "primary_care",
+      "specialty": "practice_nursing",
+      "band": "band_3",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:30.827296",
+      "title": "Primary Care - Practice Nursing",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    }
+  ]
+}

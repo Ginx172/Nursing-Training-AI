@@ -1,0 +1,424 @@
+{
+  "sector": "care_homes",
+  "sector_name": "Care Homes & Residential Care",
+  "specialty": "palliative_care",
+  "band": "band_7",
+  "band_level": "Advanced Practitioner",
+  "bank_number": 9,
+  "bank_id": "care_homes_palliative_care_band_7_bank_09",
+  "version": "1.0",
+  "total_questions": 20,
+  "created_date": "2025-10-18T02:10:29.938401",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Palliative Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Palliative Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Palliative Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Palliative Care",
+      "question_text": "A resident with dementia is refusing medication. What is the BEST approach?",
+      "options": [
+        "A) Administer covertly in food without assessment",
+        "B) Assess capacity, document, involve family, consider best interests",
+        "C) Call GP immediately for forcible administration order",
+        "D) Record as refused and take no further action"
+      ],
+      "correct_answer": "B) Assess capacity, document, involve family, consider best interests",
+      "explanation": "Must follow Mental Capacity Act 2005 principles",
+      "competencies": [
+        "Mental Capacity Act",
+        "Dementia care",
+        "Medication management",
+        "Best interests"
+      ],
+      "sector_specific": [
+        "CQC standards",
+        "DoLS knowledge",
+        "Safeguarding"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Scenario - Palliative Care",
+      "question_text": "A resident is approaching end of life. Family are in disagreement about care plan. How do you manage this?",
+      "expected_response": "Hold family meeting, explain resident's wishes if known, discuss advance care planning, involve GP/palliative team, document decisions, ensure dignity maintained",
+      "competencies": [
+        "End of life care",
+        "Family communication",
+        "Conflict resolution",
+        "Advance care planning"
+      ],
+      "sector_specific": [
+        "ReSPECT forms",
+        "Palliative care protocols",
+        "Bereavement support"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Case Study",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Case Study",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Case Study",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Case Study",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Leadership",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Leadership",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Leadership",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home - Leadership",
+      "question_text": "Question about palliative_care in care home setting",
+      "competencies": [
+        "Long-term care",
+        "Person-centered care",
+        "CQC compliance"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Governance - Palliative Care",
+      "question_text": "CQC inspection is announced for next week. What are your priorities as {band.replace('_', ' ')}?",
+      "expected_response": "Review care plans, medication audits, staff training records, safeguarding documentation, accident/incident logs, ensure environment safe, brief staff, check policies updated",
+      "competencies": [
+        "CQC standards",
+        "Quality assurance",
+        "Compliance",
+        "Leadership"
+      ],
+      "sector_specific": [
+        "CQC key lines of enquiry",
+        "Safe/Effective/Caring/Responsive/Well-led"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "care_homes",
+      "specialty": "palliative_care",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:29.938401",
+      "title": "Care Home Governance - Palliative Care",
+      "question_text": "CQC inspection is announced for next week. What are your priorities as {band.replace('_', ' ')}?",
+      "expected_response": "Review care plans, medication audits, staff training records, safeguarding documentation, accident/incident logs, ensure environment safe, brief staff, check policies updated",
+      "competencies": [
+        "CQC standards",
+        "Quality assurance",
+        "Compliance",
+        "Leadership"
+      ],
+      "sector_specific": [
+        "CQC key lines of enquiry",
+        "Safe/Effective/Caring/Responsive/Well-led"
+      ]
+    }
+  ]
+}

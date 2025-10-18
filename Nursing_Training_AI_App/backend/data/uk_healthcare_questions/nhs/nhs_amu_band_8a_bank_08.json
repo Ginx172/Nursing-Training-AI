@@ -1,0 +1,584 @@
+{
+  "sector": "nhs",
+  "sector_name": "NHS Hospitals",
+  "specialty": "amu",
+  "band": "band_8a",
+  "band_level": "Senior Manager",
+  "bank_number": 8,
+  "bank_id": "nhs_amu_band_8a_bank_08",
+  "version": "1.0",
+  "total_questions": 30,
+  "created_date": "2025-10-18T02:10:25.200183",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 21,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 22,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 23,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 24,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 25,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 26,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 27,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 28,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 29,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    },
+    {
+      "id": 30,
+      "sector": "nhs",
+      "specialty": "amu",
+      "band": "band_8a",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:25.200183",
+      "title": "NHS Amu - Band 8A",
+      "question_text": "Clinical question for amu at band_8a level",
+      "competencies": [
+        "Clinical expertise",
+        "Patient safety",
+        "Evidence-based practice"
+      ],
+      "sector_specific": [
+        "NHS values",
+        "NICE guidelines"
+      ]
+    }
+  ]
+}

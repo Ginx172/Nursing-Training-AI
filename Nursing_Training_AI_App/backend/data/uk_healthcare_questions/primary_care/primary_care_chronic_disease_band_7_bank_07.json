@@ -1,0 +1,499 @@
+{
+  "sector": "primary_care",
+  "sector_name": "Primary Care / GP Surgeries",
+  "specialty": "chronic_disease",
+  "band": "band_7",
+  "band_level": "Advanced Practitioner",
+  "bank_number": 7,
+  "bank_id": "primary_care_chronic_disease_band_7_bank_07",
+  "version": "1.0",
+  "total_questions": 23,
+  "created_date": "2025-10-18T02:10:31.735571",
+  "questions": [
+    {
+      "id": 1,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 2,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 3,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 4,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 5,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 6,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 7,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 8,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 9,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 10,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "scenario",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care Scenario - Chronic Disease",
+      "question_text": "Running 30 minutes behind in clinic with 5 patients still waiting. How do you manage?",
+      "expected_response": "Apologize to waiting patients, give realistic wait time, offer rebooking, ensure each patient gets quality time not rushed care, identify why running late, discuss with manager if systemic issue",
+      "competencies": [
+        "Time management",
+        "Communication",
+        "Patient-centered care",
+        "Problem-solving"
+      ],
+      "sector_specific": [
+        "Appointment management",
+        "Patient satisfaction",
+        "Clinic efficiency"
+      ]
+    },
+    {
+      "id": 11,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Case Study",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 12,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Case Study",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 13,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Case Study",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 14,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "case_study",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Case Study",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 15,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Leadership",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 16,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Leadership",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 17,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Leadership",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 18,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "leadership",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Leadership",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 19,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Governance",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 20,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "governance",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Governance",
+      "question_text": "Question about chronic_disease in GP surgery",
+      "competencies": [
+        "Primary care nursing",
+        "Chronic disease management",
+        "Prevention"
+      ]
+    },
+    {
+      "id": 21,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 22,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    },
+    {
+      "id": 23,
+      "sector": "primary_care",
+      "specialty": "chronic_disease",
+      "band": "band_7",
+      "question_type": "multiple_choice",
+      "created_date": "2025-10-18T02:10:31.735571",
+      "title": "Primary Care - Chronic Disease",
+      "question_text": "A patient attends asthma review with peak flow below target. What is your NEXT step?",
+      "options": [
+        "A) Immediately increase inhaled steroid dose",
+        "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+        "C) Refer to respiratory consultant",
+        "D) Tell patient to see GP"
+      ],
+      "correct_answer": "B) Assess technique, adherence, triggers, consider step up if indicated per BTS guidelines",
+      "explanation": "Follow systematic assessment before escalating treatment",
+      "competencies": [
+        "Chronic disease management",
+        "Clinical assessment",
+        "Protocol-driven care",
+        "Patient education"
+      ],
+      "sector_specific": [
+        "BTS/SIGN guidelines",
+        "QOF indicators",
+        "Asthma management"
+      ]
+    }
+  ]
+}

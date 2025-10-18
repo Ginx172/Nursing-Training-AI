@@ -43,6 +43,10 @@ pyotp==2.9.0
 qrcode[pil]==7.4.2
 cryptography==41.0.7
 
+# GraphQL & Webhooks (Enterprise API)
+strawberry-graphql[fastapi]==0.214.0
+httpx==0.25.2
+
 # Testare
 pytest==7.4.3
 pytest-asyncio==0.21.1

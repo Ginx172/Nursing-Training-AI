@@ -1,0 +1,411 @@
+{
+  "band": "band_5",
+  "specialty": "maternity",
+  "bank_id": "maternity_band_5_bank_10",
+  "version": "2025-09-29",
+  "total_questions": 18,
+  "calculation_questions": 4,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Labour",
+      "question_text": "What are the key observations you would monitor for a patient with labour?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess labour using appropriate assessment tools",
+        "Monitor vital signs and observations specific to labour",
+        "Implement evidence-based interventions for labour",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Postpartum Haemorrhage",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess postpartum haemorrhage using appropriate assessment tools",
+        "Monitor vital signs and observations specific to postpartum haemorrhage",
+        "Implement evidence-based interventions for postpartum haemorrhage",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Pre-Eclampsia",
+      "question_text": "What assessment tools would you use for a patient with pre-eclampsia?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess pre-eclampsia using appropriate assessment tools",
+        "Monitor vital signs and observations specific to pre-eclampsia",
+        "Implement evidence-based interventions for pre-eclampsia",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Fetal Distress",
+      "question_text": "Describe your approach to assessing a patient presenting with fetal distress",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess fetal distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fetal distress",
+        "Implement evidence-based interventions for fetal distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Neonatal Care",
+      "question_text": "What are the key observations you would monitor for a patient with neonatal care?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess neonatal care using appropriate assessment tools",
+        "Monitor vital signs and observations specific to neonatal care",
+        "Implement evidence-based interventions for neonatal care",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Labour",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess labour using appropriate assessment tools",
+        "Monitor vital signs and observations specific to labour",
+        "Implement evidence-based interventions for labour",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Postpartum Haemorrhage",
+      "question_text": "What assessment tools would you use for a patient with postpartum haemorrhage?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess postpartum haemorrhage using appropriate assessment tools",
+        "Monitor vital signs and observations specific to postpartum haemorrhage",
+        "Implement evidence-based interventions for postpartum haemorrhage",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Pre-Eclampsia",
+      "question_text": "Describe your approach to assessing a patient presenting with pre-eclampsia",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess pre-eclampsia using appropriate assessment tools",
+        "Monitor vital signs and observations specific to pre-eclampsia",
+        "Implement evidence-based interventions for pre-eclampsia",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Fetal Distress",
+      "question_text": "What are the key observations you would monitor for a patient with fetal distress?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess fetal distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fetal distress",
+        "Implement evidence-based interventions for fetal distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Neonatal Care",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess neonatal care using appropriate assessment tools",
+        "Monitor vital signs and observations specific to neonatal care",
+        "Implement evidence-based interventions for neonatal care",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Labour",
+      "question_text": "What assessment tools would you use for a patient with labour?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess labour using appropriate assessment tools",
+        "Monitor vital signs and observations specific to labour",
+        "Implement evidence-based interventions for labour",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Postpartum Haemorrhage",
+      "question_text": "Describe your approach to assessing a patient presenting with postpartum haemorrhage",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess postpartum haemorrhage using appropriate assessment tools",
+        "Monitor vital signs and observations specific to postpartum haemorrhage",
+        "Implement evidence-based interventions for postpartum haemorrhage",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Pre-Eclampsia",
+      "question_text": "What are the key observations you would monitor for a patient with pre-eclampsia?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess pre-eclampsia using appropriate assessment tools",
+        "Monitor vital signs and observations specific to pre-eclampsia",
+        "Implement evidence-based interventions for pre-eclampsia",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Clinical Assessment - Fetal Distress",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Antenatal care",
+        "Labour",
+        "Postnatal care"
+      ],
+      "expected_points": [
+        "Assess fetal distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fetal distress",
+        "Implement evidence-based interventions for fetal distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in maternity setting"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "band": "band_2",
+  "specialty": "neurology",
+  "bank_id": "neurology_band_2_bank_20",
+  "version": "2025-09-29",
+  "total_questions": 8,
+  "calculation_questions": 0,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "basic",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Altered Consciousness",
+      "question_text": "What assessment tools would you use for a patient with altered consciousness?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess altered consciousness using appropriate assessment tools",
+        "Monitor vital signs and observations specific to altered consciousness",
+        "Implement evidence-based interventions for altered consciousness",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Movement Disorders",
+      "question_text": "Describe your approach to assessing a patient presenting with movement disorders",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess movement disorders using appropriate assessment tools",
+        "Monitor vital signs and observations specific to movement disorders",
+        "Implement evidence-based interventions for movement disorders",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Stroke",
+      "question_text": "What are the key observations you would monitor for a patient with stroke?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess stroke using appropriate assessment tools",
+        "Monitor vital signs and observations specific to stroke",
+        "Implement evidence-based interventions for stroke",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Seizures",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess seizures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to seizures",
+        "Implement evidence-based interventions for seizures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Headache",
+      "question_text": "What assessment tools would you use for a patient with headache?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess headache using appropriate assessment tools",
+        "Monitor vital signs and observations specific to headache",
+        "Implement evidence-based interventions for headache",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Altered Consciousness",
+      "question_text": "Describe your approach to assessing a patient presenting with altered consciousness",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess altered consciousness using appropriate assessment tools",
+        "Monitor vital signs and observations specific to altered consciousness",
+        "Implement evidence-based interventions for altered consciousness",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Movement Disorders",
+      "question_text": "What are the key observations you would monitor for a patient with movement disorders?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess movement disorders using appropriate assessment tools",
+        "Monitor vital signs and observations specific to movement disorders",
+        "Implement evidence-based interventions for movement disorders",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Stroke",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Neurological assessment",
+        "Seizure management"
+      ],
+      "expected_points": [
+        "Assess stroke using appropriate assessment tools",
+        "Monitor vital signs and observations specific to stroke",
+        "Implement evidence-based interventions for stroke",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in neurology setting"
+      ]
+    }
+  ]
+}

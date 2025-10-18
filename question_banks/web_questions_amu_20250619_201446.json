@@ -1,0 +1,66 @@
+{
+  "specialty": "amu",
+  "search_timestamp": "2025-06-19T20:14:46.366671",
+  "questions": [
+    {
+      "question": "How would you manage a patient with acute sepsis in AMU?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Describe your approach to a rapidly deteriorating patient",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you prioritize multiple acute admissions?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is your understanding of the ABCDE assessment?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How would you handle a confused elderly patient in AMU?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Describe your experience with acute medical conditions",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you communicate with families about serious diagnoses?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What would you do if a patient refused treatment?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you ensure medication safety in acute settings?",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Describe working as part of an MDT in acute care",
+      "category": "amu",
+      "source": "web_search",
+      "difficulty": "medium"
+    }
+  ]
+}

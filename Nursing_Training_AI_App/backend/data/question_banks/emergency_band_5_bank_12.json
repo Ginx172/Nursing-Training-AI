@@ -1,0 +1,411 @@
+{
+  "band": "band_5",
+  "specialty": "emergency",
+  "bank_id": "emergency_band_5_bank_12",
+  "version": "2025-09-29",
+  "total_questions": 18,
+  "calculation_questions": 4,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Stroke",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess stroke using appropriate assessment tools",
+        "Monitor vital signs and observations specific to stroke",
+        "Implement evidence-based interventions for stroke",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Overdose",
+      "question_text": "What assessment tools would you use for a patient with overdose?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess overdose using appropriate assessment tools",
+        "Monitor vital signs and observations specific to overdose",
+        "Implement evidence-based interventions for overdose",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Severe Bleeding",
+      "question_text": "Describe your approach to assessing a patient presenting with severe bleeding",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess severe bleeding using appropriate assessment tools",
+        "Monitor vital signs and observations specific to severe bleeding",
+        "Implement evidence-based interventions for severe bleeding",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "What are the key observations you would monitor for a patient with trauma?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Cardiac Arrest",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess cardiac arrest using appropriate assessment tools",
+        "Monitor vital signs and observations specific to cardiac arrest",
+        "Implement evidence-based interventions for cardiac arrest",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Stroke",
+      "question_text": "What assessment tools would you use for a patient with stroke?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess stroke using appropriate assessment tools",
+        "Monitor vital signs and observations specific to stroke",
+        "Implement evidence-based interventions for stroke",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Overdose",
+      "question_text": "Describe your approach to assessing a patient presenting with overdose",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess overdose using appropriate assessment tools",
+        "Monitor vital signs and observations specific to overdose",
+        "Implement evidence-based interventions for overdose",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Severe Bleeding",
+      "question_text": "What are the key observations you would monitor for a patient with severe bleeding?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess severe bleeding using appropriate assessment tools",
+        "Monitor vital signs and observations specific to severe bleeding",
+        "Implement evidence-based interventions for severe bleeding",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Cardiac Arrest",
+      "question_text": "What assessment tools would you use for a patient with cardiac arrest?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess cardiac arrest using appropriate assessment tools",
+        "Monitor vital signs and observations specific to cardiac arrest",
+        "Implement evidence-based interventions for cardiac arrest",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Stroke",
+      "question_text": "Describe your approach to assessing a patient presenting with stroke",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess stroke using appropriate assessment tools",
+        "Monitor vital signs and observations specific to stroke",
+        "Implement evidence-based interventions for stroke",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Overdose",
+      "question_text": "What are the key observations you would monitor for a patient with overdose?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess overdose using appropriate assessment tools",
+        "Monitor vital signs and observations specific to overdose",
+        "Implement evidence-based interventions for overdose",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Severe Bleeding",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess severe bleeding using appropriate assessment tools",
+        "Monitor vital signs and observations specific to severe bleeding",
+        "Implement evidence-based interventions for severe bleeding",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "What assessment tools would you use for a patient with trauma?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Trauma",
+        "Resuscitation",
+        "Triage"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in emergency setting"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    }
+  ]
+}

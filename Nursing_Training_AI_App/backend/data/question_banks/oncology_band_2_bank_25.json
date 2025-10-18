@@ -1,0 +1,189 @@
+{
+  "band": "band_2",
+  "specialty": "oncology",
+  "bank_id": "oncology_band_2_bank_25",
+  "version": "2025-09-29",
+  "total_questions": 8,
+  "calculation_questions": 0,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "basic",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Chemotherapy Side Effects",
+      "question_text": "Describe your approach to assessing a patient presenting with chemotherapy side effects",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess chemotherapy side effects using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chemotherapy side effects",
+        "Implement evidence-based interventions for chemotherapy side effects",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Pain Management",
+      "question_text": "What are the key observations you would monitor for a patient with pain management?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess pain management using appropriate assessment tools",
+        "Monitor vital signs and observations specific to pain management",
+        "Implement evidence-based interventions for pain management",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Infection Risk",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess infection risk using appropriate assessment tools",
+        "Monitor vital signs and observations specific to infection risk",
+        "Implement evidence-based interventions for infection risk",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Fatigue",
+      "question_text": "What assessment tools would you use for a patient with fatigue?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess fatigue using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fatigue",
+        "Implement evidence-based interventions for fatigue",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Nausea",
+      "question_text": "Describe your approach to assessing a patient presenting with nausea",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess nausea using appropriate assessment tools",
+        "Monitor vital signs and observations specific to nausea",
+        "Implement evidence-based interventions for nausea",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Chemotherapy Side Effects",
+      "question_text": "What are the key observations you would monitor for a patient with chemotherapy side effects?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess chemotherapy side effects using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chemotherapy side effects",
+        "Implement evidence-based interventions for chemotherapy side effects",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Pain Management",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess pain management using appropriate assessment tools",
+        "Monitor vital signs and observations specific to pain management",
+        "Implement evidence-based interventions for pain management",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Infection Risk",
+      "question_text": "What assessment tools would you use for a patient with infection risk?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cancer care",
+        "Palliative care"
+      ],
+      "expected_points": [
+        "Assess infection risk using appropriate assessment tools",
+        "Monitor vital signs and observations specific to infection risk",
+        "Implement evidence-based interventions for infection risk",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in oncology setting"
+      ]
+    }
+  ]
+}

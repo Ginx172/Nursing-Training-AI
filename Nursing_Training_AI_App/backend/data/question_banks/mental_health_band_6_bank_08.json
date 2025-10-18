@@ -1,0 +1,507 @@
+{
+  "band": "band_6",
+  "specialty": "mental_health",
+  "bank_id": "mental_health_band_6_bank_08",
+  "version": "2025-09-29",
+  "total_questions": 22,
+  "calculation_questions": 4,
+  "leadership_questions": 2,
+  "supervision_questions": 1,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "Describe your approach to assessing a patient presenting with self-harm",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "What are the key observations you would monitor for a patient with aggression?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Depression",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess depression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to depression",
+        "Implement evidence-based interventions for depression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Anxiety",
+      "question_text": "What assessment tools would you use for a patient with anxiety?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess anxiety using appropriate assessment tools",
+        "Monitor vital signs and observations specific to anxiety",
+        "Implement evidence-based interventions for anxiety",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Psychosis",
+      "question_text": "Describe your approach to assessing a patient presenting with psychosis",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess psychosis using appropriate assessment tools",
+        "Monitor vital signs and observations specific to psychosis",
+        "Implement evidence-based interventions for psychosis",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "What are the key observations you would monitor for a patient with self-harm?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Depression",
+      "question_text": "What assessment tools would you use for a patient with depression?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess depression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to depression",
+        "Implement evidence-based interventions for depression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Anxiety",
+      "question_text": "Describe your approach to assessing a patient presenting with anxiety",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess anxiety using appropriate assessment tools",
+        "Monitor vital signs and observations specific to anxiety",
+        "Implement evidence-based interventions for anxiety",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Psychosis",
+      "question_text": "What are the key observations you would monitor for a patient with psychosis?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess psychosis using appropriate assessment tools",
+        "Monitor vital signs and observations specific to psychosis",
+        "Implement evidence-based interventions for psychosis",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "What assessment tools would you use for a patient with aggression?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Depression",
+      "question_text": "Describe your approach to assessing a patient presenting with depression",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess depression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to depression",
+        "Implement evidence-based interventions for depression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Clinical Assessment - Anxiety",
+      "question_text": "What are the key observations you would monitor for a patient with anxiety?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess anxiety using appropriate assessment tools",
+        "Monitor vital signs and observations specific to anxiety",
+        "Implement evidence-based interventions for anxiety",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Clinical Assessment - Psychosis",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess psychosis using appropriate assessment tools",
+        "Monitor vital signs and observations specific to psychosis",
+        "Implement evidence-based interventions for psychosis",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Leadership - Patient Safety Leadership",
+      "question_text": "Describe your approach to patient safety leadership in mental_health. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Leadership - Resource Management",
+      "question_text": "Describe your approach to resource management in mental_health. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Clinical Supervision",
+      "question_text": "How would you provide effective clinical supervision to a junior nurse in mental_health? What documentation and processes would you follow?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Clinical supervision",
+        "Mentorship",
+        "Professional development",
+        "Documentation"
+      ],
+      "expected_points": [
+        "Establish clear supervision framework",
+        "Regular review and feedback sessions",
+        "Document supervision activities",
+        "Support professional development",
+        "Address any concerns promptly"
+      ]
+    }
+  ]
+}

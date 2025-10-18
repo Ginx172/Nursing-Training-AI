@@ -1,0 +1,233 @@
+{
+  "band": "band_3",
+  "specialty": "pediatrics",
+  "bank_id": "pediatrics_band_3_bank_07",
+  "version": "2025-09-29",
+  "total_questions": 10,
+  "calculation_questions": 0,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "basic",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Dehydration",
+      "question_text": "What assessment tools would you use for a patient with dehydration?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess dehydration using appropriate assessment tools",
+        "Monitor vital signs and observations specific to dehydration",
+        "Implement evidence-based interventions for dehydration",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Seizures",
+      "question_text": "Describe your approach to assessing a patient presenting with seizures",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess seizures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to seizures",
+        "Implement evidence-based interventions for seizures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Developmental Concerns",
+      "question_text": "What are the key observations you would monitor for a patient with developmental concerns?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess developmental concerns using appropriate assessment tools",
+        "Monitor vital signs and observations specific to developmental concerns",
+        "Implement evidence-based interventions for developmental concerns",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Respiratory Distress",
+      "question_text": "What assessment tools would you use for a patient with respiratory distress?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess respiratory distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory distress",
+        "Implement evidence-based interventions for respiratory distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Dehydration",
+      "question_text": "Describe your approach to assessing a patient presenting with dehydration",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess dehydration using appropriate assessment tools",
+        "Monitor vital signs and observations specific to dehydration",
+        "Implement evidence-based interventions for dehydration",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Seizures",
+      "question_text": "What are the key observations you would monitor for a patient with seizures?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess seizures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to seizures",
+        "Implement evidence-based interventions for seizures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Developmental Concerns",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess developmental concerns using appropriate assessment tools",
+        "Monitor vital signs and observations specific to developmental concerns",
+        "Implement evidence-based interventions for developmental concerns",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "What assessment tools would you use for a patient with fever?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Respiratory Distress",
+      "question_text": "Describe your approach to assessing a patient presenting with respiratory distress",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess respiratory distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory distress",
+        "Implement evidence-based interventions for respiratory distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    }
+  ]
+}

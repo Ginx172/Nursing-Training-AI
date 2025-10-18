@@ -1,0 +1,299 @@
+{
+  "band": "band_5",
+  "specialty": "amu",
+  "bank_id": "amu_band5_bank_01",
+  "version": "2025-09-29",
+  "total_questions": 18,
+  "calculation_questions": 4,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "ABCDE Assessment Priority",
+      "question_text": "A 75-year-old patient arrives in AMU with chest pain and shortness of breath. Their observations are: RR 28, SpO2 88% on air, HR 110, BP 95/60, Temp 37.8°C, AVPU=A. What is your immediate priority in the ABCDE assessment?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A) Airway - check for obstruction",
+        "B) Breathing - administer high-flow oxygen",
+        "C) Circulation - establish IV access",
+        "D) Disability - assess neurological status"
+      ],
+      "correct_answer": "B) Breathing - administer high-flow oxygen",
+      "difficulty": "intermediate",
+      "competencies": ["ABCDE", "Oxygen therapy", "Priority setting"],
+      "expected_points": [
+        "Breathing is the immediate priority due to low SpO2 (88%)",
+        "High respiratory rate (28) indicates respiratory distress",
+        "Oxygen therapy should be administered immediately",
+        "Reassess after oxygen administration"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "NEWS2 Score Calculation",
+      "question_text": "Calculate the NEWS2 score for a patient with: RR 22, SpO2 94% on air, Temp 38.2°C, BP 110/70, HR 95, AVPU=A, no oxygen required.",
+      "question_type": "calculation",
+      "correct_answer": "3",
+      "difficulty": "intermediate",
+      "competencies": ["NEWS2", "Assessment", "Scoring"],
+      "expected_points": [
+        "Respiratory rate 22 = 1 point",
+        "SpO2 94% on air = 1 point", 
+        "Temperature 38.2°C = 1 point",
+        "BP, HR, AVPU, oxygen = 0 points each",
+        "Total NEWS2 score = 3"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sepsis 6 Implementation",
+      "question_text": "A patient with suspected sepsis has a NEWS2 score of 6. List the six components of the Sepsis 6 bundle that should be completed within 1 hour.",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Sepsis", "Emergency protocols", "Time-critical care"],
+      "expected_points": [
+        "1. Give oxygen if SpO2 <94%",
+        "2. Take blood cultures before antibiotics",
+        "3. Give IV antibiotics within 1 hour",
+        "4. Give IV fluid bolus if hypotensive",
+        "5. Measure lactate level",
+        "6. Monitor urine output"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Medication Calculation - IV Fluids",
+      "question_text": "A 70kg patient requires 30ml/kg/day maintenance fluids. Calculate the hourly infusion rate in ml/hour.",
+      "question_type": "calculation",
+      "correct_answer": "87.5",
+      "difficulty": "intermediate",
+      "competencies": ["Fluid calculations", "Dose calculations", "Maintenance fluids"],
+      "expected_points": [
+        "Daily requirement: 70kg × 30ml = 2100ml/day",
+        "Hourly rate: 2100ml ÷ 24 hours = 87.5ml/hour",
+        "Check for any fluid restrictions",
+        "Monitor patient response"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Delirium Assessment",
+      "question_text": "An 82-year-old patient in AMU appears confused and agitated. What is the most appropriate initial assessment tool for delirium?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A) Glasgow Coma Scale",
+        "B) 4AT (4 A's Test)",
+        "C) Mini Mental State Examination",
+        "D) Confusion Assessment Method"
+      ],
+      "correct_answer": "B) 4AT (4 A's Test)",
+      "difficulty": "intermediate",
+      "competencies": ["Delirium", "Assessment tools", "Older adults"],
+      "expected_points": [
+        "4AT is the recommended screening tool for delirium in acute settings",
+        "Quick to administer (2-3 minutes)",
+        "Assesses alertness, attention, acute change, and activity",
+        "High sensitivity and specificity for delirium"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Oxygen Therapy Targets",
+      "question_text": "What are the target SpO2 ranges for oxygen therapy in patients with COPD versus those without COPD?",
+      "question_type": "short_answer",
+      "difficulty": "intermediate",
+      "competencies": ["Oxygen therapy", "COPD", "Respiratory care"],
+      "expected_points": [
+        "COPD patients: 88-92% (risk of hypercapnia)",
+        "Non-COPD patients: 94-98%",
+        "Always document oxygen prescription",
+        "Monitor for signs of oxygen toxicity"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Falls Risk Assessment",
+      "question_text": "A 78-year-old patient with dementia and mobility issues is admitted to AMU. List five key interventions to reduce falls risk.",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Falls prevention", "Patient safety", "Older adults"],
+      "expected_points": [
+        "1. Close observation/sitter if needed",
+        "2. Call bell within reach, bed low and brakes on",
+        "3. Non-slip footwear, clear environment",
+        "4. Regular toileting regime",
+        "5. Review medications for sedating effects"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Infection Control - Hand Hygiene",
+      "question_text": "When should hand hygiene be performed during patient care? List the five moments for hand hygiene.",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Infection control", "Hand hygiene", "Patient safety"],
+      "expected_points": [
+        "1. Before touching a patient",
+        "2. Before clean/aseptic procedures",
+        "3. After body fluid exposure risk",
+        "4. After touching a patient",
+        "5. After touching patient surroundings"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Pain Assessment",
+      "question_text": "A patient with chest pain rates their pain as 8/10 on a numerical scale. What additional information should you gather during pain assessment?",
+      "question_type": "short_answer",
+      "difficulty": "intermediate",
+      "competencies": ["Pain assessment", "Communication", "Patient care"],
+      "expected_points": [
+        "Location and radiation of pain",
+        "Character (sharp, dull, crushing, burning)",
+        "Onset and duration",
+        "Aggravating and relieving factors",
+        "Impact on activities of daily living"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Medication Safety - The Five Rights",
+      "question_text": "Before administering any medication, what are the five rights that must be checked?",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Medication safety", "Patient safety", "Quality care"],
+      "expected_points": [
+        "1. Right patient",
+        "2. Right medication",
+        "3. Right dose",
+        "4. Right route",
+        "5. Right time"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "ECG Interpretation - Basic",
+      "question_text": "A patient's ECG shows a regular rhythm at 120 bpm with narrow QRS complexes. What is the most likely rhythm?",
+      "question_type": "multiple_choice",
+      "options": [
+        "A) Atrial fibrillation",
+        "B) Sinus tachycardia",
+        "C) Ventricular tachycardia",
+        "D) Atrial flutter"
+      ],
+      "correct_answer": "B) Sinus tachycardia",
+      "difficulty": "intermediate",
+      "competencies": ["ECG interpretation", "Cardiology", "Assessment"],
+      "expected_points": [
+        "Regular rhythm with narrow QRS indicates supraventricular origin",
+        "Rate of 120 bpm is above normal sinus rhythm",
+        "Sinus tachycardia is common in acute illness",
+        "Consider underlying causes (pain, infection, dehydration)"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Fluid Balance Monitoring",
+      "question_text": "A patient has been prescribed 1000ml IV fluids over 8 hours. The infusion started at 10:00. At 14:00, how much fluid should have been infused?",
+      "question_type": "calculation",
+      "correct_answer": "500",
+      "difficulty": "intermediate",
+      "competencies": ["Fluid calculations", "Monitoring", "IV therapy"],
+      "expected_points": [
+        "Total volume: 1000ml over 8 hours",
+        "Rate: 1000ml ÷ 8 hours = 125ml/hour",
+        "Time elapsed: 4 hours (10:00 to 14:00)",
+        "Volume infused: 125ml/hour × 4 hours = 500ml"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Pressure Area Care",
+      "question_text": "A bedbound patient in AMU is at risk of pressure ulcers. What are the key interventions for pressure area care?",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Pressure care", "Tissue viability", "Patient safety"],
+      "expected_points": [
+        "Regular repositioning every 2 hours",
+        "Pressure-relieving mattress/cushions",
+        "Skin inspection and moisture management",
+        "Optimize nutrition and hydration",
+        "Document pressure area assessment"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "SBAR Communication",
+      "question_text": "You need to escalate a deteriorating patient to the medical team. Describe how you would structure your SBAR communication.",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": ["Communication", "Escalation", "Patient safety"],
+      "expected_points": [
+        "Situation: Who you are, what patient, what the problem is",
+        "Background: Relevant history, observations, current treatment",
+        "Assessment: What you think the problem is",
+        "Recommendation: What you want to happen next"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Antibiotics",
+      "question_text": "A patient is prescribed 1.2g of co-amoxiclav IV. The vial contains 1.2g in 20ml. How many ml should be drawn up?",
+      "question_type": "calculation",
+      "correct_answer": "20",
+      "difficulty": "intermediate",
+      "competencies": ["Medication calculations", "IV therapy", "Antibiotics"],
+      "expected_points": [
+        "Prescribed dose: 1.2g",
+        "Vial concentration: 1.2g in 20ml",
+        "Volume required: 20ml",
+        "Check expiry date and reconstitution instructions"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "End of Life Care",
+      "question_text": "A patient in AMU is approaching end of life. What are the key principles of end of life care?",
+      "question_type": "short_answer",
+      "difficulty": "intermediate",
+      "competencies": ["End of life care", "Palliative care", "Communication"],
+      "expected_points": [
+        "Comfort and dignity",
+        "Symptom management",
+        "Communication with family",
+        "Respect for patient wishes",
+        "Multidisciplinary team approach"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Documentation Standards",
+      "question_text": "What are the key principles of good nursing documentation?",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Documentation", "Legal aspects", "Quality care"],
+      "expected_points": [
+        "Accurate and factual",
+        "Timely and contemporaneous",
+        "Clear and legible",
+        "Signed and dated",
+        "Reflects nursing assessment and care provided"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Discharge Planning",
+      "question_text": "A patient is ready for discharge from AMU. What key elements should be included in discharge planning?",
+      "question_type": "list",
+      "difficulty": "intermediate",
+      "competencies": ["Discharge planning", "Continuity of care", "Patient safety"],
+      "expected_points": [
+        "Medication reconciliation and education",
+        "Follow-up appointments arranged",
+        "Care instructions for patient/family",
+        "Contact numbers for concerns",
+        "Equipment and supplies if needed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "band": "band_3",
+  "specialty": "icu",
+  "bank_id": "icu_band_3_bank_22",
+  "version": "2025-09-29",
+  "total_questions": 10,
+  "calculation_questions": 0,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "basic",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Multi-Organ Failure",
+      "question_text": "What are the key observations you would monitor for a patient with multi-organ failure?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess multi-organ failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to multi-organ failure",
+        "Implement evidence-based interventions for multi-organ failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Post-Surgical",
+      "question_text": "What assessment tools would you use for a patient with post-surgical?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess post-surgical using appropriate assessment tools",
+        "Monitor vital signs and observations specific to post-surgical",
+        "Implement evidence-based interventions for post-surgical",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Respiratory Failure",
+      "question_text": "Describe your approach to assessing a patient presenting with respiratory failure",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess respiratory failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory failure",
+        "Implement evidence-based interventions for respiratory failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Septic Shock",
+      "question_text": "What are the key observations you would monitor for a patient with septic shock?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess septic shock using appropriate assessment tools",
+        "Monitor vital signs and observations specific to septic shock",
+        "Implement evidence-based interventions for septic shock",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Multi-Organ Failure",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess multi-organ failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to multi-organ failure",
+        "Implement evidence-based interventions for multi-organ failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "What assessment tools would you use for a patient with trauma?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Post-Surgical",
+      "question_text": "Describe your approach to assessing a patient presenting with post-surgical",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess post-surgical using appropriate assessment tools",
+        "Monitor vital signs and observations specific to post-surgical",
+        "Implement evidence-based interventions for post-surgical",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Respiratory Failure",
+      "question_text": "What are the key observations you would monitor for a patient with respiratory failure?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess respiratory failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory failure",
+        "Implement evidence-based interventions for respiratory failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Septic Shock",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess septic shock using appropriate assessment tools",
+        "Monitor vital signs and observations specific to septic shock",
+        "Implement evidence-based interventions for septic shock",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    }
+  ]
+}

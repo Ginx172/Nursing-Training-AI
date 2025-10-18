@@ -1,0 +1,167 @@
+{
+  "band": "band_5",
+  "specialty": "amu",
+  "version": "2025-09-29",
+  "questions": [
+    {
+      "id": 1,
+      "title": "ABCDE assessment basics",
+      "question_text": "Outline the ABCDE approach for a new acute admission with shortness of breath.",
+      "question_type": "scenario",
+      "difficulty": "easy",
+      "competencies": ["Assessment", "Escalation", "Safety"],
+      "expected_points": [
+        "Airway: assess patency, look for obstruction, consider airway adjuncts",
+        "Breathing: rate, SpO2, chest expansion, auscultation, oxygen as indicated",
+        "Circulation: pulse, BP, capillary refill, IV access, fluids if needed",
+        "Disability: AVPU/GCS, glucose, pupils",
+        "Exposure: temperature, rashes, edema; maintain dignity and warmth",
+        "Escalate early using SBAR if deteriorating"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "NEWS2 interpretation",
+      "question_text": "A patient's observations are: RR 24, SpO2 92% on air, Temp 38.3, BP 98/58, HR 116, AVPU=A. What is the NEWS2 risk category and action?",
+      "question_type": "multiple_choice",
+      "options": ["Low risk - routine", "Low-medium - increase frequency", "Medium risk - urgent review", "High risk - emergency response"],
+      "correct_answer": "High risk - emergency response",
+      "difficulty": "medium",
+      "competencies": ["NEWS2", "Escalation"]
+    },
+    {
+      "id": 3,
+      "title": "Oxygen therapy targets",
+      "question_text": "What SpO2 targets would you aim for in COPD versus non-COPD patients?",
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "competencies": ["Respiratory", "Oxygen therapy"],
+      "expected_points": [
+        "COPD (risk of hypercapnia): 88–92%",
+        "Non-COPD: 94–98% unless otherwise indicated"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sepsis 6 initial actions",
+      "question_text": "List the Sepsis 6 actions to be completed within 1 hour.",
+      "question_type": "list",
+      "difficulty": "medium",
+      "competencies": ["Sepsis", "Escalation"],
+      "expected_points": [
+        "Oxygen",
+        "Blood cultures",
+        "IV antibiotics",
+        "IV fluids",
+        "Measure lactate",
+        "Monitor urine output"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Fluids calculation (rate)",
+      "question_text": "Give 1L of crystalloid over 2 hours. What is the infusion rate in mL/hour?",
+      "question_type": "calculation",
+      "correct_answer": "500",
+      "difficulty": "easy",
+      "competencies": ["Fluids", "Dose calc"]
+    },
+    {
+      "id": 6,
+      "title": "SBAR handover",
+      "question_text": "Provide a concise SBAR handover to escalate a NEWS2 8 patient with hypotension.",
+      "question_type": "scenario",
+      "difficulty": "medium",
+      "competencies": ["Communication", "Escalation"],
+      "expected_points": [
+        "Situation: who/what the issue is",
+        "Background: relevant history/observations",
+        "Assessment: key concerns (e.g., hypotension, tachycardia, fever)",
+        "Recommendation: request urgent senior review/specific actions"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Falls risk and prevention",
+      "question_text": "List key interventions to reduce falls risk in a confused elderly patient.",
+      "question_type": "list",
+      "difficulty": "easy",
+      "competencies": ["Safety", "Older adults"],
+      "expected_points": [
+        "Close observation/sitter if needed",
+        "Call bell within reach, bed low and brakes on",
+        "Non-slip footwear, clear environment",
+        "Toileting regime, review sedation",
+        "Delirium screening and orientation aids"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Delirium vs dementia quick screen",
+      "question_text": "Name two features that suggest delirium rather than dementia in AMU.",
+      "question_type": "short_answer",
+      "difficulty": "medium",
+      "competencies": ["Cognition", "Assessment"],
+      "expected_points": [
+        "Acute onset and fluctuating course",
+        "Inattention",
+        "Altered level of consciousness"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Infection control",
+      "question_text": "State core steps for donning and doffing PPE safely in suspected influenza.",
+      "question_type": "list",
+      "difficulty": "easy",
+      "competencies": ["IPC", "Safety"],
+      "expected_points": [
+        "Hand hygiene before/after",
+        "Don: gown/apron → mask → eye protection → gloves",
+        "Doff: gloves → apron/gown → eye protection → mask, perform hand hygiene between steps"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "ECG basics",
+      "question_text": "Name two red flags on ECG requiring urgent escalation.",
+      "question_type": "short_answer",
+      "difficulty": "medium",
+      "competencies": ["Cardiology", "Escalation"],
+      "expected_points": [
+        "ST-elevation compatible with STEMI",
+        "New-onset fast AF with hemodynamic instability",
+        "Complete heart block"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Medication safety",
+      "question_text": "List three checks before IV antibiotic administration.",
+      "question_type": "list",
+      "difficulty": "easy",
+      "competencies": ["Med safety"],
+      "expected_points": [
+        "Right patient, drug, dose, route, time",
+        "Allergies checked and documented",
+        "Dilution, compatibility, infusion rate as per guideline"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Pressure area care",
+      "question_text": "Name measures to prevent pressure ulcers in a bedbound patient awaiting transfer.",
+      "question_type": "list",
+      "difficulty": "easy",
+      "competencies": ["Tissue viability", "Basic care"],
+      "expected_points": [
+        "Regular repositioning",
+        "Pressure-relieving mattress/cushions",
+        "Skin inspection and moisture management",
+        "Optimize nutrition and hydration"
+      ]
+    }
+  ]
+}
+
+

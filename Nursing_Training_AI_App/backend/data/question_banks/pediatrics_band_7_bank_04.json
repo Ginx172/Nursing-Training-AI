@@ -1,0 +1,579 @@
+{
+  "band": "band_7",
+  "specialty": "pediatrics",
+  "bank_id": "pediatrics_band_7_bank_04",
+  "version": "2025-09-29",
+  "total_questions": 25,
+  "calculation_questions": 4,
+  "leadership_questions": 8,
+  "supervision_questions": 0,
+  "difficulty_level": "advanced",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Developmental Concerns",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess developmental concerns using appropriate assessment tools",
+        "Monitor vital signs and observations specific to developmental concerns",
+        "Implement evidence-based interventions for developmental concerns",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "What assessment tools would you use for a patient with fever?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Respiratory Distress",
+      "question_text": "Describe your approach to assessing a patient presenting with respiratory distress",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess respiratory distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory distress",
+        "Implement evidence-based interventions for respiratory distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Dehydration",
+      "question_text": "What are the key observations you would monitor for a patient with dehydration?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess dehydration using appropriate assessment tools",
+        "Monitor vital signs and observations specific to dehydration",
+        "Implement evidence-based interventions for dehydration",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Seizures",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess seizures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to seizures",
+        "Implement evidence-based interventions for seizures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Developmental Concerns",
+      "question_text": "What assessment tools would you use for a patient with developmental concerns?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess developmental concerns using appropriate assessment tools",
+        "Monitor vital signs and observations specific to developmental concerns",
+        "Implement evidence-based interventions for developmental concerns",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "Describe your approach to assessing a patient presenting with fever",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Respiratory Distress",
+      "question_text": "What are the key observations you would monitor for a patient with respiratory distress?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess respiratory distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory distress",
+        "Implement evidence-based interventions for respiratory distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Dehydration",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess dehydration using appropriate assessment tools",
+        "Monitor vital signs and observations specific to dehydration",
+        "Implement evidence-based interventions for dehydration",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Seizures",
+      "question_text": "What assessment tools would you use for a patient with seizures?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess seizures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to seizures",
+        "Implement evidence-based interventions for seizures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Developmental Concerns",
+      "question_text": "Describe your approach to assessing a patient presenting with developmental concerns",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess developmental concerns using appropriate assessment tools",
+        "Monitor vital signs and observations specific to developmental concerns",
+        "Implement evidence-based interventions for developmental concerns",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "What are the key observations you would monitor for a patient with fever?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Respiratory Distress",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Child development",
+        "Family-centered care"
+      ],
+      "expected_points": [
+        "Assess respiratory distress using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory distress",
+        "Implement evidence-based interventions for respiratory distress",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in pediatrics setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Leadership - Managing Staff Performance",
+      "question_text": "Describe your approach to managing staff performance in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Leadership - Quality Improvement Initiatives",
+      "question_text": "Describe your approach to quality improvement initiatives in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Leadership - Patient Safety Leadership",
+      "question_text": "Describe your approach to patient safety leadership in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Leadership - Resource Management",
+      "question_text": "Describe your approach to resource management in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Leadership - Change Management",
+      "question_text": "Describe your approach to change management in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Leadership - Staff Development",
+      "question_text": "Describe your approach to staff development in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Leadership - Team Management During Crisis",
+      "question_text": "Describe your approach to team management during crisis in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Leadership - Implementing New Protocols",
+      "question_text": "Describe your approach to implementing new protocols in pediatrics. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "band": "band_5",
+  "specialty": "cardiology",
+  "bank_id": "cardiology_band_5_bank_30",
+  "version": "2025-09-29",
+  "total_questions": 18,
+  "calculation_questions": 4,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "What assessment tools would you use for a patient with chest pain?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Heart Failure",
+      "question_text": "Describe your approach to assessing a patient presenting with heart failure",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess heart failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to heart failure",
+        "Implement evidence-based interventions for heart failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Arrhythmias",
+      "question_text": "What are the key observations you would monitor for a patient with arrhythmias?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess arrhythmias using appropriate assessment tools",
+        "Monitor vital signs and observations specific to arrhythmias",
+        "Implement evidence-based interventions for arrhythmias",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Hypertension",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess hypertension using appropriate assessment tools",
+        "Monitor vital signs and observations specific to hypertension",
+        "Implement evidence-based interventions for hypertension",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Cardiac Procedures",
+      "question_text": "What assessment tools would you use for a patient with cardiac procedures?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess cardiac procedures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to cardiac procedures",
+        "Implement evidence-based interventions for cardiac procedures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "Describe your approach to assessing a patient presenting with chest pain",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Heart Failure",
+      "question_text": "What are the key observations you would monitor for a patient with heart failure?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess heart failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to heart failure",
+        "Implement evidence-based interventions for heart failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Arrhythmias",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess arrhythmias using appropriate assessment tools",
+        "Monitor vital signs and observations specific to arrhythmias",
+        "Implement evidence-based interventions for arrhythmias",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Hypertension",
+      "question_text": "What assessment tools would you use for a patient with hypertension?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess hypertension using appropriate assessment tools",
+        "Monitor vital signs and observations specific to hypertension",
+        "Implement evidence-based interventions for hypertension",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Cardiac Procedures",
+      "question_text": "Describe your approach to assessing a patient presenting with cardiac procedures",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess cardiac procedures using appropriate assessment tools",
+        "Monitor vital signs and observations specific to cardiac procedures",
+        "Implement evidence-based interventions for cardiac procedures",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "What are the key observations you would monitor for a patient with chest pain?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Heart Failure",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess heart failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to heart failure",
+        "Implement evidence-based interventions for heart failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Arrhythmias",
+      "question_text": "What assessment tools would you use for a patient with arrhythmias?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess arrhythmias using appropriate assessment tools",
+        "Monitor vital signs and observations specific to arrhythmias",
+        "Implement evidence-based interventions for arrhythmias",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Clinical Assessment - Hypertension",
+      "question_text": "Describe your approach to assessing a patient presenting with hypertension",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Cardiac care",
+        "ECG interpretation"
+      ],
+      "expected_points": [
+        "Assess hypertension using appropriate assessment tools",
+        "Monitor vital signs and observations specific to hypertension",
+        "Implement evidence-based interventions for hypertension",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in cardiology setting"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    }
+  ]
+}

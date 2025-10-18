@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: nursing_training_postgres
+    environment:
+      POSTGRES_DB: nursing_training_ai
+      POSTGRES_USER: nursing_user
+      POSTGRES_PASSWORD: nursing_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schemas/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - nursing_network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: nursing_training_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - nursing_network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nursing_training_backend
+    environment:
+      - DATABASE_URL=postgresql://nursing_user:nursing_password@postgres:5432/nursing_training_ai
+      - REDIS_URL=redis://redis:6379/0
+      - DEBUG=True
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./backend:/app
+      - /app/__pycache__
+    networks:
+      - nursing_network
+
+  # Frontend Web
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nursing_training_frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - nursing_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  nursing_network:
+    driver: bridge

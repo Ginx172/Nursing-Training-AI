@@ -1,0 +1,592 @@
+{
+  "band": "band_7",
+  "specialty": "icu",
+  "bank_id": "icu_band_7_bank_02",
+  "version": "2025-09-29",
+  "total_questions": 25,
+  "calculation_questions": 4,
+  "leadership_questions": 8,
+  "supervision_questions": 0,
+  "difficulty_level": "advanced",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Multi-Organ Failure",
+      "question_text": "What are the key observations you would monitor for a patient with multi-organ failure?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess multi-organ failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to multi-organ failure",
+        "Implement evidence-based interventions for multi-organ failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Post-Surgical",
+      "question_text": "What assessment tools would you use for a patient with post-surgical?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess post-surgical using appropriate assessment tools",
+        "Monitor vital signs and observations specific to post-surgical",
+        "Implement evidence-based interventions for post-surgical",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Respiratory Failure",
+      "question_text": "Describe your approach to assessing a patient presenting with respiratory failure",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess respiratory failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory failure",
+        "Implement evidence-based interventions for respiratory failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Septic Shock",
+      "question_text": "What are the key observations you would monitor for a patient with septic shock?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess septic shock using appropriate assessment tools",
+        "Monitor vital signs and observations specific to septic shock",
+        "Implement evidence-based interventions for septic shock",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Multi-Organ Failure",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess multi-organ failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to multi-organ failure",
+        "Implement evidence-based interventions for multi-organ failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "What assessment tools would you use for a patient with trauma?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Post-Surgical",
+      "question_text": "Describe your approach to assessing a patient presenting with post-surgical",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess post-surgical using appropriate assessment tools",
+        "Monitor vital signs and observations specific to post-surgical",
+        "Implement evidence-based interventions for post-surgical",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Respiratory Failure",
+      "question_text": "What are the key observations you would monitor for a patient with respiratory failure?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess respiratory failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to respiratory failure",
+        "Implement evidence-based interventions for respiratory failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Septic Shock",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess septic shock using appropriate assessment tools",
+        "Monitor vital signs and observations specific to septic shock",
+        "Implement evidence-based interventions for septic shock",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Multi-Organ Failure",
+      "question_text": "What assessment tools would you use for a patient with multi-organ failure?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess multi-organ failure using appropriate assessment tools",
+        "Monitor vital signs and observations specific to multi-organ failure",
+        "Implement evidence-based interventions for multi-organ failure",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Trauma",
+      "question_text": "Describe your approach to assessing a patient presenting with trauma",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess trauma using appropriate assessment tools",
+        "Monitor vital signs and observations specific to trauma",
+        "Implement evidence-based interventions for trauma",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Post-Surgical",
+      "question_text": "What are the key observations you would monitor for a patient with post-surgical?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Leadership",
+        "Management",
+        "Strategic planning",
+        "Quality improvement",
+        "Critical care",
+        "Ventilation",
+        "Hemodynamics"
+      ],
+      "expected_points": [
+        "Assess post-surgical using appropriate assessment tools",
+        "Monitor vital signs and observations specific to post-surgical",
+        "Implement evidence-based interventions for post-surgical",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in icu setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "advanced",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Leadership - Managing Staff Performance",
+      "question_text": "Describe your approach to managing staff performance in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Leadership - Quality Improvement Initiatives",
+      "question_text": "Describe your approach to quality improvement initiatives in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Leadership - Patient Safety Leadership",
+      "question_text": "Describe your approach to patient safety leadership in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Leadership - Resource Management",
+      "question_text": "Describe your approach to resource management in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Leadership - Change Management",
+      "question_text": "Describe your approach to change management in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Leadership - Staff Development",
+      "question_text": "Describe your approach to staff development in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Leadership - Team Management During Crisis",
+      "question_text": "Describe your approach to team management during crisis in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Leadership - Implementing New Protocols",
+      "question_text": "Describe your approach to implementing new protocols in icu. What challenges might you face and how would you address them?",
+      "question_type": "scenario",
+      "difficulty": "advanced",
+      "competencies": [
+        "Leadership",
+        "Management",
+        "Team working",
+        "Problem solving"
+      ],
+      "expected_points": [
+        "Demonstrate understanding of leadership principles",
+        "Consider team dynamics and individual needs",
+        "Address potential challenges proactively",
+        "Show evidence-based approach to management"
+      ]
+    }
+  ]
+}

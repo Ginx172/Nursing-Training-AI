@@ -1,0 +1,397 @@
+{
+  "band": "band_5",
+  "specialty": "amu",
+  "bank_id": "amu_band_5_bank_08",
+  "version": "2025-09-29",
+  "total_questions": 18,
+  "calculation_questions": 4,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Confusion",
+      "question_text": "Describe your approach to assessing a patient presenting with confusion",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess confusion using appropriate assessment tools",
+        "Monitor vital signs and observations specific to confusion",
+        "Implement evidence-based interventions for confusion",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "What are the key observations you would monitor for a patient with fever?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Shortness Of Breath",
+      "question_text": "What assessment tools would you use for a patient with shortness of breath?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess shortness of breath using appropriate assessment tools",
+        "Monitor vital signs and observations specific to shortness of breath",
+        "Implement evidence-based interventions for shortness of breath",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Abdominal Pain",
+      "question_text": "Describe your approach to assessing a patient presenting with abdominal pain",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess abdominal pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to abdominal pain",
+        "Implement evidence-based interventions for abdominal pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Confusion",
+      "question_text": "What are the key observations you would monitor for a patient with confusion?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess confusion using appropriate assessment tools",
+        "Monitor vital signs and observations specific to confusion",
+        "Implement evidence-based interventions for confusion",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "What assessment tools would you use for a patient with chest pain?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Shortness Of Breath",
+      "question_text": "Describe your approach to assessing a patient presenting with shortness of breath",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess shortness of breath using appropriate assessment tools",
+        "Monitor vital signs and observations specific to shortness of breath",
+        "Implement evidence-based interventions for shortness of breath",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Abdominal Pain",
+      "question_text": "What are the key observations you would monitor for a patient with abdominal pain?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess abdominal pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to abdominal pain",
+        "Implement evidence-based interventions for abdominal pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Confusion",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess confusion using appropriate assessment tools",
+        "Monitor vital signs and observations specific to confusion",
+        "Implement evidence-based interventions for confusion",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Fever",
+      "question_text": "What assessment tools would you use for a patient with fever?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess fever using appropriate assessment tools",
+        "Monitor vital signs and observations specific to fever",
+        "Implement evidence-based interventions for fever",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Clinical Assessment - Chest Pain",
+      "question_text": "Describe your approach to assessing a patient presenting with chest pain",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess chest pain using appropriate assessment tools",
+        "Monitor vital signs and observations specific to chest pain",
+        "Implement evidence-based interventions for chest pain",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Clinical Assessment - Shortness Of Breath",
+      "question_text": "What are the key observations you would monitor for a patient with shortness of breath?",
+      "question_type": "scenario",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Acute care",
+        "Medical emergencies"
+      ],
+      "expected_points": [
+        "Assess shortness of breath using appropriate assessment tools",
+        "Monitor vital signs and observations specific to shortness of breath",
+        "Implement evidence-based interventions for shortness of breath",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in amu setting"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Medication Calculation - Morphine",
+      "question_text": "Calculate the correct dose of morphine for a 75kg patient with severe pain.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Medication Calculation - Paracetamol",
+      "question_text": "A 70kg patient requires 15mg/kg of paracetamol. Calculate the total dose required.",
+      "question_type": "calculation",
+      "correct_answer": "15",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Medication Calculation - Medication",
+      "question_text": "Calculate the infusion rate for 1000ml of 0.9% sodium chloride to be given over 8 hours.",
+      "question_type": "calculation",
+      "correct_answer": "125",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Medication Calculation - Fluids",
+      "question_text": "A patient requires maintenance fluids at 30ml/kg/day. Calculate the hourly rate for a 60kg patient.",
+      "question_type": "calculation",
+      "correct_answer": "75",
+      "difficulty": "intermediate",
+      "competencies": [
+        "Calculations",
+        "Medication safety",
+        "Dose calculations"
+      ],
+      "expected_points": [
+        "Show all working clearly",
+        "Check calculation twice",
+        "Consider patient factors",
+        "Verify with another healthcare professional if unsure"
+      ]
+    }
+  ]
+}

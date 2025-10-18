@@ -1,0 +1,277 @@
+{
+  "band": "band_4",
+  "specialty": "mental_health",
+  "bank_id": "mental_health_band_4_bank_03",
+  "version": "2025-09-29",
+  "total_questions": 12,
+  "calculation_questions": 0,
+  "leadership_questions": 0,
+  "supervision_questions": 0,
+  "difficulty_level": "basic",
+  "questions": [
+    {
+      "id": 1,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "What are the key observations you would monitor for a patient with self-harm?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Assessment - Depression",
+      "question_text": "What assessment tools would you use for a patient with depression?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess depression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to depression",
+        "Implement evidence-based interventions for depression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Clinical Assessment - Anxiety",
+      "question_text": "Describe your approach to assessing a patient presenting with anxiety",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess anxiety using appropriate assessment tools",
+        "Monitor vital signs and observations specific to anxiety",
+        "Implement evidence-based interventions for anxiety",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Clinical Assessment - Psychosis",
+      "question_text": "What are the key observations you would monitor for a patient with psychosis?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess psychosis using appropriate assessment tools",
+        "Monitor vital signs and observations specific to psychosis",
+        "Implement evidence-based interventions for psychosis",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "What assessment tools would you use for a patient with aggression?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Clinical Assessment - Depression",
+      "question_text": "Describe your approach to assessing a patient presenting with depression",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess depression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to depression",
+        "Implement evidence-based interventions for depression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Clinical Assessment - Anxiety",
+      "question_text": "What are the key observations you would monitor for a patient with anxiety?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess anxiety using appropriate assessment tools",
+        "Monitor vital signs and observations specific to anxiety",
+        "Implement evidence-based interventions for anxiety",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Clinical Assessment - Psychosis",
+      "question_text": "How would you prioritize care for a patient with multiple acute conditions?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess psychosis using appropriate assessment tools",
+        "Monitor vital signs and observations specific to psychosis",
+        "Implement evidence-based interventions for psychosis",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Clinical Assessment - Self-Harm",
+      "question_text": "What assessment tools would you use for a patient with self-harm?",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess self-harm using appropriate assessment tools",
+        "Monitor vital signs and observations specific to self-harm",
+        "Implement evidence-based interventions for self-harm",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Clinical Assessment - Aggression",
+      "question_text": "Describe your approach to assessing a patient presenting with aggression",
+      "question_type": "scenario",
+      "difficulty": "basic",
+      "competencies": [
+        "Assessment",
+        "Patient care",
+        "Safety",
+        "Communication",
+        "Mental health assessment",
+        "Crisis intervention"
+      ],
+      "expected_points": [
+        "Assess aggression using appropriate assessment tools",
+        "Monitor vital signs and observations specific to aggression",
+        "Implement evidence-based interventions for aggression",
+        "Document findings and care provided",
+        "Escalate concerns appropriately in mental_health setting"
+      ]
+    }
+  ]
+}

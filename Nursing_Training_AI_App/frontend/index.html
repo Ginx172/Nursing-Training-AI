@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Training AI - UK Healthcare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Bubble effects */
+        .bubble-area {
+            position: relative;
+            min-height: 120px;
+        }
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+            color: #4b4b4b;
+            padding: 12px 16px;
+            border-radius: 30px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            transform: scale(0.6);
+            opacity: 0;
+            transition: transform 300ms ease, opacity 300ms ease;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+        .bubble.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .bubble.pop {
+            animation: pop 350ms ease forwards;
+        }
+        @keyframes pop {
+            0% { transform: scale(1); opacity: 1; }
+            70% { transform: scale(1.2); opacity: 0.9; }
+            100% { transform: scale(0.2); opacity: 0; }
+        }
+        .capability-list {
+            margin-top: 10px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+        }
+        .capability-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .capability-list li:last-child { border-bottom: none; }
+        
+        .capability {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .capability h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .selection-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .audio-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+        
+        .audio-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .audio-btn {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .audio-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .audio-btn.recording {
+            background: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .status.loading {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .evaluation-result {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .evaluation-result h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .feedback-section {
+            margin-top: 20px;
+        }
+        
+        .feedback-section h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feedback-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .feedback-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .auto-presentation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .auto-presentation h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .auto-presentation p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .capabilities {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .audio-controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Nursing Training AI</h1>
+            <p>UK Healthcare Professional Development Platform</p>
+        </div>
+        
+        <div class="auto-presentation">
+            <h2>🤖 AI Assistant Capabilities</h2>
+            <p>I can help you with comprehensive nursing training across all UK healthcare bands and specialties.</p>
+            <button class="btn-secondary" onclick="loadCapabilities()">Show My Capabilities</button>
+            <button class="btn-secondary" onclick="loadStats()">Show Live Statistics</button>
+        </div>
+        
+        <div id="capabilities" class="capabilities" style="display: none;"></div>
+        <div id="bubbleArea" class="bubble-area" style="display: none;"></div>
+        <ul id="capabilityList" class="capability-list" style="display: none;"></ul>
+        
+        <div id="stats" class="stats" style="display: none;">
+            <!-- Statistics will be loaded here -->
+        </div>
+        
+        <div class="card">
+            <h2>📋 Select Your Training Session</h2>
+            <form id="selectionForm" class="selection-form">
+                <div class="form-group">
+                    <label for="specialty">Specialty:</label>
+                    <select id="specialty" name="specialty" required>
+                        <option value="">Select a specialty...</option>
+                        <option value="amu">Acute Medical Unit (AMU)</option>
+                        <option value="icu">Intensive Care Unit (ICU)</option>
+                        <option value="emergency">Emergency Department</option>
+                        <option value="maternity">Maternity</option>
+                        <option value="mental_health">Mental Health</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="oncology">Oncology</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="band">Band Level:</label>
+                    <select id="band" name="band" required>
+                        <option value="">Select a band...</option>
+                        <option value="band_2">Band 2 - Healthcare Assistant</option>
+                        <option value="band_3">Band 3 - Senior Healthcare Assistant</option>
+                        <option value="band_4">Band 4 - Assistant Practitioner</option>
+                        <option value="band_5">Band 5 - Staff Nurse</option>
+                        <option value="band_6">Band 6 - Senior Staff Nurse</option>
+                        <option value="band_7">Band 7 - Clinical Nurse Specialist</option>
+                        <option value="band_8">Band 8 - Advanced Nurse Practitioner</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Start Training Session</button>
+            </form>
+        </div>
+        
+        <div id="audioSection" class="audio-section" style="display: none;">
+            <h2>🎤 Audio Training Session</h2>
+            <div class="form-group" style="margin-bottom: 10px; display:flex; gap:10px; align-items:center;">
+                <label style="min-width:120px;">Mode:</label>
+                <select id="examMode" style="flex:1; padding:8px;">
+                    <option value="oral">Oral</option>
+                    <option value="text">Text</option>
+                </select>
+                <label style="min-width:120px;">Speech rate:</label>
+                <input id="speechRate" type="range" min="0.7" max="1.3" step="0.05" value="1.0" style="flex:1;" />
+                <span id="speechRateVal">1.0x</span>
+            </div>
+            <div class="audio-controls">
+                <button id="recordBtn" class="audio-btn">🎤 Record Answer</button>
+                <button id="playQuestionBtn" class="audio-btn">🔊 Play Question</button>
+                <button id="repeatBtn" class="audio-btn">⟳ Repeat</button>
+                <button id="stopBtn" class="audio-btn" style="display: none;">⏹️ Stop</button>
+            </div>
+            <div id="questionText" style="display:none; background:#f8f9fa; padding:12px; border-radius:8px; border-left:4px solid #667eea; white-space:pre-wrap;"></div>
+            <div id="textAnswerBlock" style="display:none; margin-top:12px;">
+                <label for="answerText" style="font-weight:600; color:#555;">Your written answer:</label>
+                <textarea id="answerText" rows="6" style="width:100%; margin-top:8px; padding:10px; border:2px solid #ddd; border-radius:8px;"></textarea>
+                <div style="display:flex; gap:10px; margin-top:10px;">
+                    <button id="prevBtn" class="audio-btn">⬅️ Previous</button>
+                    <button id="saveBtn" class="audio-btn">💾 Save</button>
+                    <button id="nextBtn" class="audio-btn">Next ➡️</button>
+                    <button id="finishBtn" class="audio-btn" style="background:#28a745; color:white; border-color:#28a745;">✅ Finish</button>
+                </div>
+            </div>
+            <div id="summarySection" style="display:none; margin-top:16px; background:white; padding:16px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);"></div>
+            
+            <div id="status" class="status" style="display: none;"></div>
+            
+            <div id="evaluationResult" class="evaluation-result" style="display: none;">
+                <h3>📊 AI Evaluation Result</h3>
+                <div id="score" class="score"></div>
+                <div id="feedback" class="feedback-section"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_BASE = 'http://localhost:8002/api';
+        let isRecording = false;
+        let mediaRecorder;
+        let audioChunks = [];
+        
+        // Load capabilities
+        async function loadCapabilities() {
+            try {
+                const response = await fetch(`${API_BASE}/auto/summary`);
+                const data = await response.json();
+                
+                const capabilitiesDiv = document.getElementById('capabilities');
+                const bubbleArea = document.getElementById('bubbleArea');
+                const capList = document.getElementById('capabilityList');
+                capabilitiesDiv.innerHTML = '';
+                bubbleArea.innerHTML = '';
+                capList.innerHTML = '';
+                
+                // Create capability descriptors
+                const capabilities = data.capabilities;
+                const capabilityCards = [
+                    { title: 'AI Evaluation', desc: 'Universal AI evaluation with MCP + RAG', status: capabilities.ai_evaluation },
+                    { title: 'Audio Support', desc: 'Speech-to-Text & Text-to-Speech', status: capabilities.audio_stt && capabilities.audio_tts },
+                    { title: 'Question Banks', desc: `${data.datasets.total_banks} banks across ${data.datasets.specialty_counts ? Object.keys(data.datasets.specialty_counts).length : 9} specialties`, status: true },
+                    { title: 'Security', desc: 'Maximum security with encryption & audit trails', status: capabilities.security_hardening },
+                    { title: 'Self Learning', desc: 'ML-powered continuous improvement', status: capabilities.self_learning },
+                    { title: 'Payment System', desc: 'Secure payment verification', status: capabilities.payment_verification }
+                ];
+                
+                // Sequential bubbles
+                let idx = 0;
+                bubbleArea.style.display = 'block';
+                capList.style.display = 'block';
+                capabilitiesDiv.style.display = 'none';
+
+                const placeBubble = (cap) => {
+                    const b = document.createElement('div');
+                    b.className = 'bubble';
+                    b.style.left = `${Math.random()*60 + 10}%`;
+                    b.style.top = `${Math.random()*40 + 5}%`;
+                    b.textContent = `${cap.title}: ${cap.desc}`;
+                    bubbleArea.appendChild(b);
+                    requestAnimationFrame(() => b.classList.add('show'));
+                    setTimeout(() => {
+                        b.classList.add('pop');
+                        setTimeout(() => {
+                            b.remove();
+                            const li = document.createElement('li');
+                            li.textContent = `${cap.title} — ${cap.desc}`;
+                            capList.appendChild(li);
+                        }, 350);
+                    }, 900);
+                };
+
+                const runSeq = () => {
+                    if (idx >= capabilityCards.length) return;
+                    placeBubble(capabilityCards[idx]);
+                    idx += 1;
+                    setTimeout(runSeq, 1100);
+                };
+                runSeq();
+            } catch (error) {
+                console.error('Error loading capabilities:', error);
+            }
+        }
+        
+        // Load statistics
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/auto/summary`);
+                const data = await response.json();
+                
+                const statsDiv = document.getElementById('stats');
+                statsDiv.innerHTML = '';
+                
+                const stats = data.datasets;
+                const statCards = [
+                    { title: 'Total Banks', value: stats.total_banks || 1890 },
+                    { title: 'Specialties', value: stats.specialty_counts ? Object.keys(stats.specialty_counts).length : 9 },
+                    { title: 'Bands', value: stats.band_counts ? Object.keys(stats.band_counts).length : 7 },
+                    { title: 'Curated Banks', value: stats.curated_banks || 0 }
+                ];
+                
+                statCards.forEach(stat => {
+                    const card = document.createElement('div');
+                    card.className = 'stat';
+                    card.innerHTML = `
+                        <div class="stat-number">${stat.value}</div>
+                        <div>${stat.title}</div>
+                    `;
+                    statsDiv.appendChild(card);
+                });
+                
+                statsDiv.style.display = 'grid';
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+        
+        // Form submission
+        document.getElementById('selectionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const specialty = document.getElementById('specialty').value;
+            const band = document.getElementById('band').value;
+            
+            if (!specialty || !band) {
+                alert('Please select both specialty and band');
+                return;
+            }
+            
+            // Show audio section
+            document.getElementById('audioSection').style.display = 'block';
+            
+            // Load a question bank for the selected specialty and band
+            try {
+                const response = await fetch(`${API_BASE}/banks/catalog?specialty=${specialty}&band=${band}&page=1&page_size=1`);
+                const data = await response.json();
+                
+                if (data.items.length > 0) {
+                    const bank = data.items[0];
+                    showStatus(`Loaded ${bank.filename} with ${bank.total_questions} questions`, 'success');
+
+                    // Fetch bank content to display first question text
+                    try {
+                        const contentRes = await fetch(`${API_BASE}/banks/content?filename=${encodeURIComponent(bank.filename)}`);
+                        const content = await contentRes.json();
+                        const first = content?.questions && content.questions.length ? content.questions[0] : null;
+                        const qText = (first && (first.question_text || first.text || first.title)) || `First question from ${bank.filename}`;
+                        const qDiv = document.getElementById('questionText');
+                        qDiv.textContent = qText;
+                        qDiv.style.display = 'block';
+                        // Store for playback and state
+                        window.__currentQuestionText = qText;
+                        window.__questions = content.questions || [];
+                        window.__currentIndex = 0;
+                        window.__answers = [];
+                        // Toggle text answer block if mode is text
+                        const mode = document.getElementById('examMode').value;
+                        document.getElementById('textAnswerBlock').style.display = (mode === 'text') ? 'block' : 'none';
+                    } catch (err) {
+                        console.warn('Unable to load bank content:', err);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading question bank:', error);
+                showStatus('Error loading question bank', 'error');
+            }
+        });
+        
+        // Audio recording
+        document.getElementById('recordBtn').addEventListener('click', async () => {
+            if (!isRecording) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    
+                    mediaRecorder.ondataavailable = (event) => {
+                        audioChunks.push(event.data);
+                    };
+                    
+                    mediaRecorder.onstop = async () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        await processAudio(audioBlob);
+                    };
+                    
+                    mediaRecorder.start();
+                    isRecording = true;
+                    
+                    document.getElementById('recordBtn').textContent = '🔴 Recording...';
+                    document.getElementById('recordBtn').classList.add('recording');
+                    document.getElementById('stopBtn').style.display = 'inline-block';
+                    
+                } catch (error) {
+                    console.error('Error starting recording:', error);
+                    showStatus('Error accessing microphone', 'error');
+                }
+            }
+        });
+        
+        document.getElementById('stopBtn').addEventListener('click', () => {
+            if (isRecording && mediaRecorder) {
+                mediaRecorder.stop();
+                isRecording = false;
+                
+                document.getElementById('recordBtn').textContent = '🎤 Record Answer';
+                document.getElementById('recordBtn').classList.remove('recording');
+                document.getElementById('stopBtn').style.display = 'none';
+            }
+        });
+
+        // Play question audio
+        document.getElementById('playQuestionBtn').addEventListener('click', async () => {
+            try {
+                const mode = document.getElementById('examMode').value;
+                const text = window.__currentQuestionText || "This is a sample question: Describe your approach to patient assessment in an emergency situation. Please provide a detailed response covering initial assessment, priority actions, and documentation requirements.";
+                showStatus('Playing question audio...', 'loading');
+
+                // Fire-and-forget the backend (for logging/analytics), but play locally for immediate audio
+                fetch(`${API_BASE}/audio/tts?text=${encodeURIComponent(text)}`, { method: 'POST' }).catch(() => {});
+
+                // Always show question text immediately
+                const qDiv = document.getElementById('questionText');
+                qDiv.textContent = text;
+                qDiv.style.display = 'block';
+
+                // Use browser Speech Synthesis API for reliable local playback
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'en-GB';
+                    const rate = parseFloat(document.getElementById('speechRate').value || '1.0');
+                    utterance.rate = rate;
+                    utterance.pitch = 1.0;
+                    utterance.onend = () => {
+                        showStatus('Question played.', 'success');
+                        qDiv.style.outline = '2px solid #667eea';
+                        setTimeout(() => { qDiv.style.outline = 'none'; }, 800);
+                        qDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                    if (mode === 'oral') {
+                        speechSynthesis.cancel();
+                        speechSynthesis.speak(utterance);
+                    }
+                    // If mode is text, do not speak; just show text (already shown)
+                } else {
+                    showStatus('Speech synthesis not supported in this browser.', 'error');
+                }
+            } catch (error) {
+                console.error('Error playing question audio:', error);
+                showStatus('Error playing question audio', 'error');
+            }
+        });
+
+        // Repeat button
+        document.getElementById('repeatBtn').addEventListener('click', () => {
+            const text = window.__currentQuestionText || '';
+            if (!text) return;
+            // Show text immediately
+            const qDiv = document.getElementById('questionText');
+            qDiv.textContent = text;
+            qDiv.style.display = 'block';
+            if ('speechSynthesis' in window) {
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = 'en-GB';
+                const rate = parseFloat(document.getElementById('speechRate').value || '1.0');
+                u.rate = rate;
+                u.pitch = 1.0;
+                speechSynthesis.cancel();
+                u.onend = () => {
+                    qDiv.style.outline = '2px solid #667eea';
+                    setTimeout(() => { qDiv.style.outline = 'none'; }, 800);
+                    qDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                };
+                speechSynthesis.speak(u);
+            }
+        });
+
+        // Rate display update
+        document.getElementById('speechRate').addEventListener('input', (e) => {
+            document.getElementById('speechRateVal').textContent = `${parseFloat(e.target.value).toFixed(2)}x`;
+        });
+
+        // Text mode controls: save/next/prev/finish
+        function setQuestionByIndex(idx) {
+            const qs = window.__questions || [];
+            if (!qs.length) return;
+            const q = qs[idx] || {};
+            const text = q.question_text || q.text || q.title || '';
+            window.__currentQuestionText = text;
+            const qDiv = document.getElementById('questionText');
+            qDiv.textContent = text;
+            qDiv.style.display = 'block';
+            const saved = (window.__answers || [])[idx] || '';
+            document.getElementById('answerText').value = saved;
+        }
+
+        document.getElementById('saveBtn').addEventListener('click', () => {
+            const idx = window.__currentIndex ?? 0;
+            const ans = document.getElementById('answerText').value || '';
+            window.__answers[idx] = ans;
+            showStatus('Answer saved.', 'success');
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const qs = window.__questions || [];
+            if (!qs.length) return;
+            const idx = Math.min((window.__currentIndex ?? 0) + 1, qs.length - 1);
+            window.__currentIndex = idx;
+            setQuestionByIndex(idx);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            const qs = window.__questions || [];
+            if (!qs.length) return;
+            const idx = Math.max((window.__currentIndex ?? 0) - 1, 0);
+            window.__currentIndex = idx;
+            setQuestionByIndex(idx);
+        });
+
+        document.getElementById('finishBtn').addEventListener('click', async () => {
+            try {
+                // Save current input before finish
+                const idx = window.__currentIndex ?? 0;
+                const ans = document.getElementById('answerText').value || '';
+                window.__answers[idx] = ans;
+
+                // Build summary locally for now (until batch endpoint is added)
+                const qs = window.__questions || [];
+                const answers = window.__answers || [];
+                let html = '<h3>Session Summary</h3>';               
+                html += '<ol>';
+                for (let i = 0; i < qs.length; i++) {
+                    const q = qs[i] || {};
+                    const qText = q.question_text || q.text || q.title || `Question ${i+1}`;
+                    const ideal = (q.ideal_answer || q.key_points || []).map(p => `<li>${p}</li>`).join('') || '<li>(Ideal structure will be provided by AI)</li>';
+                    const userAns = (answers[i] || '').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+                    html += `<li style="margin-bottom:12px;">
+                        <div><strong>Q${i+1}:</strong> ${qText}</div>
+                        <div style="margin-top:6px;"><em>Your answer:</em> ${userAns || '<span style="color:#888;">(no answer)</span>'}</div>
+                        <div style="margin-top:6px;"><em>Ideal answer (outline):</em><ul>${ideal}</ul></div>
+                    </li>`;
+                }
+                html += '</ol>';
+                html += '<div style="margin-top:10px; font-weight:600;">Overall score will be computed after batch evaluation.</div>';
+                document.getElementById('summarySection').innerHTML = html;
+                document.getElementById('summarySection').style.display = 'block';
+                showStatus('Summary generated.', 'success');
+            } catch (e) {
+                console.error(e);
+                showStatus('Error generating summary', 'error');
+            }
+        });
+        
+        // Process audio
+        async function processAudio(audioBlob) {
+            showStatus('Processing audio...', 'loading');
+            
+            try {
+                const formData = new FormData();
+                formData.append('file', audioBlob, 'recording.wav');
+                
+                const response = await fetch(`${API_BASE}/audio/stt`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.text) {
+                    showStatus(`Transcribed: "${result.text}"`, 'success');
+                    await evaluateAnswer(result.text);
+                } else {
+                    showStatus('No speech detected', 'error');
+                }
+                
+            } catch (error) {
+                console.error('Error processing audio:', error);
+                showStatus('Error processing audio', 'error');
+            }
+        }
+        
+        // Evaluate answer
+        async function evaluateAnswer(text) {
+            try {
+                const response = await fetch(`${API_BASE}/questions/evaluate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        question: {
+                            id: 1,
+                            title: "Sample Question",
+                            question_text: "Describe your approach to patient assessment",
+                            question_type: "scenario"
+                        },
+                        user_answer: text,
+                        band: document.getElementById('band').value,
+                        specialty: document.getElementById('specialty').value
+                    })
+                });
+                
+                const result = await response.json();
+                displayEvaluation(result);
+                
+            } catch (error) {
+                console.error('Error evaluating answer:', error);
+                showStatus('Error evaluating answer', 'error');
+            }
+        }
+        
+        // Display evaluation result
+        function displayEvaluation(result) {
+            const resultDiv = document.getElementById('evaluationResult');
+            const scoreDiv = document.getElementById('score');
+            const feedbackDiv = document.getElementById('feedback');
+            
+            scoreDiv.textContent = `${Math.round(result.overall_score * 100)}%`;
+            
+            feedbackDiv.innerHTML = `
+                <h4>Strengths:</h4>
+                <ul class="feedback-list">
+                    ${result.strengths.map(s => `<li>${s}</li>`).join('')}
+                </ul>
+                
+                <h4>Areas for Improvement:</h4>
+                <ul class="feedback-list">
+                    ${result.areas_for_improvement.map(a => `<li>${a}</li>`).join('')}
+                </ul>
+                
+                <h4>Book Recommendations:</h4>
+                <ul class="feedback-list">
+                    ${result.book_recommendations.map(b => `<li>${b.title} - ${b.author}</li>`).join('')}
+                </ul>
+            `;
+            
+            resultDiv.style.display = 'block';
+        }
+        
+        // Show status
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+            statusDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Nursing Training AI - Frontend loaded');
+        });
+    </script>
+</body>
+</html>

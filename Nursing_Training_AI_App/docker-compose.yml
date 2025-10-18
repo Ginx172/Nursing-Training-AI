@@ -67,6 +67,22 @@ services:
     networks:
       - nursing_network
 
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: nursing_training_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - nursing_network
+
 volumes:
   postgres_data:
   redis_data:

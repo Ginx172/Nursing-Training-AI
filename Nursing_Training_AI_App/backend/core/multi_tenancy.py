@@ -4,7 +4,20 @@ Implements secure tenant isolation for Enterprise organizations
 Strategy: Schema-per-tenant for maximum isolation and security
 """
 
-from typing import Optional, Dict, Any, List
+from typing import
+import re
+
+_VALID_SCHEMA_RE = re.compile(r"^[a-z0-9_]+$")
+_MAX_SCHEMA_LENGTH = 63
+
+
+def _sanitize_schema_name(organization_id: str) -> str:
+    schema_name = f"tenant_{organization_id}".lower().replace("-", "_")
+    if len(schema_name) > _MAX_SCHEMA_LENGTH:
+        raise ValueError(f"Schema name too long ({len(schema_name)} chars, max {_MAX_SCHEMA_LENGTH})")
+    if not _VALID_SCHEMA_RE.match(schema_name):
+        raise ValueError(f"Invalid organization_id: only lowercase letters, digits, hyphens, and underscores allowed")
+    return schema_name Optional, Dict, Any, List
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import Session
 from datetime import datetime
@@ -42,7 +55,7 @@ class TenantManager:
         """
         try:
             # Generate schema name (sanitized)
-            schema_name = f"tenant_{organization_id}".lower().replace("-", "_")
+            schema_name = _sanitize_schema_name(organization_id)
             
             # Create schema in database
             with primary_engine.connect() as conn:
@@ -131,7 +144,7 @@ class TenantManager:
             return self.tenant_schemas[organization_id]
         
         # TODO: Fetch from database
-        schema_name = f"tenant_{organization_id}".lower().replace("-", "_")
+        schema_name = _sanitize_schema_name(organization_id)
         self.tenant_schemas[organization_id] = schema_name
         
         return schema_name
@@ -271,7 +284,7 @@ class TenantManager:
                 result = conn.execute(text(f"""
                     SELECT pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) as size
                     FROM pg_tables
-                    WHERE schemaname = '{schema_name}'
+                    WHERE schemaname = :schema_name
                 """))
                 
                 total_size = sum([row[0] for row in result], 0)

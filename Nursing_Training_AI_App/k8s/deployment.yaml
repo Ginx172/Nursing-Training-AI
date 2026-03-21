@@ -28,10 +28,10 @@ metadata:
   namespace: nursing-training-ai
 type: Opaque
 stringData:
-  DATABASE_URL: "postgresql://user:password@postgres-service:5432/nursing_ai"
-  SECRET_KEY: "your-secret-key-here"
-  STRIPE_SECRET_KEY: "sk_live_your_key"
-  ENCRYPTION_MASTER_KEY: "your-encryption-key"
+  DATABASE_URL: "REPLACE_WITH_REAL_DATABASE_URL"
+  SECRET_KEY: "REPLACE_WITH_REAL_SECRET_KEY_MIN_32_CHARS"
+  STRIPE_SECRET_KEY: "REPLACE_WITH_REAL_STRIPE_KEY"
+  ENCRYPTION_MASTER_KEY: "REPLACE_WITH_REAL_ENCRYPTION_KEY"
 
 ---
 # PostgreSQL StatefulSet

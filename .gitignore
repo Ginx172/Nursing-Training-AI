@@ -40,7 +40,7 @@ logs/
 
 # Node
 node_modules/
-package-lock.json
+# package-lock.json should be committed for reproducible builds
 
 # Backups
 _backups/
@@ -56,3 +56,7 @@ test_audit/
 test_models/
 
 
+
+# Next.js build output
+.next/
+*/.next/

@@ -411,6 +411,108 @@ class RAGService:
             logger.error(f"❌ Error getting recommendations: {str(e)}")
             return []
     
+    async def get_topics(self) -> List[str]:
+        """Return a list of all available topics from the loaded chunks."""
+        topics = set()
+        for specialty, chunks in self.chunks_data.items():
+            for chunk in chunks:
+                # Chunks from build_rag_index.py have 'topic' key
+                if isinstance(chunk, dict) and 'topic' in chunk:
+                    topics.add(chunk['topic'])
+        
+        # Add basic topics if none found (fallback)
+        if not topics:
+            topics = {"General", "Anatomy", "Pharmacology", "Patient Care"}
+            
+        return sorted(list(topics))
+
+    async def get_knowledge_graph(self) -> Dict[str, Any]:
+        """Generate a simple knowledge graph structure for visualization."""
+        nodes = []
+        edges = []
+        
+        topics = await self.get_topics()
+        topic_id_map = {}
+        
+        # Add Topic Nodes
+        for i, topic in enumerate(topics):
+            node_id = f"topic_{i}"
+            topic_id_map[topic] = node_id
+            nodes.append({
+                "id": node_id,
+                "label": topic,
+                "type": "topic",
+                "color": "#4a90e2" # Blue for topics
+            })
+            
+        # Add Document Nodes (deduplicated and linked to topics)
+        doc_count = 0
+        seen_docs = set()
+        
+        # Limit nodes to avoid frontend performance issues
+        MAX_DOC_NODES = 50 
+        
+        for specialty, chunks in self.chunks_data.items():
+            if doc_count >= MAX_DOC_NODES:
+                break
+                
+            for chunk in chunks:
+                if doc_count >= MAX_DOC_NODES:
+                    break
+                
+                if not isinstance(chunk, dict):
+                    continue
+                    
+                source = chunk.get('source', 'Unknown')
+                topic = chunk.get('topic', 'General')
+                
+                if source not in seen_docs:
+                    seen_docs.add(source)
+                    doc_id = f"doc_{doc_count}"
+                    
+                    nodes.append({
+                        "id": doc_id,
+                        "label": source,
+                        "type": "document",
+                        "color": "#e24a4a" # Red for docs
+                    })
+                    
+                    # Edge from Topic to Document
+                    if topic in topic_id_map:
+                        edges.append({
+                            "id": f"e{len(edges)}",
+                            "source": topic_id_map[topic],
+                            "target": doc_id,
+                            "animated": True
+                        })
+                    
+                    doc_count += 1
+                    
+        return {"nodes": nodes, "edges": edges}
+
+    async def generate_quiz(self, topic: str, difficulty: str) -> Dict[str, Any]:
+        """Generate a quiz based on a specific topic using RAG content"""
+        # Placeholder for quiz generation using LLM + RAG content
+        # In a real implementation, this would query the LLM with context from the topic
+        
+        return {
+            "topic": topic,
+            "questions": [
+                {
+                    "id": 1,
+                    "question": f"What is a key concept in {topic} regarding patient safety?",
+                    "options": ["Hand Hygiene", "Speed", "Documentation", "None"],
+                    "correctAnswer": "Hand Hygiene"
+                },
+                {
+                    "id": 2,
+                    "question": f"In {topic}, which of the following is crucial?",
+                    "options": ["Ignoring symptoms", "Assessment", "Leaving early", "Paperwork"],
+                    "correctAnswer": "Assessment"
+                }
+            ]
+        }
+
     async def health_check(self) -> Dict[str, Any]:
         """Verifică starea serviciului RAG"""
         return {

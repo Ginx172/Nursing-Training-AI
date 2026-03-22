@@ -198,10 +198,42 @@ async def check_database_health() -> dict:
 # DATABASE INITIALIZATION
 # ========================================
 
+def wait_for_db(max_retries=5, delay=5):
+    """Wait for database to become available"""
+    import time
+    from sqlalchemy.exc import OperationalError
+    
+    print("⏳ Waiting for database connection...")
+    
+    retries = 0
+    while retries < max_retries:
+        try:
+            # Try to connect
+            with primary_engine.connect() as conn:
+                conn.execute("SELECT 1")
+            print("✅ Database connection established")
+            return True
+        except OperationalError as e:
+            retries += 1
+            print(f"⚠️ Database not ready (Attempt {retries}/{max_retries}): {str(e)}")
+            time.sleep(delay)
+        except Exception as e:
+            print(f"❌ Unexpected error connecting to database: {str(e)}")
+            return False
+            
+    print("❌ Could not connect to database after multiple attempts")
+    return False
+
 def init_db():
     """Initialize database tables"""
-    Base.metadata.create_all(bind=primary_engine)
-    print("✅ Database tables created")
+    if wait_for_db():
+        try:
+            Base.metadata.create_all(bind=primary_engine)
+            print("✅ Database tables created")
+        except Exception as e:
+            print(f"❌ Error creating tables: {str(e)}")
+    else:
+        print("⚠️ Skipping table creation due to database unavailability")
 
 def drop_db():
     """Drop all database tables (WARNING: Use with caution!)"""

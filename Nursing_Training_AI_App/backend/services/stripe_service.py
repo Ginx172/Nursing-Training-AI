@@ -33,7 +33,7 @@ class StripeService:
                 metadata=metadata or {}
             )
             return customer
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating customer: {e}")
             raise
 
@@ -53,7 +53,7 @@ class StripeService:
                 expand=['latest_invoice.payment_intent']
             )
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating subscription: {e}")
             raise
 
@@ -84,7 +84,7 @@ class StripeService:
                 billing_address_collection='required'
             )
             return session
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating checkout session: {e}")
             raise
 
@@ -94,7 +94,7 @@ class StripeService:
         try:
             subscription = stripe.Subscription.retrieve(subscription_id)
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error retrieving subscription: {e}")
             raise
 
@@ -116,7 +116,7 @@ class StripeService:
                 proration_behavior='create_prorations'
             )
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error updating subscription: {e}")
             raise
 
@@ -136,7 +136,7 @@ class StripeService:
                 subscription = stripe.Subscription.delete(subscription_id)
             
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error cancelling subscription: {e}")
             raise
 
@@ -149,7 +149,7 @@ class StripeService:
                 cancel_at_period_end=False
             )
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error reactivating subscription: {e}")
             raise
 
@@ -170,7 +170,7 @@ class StripeService:
                 automatic_payment_methods={'enabled': True}
             )
             return payment_intent
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating payment intent: {e}")
             raise
 
@@ -183,7 +183,7 @@ class StripeService:
                 status='all'
             )
             return subscriptions.data
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error getting customer subscriptions: {e}")
             raise
 
@@ -193,10 +193,10 @@ class StripeService:
         try:
             invoice = stripe.Invoice.upcoming(customer=customer_id)
             return invoice
-        except stripe.error.InvalidRequestError:
+        except stripe.InvalidRequestError:
             # No upcoming invoice
             return None
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error getting upcoming invoice: {e}")
             raise
 
@@ -212,7 +212,7 @@ class StripeService:
                 return_url=return_url
             )
             return session
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating billing portal session: {e}")
             raise
 
@@ -231,7 +231,7 @@ class StripeService:
         except ValueError as e:
             print(f"Invalid payload: {e}")
             raise
-        except stripe.error.SignatureVerificationError as e:
+        except stripe.SignatureVerificationError as e:
             print(f"Invalid signature: {e}")
             raise
 
@@ -276,7 +276,7 @@ class StripeService:
                 coupon=coupon_code
             )
             return subscription
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error applying coupon: {e}")
             raise
 
@@ -294,7 +294,7 @@ class StripeService:
                 timestamp=timestamp or int(datetime.now().timestamp())
             )
             return usage_record
-        except stripe.error.StripeError as e:
+        except stripe.StripeError as e:
             print(f"Error creating usage record: {e}")
             raise
 

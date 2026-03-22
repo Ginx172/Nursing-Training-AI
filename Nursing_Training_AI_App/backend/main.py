@@ -24,6 +24,21 @@ from api import (
     sso
 )
 
+# Import additional routers with graceful fallback
+try:
+    from api.routes import auth, users, questions, training, bands, ai_services, audio, demo, auto_presentation, banks_catalog, security, security_monitoring
+    _routes_available = True
+except Exception as _routes_err:
+    _routes_available = False
+    print(f"Warning: some api/routes modules could not be imported: {_routes_err}")
+
+try:
+    from api.routes.learning_insights import router as learning_router
+    _learning_router_available = True
+except Exception as _lr_err:
+    _learning_router_available = False
+    print(f"Warning: learning_insights router could not be imported: {_lr_err}")
+
 # Import services
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
@@ -43,6 +58,12 @@ async def lifespan(app: FastAPI):
     init_db()
     health = await check_database_health()
     print(f"Database Health: {health['status']}")
+    # Initialise self-learning engine
+    try:
+        from core.continuous_learning import continuous_learning
+        print("Self-learning engine initialised.")
+    except Exception as e:
+        print(f"Warning: self-learning engine could not be initialised: {e}")
     yield
     print("Shutting down Nursing Training AI API...")
 
@@ -81,6 +102,7 @@ app = FastAPI(
         {"name": "payments", "description": "Subscription and payment management"},
         {"name": "admin", "description": "Admin panel endpoints (requires admin role)"},
         {"name": "health", "description": "System health and monitoring"},
+        {"name": "learning", "description": "Self-learning insights, failure patterns and improvement proposals"},
     ],
     servers=[
         {"url": "https://api.nursingtrainingai.com", "description": "Production server"},
@@ -154,6 +176,23 @@ app.include_router(analytics.router)
 app.include_router(admin.router)
 app.include_router(payments.router)
 app.include_router(sso.router)
+
+if _routes_available:
+    app.include_router(auth.router)
+    app.include_router(users.router)
+    app.include_router(questions.router)
+    app.include_router(training.router)
+    app.include_router(bands.router)
+    app.include_router(ai_services.router)
+    app.include_router(audio.router)
+    app.include_router(demo.router)
+    app.include_router(auto_presentation.router)
+    app.include_router(banks_catalog.router)
+    app.include_router(security.router)
+    app.include_router(security_monitoring.router)
+
+if _learning_router_available:
+    app.include_router(learning_router)
 
 # ========================================
 # HEALTH CHECK ENDPOINTS

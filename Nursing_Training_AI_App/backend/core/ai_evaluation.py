@@ -5,6 +5,7 @@ Integrează MCP și RAG pentru evaluare inteligentă și recomandări de cărți
 
 import os
 import json
+import logging
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass
 from enum import Enum
@@ -12,6 +13,8 @@ import asyncio
 import httpx
 from pathlib import Path
 from .mcp_rag_config import mcp_rag_config
+
+logger = logging.getLogger(__name__)
 
 class BandLevel(Enum):
     BAND_2 = "band_2"
@@ -70,6 +73,9 @@ class AIEvaluationService:
         self.knowledge_base_path = Path(mcp_rag_config.knowledge_base_path)
         self.mcp_endpoint = mcp_rag_config.mcp_endpoint
         self.rag_endpoint = mcp_rag_config.rag_endpoint
+        self.gemini_api_key = mcp_rag_config.gemini_api_key
+        self.gemini_model = mcp_rag_config.gemini_model
+        # kept for backward compat
         self.openai_api_key = mcp_rag_config.openai_api_key
         
         # Criterii de evaluare pentru fiecare band
@@ -232,8 +238,8 @@ class AIEvaluationService:
     
     async def _get_ai_evaluation(self, question: Dict[str, Any], user_answer: str, 
                                 band: str, specialty: str) -> Dict[str, Any]:
-        """Obține evaluarea AI folosind OpenAI API"""
-        if not self.openai_api_key:
+        """Obține evaluarea AI folosind Gemini API"""
+        if not self.gemini_api_key:
             return self._fallback_evaluation(question, user_answer, band, specialty)
         
         # Construiește prompt-ul pentru evaluare
@@ -273,7 +279,7 @@ class AIEvaluationService:
         - Comunicarea: {criteria.communication}
         - Leadership-ul: {criteria.leadership}
 
-        Returnează evaluarea în format JSON:
+        Returnează evaluarea în format JSON (doar JSON, fără markdown):
         {{
             "overall_score": 0-100,
             "detailed_scores": {{
@@ -292,26 +298,20 @@ class AIEvaluationService:
         """
         
         try:
-            async with httpx.AsyncClient() as client:
-                response = await client.post(
-                    "https://api.openai.com/v1/chat/completions",
-                    headers={"Authorization": f"Bearer {self.openai_api_key}"},
-                    json={
-                        "model": "gpt-4",
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.3,
-                        "max_tokens": 2000
-                    },
-                    timeout=60.0
-                )
-                
-                if response.status_code == 200:
-                    data = response.json()
-                    content = data["choices"][0]["message"]["content"]
-                    return json.loads(content)
-                else:
-                    return self._fallback_evaluation(question, user_answer, band, specialty)
-        except Exception as e:
+            import google.generativeai as genai
+            genai.configure(api_key=self.gemini_api_key)
+            model = genai.GenerativeModel(self.gemini_model)
+            response = model.generate_content(prompt)
+            content = response.text.strip()
+            # Strip markdown code fences if present
+            if content.startswith("```"):
+                content = content.split("```", 2)[1]
+                if content.startswith("json"):
+                    content = content[4:]
+                content = content.rsplit("```", 1)[0].strip()
+            return json.loads(content)
+        except Exception as exc:
+            logger.warning("Gemini API evaluation failed, using fallback: %s", exc)
             return self._fallback_evaluation(question, user_answer, band, specialty)
     
     def _fallback_evaluation(self, question: Dict[str, Any], user_answer: str, 
@@ -362,6 +362,19 @@ class AIEvaluationService:
             specialty, 
             ai_evaluation.get("knowledge_gaps", [])
         )
+
+        # Feedback loop — trimite rezultatul înapoi la self_learning
+        try:
+            from .self_learning import self_learning
+            self_learning.record_outcome({
+                "band": band,
+                "specialty": specialty,
+                "overall_score": ai_evaluation.get("overall_score", 0.0),
+                "detailed_scores": ai_evaluation.get("detailed_scores", {}),
+                "question_id": question.get("id", 0),
+            })
+        except Exception as exc:
+            logger.warning("Failed to record outcome in self_learning feedback loop: %s", exc)
         
         return EvaluationResult(
             question_id=question.get("id", 0),

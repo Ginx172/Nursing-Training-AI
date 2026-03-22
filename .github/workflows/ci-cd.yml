@@ -10,7 +10,8 @@ jobs:
   test-backend:
     name: Test Backend
     runs-on: ubuntu-latest
-    
+     env:
+      SECRET_KEY: ${{{ d+1f5urJU4QmBxULBEPSt$68+vDcyQ }}}
     steps:
     - uses: actions/checkout@v3
     

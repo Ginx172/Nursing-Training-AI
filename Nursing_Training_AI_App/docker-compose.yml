@@ -6,9 +6,9 @@ services:
     image: postgres:15-alpine
     container_name: nursing_training_postgres
     environment:
-      POSTGRES_DB: nursing_training_ai
-      POSTGRES_USER: nursing_user
-      POSTGRES_PASSWORD: nursing_password
+      POSTGRES_DB: ${POSTGRES_DB:-nursing_training_ai}
+      POSTGRES_USER: ${POSTGRES_USER:-nursing_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required - set it in .env}
     ports:
       - "5432:5432"
     volumes:
@@ -16,6 +16,11 @@ services:
       - ./database/schemas/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - nursing_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-nursing_user} -d ${POSTGRES_DB:-nursing_training_ai}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # Redis Cache
   redis:
@@ -27,6 +32,11 @@ services:
       - redis_data:/data
     networks:
       - nursing_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # Backend API
   backend:
@@ -35,17 +45,18 @@ services:
       dockerfile: Dockerfile
     container_name: nursing_training_backend
     environment:
-      - DATABASE_URL=postgresql://nursing_user:nursing_password@postgres:5432/nursing_training_ai
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-nursing_user}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-nursing_training_ai}
       - REDIS_URL=redis://redis:6379/0
-      - DEBUG=True
+      - SECRET_KEY=${SECRET_KEY:?SECRET_KEY is required - set it in .env}
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - DEBUG=${DEBUG:-false}
     ports:
       - "8000:8000"
     depends_on:
-      - postgres
-      - redis
-    volumes:
-      - ./backend:/app
-      - /app/__pycache__
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     networks:
       - nursing_network
 
@@ -61,9 +72,6 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
     networks:
       - nursing_network
 

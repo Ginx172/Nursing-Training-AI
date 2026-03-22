@@ -1,0 +1,63 @@
+1. Realitatea despre "Optimizarea Procesării Imaginilor"
+Trebuie să clarificăm un aspect critic înainte de a începe refactoring-ul:
+
+
+Nu există procesare de imagini de optimizat. Analiza specifică clar că "Nu există module care folosesc OpenCV sau MediaPipe".
+
+Proiectul este axat pe Text-to-Speech (Audio) și NLP (Text), nu pe viziune computerizată.
+
+Dacă sistemul se blochează, nu este din cauza încărcării grafice, ci a logicii backend sau a infrastructurii.
+
+2. Plan de Refactoring Python (Corectarea Erorilor de Logică)
+Blocajele actuale sunt cauzate cel mai probabil de discrepanța dintre codul existent și funcționalitățile promise dar neimplementate.
+
+Pasul A: Implementarea Modulelor Lipsă (RAG & Plăți) Conform analizei, codul se oprește deoarece părți critice sunt doar "planificate":
+
+
+Problemă: Modulele pentru sistemul RAG (Retrieval-Augmented Generation) și procesarea plăților sunt marcate ca nebifate ([ ]) în checklist-ul intern, deși documentația spune că e gata.
+
+Soluție: Trebuie scrisă logica efectivă în directorul services. Verifică folderul /Healthcare_Knowledge_Base unde ar trebui să fie ghidurile NICE și implementează logica de indexare cu faiss-cpu care este deja în dependențe.
+
+Pasul B: Stabilizarea Infrastructurii (Redis & Docker)
+
+
+Problemă: Sistemul depinde critic de Redis pentru caching și sesiuni (TTL 24h). Dacă containerul Docker pentru Redis nu răspunde, aplicația FastAPI se va bloca în așteptare (timeout).
+
+
+Soluție: Asigură-te că docker-compose este configurat corect pentru a porni Redis și PostgreSQL înainte de serviciul backend. Adaugă mecanisme de retry în Python la conectarea la baza de date.
+
+Pasul C: Adăugarea Testelor Reale
+
+
+Problemă: Proiectul se bazează pe scripturi PowerShell (test_endpoints.ps1) și nu are un director dedicat de teste unitare.
+
+Soluție: Creează un director /tests. Deoarece pytest este deja în requirements.txt, scrie teste automate pentru a valida că API-urile nu returnează erori 500 atunci când sunt interogate.
+
+3. Interfață și Vizualizare (JavaScript/React)
+Deoarece frontend-ul Web lipsește aproape cu desăvârșire (fiind doar planificat), iată cum poți construi interfața cerută:
+
+
+Tehnologie recomandată: Next.js (deja menționat în planurile proiectului ).
+
+Arhitectură propusă pentru Dashboard:
+
+Stare Sistem: Un panou care interoghează endpoint-ul de "Health Check" din FastAPI pentru a arăta dacă Redis și Postgres sunt active.
+
+Vizualizare RAG:
+
+Folosește o librărie de grafuri în JavaScript (ex: React Flow sau D3.js) pentru a vizualiza nodurile din Knowledge Base.
+
+Când un utilizator (student asistent) pune o întrebare, interfața ar trebui să arate vizual ce documente din ghidurile NICE au fost recuperate.
+
+Management Întrebări:
+
+O interfață tabelară (folosind TanStack Table) pentru a naviga prin cele 1,890 de bănci de întrebări din baza de date PostgreSQL.
+
+Rezumat acțiuni imediate
+Dacă scriptul "se blochează" acum, verifică în această ordine:
+
+Rulează Docker? (Postgres + Redis sunt obligatorii) .
+
+Ai cheile de OpenAI configurate? (Librăria openai v1.x va arunca erori dacă nu există API key) .
+
+Există cod în /services pentru endpoint-ul apelat? (S-ar putea să lovești o funcție goală/placeholder din cauza stadiului incomplet al Fazei 2 ).

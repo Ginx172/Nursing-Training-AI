@@ -12,8 +12,6 @@ from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 import ipaddress
-import geoip2.database
-import geoip2.errors
 from fastapi import Request, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import jwt
@@ -176,10 +174,12 @@ class ThreatDetector:
     def _get_country_from_ip(self, ip: str) -> Optional[str]:
         """Get country from IP using GeoIP database"""
         try:
+            import geoip2.database  # lazy import - optional dependency
+            import geoip2.errors
             with geoip2.database.Reader(self.geo_db_path) as reader:
                 response = reader.country(ip)
                 return response.country.iso_code
-        except:
+        except Exception:
             return None
     
     def record_security_event(self, event: SecurityEvent):

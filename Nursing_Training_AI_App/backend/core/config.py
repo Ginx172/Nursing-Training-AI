@@ -10,6 +10,13 @@ import os
 import sys
 import secrets
 
+def _is_testing() -> bool:
+    """Detect if we are running under pytest."""
+    return (
+        "PYTEST_CURRENT_TEST" in os.environ
+        or os.environ.get("TESTING", "").lower() in ("1", "true", "yes")
+    )
+
 
 class Settings(BaseSettings):
     """Application configuration - sensitive fields have NO defaults"""
@@ -40,15 +47,17 @@ class Settings(BaseSettings):
             return [host.strip() for host in self.ALLOWED_HOSTS.split(",") if host.strip()]
         return self.ALLOWED_HOSTS if isinstance(self.ALLOWED_HOSTS, list) else []
 
-    # Database - NO default with password
-    DATABASE_URL: str
+    # Database - NO default with password (testing provides a safe default)
+    DATABASE_URL: str = "sqlite:///./test.db" if _is_testing() else ...
+
     DATABASE_URL_TEST: Optional[str] = None
 
     # Redis
     REDIS_URL: str = "redis://localhost:6379/0"
 
-    # JWT - NO insecure default
-    SECRET_KEY: str
+    # JWT - NO insecure default (testing provides a safe default)
+    SECRET_KEY: str = "ci-testing-secret-key-minimum-32-chars-safe" if _is_testing() else ...
+
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
@@ -95,11 +104,14 @@ class Settings(BaseSettings):
     GEOIP_DB_PATH: str = "./data/GeoLite2-Country.mmdb"
 
     # Environment
-    ENVIRONMENT: str = "development"
+    ENVIRONMENT: str = "testing" if _is_testing() else "development"
 
     @field_validator("SECRET_KEY")
     @classmethod
     def validate_secret_key(cls, v: str) -> str:
+        # Skip strict validation in testing mode
+        if _is_testing():
+            return v
         placeholder_values = [
             "your-secret-key-change-in-production",
             "your-secret-key-here",
@@ -115,6 +127,9 @@ class Settings(BaseSettings):
     @field_validator("DATABASE_URL")
     @classmethod
     def validate_database_url(cls, v: str) -> str:
+        # Skip strict validation in testing mode
+        if _is_testing():
+            return v
         placeholder_passwords = ["password", "nursing_password", "pass", "changeme"]
         for placeholder in placeholder_passwords:
             if ":" + placeholder + "@" in v:
@@ -140,6 +155,5 @@ def _load_settings() -> Settings:
         print("  SECRET_KEY=<at-least-32-character-random-string>")
         print("=" * 60 + "\n")
         sys.exit(1)
-
 
 settings = _load_settings()

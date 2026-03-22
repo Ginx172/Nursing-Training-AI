@@ -76,3 +76,21 @@ ry/
 Gemini API.txt
 .....New_GH_Copilot_Plan.txt
 structura_PROIECT_NURSING.txt
+Nursing_Training_AI_App/backend/data/vectordb/
+__JAN26_repair_session/
+_test_gemini*.py
+_debug_env.py
+_gen_qg.py
+ry/
+Gemini API.txt
+.....New_GH_Copilot_Plan.txt
+structura_PROIECT_NURSING.txt
+Nursing_Interviews_AI_model/rag_engine/Windows/
+Nursing_Interviews_AI_model/rag_engine/venv/
+Nursing_Interviews_AI_model/rag_engine/Windows/
+Nursing_Interviews_AI_model/rag_engine/venv/
+Nursing_Interviews_AI_model/rag_engine/*.bin
+Nursing_Interviews_AI_model/rag_engine/*.faiss
+venv/
+*.pyc
+__pycache__/

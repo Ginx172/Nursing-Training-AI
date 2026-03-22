@@ -94,3 +94,4 @@ Nursing_Interviews_AI_model/rag_engine/*.faiss
 venv/
 *.pyc
 __pycache__/
+Nursing_Interviews_AI_model/

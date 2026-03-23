@@ -4,7 +4,7 @@ Handles GDPR rights: access, erasure, portability, rectification
 """
 
 from typing import Dict, List, Optional, Any
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import zipfile
 import io

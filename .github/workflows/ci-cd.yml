@@ -24,6 +24,7 @@ jobs:
       run: |
         cd Nursing_Training_AI_App/backend
         pip install -r requirements.txt
+        pip install email-validator pytest flake8 black
     
     - name: Run tests
       run: |

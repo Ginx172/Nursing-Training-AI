@@ -5,17 +5,17 @@
   "communication_weight": 1.0,
   "leadership_weight": 1.0,
   "amu::invalid_band": {
-    "knowledge_depth": 1.01,
+    "knowledge_depth": 1.0201,
     "clinical_reasoning": 1.0,
-    "safety_awareness": 0.99,
-    "communication": 1.01,
-    "leadership": 1.03
+    "safety_awareness": 0.9801,
+    "communication": 1.0201,
+    "leadership": 1.0609
   },
   "amu::band_5": {
-    "knowledge_depth": 1.01,
+    "knowledge_depth": 1.0201,
     "clinical_reasoning": 1.0,
-    "safety_awareness": 0.99,
-    "communication": 1.01,
-    "leadership": 1.03
+    "safety_awareness": 0.9801,
+    "communication": 1.0201,
+    "leadership": 1.0609
   }
 }

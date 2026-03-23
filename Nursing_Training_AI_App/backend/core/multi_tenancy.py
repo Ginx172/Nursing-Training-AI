@@ -4,7 +4,7 @@ Implements secure tenant isolation for Enterprise organizations
 Strategy: Schema-per-tenant for maximum isolation and security
 """
 
-from typing import
+from typing import Optional, Dict, Any, List
 import re
 
 _VALID_SCHEMA_RE = re.compile(r"^[a-z0-9_]+$")
@@ -17,8 +17,9 @@ def _sanitize_schema_name(organization_id: str) -> str:
         raise ValueError(f"Schema name too long ({len(schema_name)} chars, max {_MAX_SCHEMA_LENGTH})")
     if not _VALID_SCHEMA_RE.match(schema_name):
         raise ValueError(f"Invalid organization_id: only lowercase letters, digits, hyphens, and underscores allowed")
-    return schema_name Optional, Dict, Any, List
+    return schema_name
 from sqlalchemy import create_engine, text
+from sqlalchemy.sql import quoted_name
 from sqlalchemy.orm import Session
 from datetime import datetime
 import os
@@ -60,13 +61,14 @@ class TenantManager:
             # Create schema in database
             with primary_engine.connect() as conn:
                 # Create schema
-                conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {schema_name}"))
+                qname = quoted_name(schema_name, quote=True)
+                conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {qname}"))
                 
                 # Grant permissions
                 conn.execute(text(f"""
-                    GRANT ALL ON SCHEMA {schema_name} TO nursing_user;
-                    GRANT ALL ON ALL TABLES IN SCHEMA {schema_name} TO nursing_user;
-                    ALTER DEFAULT PRIVILEGES IN SCHEMA {schema_name} 
+                    GRANT ALL ON SCHEMA {qname} TO nursing_user;
+                    GRANT ALL ON ALL TABLES IN SCHEMA {qname} TO nursing_user;
+                    ALTER DEFAULT PRIVILEGES IN SCHEMA {qname} 
                     GRANT ALL ON TABLES TO nursing_user;
                 """))
                 
@@ -121,7 +123,8 @@ class TenantManager:
         try:
             # Set search path to tenant schema
             with primary_engine.connect() as conn:
-                conn.execute(text(f"SET search_path TO {schema_name}"))
+                qname = quoted_name(schema_name, quote=True)
+                conn.execute(text(f"SET search_path TO {qname}"))
                 
                 # Create all tables in this schema
                 Base.metadata.create_all(bind=primary_engine)
@@ -153,9 +156,10 @@ class TenantManager:
         """Set database context to tenant schema"""
         try:
             schema_name = self.get_tenant_schema(organization_id)
+            qname = quoted_name(schema_name, quote=True)
             
             # Set search path to tenant schema
-            db.execute(text(f"SET search_path TO {schema_name}"))
+            db.execute(text(f"SET search_path TO {qname}"))
             
         except Exception as e:
             print(f"Error setting tenant context: {e}")
@@ -200,11 +204,19 @@ class TenantManager:
             if not confirm:
                 raise ValueError("Must confirm deletion with confirm=True")
             
+            environment = os.environ.get("ENVIRONMENT", "production")
+            if environment == "production":
+                raise ValueError(
+                    "Tenant deletion is disabled in production. "
+                    "Set ENVIRONMENT != 'production' to allow this operation."
+                )
+            
             schema_name = self.get_tenant_schema(organization_id)
             
             # Drop schema (CASCADE drops all tables)
             with primary_engine.connect() as conn:
-                conn.execute(text(f"DROP SCHEMA IF EXISTS {schema_name} CASCADE"))
+                qname = quoted_name(schema_name, quote=True)
+                conn.execute(text(f"DROP SCHEMA IF EXISTS {qname} CASCADE"))
                 conn.commit()
             
             # Remove from cache
@@ -281,13 +293,16 @@ class TenantManager:
             
             # Get storage usage
             with primary_engine.connect() as conn:
-                result = conn.execute(text(f"""
-                    SELECT pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) as size
-                    FROM pg_tables
-                    WHERE schemaname = :schema_name
-                """))
+                result = conn.execute(
+                    text(
+                        "SELECT COALESCE(SUM(pg_total_relation_size(schemaname||'.'||tablename)), 0)"
+                        " FROM pg_tables"
+                        " WHERE schemaname = :schema_name"
+                    ),
+                    {"schema_name": schema_name}
+                )
                 
-                total_size = sum([row[0] for row in result], 0)
+                total_size = result.scalar() or 0
             
             # TODO: Get other metrics from database
             

@@ -28,10 +28,11 @@ Thumbs.db
 *.log
 logs/
 
-# Environment variables
+# Environment variables — never commit real .env files
 .env
 *.env
 !config_example.env
+!*.env.example
 
 # Database
 *.db
@@ -61,13 +62,9 @@ test_models/
 .next/
 */.next/
 
-*.env
-.env
-
 # Vector DB - fisiere mari
 Nursing_Training_AI_App/backend/data/vectordb/
 Nursing_Interviews_AI_model/
-API.txt
 API.txt
 
 # Self-learning runtime data

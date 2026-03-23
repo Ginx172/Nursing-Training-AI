@@ -64,13 +64,12 @@ class TenantManager:
                 qname = quoted_name(schema_name, quote=True)
                 conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {qname}"))
                 
-                # Grant permissions
-                conn.execute(text(f"""
-                    GRANT ALL ON SCHEMA {qname} TO nursing_user;
-                    GRANT ALL ON ALL TABLES IN SCHEMA {qname} TO nursing_user;
-                    ALTER DEFAULT PRIVILEGES IN SCHEMA {qname} 
-                    GRANT ALL ON TABLES TO nursing_user;
-                """))
+                # Grant permissions — individual statements required; quoted_name provides
+                # DDL-safe quoting and _sanitize_schema_name() guarantees the identifier
+                # contains only [a-z0-9_] so no additional escaping is needed.
+                conn.execute(text(f"GRANT ALL ON SCHEMA {qname} TO nursing_user"))
+                conn.execute(text(f"GRANT ALL ON ALL TABLES IN SCHEMA {qname} TO nursing_user"))
+                conn.execute(text(f"ALTER DEFAULT PRIVILEGES IN SCHEMA {qname} GRANT ALL ON TABLES TO nursing_user"))
                 
                 conn.commit()
             

@@ -8,13 +8,28 @@ from fastapi.responses import RedirectResponse, Response
 from pydantic import BaseModel, EmailStr
 from typing import Optional, Dict
 import secrets
+import time
+import threading
 
 from services.sso_service import sso_service
 
 router = APIRouter(prefix="/api/sso", tags=["sso"])
 
-# Store for state tokens (in production, use Redis)
-state_tokens = {}
+# CSRF state tokens with expiry timestamps.
+# WARNING: This in-process dict is NOT suitable for multi-worker or multi-instance
+# deployments — tokens created in one worker will be invisible to others and are
+# lost on restart. Replace with a shared Redis store (with TTL) in production.
+_STATE_TOKEN_TTL_SECONDS = 300  # 5 minutes
+state_tokens: Dict[str, Dict] = {}
+_state_tokens_lock = threading.Lock()
+
+
+def _cleanup_expired_state_tokens() -> None:
+    """Remove state tokens that have exceeded their TTL. Must be called with _state_tokens_lock held."""
+    now = time.monotonic()
+    expired = [k for k, v in state_tokens.items() if now - v["_created_at"] > _STATE_TOKEN_TTL_SECONDS]
+    for k in expired:
+        state_tokens.pop(k, None)
 
 # Request Models
 class SSOConfigRequest(BaseModel):
@@ -51,11 +66,13 @@ async def initiate_sso_login(request: SSOLoginRequest):
         
         # Generate state token for CSRF protection
         state = secrets.token_urlsafe(32)
-        state_tokens[state] = {
-            "email": request.email,
-            "return_url": request.return_url,
-            "created_at": secrets.token_hex(16)
-        }
+        with _state_tokens_lock:
+            _cleanup_expired_state_tokens()
+            state_tokens[state] = {
+                "email": request.email,
+                "return_url": request.return_url,
+                "_created_at": time.monotonic(),
+            }
         
         # Get login URL based on provider
         if provider == "azure_ad":
@@ -88,11 +105,12 @@ async def sso_callback(
         if error:
             raise HTTPException(status_code=400, detail=f"SSO error: {error}")
         
-        # Validate state token
-        if not state or state not in state_tokens:
-            raise HTTPException(status_code=400, detail="Invalid state token")
-        
-        state_data = state_tokens.pop(state)
+        # Validate state token (also evict expired tokens)
+        with _state_tokens_lock:
+            _cleanup_expired_state_tokens()
+            if not state or state not in state_tokens:
+                raise HTTPException(status_code=400, detail="Invalid state token")
+            state_data = state_tokens.pop(state)
         
         # Authenticate with SSO provider
         auth_result = await sso_service.authenticate_sso(

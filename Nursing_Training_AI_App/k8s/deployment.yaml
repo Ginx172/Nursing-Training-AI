@@ -21,6 +21,10 @@ data:
 
 ---
 # Secret for sensitive data
+# WARNING: Replace ALL placeholder values below before deploying.
+# In production, manage secrets via an external secrets manager
+# (e.g. HashiCorp Vault, AWS Secrets Manager, or Sealed Secrets)
+# rather than storing them in plain-text stringData.
 apiVersion: v1
 kind: Secret
 metadata:
@@ -29,9 +33,11 @@ metadata:
 type: Opaque
 stringData:
   DATABASE_URL: "REPLACE_WITH_REAL_DATABASE_URL"
+  DATABASE_PASSWORD: "REPLACE_WITH_REAL_DATABASE_PASSWORD"
   SECRET_KEY: "REPLACE_WITH_REAL_SECRET_KEY_MIN_32_CHARS"
   STRIPE_SECRET_KEY: "REPLACE_WITH_REAL_STRIPE_KEY"
   ENCRYPTION_MASTER_KEY: "REPLACE_WITH_REAL_ENCRYPTION_KEY"
+  SENTRY_DSN: "REPLACE_WITH_REAL_SENTRY_DSN"
 
 ---
 # PostgreSQL StatefulSet

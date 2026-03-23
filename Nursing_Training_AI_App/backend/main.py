@@ -24,6 +24,32 @@ from api import (
     sso
 )
 
+# Dynamically load additional routers with graceful fallback
+import importlib
+_EXTRA_ROUTES = [
+    ("api.routes.auth", "router", "/api/auth"),
+    ("api.routes.users", "router", "/api/users"),
+    ("api.routes.questions", "router", "/api/questions"),
+    ("api.routes.training", "router", "/api/training"),
+    ("api.routes.bands", "router", "/api/bands"),
+    ("api.routes.ai_services", "router", "/api/ai"),
+    ("api.routes.audio", "router", "/api/audio"),
+    ("api.routes.demo", "router", "/api/demo"),
+    ("api.routes.auto_presentation", "router", "/api/auto-presentation"),
+    ("api.routes.banks_catalog", "router", "/api/banks"),
+    ("api.routes.security", "router", "/api/security"),
+    ("api.routes.security_monitoring", "router", "/api/security-monitoring"),
+    ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
+]
+_extra_routers = []
+for _module_path, _attr, _prefix in _EXTRA_ROUTES:
+    try:
+        _mod = importlib.import_module(_module_path)
+        _router = getattr(_mod, _attr)
+        _extra_routers.append((_router, _prefix))
+    except Exception as _e:
+        print(f"Warning: could not load router {_module_path}: {_e}")
+
 # Import services
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
@@ -154,6 +180,11 @@ app.include_router(analytics.router)
 app.include_router(admin.router)
 app.include_router(payments.router)
 app.include_router(sso.router)
+for _router, _prefix in _extra_routers:
+    if _prefix:
+        app.include_router(_router, prefix=_prefix)
+    else:
+        app.include_router(_router)
 
 # ========================================
 # HEALTH CHECK ENDPOINTS

@@ -71,6 +71,8 @@ class AIEvaluationService:
         self.mcp_endpoint = mcp_rag_config.mcp_endpoint
         self.rag_endpoint = mcp_rag_config.rag_endpoint
         self.openai_api_key = mcp_rag_config.openai_api_key
+        self.gemini_api_key = mcp_rag_config.gemini_api_key
+        self.gemini_model = mcp_rag_config.gemini_model
         
         # Criterii de evaluare pentru fiecare band
         self.evaluation_criteria = self._load_evaluation_criteria()
@@ -232,8 +234,8 @@ class AIEvaluationService:
     
     async def _get_ai_evaluation(self, question: Dict[str, Any], user_answer: str, 
                                 band: str, specialty: str) -> Dict[str, Any]:
-        """Obține evaluarea AI folosind OpenAI API"""
-        if not self.openai_api_key:
+        """Obține evaluarea AI folosind Google Gemini API"""
+        if not self.gemini_api_key:
             return self._fallback_evaluation(question, user_answer, band, specialty)
         
         # Construiește prompt-ul pentru evaluare
@@ -291,27 +293,35 @@ class AIEvaluationService:
         }}
         """
         
+        gemini_url = (
+            f"https://generativelanguage.googleapis.com/v1beta/models/"
+            f"{self.gemini_model}:generateContent?key={self.gemini_api_key}"
+        )
         try:
             async with httpx.AsyncClient() as client:
                 response = await client.post(
-                    "https://api.openai.com/v1/chat/completions",
-                    headers={"Authorization": f"Bearer {self.openai_api_key}"},
+                    gemini_url,
                     json={
-                        "model": "gpt-4",
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.3,
-                        "max_tokens": 2000
+                        "contents": [{"parts": [{"text": prompt}]}],
+                        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 2000}
                     },
                     timeout=60.0
                 )
                 
                 if response.status_code == 200:
                     data = response.json()
-                    content = data["choices"][0]["message"]["content"]
-                    return json.loads(content)
+                    content = data["candidates"][0]["content"]["parts"][0]["text"]
+                    # Strip markdown code fences if present
+                    content = content.strip()
+                    if content.startswith("```"):
+                        content = content.split("```", 2)[1]
+                        if content.startswith("json"):
+                            content = content[4:]
+                        content = content.rsplit("```", 1)[0]
+                    return json.loads(content.strip())
                 else:
                     return self._fallback_evaluation(question, user_answer, band, specialty)
-        except Exception as e:
+        except Exception:
             return self._fallback_evaluation(question, user_answer, band, specialty)
     
     def _fallback_evaluation(self, question: Dict[str, Any], user_answer: str, 
@@ -363,7 +373,7 @@ class AIEvaluationService:
             ai_evaluation.get("knowledge_gaps", [])
         )
         
-        return EvaluationResult(
+        result = EvaluationResult(
             question_id=question.get("id", 0),
             band=band,
             specialty=specialty,
@@ -376,6 +386,20 @@ class AIEvaluationService:
             book_recommendations=book_recommendations,
             next_steps=ai_evaluation.get("next_steps", [])
         )
+
+        # Închide feedback loop-ul de auto-învățare
+        try:
+            from core.self_learning import self_learning
+            self_learning.record_outcome({
+                "band": band,
+                "specialty": specialty,
+                "overall_score": result.overall_score,
+                "detailed_scores": result.detailed_scores,
+            })
+        except Exception:
+            pass
+
+        return result
 
 # Instanță globală a serviciului
 ai_evaluation_service = AIEvaluationService()

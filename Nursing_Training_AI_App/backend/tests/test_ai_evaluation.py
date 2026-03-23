@@ -83,12 +83,12 @@ class TestAIEvaluation:
             "next_steps": ["Study advanced protocols", "Practice leadership scenarios"]
         }
         
-        # Mock the async method
+        # Mock the async method - use side_effect with async function
         async def mock_evaluate_async(*args, **kwargs):
             from core.ai_evaluation import EvaluationResult
             return EvaluationResult(**mock_result)
         
-        mock_evaluate.return_value = mock_evaluate_async()
+        mock_evaluate.side_effect = mock_evaluate_async
         
         # Test data
         evaluation_request = {

@@ -12,6 +12,8 @@ class MCPRAGConfig:
         self.mcp_endpoint = os.getenv("MCP_ENDPOINT", "http://localhost:8001")
         self.rag_endpoint = os.getenv("RAG_ENDPOINT", "http://localhost:8002")
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
+        self.gemini_api_key = os.getenv("GEMINI_API_KEY")
+        self.gemini_model = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
         self.knowledge_base_path = os.getenv("KNOWLEDGE_BASE_PATH", "J:/_Proiect_Nursing_training_AI/Healthcare_Knowledge_Base")
         self.rag_engine_path = os.getenv("RAG_ENGINE_PATH", "J:/_Proiect_Nursing_training_AI/Nursing_Interviews_AI_model/rag_engine")
         

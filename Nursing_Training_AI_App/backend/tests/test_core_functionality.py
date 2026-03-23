@@ -59,13 +59,14 @@ class TestSelfLearning:
     
     def test_self_learning_initialization(self):
         """Test inițializarea modulului de auto-învățare"""
-        with patch('builtins.open', mock_open(read_data='{"test": 1.0}')) as mock_file:
+        with patch('builtins.open', mock_open(read_data='{}')) as mock_file:
             learning = SelfLearning("test_models")
             
-            # Test get weights
+            # Test get weights - new implementation returns flat dimension weights
             weights = learning.get_weights()
             assert isinstance(weights, dict)
-            assert "test" in weights
+            assert "knowledge_depth_weight" in weights
+            assert "clinical_reasoning_weight" in weights
     
     def test_self_learning_record_outcome(self):
         """Test înregistrarea unui rezultat"""

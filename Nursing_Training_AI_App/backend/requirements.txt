@@ -12,6 +12,7 @@ redis==5.0.1
 
 # AI/ML
 openai==1.3.7
+google-generativeai>=0.3.0
 sentence-transformers==2.2.2
 faiss-cpu
 transformers
@@ -33,6 +34,7 @@ stripe==8.0.0
 
 # Email
 aiosmtplib==3.0.1
+email-validator
 
 # Monitoring
 psutil==5.9.6
@@ -47,7 +49,6 @@ cryptography==41.0.7
 
 # GraphQL & Webhooks (Enterprise API)
 strawberry-graphql[fastapi]==0.214.0
-httpx==0.25.2
 
 # Multi-Tenancy & BI Integration
 dnspython==2.4.2
@@ -62,7 +63,6 @@ google-cloud-texttospeech==2.14.1
 # Testare
 pytest==7.4.3
 pytest-asyncio==0.21.1
-httpx==0.25.2
 
 # Development
 black==23.11.0

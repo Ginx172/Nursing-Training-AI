@@ -61,7 +61,7 @@ def _load_bank(relative_path: str) -> QuestionBank:
 
 @router.get("/amu/band5", response_model=QuestionBank)
 async def get_amu_band5():
-    return _load_bank('band5_amu.json')
+    return _load_bank('amu_band_5_bank_01.json')
 
 
 @router.post("/evaluate", response_model=EvaluationResponse)

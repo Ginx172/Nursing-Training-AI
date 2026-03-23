@@ -24,12 +24,18 @@ from api import (
     sso
 )
 
+# Import critical routers directly so import failures are raised immediately,
+# not swallowed silently. These routers serve endpoints that the test suite
+# depends on (questions and security/payments), and their dependencies
+# (core.ai_evaluation, core.audit) must always be available.
+from api.routes.questions import router as questions_router
+from api.routes.security import router as security_router
+
 # Dynamically load additional routers with graceful fallback
 import importlib
 _EXTRA_ROUTES = [
     ("api.routes.auth", "router", "/api/auth"),
     ("api.routes.users", "router", "/api/users"),
-    ("api.routes.questions", "router", "/api/questions"),
     ("api.routes.training", "router", "/api/training"),
     ("api.routes.bands", "router", "/api/bands"),
     ("api.routes.ai_services", "router", "/api/ai"),
@@ -37,7 +43,6 @@ _EXTRA_ROUTES = [
     ("api.routes.demo", "router", "/api/demo"),
     ("api.routes.auto_presentation", "router", "/api/auto-presentation"),
     ("api.routes.banks_catalog", "router", "/api/banks"),
-    ("api.routes.security", "router", "/api/security"),
     ("api.routes.security_monitoring", "router", "/api/security-monitoring"),
     ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
 ]
@@ -180,6 +185,8 @@ app.include_router(analytics.router)
 app.include_router(admin.router)
 app.include_router(payments.router)
 app.include_router(sso.router)
+app.include_router(questions_router, prefix="/api/questions")
+app.include_router(security_router, prefix="/api/security")
 for _router, _prefix in _extra_routers:
     if _prefix:
         app.include_router(_router, prefix=_prefix)

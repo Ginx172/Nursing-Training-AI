@@ -14,6 +14,7 @@ jobs:
       PYTHONPATH: ${{ github.workspace }}/Nursing_Training_AI_App/backend
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       SECRET_KEY: "ci-test-secret-key-not-for-production"
+      DATABASE_URL: "sqlite:///./test.db"
 
     steps:
     - uses: actions/checkout@v4

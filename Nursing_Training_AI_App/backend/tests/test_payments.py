@@ -236,9 +236,9 @@ class TestSecurityMiddleware:
             response = client.get("/")
             responses.append(response)
         
-        # Toate request-urile ar trebui să primească răspuns valid
+        # No rate limiting is implemented, so all requests should return 200
         status_codes = [r.status_code for r in responses]
-        assert all(code in [200, 429] for code in status_codes)
+        assert all(code == 200 for code in status_codes)
 
 
 if __name__ == "__main__":

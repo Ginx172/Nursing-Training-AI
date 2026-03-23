@@ -3,13 +3,17 @@ Teste pentru sistemul de evaluare AI universal
 """
 
 import pytest
+from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from unittest.mock import patch, AsyncMock
 import json
 
-from main import app
+from api.routes.questions import router as questions_router
 
-client = TestClient(app)
+_app = FastAPI()
+_app.include_router(questions_router, prefix="/api/questions")
+
+client = TestClient(_app)
 
 class TestAIEvaluation:
     """Teste pentru evaluarea AI universală"""

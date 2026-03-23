@@ -6,6 +6,7 @@ Enterprise-grade permissions system with fine-grained access control
 from typing import List, Dict, Optional, Set
 from enum import Enum
 from datetime import datetime
+from fastapi import Depends, HTTPException
 
 class Permission(str, Enum):
     # User Permissions

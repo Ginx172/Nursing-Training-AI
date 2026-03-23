@@ -4,7 +4,7 @@ Immutable audit trail for Enterprise compliance and security
 """
 
 from typing import Dict, Optional, Any, List
-from datetime import datetime
+from datetime import datetime, timedelta
 from enum import Enum
 import hashlib
 import json

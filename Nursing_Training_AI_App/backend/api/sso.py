@@ -4,7 +4,7 @@ Handles Single Sign-On authentication flows
 """
 
 from fastapi import APIRouter, HTTPException, Request, Query, Depends
-from fastapi.responses import RedirectResponse
+from fastapi.responses import RedirectResponse, Response
 from pydantic import BaseModel, EmailStr
 from typing import Optional, Dict
 import secrets

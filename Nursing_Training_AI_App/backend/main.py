@@ -24,6 +24,21 @@ from api import (
     sso
 )
 
+# Import additional routers with graceful fallback
+_extra_routers = {}
+for _name in [
+    "auth", "users", "questions", "training", "bands",
+    "ai_services", "audio", "demo", "auto_presentation",
+    "banks_catalog", "security", "security_monitoring",
+    "learning_insights",
+]:
+    try:
+        import importlib
+        _mod = importlib.import_module(f"api.routes.{_name}")
+        _extra_routers[_name] = _mod.router
+    except Exception as _e:
+        print(f"Warning: could not load router '{_name}': {_e}")
+
 # Import services
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
@@ -81,6 +96,7 @@ app = FastAPI(
         {"name": "payments", "description": "Subscription and payment management"},
         {"name": "admin", "description": "Admin panel endpoints (requires admin role)"},
         {"name": "health", "description": "System health and monitoring"},
+        {"name": "learning", "description": "Continuous learning insights and ML cycle"},
     ],
     servers=[
         {"url": "https://api.nursingtrainingai.com", "description": "Production server"},
@@ -154,6 +170,10 @@ app.include_router(analytics.router)
 app.include_router(admin.router)
 app.include_router(payments.router)
 app.include_router(sso.router)
+
+# Include dynamically loaded routers
+for _router in _extra_routers.values():
+    app.include_router(_router)
 
 # ========================================
 # HEALTH CHECK ENDPOINTS

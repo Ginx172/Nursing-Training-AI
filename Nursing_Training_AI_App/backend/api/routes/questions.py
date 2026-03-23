@@ -64,6 +64,46 @@ async def get_amu_band5():
     return _load_bank('amu_band_5_bank_01.json')
 
 
+@router.get("/bank/{specialty}/{band}", response_model=QuestionBank)
+async def get_question_bank(specialty: str, band: str):
+    """Load the first available question bank for a specialty and band combination.
+
+    Accepts band values like 'band_5', 'band5', or '5' (all normalised internally).
+    Specialty names are matched case-insensitively.
+    """
+    # Normalise band: strip spaces, lower-case, ensure 'band_N' format
+    band_clean = band.strip().lower().replace(" ", "_")
+    if not band_clean.startswith("band_"):
+        if band_clean.startswith("band"):
+            # e.g. 'band5' → 'band_5'
+            band_clean = "band_" + band_clean[4:]
+        else:
+            # e.g. '5' → 'band_5'
+            band_clean = "band_" + band_clean
+
+    specialty_clean = specialty.strip().lower()
+
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    data_dir = os.path.join(base_dir, 'data', 'question_banks')
+
+    prefix = f"{specialty_clean}_{band_clean}_bank_"
+    try:
+        files = sorted(
+            f for f in os.listdir(data_dir)
+            if f.lower().startswith(prefix) and f.endswith('.json')
+        )
+    except OSError:
+        raise HTTPException(status_code=404, detail=f"Question bank directory not found")
+
+    if not files:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No question bank found for specialty='{specialty}' band='{band}'"
+        )
+
+    return _load_bank(files[0])
+
+
 @router.post("/evaluate", response_model=EvaluationResponse)
 async def evaluate_answer(request: EvaluationRequest):
     """Evaluează un răspuns folosind AI, MCP și RAG pentru orice band și specialitate"""

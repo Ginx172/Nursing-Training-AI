@@ -1,5 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Mic, Play, Square, Loader2, CheckCircle, Volume2, User, Bot, RotateCcw, FastForward, Send, Keyboard, Pause } from 'lucide-react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { Mic, Loader2, Volume2, User, Bot, RotateCcw, Send, Keyboard, Pause } from 'lucide-react';
+
+const API_URL =
+    typeof window !== 'undefined'
+        ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+        : 'http://localhost:8000';
+
+const DEMO_QUESTION_ID = 1;
+
+const SCORE_CORRECT = 90;
+const SCORE_INCORRECT = 65;
 
 const InterviewMode = () => {
     const [isRecording, setIsRecording] = useState(false);
@@ -8,6 +18,14 @@ const InterviewMode = () => {
     const [transcript, setTranscript] = useState<any[]>([
         { role: 'ai', text: "Hello! I'm your AI Clinical Interviewer. I'll be asking you a series of scenario-based questions to assess your clinical reasoning and communication skills. Are you ready to begin?" }
     ]);
+
+    // Speech recognition
+    const recognitionRef = useRef<any>(null);
+    const SpeechRecognitionImpl = useMemo(() => {
+        if (typeof window === 'undefined') return null;
+        const w = window as any;
+        return w.SpeechRecognition || w.webkitSpeechRecognition || null;
+    }, []);
 
     // Text Input State
     const [isTyping, setIsTyping] = useState(false);
@@ -22,6 +40,7 @@ const InterviewMode = () => {
         // Cleanup speech on unmount
         return () => {
             window.speechSynthesis.cancel();
+            stopListening();
         };
     }, []);
 
@@ -59,12 +78,47 @@ const InterviewMode = () => {
     };
 
     const startRecording = () => {
-        setIsRecording(true);
-        // Simulate recording duration
-        setTimeout(() => {
+        if (!SpeechRecognitionImpl) return;
+        try {
+            // Cancel any TTS
+            stopSpeaking();
+            // Stop previous recognition
+            if (recognitionRef.current) {
+                try { recognitionRef.current.stop(); } catch {}
+                recognitionRef.current = null;
+            }
+            const rec = new SpeechRecognitionImpl();
+            recognitionRef.current = rec;
+            rec.lang = 'en-GB';
+            rec.interimResults = false;
+            rec.maxAlternatives = 1;
+            rec.onresult = (event: any) => {
+                const transcriptText = event.results?.[0]?.[0]?.transcript || '';
+                if (transcriptText) {
+                    analyzeResponse(transcriptText);
+                }
+            };
+            rec.onerror = () => {
+                setIsRecording(false);
+                recognitionRef.current = null;
+            };
+            rec.onend = () => {
+                setIsRecording(false);
+                recognitionRef.current = null;
+            };
+            rec.start();
+            setIsRecording(true);
+        } catch {
             setIsRecording(false);
-            analyzeResponse("I believe checking patient ID is crucial because it ensures the right patient gets the right medication, preventing critical errors."); // Simulating transcribed audio
-        }, 3000);
+        }
+    };
+
+    const stopListening = () => {
+        if (recognitionRef.current) {
+            try { recognitionRef.current.stop(); } catch {}
+            recognitionRef.current = null;
+        }
+        setIsRecording(false);
     };
 
     const handleTextSubmit = (e: React.FormEvent) => {
@@ -76,32 +130,42 @@ const InterviewMode = () => {
         setIsTyping(false);
     };
 
-    const analyzeResponse = (userResponse: string) => {
+    const analyzeResponse = async (userResponse: string) => {
         setProcessing(true);
 
         // Add user message immediately
         setTranscript(prev => [...prev, { role: 'user', text: userResponse }]);
 
-        // Simulate AI analysis and response
-        setTimeout(() => {
-            setProcessing(false);
-            const nextQuestion = "That's a solid answer. Now, imagine the patient becomes unresponsive during the procedure. What is your immediate next step?";
-
-            setTranscript(prev => [
-                ...prev,
-                { role: 'ai', text: nextQuestion }
-            ]);
-
-            setFeedback({
-                score: 85,
-                clarity: "High",
-                clinical_accuracy: "Good",
-                tips: "Good use of safety protocols. To improve, explicitly mention checking the wristband against the MAR."
+        try {
+            const res = await fetch(`${API_URL}/api/demo/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question_id: DEMO_QUESTION_ID, user_answer: userResponse }),
             });
 
-            // Auto-play the next question
-            speakText(nextQuestion);
-        }, 2000);
+            if (res.ok) {
+                const data = await res.json();
+                const nextQuestion = data.feedback
+                    ? "Thank you for your answer. " + (data.is_correct ? "Well done! " : "") + data.feedback
+                    : "Thank you. Let's continue — can you describe a situation where you had to escalate a patient concern to a senior colleague?";
+
+                setTranscript(prev => [...prev, { role: 'ai', text: nextQuestion }]);
+                setFeedback({
+                    score: data.is_correct ? SCORE_CORRECT : SCORE_INCORRECT,
+                    tips: data.feedback || "Good response. Consider adding more clinical detail.",
+                });
+                speakText(nextQuestion);
+            } else {
+                throw new Error(`HTTP ${res.status}`);
+            }
+        } catch {
+            // Fallback if API unreachable
+            const fallback = "Thank you for your response. Let's continue — can you describe a situation where you had to escalate a patient concern to a senior colleague?";
+            setTranscript(prev => [...prev, { role: 'ai', text: fallback }]);
+            speakText(fallback);
+        } finally {
+            setProcessing(false);
+        }
     };
 
     return (
@@ -231,19 +295,22 @@ const InterviewMode = () => {
                             </button>
                         </form>
                     ) : (
-                        <div className="flex justify-center gap-4">
-                            <button
-                                onClick={startRecording}
-                                className="group relative bg-teal-600 text-white pl-6 pr-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-teal-200 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
-                            >
-                                <span className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/40 transition-colors"></span>
-                                <Mic className="h-6 w-6" />
-                                <span>Record Answer</span>
-                            </button>
-
-                            <div className="flex items-center justify-center p-2">
-                                <span className="text-slate-300 font-medium text-sm">OR</span>
-                            </div>
+                        <div className="flex justify-center gap-4 flex-wrap">
+                            {SpeechRecognitionImpl && (
+                                <>
+                                    <button
+                                        onClick={startRecording}
+                                        className="group relative bg-teal-600 text-white pl-6 pr-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-teal-200 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
+                                    >
+                                        <span className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/40 transition-colors"></span>
+                                        <Mic className="h-6 w-6" />
+                                        <span>Record Answer</span>
+                                    </button>
+                                    <div className="flex items-center justify-center p-2">
+                                        <span className="text-slate-300 font-medium text-sm">OR</span>
+                                    </div>
+                                </>
+                            )}
 
                             <button
                                 onClick={() => setIsTyping(true)}
@@ -257,9 +324,15 @@ const InterviewMode = () => {
                 ) : (
                     <div className="flex justify-center py-2">
                         {isRecording ? (
-                            <div className="flex items-center gap-3 text-teal-600 font-bold animate-pulse">
+                            <div className="flex items-center gap-4 text-teal-600 font-bold animate-pulse">
                                 <span className="w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
                                 Listening...
+                                <button
+                                    onClick={stopListening}
+                                    className="ml-2 text-sm text-red-500 border border-red-300 rounded-lg px-3 py-1 font-medium hover:bg-red-50 transition"
+                                >
+                                    Stop
+                                </button>
                             </div>
                         ) : (
                             <span className="text-slate-400 font-medium">Processing...</span>

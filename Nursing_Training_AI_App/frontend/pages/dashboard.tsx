@@ -19,7 +19,8 @@ import {
     LogOut,
     Bell,
     Search,
-    Zap
+    Zap,
+    ChevronRight,
 } from 'lucide-react';
 
 export default function Dashboard() {
@@ -56,7 +57,12 @@ export default function Dashboard() {
                         <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 px-4">Menu</p>
                         <NavItem icon={<LayoutDashboard />} label="Dashboard" active />
                         <NavItem icon={<BookOpen />} label="Knowledge Base" />
-                        <NavItem icon={<Mic />} label="Interview Practice" />
+                        <Link href="/interview" className="flex items-center gap-3 px-4 py-3.5 rounded-xl font-medium transition-all duration-200 group text-slate-500 hover:text-slate-800 hover:bg-slate-50">
+                            <span className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                                <Mic size={20} />
+                            </span>
+                            Interview Practice
+                        </Link>
                         <NavItem icon={<MessageSquare />} label="Question Bank" />
                         <NavItem icon={<Users />} label="Students" />
                     </div>
@@ -131,9 +137,26 @@ export default function Dashboard() {
                         </div>
                     </div>
 
+                    {/* Interview CTA */}
+                    <Link
+                        href="/interview"
+                        className="group relative overflow-hidden bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl p-6 flex items-center justify-between text-white shadow-lg shadow-teal-100 hover:shadow-xl hover:from-teal-500 hover:to-emerald-500 transition-all duration-300"
+                    >
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                        <div className="relative z-10 flex items-center gap-5">
+                            <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                                <Mic className="w-7 h-7" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold">Start Full Interview Practice</h3>
+                                <p className="text-teal-100 text-sm mt-0.5">Select your band &amp; specialty → Answer questions → Get AI feedback</p>
+                            </div>
+                        </div>
+                        <ChevronRight className="relative z-10 w-6 h-6 text-white/80 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+
                     {/* Stats Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <StatCard
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">                        <StatCard
                             icon={<Users className="text-blue-600" />}
                             label="Active Students"
                             value="1,248"
@@ -172,7 +195,12 @@ export default function Dashboard() {
                             <SectionHeader title="System Status" subtitle="Infrastructure Health" />
                             <SystemHealth />
 
-                            <SectionHeader title="AI Interview Mode" subtitle="Voice & Text Simulation" />
+                            <SectionHeader title="AI Interview Mode" subtitle="Quick-try widget — Voice & Text Simulation" />
+                            <div className="text-xs text-slate-400 mb-2 flex items-center gap-1.5">
+                                <Mic className="w-3.5 h-3.5" />
+                                <span>For the full end-to-end interview flow with band/specialty selection and results, </span>
+                                <Link href="/interview" className="text-teal-600 font-semibold hover:underline">go to /interview</Link>.
+                            </div>
                             <InterviewMode />
                         </div>
 

@@ -6,14 +6,34 @@ import pytest
 import hmac
 import hashlib
 import json
+from fastapi import FastAPI, Request
 from fastapi.testclient import TestClient
 from unittest.mock import patch, mock_open
 import os
 
-# Import the main app
-from main import app
+from api.routes.security import router as security_router
 
-client = TestClient(app)
+_app = FastAPI()
+_app.include_router(security_router, prefix="/api/security")
+
+
+@_app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
+    return response
+
+
+@_app.get("/")
+async def root():
+    return {"message": "Nursing Training AI API", "status": "operational"}
+
+
+client = TestClient(_app)
 
 class TestPaymentVerification:
     """Teste pentru endpoint-ul de verificare plăți generic"""

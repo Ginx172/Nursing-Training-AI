@@ -1,21 +1,21 @@
 {
-  "knowledge_depth_weight": 1.0,
+  "knowledge_weight": 1.0,
   "clinical_reasoning_weight": 1.0,
-  "safety_awareness_weight": 1.0,
+  "safety_weight": 1.0,
   "communication_weight": 1.0,
   "leadership_weight": 1.0,
   "amu::invalid_band": {
-    "knowledge_depth": 1.0510100501,
+    "knowledge_depth": 1.030301,
     "clinical_reasoning": 1.0,
-    "safety_awareness": 0.9509900498999999,
-    "communication": 1.0510100501,
-    "leadership": 1.1592740743
+    "safety_awareness": 0.9702989999999999,
+    "communication": 1.030301,
+    "leadership": 1.092727
   },
   "amu::band_5": {
-    "knowledge_depth": 1.0510100501,
+    "knowledge_depth": 1.030301,
     "clinical_reasoning": 1.0,
-    "safety_awareness": 0.9509900498999999,
-    "communication": 1.0510100501,
-    "leadership": 1.1592740743
+    "safety_awareness": 0.9702989999999999,
+    "communication": 1.030301,
+    "leadership": 1.092727
   }
 }

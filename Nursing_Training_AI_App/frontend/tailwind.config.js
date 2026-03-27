@@ -67,7 +67,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
+    // Uncomment after installing: npm install @tailwindcss/forms @tailwindcss/typography
+    // require('@tailwindcss/forms'),
+    // require('@tailwindcss/typography'),
   ],
 }

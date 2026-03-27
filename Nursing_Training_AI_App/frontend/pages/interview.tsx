@@ -60,15 +60,25 @@ interface QuestionBank {
 
 interface PerQuestionResult {
     question_id: number;
+    question_title: string;
+    question_text: string;
+    user_answer: string;
     is_correct: boolean;
+    score: number;
+    max_score: number;
     feedback: string;
-    recommendations: { title: string; summary: string; url?: string | null }[];
+    strengths: string[];
+    weaknesses: string[];
+    ideal_answer: string;
+    recommendations?: { title: string; summary: string; url?: string | null }[];
 }
 
 interface BatchResult {
     total_questions: number;
     correct: number;
     score_percentage: number;
+    total_score: number;
+    total_possible: number;
     per_question: PerQuestionResult[];
     study_plan: { title: string; items: string[] }[];
     next_steps: string;
@@ -300,12 +310,18 @@ export default function InterviewPage() {
         setSubmitError('');
         try {
             const payload = {
+                band: bank.band,
+                specialty: bank.specialty,
                 answers: bank.questions.map(q => ({
                     question_id: q.id,
+                    question_text: q.question_text,
+                    question_title: q.title,
                     user_answer: (answers[q.id] ?? '').trim(),
+                    correct_answer: q.correct_answer ?? '',
+                    expected_points: q.expected_points ?? [],
                 })),
             };
-            const res = await fetch(`${API_URL}/api/demo/submit-batch`, {
+            const res = await fetch(`${API_URL}/api/questions/submit-interview`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
@@ -858,44 +874,90 @@ function ResultsStep({
                 </div>
             </div>
 
-            {/* Per-question feedback */}
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                <div className="px-6 py-4 border-b border-slate-100 flex items-center gap-2">
+            {/* Per-question detailed feedback */}
+            <div className="space-y-4">
+                <div className="flex items-center gap-2 px-1">
                     <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <h3 className="font-bold text-slate-800">Question-by-Question Feedback</h3>
+                    <h3 className="font-bold text-slate-800 text-lg">Detailed Feedback per Question</h3>
                 </div>
-                <div className="divide-y divide-slate-100">
-                    {results.per_question.map((r, idx) => (
-                        <div key={r.question_id} className="p-5 space-y-2">
+                {results.per_question.map((r, idx) => (
+                    <div key={r.question_id} className={`bg-white rounded-2xl border-2 shadow-sm overflow-hidden ${
+                        r.is_correct ? 'border-emerald-200' : 'border-red-200'
+                    }`}>
+                        {/* Question header with score */}
+                        <div className={`px-6 py-4 flex items-center justify-between ${
+                            r.is_correct ? 'bg-emerald-50' : 'bg-red-50'
+                        }`}>
                             <div className="flex items-center gap-3">
                                 {r.is_correct ? (
-                                    <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                                    <CheckCircle className="w-6 h-6 text-emerald-500" />
                                 ) : (
-                                    <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                                    <AlertCircle className="w-6 h-6 text-red-400" />
                                 )}
-                                <span className="font-semibold text-slate-700 text-sm">
-                                    Q{idx + 1}: {bank.questions[idx]?.title ?? `Question ${idx + 1}`}
-                                </span>
-                                <span className={`ml-auto text-xs font-bold px-2 py-0.5 rounded-full ${
-                                    r.is_correct ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-600'
-                                }`}>
-                                    {r.is_correct ? 'Correct' : 'Incorrect'}
-                                </span>
+                                <div>
+                                    <span className="font-bold text-slate-800">Q{idx + 1}: {r.question_title || `Question ${idx + 1}`}</span>
+                                    <p className="text-xs text-slate-500 mt-0.5">{r.question_text}</p>
+                                </div>
                             </div>
-                            <p className="text-slate-600 text-sm leading-relaxed pl-8">{r.feedback}</p>
-                            {r.recommendations?.length > 0 && (
-                                <div className="pl-8 space-y-1.5 mt-2">
-                                    {r.recommendations.map((rec, i) => (
-                                        <div key={i} className="text-xs text-slate-500 flex items-start gap-2">
-                                            <BookOpen className="w-3.5 h-3.5 text-indigo-400 mt-0.5 flex-shrink-0" />
-                                            <span><strong className="text-indigo-600">{rec.title}:</strong> {rec.summary}</span>
-                                        </div>
-                                    ))}
+                            <div className={`text-2xl font-black px-3 py-1 rounded-xl ${
+                                r.score >= 8 ? 'bg-emerald-100 text-emerald-700' :
+                                r.score >= 5 ? 'bg-amber-100 text-amber-700' :
+                                'bg-red-100 text-red-600'
+                            }`}>
+                                {r.score}/{r.max_score}
+                            </div>
+                        </div>
+
+                        <div className="p-6 space-y-4">
+                            {/* AI Feedback */}
+                            <div className="p-3 bg-blue-50 rounded-xl">
+                                <p className="text-sm text-blue-800 font-medium">{r.feedback}</p>
+                            </div>
+
+                            {/* Your answer */}
+                            <div>
+                                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Your Answer</h4>
+                                <p className="text-sm text-slate-700 bg-slate-50 rounded-lg p-3">{r.user_answer}</p>
+                            </div>
+
+                            {/* Strengths */}
+                            {r.strengths && r.strengths.length > 0 && (
+                                <div>
+                                    <h4 className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">What you did well</h4>
+                                    <ul className="space-y-1">
+                                        {r.strengths.map((s, i) => (
+                                            <li key={i} className="text-sm text-emerald-700 flex items-start gap-2">
+                                                <CheckCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" /> {s}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* Weaknesses */}
+                            {r.weaknesses && r.weaknesses.length > 0 && (
+                                <div>
+                                    <h4 className="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Areas to improve</h4>
+                                    <ul className="space-y-1">
+                                        {r.weaknesses.map((w, i) => (
+                                            <li key={i} className="text-sm text-red-600 flex items-start gap-2">
+                                                <AlertCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" /> {w}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* Ideal answer */}
+                            {r.ideal_answer && (
+                                <div className="border-t border-slate-100 pt-4">
+                                    <h4 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1">Model / Ideal Answer</h4>
+                                    <p className="text-sm text-slate-600 bg-indigo-50 rounded-lg p-3 leading-relaxed">{r.ideal_answer}</p>
                                 </div>
                             )}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
 
             {/* Study plan */}

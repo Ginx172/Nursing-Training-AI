@@ -11,23 +11,29 @@ from pathlib import Path
 import asyncio
 import logging
 from dataclasses import dataclass
-import numpy as np
+try:
+    import numpy as np
+    NUMPY_AVAILABLE = True
+except (ImportError, AttributeError) as e:
+    NUMPY_AVAILABLE = False
+    np = None
+    logging.warning(f"NumPy not available: {e}")
 
-# Import pentru FAISS (va fi adăugat în requirements.txt)
+# Import pentru FAISS
 try:
     import faiss
     FAISS_AVAILABLE = True
-except ImportError:
+except (ImportError, AttributeError, Exception) as e:
     FAISS_AVAILABLE = False
-    logging.warning("FAISS not available. Install with: pip install faiss-cpu")
+    logging.warning(f"FAISS not available: {e}. RAG search will be disabled.")
 
 # Import pentru Sentence Transformers
 try:
     from sentence_transformers import SentenceTransformer
     SENTENCE_TRANSFORMERS_AVAILABLE = True
-except ImportError:
+except (ImportError, AttributeError, Exception) as e:
     SENTENCE_TRANSFORMERS_AVAILABLE = False
-    logging.warning("Sentence Transformers not available. Install with: pip install sentence-transformers")
+    logging.warning(f"Sentence Transformers not available: {e}. RAG search will be disabled.")
 
 from core.config import settings
 from core.mcp_rag_config import mcp_rag_config

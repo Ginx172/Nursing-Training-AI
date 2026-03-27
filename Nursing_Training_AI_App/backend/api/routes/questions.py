@@ -78,13 +78,139 @@ async def get_amu_band5():
 
 MAX_QUESTIONS_PER_SESSION = 15
 
+# Intrebari suplimentare care lipsesc din question banks - categorii NHS esentiale
+SUPPLEMENTARY_QUESTIONS = [
+    {
+        "title": "Safeguarding - Vulnerable Adult",
+        "question_text": "You notice bruising on an elderly patient that is inconsistent with their explanation. Describe the steps you would take to safeguard this patient.",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["document findings objectively", "report to safeguarding lead", "follow local safeguarding policy", "maintain patient dignity", "do not investigate yourself"],
+        "competencies": ["safeguarding", "documentation", "professional duty"],
+    },
+    {
+        "title": "Safeguarding - Child Protection",
+        "question_text": "A child presents with injuries that raise concerns about non-accidental injury. What are your responsibilities and what actions would you take?",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["document injuries accurately", "inform designated safeguarding lead", "follow local child protection procedures", "do not confront parents", "ensure child safety", "consider MASH referral"],
+        "competencies": ["safeguarding", "child protection", "documentation"],
+    },
+    {
+        "title": "Mental Health - Risk Assessment",
+        "question_text": "A patient on your ward discloses thoughts of self-harm. How would you assess and manage this situation?",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["immediate safety assessment", "stay with patient", "use empathetic communication", "assess suicide risk factors", "escalate to mental health liaison team", "document assessment", "implement safety plan"],
+        "competencies": ["mental health", "risk assessment", "communication"],
+    },
+    {
+        "title": "Mental Capacity Assessment",
+        "question_text": "A patient is refusing a life-saving blood transfusion. Explain how you would assess their mental capacity to make this decision, referencing the Mental Capacity Act 2005.",
+        "question_type": "scenario",
+        "difficulty": "advanced",
+        "expected_points": ["assume capacity unless proven otherwise", "two-stage test", "can they understand the information", "can they retain it", "can they weigh it up", "can they communicate their decision", "best interests if lacking capacity", "advance directives"],
+        "competencies": ["mental capacity", "ethics", "legal framework"],
+    },
+    {
+        "title": "Communication - SBAR Handover",
+        "question_text": "You need to escalate a deteriorating patient to the medical team. Demonstrate how you would structure your communication using the SBAR framework.",
+        "question_type": "scenario",
+        "difficulty": "easy",
+        "expected_points": ["Situation - identify yourself and patient", "Background - relevant history", "Assessment - current observations and concerns", "Recommendation - what you need from them"],
+        "competencies": ["communication", "SBAR", "escalation"],
+    },
+    {
+        "title": "Communication - Breaking Bad News",
+        "question_text": "How would you support a patient who has just been told they have a terminal diagnosis? What communication techniques would you use?",
+        "question_type": "scenario",
+        "difficulty": "advanced",
+        "expected_points": ["private environment", "active listening", "acknowledge emotions", "use simple language", "check understanding", "offer support resources", "involve family if patient consents", "document conversation"],
+        "competencies": ["communication", "empathy", "palliative care"],
+    },
+    {
+        "title": "Infection Prevention and Control",
+        "question_text": "Describe the key principles of infection prevention and control you would apply when caring for a patient with suspected C. difficile infection.",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["hand hygiene with soap and water", "isolation in side room", "PPE - gloves and apron", "enhanced environmental cleaning", "antimicrobial stewardship", "stool specimen collection", "patient education"],
+        "competencies": ["infection control", "patient safety"],
+    },
+    {
+        "title": "Ethics - Consent and Confidentiality",
+        "question_text": "A patient's family member asks you for information about the patient's condition, but the patient has not given consent to share. How do you handle this situation?",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["maintain confidentiality", "explain duty of confidentiality to family", "check if patient has given consent", "offer to help family speak with patient", "document the interaction", "exceptions - risk of harm to others"],
+        "competencies": ["ethics", "confidentiality", "communication"],
+    },
+    {
+        "title": "End of Life Care",
+        "question_text": "Describe your approach to providing dignified end-of-life care for a patient and supporting their family.",
+        "question_type": "scenario",
+        "difficulty": "advanced",
+        "expected_points": ["symptom management", "patient comfort and dignity", "anticipatory prescribing", "spiritual and cultural needs", "family support and communication", "preferred priorities of care", "DNACPR discussions", "bereavement support"],
+        "competencies": ["palliative care", "empathy", "holistic care"],
+    },
+    {
+        "title": "Patient Falls Prevention",
+        "question_text": "An elderly patient on your ward has been assessed as high risk for falls. What interventions would you implement to reduce their risk?",
+        "question_type": "scenario",
+        "difficulty": "easy",
+        "expected_points": ["falls risk assessment tool", "bed at lowest height", "call bell within reach", "non-slip footwear", "adequate lighting", "medication review", "mobility assessment", "toileting schedule", "falls care plan"],
+        "competencies": ["patient safety", "risk assessment", "care planning"],
+    },
+    {
+        "title": "Delegation and Teamwork",
+        "question_text": "As a nurse in charge of a busy shift, how do you decide which tasks to delegate to healthcare assistants and what are your responsibilities when delegating?",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["assess competence of delegate", "match task to skill level", "clear instructions", "maintain accountability", "supervision and support", "NMC Code on delegation"],
+        "competencies": ["leadership", "delegation", "teamwork"],
+    },
+    {
+        "title": "Deteriorating Patient - NEWS2",
+        "question_text": "You record a NEWS2 score of 7 for your patient. Explain the significance of this score and what actions you would take.",
+        "question_type": "scenario",
+        "difficulty": "intermediate",
+        "expected_points": ["score of 7+ triggers urgent response", "ABCDE assessment", "increase monitoring frequency", "escalate to medical team immediately", "consider critical care outreach", "document and communicate using SBAR"],
+        "competencies": ["clinical assessment", "escalation", "NEWS2"],
+    },
+]
+
+
+def _collect_questions_from_banks(data_dir: str, prefix: str, seen_texts: set) -> list:
+    """Colecteaza intrebari unice din bank-uri JSON cu un prefix dat."""
+    questions = []
+    try:
+        files = sorted(f for f in os.listdir(data_dir) if f.lower().startswith(prefix) and f.endswith('.json'))
+    except OSError:
+        return questions
+
+    for fname in files:
+        try:
+            with open(os.path.join(data_dir, fname), 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            for q in data.get("questions", []):
+                text = q.get("question_text", "").strip()
+                if text and text not in seen_texts:
+                    seen_texts.add(text)
+                    questions.append(q)
+        except (json.JSONDecodeError, OSError):
+            continue
+    return questions
+
 
 @router.get("/bank/{specialty}/{band}", response_model=QuestionBank)
 async def get_question_bank(specialty: str, band: str):
-    """Load questions from ALL available banks for a specialty/band combo,
-    deduplicate, randomize, and return a set of up to MAX_QUESTIONS_PER_SESSION.
+    """Load a diverse set of questions: primary specialty + cross-specialty + NHS core topics.
 
-    Accepts band values like 'band_5', 'band5', or '5' (all normalised internally).
+    Strategy:
+    - ~8 questions from selected specialty
+    - ~3 questions from other specialties (cross-training)
+    - ~4 supplementary questions (safeguarding, mental health, communication, ethics)
+    - Drug calculations limited to max 1
+    - Total: 15 unique, randomized questions
     """
     band_clean = band.strip().lower().replace(" ", "_")
     if not band_clean.startswith("band_"):
@@ -98,53 +224,67 @@ async def get_question_bank(specialty: str, band: str):
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     data_dir = os.path.join(base_dir, 'data', 'question_banks')
 
-    prefix = f"{specialty_clean}_{band_clean}_bank_"
-    try:
-        files = sorted(
-            f for f in os.listdir(data_dir)
-            if f.lower().startswith(prefix) and f.endswith('.json')
-        )
-    except OSError:
-        raise HTTPException(status_code=404, detail="Question bank directory not found")
-
-    if not files:
-        raise HTTPException(
-            status_code=404,
-            detail=f"No question bank found for specialty='{specialty}' band='{band}'"
-        )
-
-    # Colecteaza intrebari din TOATE bank-urile disponibile
-    all_questions = []
     seen_texts = set()
-    for fname in files:
-        fpath = os.path.join(data_dir, fname)
-        try:
-            with open(fpath, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            for q in data.get("questions", []):
-                text = q.get("question_text", "").strip()
-                if text and text not in seen_texts:
-                    seen_texts.add(text)
-                    all_questions.append(q)
-        except (json.JSONDecodeError, OSError):
-            continue
 
-    if not all_questions:
-        raise HTTPException(status_code=404, detail="No valid questions found")
+    # 1. Intrebari din specialitatea selectata
+    primary_prefix = f"{specialty_clean}_{band_clean}_bank_"
+    primary_qs = _collect_questions_from_banks(data_dir, primary_prefix, seen_texts)
 
-    # Randomizeaza si limiteaza
-    random.shuffle(all_questions)
-    selected = all_questions[:MAX_QUESTIONS_PER_SESSION]
+    # Limiteaza drug calculations din primary
+    drug_keywords = ['drug', 'dose', 'dosage', 'medication calculation', 'mg/kg', 'ml/h', 'infusion rate']
+    non_drug = [q for q in primary_qs if not any(kw in q.get('question_text', '').lower() for kw in drug_keywords)]
+    drug_qs = [q for q in primary_qs if any(kw in q.get('question_text', '').lower() for kw in drug_keywords)]
 
-    # Re-numeroteaza ID-urile secvential (1, 2, 3...)
-    for i, q in enumerate(selected, 1):
+    random.shuffle(non_drug)
+    random.shuffle(drug_qs)
+    primary_selected = non_drug[:8] + drug_qs[:1]  # Max 1 drug calc
+    random.shuffle(primary_selected)
+
+    # 2. Intrebari cross-specialty (diversitate)
+    all_specialties = ['amu', 'emergency', 'icu', 'maternity', 'mental_health', 'pediatrics', 'cardiology', 'oncology', 'neurology']
+    other_specs = [s for s in all_specialties if s != specialty_clean]
+    random.shuffle(other_specs)
+
+    cross_qs = []
+    for spec in other_specs[:3]:
+        cross_prefix = f"{spec}_{band_clean}_bank_"
+        spec_qs = _collect_questions_from_banks(data_dir, cross_prefix, seen_texts)
+        # Exclude drug calculations din cross
+        spec_qs = [q for q in spec_qs if not any(kw in q.get('question_text', '').lower() for kw in drug_keywords)]
+        if spec_qs:
+            random.shuffle(spec_qs)
+            cross_qs.append(spec_qs[0])
+
+    # 3. Intrebari suplimentare (safeguarding, mental health, communication, ethics)
+    supplementary = [q.copy() for q in SUPPLEMENTARY_QUESTIONS]
+    random.shuffle(supplementary)
+    supp_selected = []
+    for q in supplementary:
+        text = q.get("question_text", "").strip()
+        if text not in seen_texts:
+            seen_texts.add(text)
+            supp_selected.append(q)
+            if len(supp_selected) >= 4:
+                break
+
+    # Combina totul
+    all_selected = primary_selected[:8] + cross_qs[:3] + supp_selected[:4]
+
+    if not all_selected:
+        raise HTTPException(status_code=404, detail=f"No questions found for specialty='{specialty}' band='{band}'")
+
+    random.shuffle(all_selected)
+    final = all_selected[:MAX_QUESTIONS_PER_SESSION]
+
+    # Re-numeroteaza
+    for i, q in enumerate(final, 1):
         q["id"] = i
 
     return QuestionBank(
         band=band_clean,
         specialty=specialty_clean,
-        version="multi-bank-randomized",
-        questions=[Question(**q) for q in selected],
+        version="diverse-mixed",
+        questions=[Question(**q) for q in final],
     )
 
 

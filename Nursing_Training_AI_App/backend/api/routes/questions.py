@@ -56,6 +56,17 @@ def _load_bank(relative_path: str) -> QuestionBank:
         raise HTTPException(status_code=404, detail=f"Question bank not found: {relative_path}")
     with open(data_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
+
+    # Deduplicare: elimina intrebarile cu acelasi question_text
+    seen_texts = set()
+    unique_questions = []
+    for q in data.get("questions", []):
+        text = q.get("question_text", "").strip()
+        if text and text not in seen_texts:
+            seen_texts.add(text)
+            unique_questions.append(q)
+    data["questions"] = unique_questions
+
     return QuestionBank(**data)
 
 

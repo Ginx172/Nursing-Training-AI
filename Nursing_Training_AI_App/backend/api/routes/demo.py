@@ -104,7 +104,7 @@ async def submit_demo_answer(payload: SubmitAnswer) -> SubmitResult:
         return SubmitResult(
             question_id=payload.question_id,
             is_correct=False,
-            feedback="Întrebare invalidă.",
+            feedback="Invalid question.",
         )
 
     normalized_correct = question.correct_answer.strip().lower()
@@ -125,30 +125,30 @@ async def submit_demo_answer(payload: SubmitAnswer) -> SubmitResult:
     # Build AI-like textual feedback with steps
     if question.id == 1:
         steps = (
-            "1) Necesar zilnic = greutate × 30 mL/kg\n"
-            "2) 70 × 30 = 2100 mL/zi\n"
-            "3) Rata pe oră = 2100 / 24 = 87.5 mL/h"
+            "1) Daily requirement = weight x 30 mL/kg\n"
+            "2) 70 x 30 = 2100 mL/day\n"
+            "3) Hourly rate = 2100 / 24 = 87.5 mL/h"
         )
         topic_recs = [
             Recommendation(
-                title="Calculul perfuziilor: mL/oră și mL/kg/zi",
-                summary="Reîmprospătează formulele de bază și conversiile zilnic → orar.",
+                title="IV infusion calculations: mL/hour and mL/kg/day",
+                summary="Refresh basic formulas and daily-to-hourly conversions.",
                 url=None,
             ),
             Recommendation(
-                title="Erori frecvente în calcule clinice",
-                summary="Rotunjiri, unități greșite, împărțirea pe 24 h.",
+                title="Common clinical calculation errors",
+                summary="Rounding, wrong units, division by 24 hours.",
                 url=None,
             ),
         ]
         if correct:
             feedback = (
-                "Corect! Ai aplicat corect formula de mentenanță.\n" + steps
+                "Correct! You applied the maintenance formula correctly.\n" + steps
             )
         else:
             feedback = (
-                "Incorect. "
-                f"Răspuns corect: {question.correct_answer}.\n"
+                "Incorrect."
+                f"Correct answer: {question.correct_answer}.\n"
                 + (question.explanation or "")
                 + "\n" + steps
             )
@@ -156,28 +156,28 @@ async def submit_demo_answer(payload: SubmitAnswer) -> SubmitResult:
 
     elif question.id == 2:
         steps = (
-            "1) Volum total = 100 mL\n"
-            "2) Timp = 30 minute = 0.5 ore\n"
-            "3) Rata = volum / timp = 100 / 0.5 = 200 mL/h"
+            "1) Total volume = 100 mL\n"
+            "2) Time = 30 minutes = 0.5 hours\n"
+            "3) Rate = volume / time = 100 / 0.5 = 200 mL/h"
         )
         topic_recs = [
             Recommendation(
-                title="Conversii timp: minute ↔ ore",
-                summary="Transpune mereu minutele în ore pentru mL/h.",
+                title="Time conversions: minutes to hours",
+                summary="Always convert minutes to hours for mL/h.",
                 url=None,
             ),
             Recommendation(
-                title="Setarea pompei de perfuzie",
-                summary="Verifică mereu volumul, timpul și unitățile afișate.",
+                title="Infusion pump setup",
+                summary="Always verify volume, time, and displayed units.",
                 url=None,
             ),
         ]
         if correct:
-            feedback = "Corect! Calculul ratei este precis.\n" + steps
+            feedback = "Correct! The rate calculation is accurate.\n" + steps
         else:
             feedback = (
-                "Incorect. "
-                f"Răspuns corect: {question.correct_answer}.\n"
+                "Incorrect."
+                f"Correct answer: {question.correct_answer}.\n"
                 + (question.explanation or "")
                 + "\n" + steps
             )
@@ -185,26 +185,26 @@ async def submit_demo_answer(payload: SubmitAnswer) -> SubmitResult:
 
     else:  # question.id == 3
         rationale = (
-            "Escalarea rapidă și antibioticele timpurii fac parte din Sepsis 6. "
-            "Menținerea presiunii arteriale și revizuirea răspunsului la fluide sunt critice."
+            "Rapid escalation and early antibiotics are part of the Sepsis 6 bundle. "
+            "Maintaining blood pressure and reviewing fluid response are critical."
         )
         topic_recs = [
             Recommendation(
-                title="Sepsis 6 – elemente cheie",
-                summary="Escalare, antibiotice în 1 oră, lactat, cultură, fluide, diureză.",
+                title="Sepsis 6 - key elements",
+                summary="Escalation, antibiotics within 1 hour, lactate, cultures, fluids, urine output.",
                 url=None,
             ),
             Recommendation(
-                title="Escaladare și SBAR",
-                summary="Folosește structura SBAR pentru comunicare rapidă și clară.",
+                title="Escalation and SBAR communication",
+                summary="Use the SBAR framework for rapid and clear communication.",
                 url=None,
             ),
         ]
         if correct:
-            feedback = "Corect! " + rationale
+            feedback = "Correct!" + rationale
         else:
             feedback = (
-                "Incorect. Răspuns corect: True. " + rationale
+                "Incorrect.Correct answer: True. " + rationale
             )
         recs = topic_recs
 
@@ -218,7 +218,7 @@ async def submit_demo_answer(payload: SubmitAnswer) -> SubmitResult:
 
 @router.post("/submit-batch")
 async def submit_batch(payload: BatchSubmitPayload):
-    """Primește toate răspunsurile, returnează feedback doar la final (agregat)."""
+    """Receives all answers, returns feedback only at the end (aggregated)."""
 
     id_to_question = {q.id: q for q in DEMO_QUESTIONS}
     per_question: List[PerQuestionResult] = []
@@ -231,7 +231,7 @@ async def submit_batch(payload: BatchSubmitPayload):
                 PerQuestionResult(
                     question_id=ans.question_id,
                     is_correct=False,
-                    feedback="Întrebare invalidă.",
+                    feedback="Invalid question.",
                     recommendations=[],
                 )
             )
@@ -251,16 +251,16 @@ async def submit_batch(payload: BatchSubmitPayload):
             correct_count += 1
 
         # Build condensed feedback per question (without revealing answers if desired)
-        fb = "Răspuns corect" if is_ok else "Răspuns incorect"
+        fb = "Correct answer" if is_ok else "Incorrect answer"
 
         # Minimal recommendations per question topic
         recs: List[Recommendation] = []
         if q.id == 1:
-            recs = [Recommendation(title="Calcul perfuzii de bază", summary="mL/kg/zi și transformare în mL/h.")]
+            recs = [Recommendation(title="Basic infusion calculations", summary="mL/kg/day and conversion to mL/h.")]
         elif q.id == 2:
-            recs = [Recommendation(title="Conversii timp → rată", summary="Minute în ore, volume totale.")]
+            recs = [Recommendation(title="Time to rate conversions", summary="Minutes to hours, total volumes.")]
         elif q.id == 3:
-            recs = [Recommendation(title="Sepsis 6 și escaladare", summary="Pașii cheie și SBAR.")]
+            recs = [Recommendation(title="Sepsis 6 and escalation", summary="Key steps and SBAR.")]
 
         per_question.append(
             PerQuestionResult(
@@ -282,22 +282,22 @@ async def submit_batch(payload: BatchSubmitPayload):
         "per_question": [r.model_dump() for r in per_question],
         "study_plan": [
             {
-                "title": "Consolidează bazele calculelor clinice",
+                "title": "Consolidate clinical calculation fundamentals",
                 "items": [
-                    "mL/kg/zi → mL/h",
-                    "Conversii minute ↔ ore",
-                    "Setarea pompei și verificarea unităților",
+                    "mL/kg/day to mL/h",
+                    "Minutes to hours conversions",
+                    "Pump setup and unit verification",
                 ],
             },
             {
-                "title": "Siguranță și protocoale",
+                "title": "Safety and protocols",
                 "items": [
                     "Sepsis 6",
-                    "Escaladare și comunicare SBAR",
+                    "Escalation and SBAR communication",
                 ],
             },
         ],
-        "next_steps": "Reia întrebările greșite, apoi încearcă un set nou cu dificultate mai mare.",
+        "next_steps": "Review incorrect questions, then try a new set at a higher difficulty.",
     }
 
     return final_summary

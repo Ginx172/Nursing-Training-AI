@@ -127,6 +127,7 @@ export default function InterviewPage() {
     // Text-to-Speech (TTS) - AI citeste intrebarile cu voce
     const [isSpeaking, setIsSpeaking] = useState(false);
     const [ttsEnabled, setTtsEnabled] = useState(true);
+    const [speechRate, setSpeechRate] = useState(1.0);
     const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
     const speakQuestion = useCallback((text: string) => {
@@ -134,7 +135,7 @@ export default function InterviewPage() {
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'en-GB';
-        utterance.rate = 0.95;
+        utterance.rate = speechRate;
         utterance.pitch = 1.0;
         utterance.volume = 1.0;
         // Selecteaza o voce engleza daca e disponibila
@@ -146,7 +147,7 @@ export default function InterviewPage() {
         utterance.onerror = () => setIsSpeaking(false);
         utteranceRef.current = utterance;
         window.speechSynthesis.speak(utterance);
-    }, [ttsEnabled]);
+    }, [ttsEnabled, speechRate]);
 
     const stopSpeaking = useCallback(() => {
         if (typeof window !== 'undefined' && window.speechSynthesis) {
@@ -402,6 +403,8 @@ export default function InterviewPage() {
                         onSpeak={speakQuestion}
                         onStopSpeaking={stopSpeaking}
                         onToggleTts={setTtsEnabled}
+                        speechRate={speechRate}
+                        onSpeechRateChange={setSpeechRate}
                     />
                 )}
 
@@ -439,19 +442,19 @@ function SetupStep({
 }) {
     return (
         <div className="space-y-8">
-            {/* Header */}
-            <div className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-emerald-600 rounded-3xl p-8 text-white shadow-xl shadow-teal-100">
+            {/* Hero */}
+            <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-teal-500 rounded-2xl p-8 text-white shadow-xl">
                 <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                 <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2.5 bg-white/20 rounded-xl">
-                            <Mic className="w-6 h-6" />
+                        <div className="p-2 bg-white/20 rounded-xl backdrop-blur-sm">
+                            <BookOpen className="w-6 h-6" />
                         </div>
-                        <span className="text-teal-100 text-sm font-semibold uppercase tracking-wider">Interview Practice</span>
+                        <h1 className="text-2xl font-bold">Clinical Interview Practice</h1>
                     </div>
-                    <h1 className="text-3xl font-bold mb-2">Start Your Interview</h1>
-                    <p className="text-teal-100 text-base max-w-lg">
-                        Select your NHS band and clinical specialty to load a personalised question bank. Answer questions one-by-one and get detailed AI feedback at the end.
+                    <p className="text-blue-100 max-w-xl">
+                        Select your NHS band and specialty to begin an AI-powered clinical interview.
+                        Questions are tailored to your level and read aloud by the AI interviewer.
                     </p>
                 </div>
             </div>
@@ -461,7 +464,7 @@ function SetupStep({
                 {loading && (
                     <div className="flex items-center gap-3 text-slate-500">
                         <Loader2 className="w-5 h-5 animate-spin text-teal-600" />
-                        <span>Loading configuration…</span>
+                        <span>Loading configuration...</span>
                     </div>
                 )}
                 {error && (
@@ -473,27 +476,31 @@ function SetupStep({
 
                 {!loading && !error && (
                     <>
-                        {/* Band Selection */}
-                        <div className="space-y-2">
+                        {/* Band Selection - Card Grid */}
+                        <div className="space-y-3">
                             <label className="text-sm font-semibold text-slate-700 block">
                                 NHS Band Level
                             </label>
-                            <select
-                                value={selectedBand}
-                                onChange={e => onBandChange(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition bg-slate-50"
-                            >
-                                <option value="">Select a band…</option>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {bands.map(b => (
-                                    <option key={b.id} value={b.id}>
-                                        {b.name} — {b.description}
-                                    </option>
+                                    <button
+                                        key={b.id}
+                                        onClick={() => onBandChange(b.id)}
+                                        className={`text-left px-4 py-3 rounded-xl border-2 transition-all duration-150 shadow-sm hover:shadow-md ${
+                                            selectedBand === b.id
+                                                ? 'border-blue-500 bg-blue-50 text-blue-800 ring-2 ring-blue-200'
+                                                : 'border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50/50'
+                                        }`}
+                                    >
+                                        <div className="font-semibold text-sm">{b.name}</div>
+                                        <div className="text-xs text-slate-500 mt-0.5">{b.description}</div>
+                                    </button>
                                 ))}
-                            </select>
+                            </div>
                         </div>
 
-                        {/* Specialty Selection */}
-                        <div className="space-y-2">
+                        {/* Specialty Selection - Card Grid */}
+                        <div className="space-y-3">
                             <label className="text-sm font-semibold text-slate-700 block">
                                 Clinical Specialty
                             </label>
@@ -502,9 +509,9 @@ function SetupStep({
                                     <button
                                         key={s.id}
                                         onClick={() => onSpecialtyChange(s.id)}
-                                        className={`text-left px-4 py-3 rounded-xl border-2 transition-all duration-150 ${
+                                        className={`text-left px-4 py-3 rounded-xl border-2 transition-all duration-150 shadow-sm hover:shadow-md ${
                                             selectedSpecialty === s.id
-                                                ? 'border-teal-500 bg-teal-50 text-teal-800'
+                                                ? 'border-teal-500 bg-teal-50 text-teal-800 ring-2 ring-teal-200'
                                                 : 'border-slate-200 bg-white text-slate-700 hover:border-teal-300 hover:bg-teal-50/50'
                                         }`}
                                     >
@@ -525,10 +532,10 @@ function SetupStep({
                         <button
                             onClick={onStart}
                             disabled={!selectedBand || !selectedSpecialty || bankLoading}
-                            className="w-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-teal-100 hover:shadow-xl hover:from-teal-500 hover:to-emerald-500 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                            className="w-full bg-gradient-to-r from-indigo-600 via-blue-600 to-teal-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-100 hover:shadow-xl hover:from-indigo-500 hover:via-blue-500 hover:to-teal-400 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                         >
                             {bankLoading ? (
-                                <><Loader2 className="w-5 h-5 animate-spin" /> Loading Questions…</>
+                                <><Loader2 className="w-5 h-5 animate-spin" /> Loading Questions...</>
                             ) : (
                                 <><Mic className="w-5 h-5" /> Start Interview</>
                             )}
@@ -545,9 +552,9 @@ function SetupStep({
 function QuestionsStep({
     bank, currentIndex, currentQuestion, answers, allAnswered,
     answeredCount, isListening, canListen, submitting, submitError,
-    isSpeaking, ttsEnabled,
+    isSpeaking, ttsEnabled, speechRate,
     onAnswer, onNext, onPrev, onStartListening, onStopListening, onSubmit, onJumpTo,
-    onSpeak, onStopSpeaking, onToggleTts,
+    onSpeak, onStopSpeaking, onToggleTts, onSpeechRateChange,
 }: {
     bank: QuestionBank;
     currentIndex: number;
@@ -561,6 +568,7 @@ function QuestionsStep({
     submitError: string;
     isSpeaking: boolean;
     ttsEnabled: boolean;
+    speechRate: number;
     onAnswer: (id: number, value: string) => void;
     onNext: () => void;
     onPrev: () => void;
@@ -569,6 +577,7 @@ function QuestionsStep({
     onSpeak: (text: string) => void;
     onStopSpeaking: () => void;
     onToggleTts: (enabled: boolean) => void;
+    onSpeechRateChange: (rate: number) => void;
     onSubmit: () => void;
     onJumpTo: (index: number) => void;
 }) {
@@ -638,30 +647,49 @@ function QuestionsStep({
                     </p>
 
                     {/* TTS Controls */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3 p-3 bg-slate-50 rounded-xl">
                         <button
                             onClick={() => isSpeaking ? onStopSpeaking() : onSpeak(currentQuestion.question_text)}
                             className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                                 isSpeaking
-                                    ? 'bg-red-50 text-red-600 hover:bg-red-100'
-                                    : 'bg-blue-50 text-blue-600 hover:bg-blue-100'
+                                    ? 'bg-red-100 text-red-600 hover:bg-red-200'
+                                    : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
                             }`}
                         >
                             {isSpeaking ? (
-                                <><VolumeX className="w-4 h-4" /> Stop Reading</>
+                                <><VolumeX className="w-4 h-4" /> Stop</>
                             ) : (
                                 <><Volume2 className="w-4 h-4" /> Read Aloud</>
                             )}
                         </button>
-                        <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer">
+                        <button
+                            onClick={() => onSpeak(currentQuestion.question_text)}
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all"
+                        >
+                            <RotateCcw className="w-3.5 h-3.5" /> Repeat
+                        </button>
+                        <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer ml-auto">
                             <input
                                 type="checkbox"
                                 checked={ttsEnabled}
                                 onChange={(e) => onToggleTts(e.target.checked)}
                                 className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                             />
-                            Auto-read questions
+                            Auto-read
                         </label>
+                        <div className="flex items-center gap-2 text-xs text-slate-500">
+                            <span>Speed:</span>
+                            <input
+                                type="range"
+                                min="0.5"
+                                max="2"
+                                step="0.1"
+                                value={speechRate}
+                                onChange={(e) => onSpeechRateChange(parseFloat(e.target.value))}
+                                className="w-20 h-1.5 accent-blue-600"
+                            />
+                            <span className="font-medium text-slate-700 w-8">{speechRate}x</span>
+                        </div>
                     </div>
 
                     {/* Answer input */}
@@ -714,6 +742,17 @@ function QuestionsStep({
                                     )}
                                 </button>
                             )}
+                            {currentAnswer.trim() && (
+                                <button
+                                    type="button"
+                                    onClick={currentIndex < bank.questions.length - 1 ? onNext : undefined}
+                                    disabled={!currentAnswer.trim()}
+                                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-sm hover:bg-emerald-700 transition shadow-sm"
+                                >
+                                    <Send className="w-4 h-4" />
+                                    {currentIndex < bank.questions.length - 1 ? 'Confirm & Next' : 'Answer Saved'}
+                                </button>
+                            )}
                         </div>
                     )}
 
@@ -749,7 +788,7 @@ function QuestionsStep({
                 ) : (
                     <button
                         onClick={onSubmit}
-                        disabled={!allAnswered || submitting}
+                        disabled={submitting}
                         className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-sm hover:from-indigo-500 hover:to-violet-500 transition shadow-lg shadow-indigo-100 disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                         {submitting ? (
@@ -761,9 +800,9 @@ function QuestionsStep({
                 )}
             </div>
 
-            {!allAnswered && currentIndex === bank.questions.length - 1 && (
+            {answeredCount < total && currentIndex === bank.questions.length - 1 && (
                 <p className="text-center text-sm text-amber-600 font-medium">
-                    Please answer all {bank.questions.length} questions before submitting. ({bank.questions.length - answeredCount} remaining)
+                    {answeredCount} of {total} questions answered. You can still submit.
                 </p>
             )}
 

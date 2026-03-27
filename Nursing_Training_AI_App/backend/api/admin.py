@@ -8,6 +8,9 @@ from pydantic import BaseModel, EmailStr
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
+from models.user import User
+from api.dependencies import get_current_admin
+
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 
 # Request/Response Models
@@ -52,11 +55,11 @@ async def search_users(
     subscription_tier: Optional[str] = Query(None),
     status: Optional[str] = Query(None),
     limit: int = Query(50),
-    offset: int = Query(0)
+    offset: int = Query(0),
+    admin: User = Depends(get_current_admin),
 ):
     """Search and filter users (Admin only)"""
     try:
-        # TODO: Add admin authentication check
         # TODO: Implement actual database query
         
         users = [
@@ -90,10 +93,9 @@ async def search_users(
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.get("/users/{user_id}")
-async def get_user_details(user_id: str):
+async def get_user_details(user_id: str, admin: User = Depends(get_current_admin)):
     """Get detailed user information (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Fetch from database
         
         user_details = {
@@ -141,10 +143,9 @@ async def get_user_details(user_id: str):
         raise HTTPException(status_code=404, detail="User not found or server error.")
 
 @router.put("/users/{user_id}")
-async def update_user(user_id: str, updates: Dict[str, Any] = Body(...)):
+async def update_user(user_id: str, updates: Dict[str, Any] = Body(...), admin: User = Depends(get_current_admin)):
     """Update user information (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Update database
         
         return {
@@ -157,10 +158,9 @@ async def update_user(user_id: str, updates: Dict[str, Any] = Body(...)):
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.delete("/users/{user_id}")
-async def delete_user(user_id: str):
+async def delete_user(user_id: str, admin: User = Depends(get_current_admin)):
     """Delete user account (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Delete from database
         # TODO: Cancel Stripe subscription
         
@@ -182,7 +182,8 @@ async def search_questions(
     question_type: Optional[str] = Query(None),
     difficulty: Optional[str] = Query(None),
     limit: int = Query(50),
-    offset: int = Query(0)
+    offset: int = Query(0),
+    admin: User = Depends(get_current_admin),
 ):
     """Search questions (Admin only)"""
     try:
@@ -201,10 +202,9 @@ async def search_questions(
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.post("/questions/create")
-async def create_question(question: CreateQuestionRequest):
+async def create_question(question: CreateQuestionRequest, admin: User = Depends(get_current_admin)):
     """Create new question (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Save to database
         
         return {
@@ -216,10 +216,9 @@ async def create_question(question: CreateQuestionRequest):
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.put("/questions/{question_id}")
-async def update_question(question_id: str, updates: Dict[str, Any] = Body(...)):
+async def update_question(question_id: str, updates: Dict[str, Any] = Body(...), admin: User = Depends(get_current_admin)):
     """Update question (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Update database
         
         return {
@@ -231,10 +230,9 @@ async def update_question(question_id: str, updates: Dict[str, Any] = Body(...))
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.delete("/questions/{question_id}")
-async def delete_question(question_id: str):
+async def delete_question(question_id: str, admin: User = Depends(get_current_admin)):
     """Delete question (Admin only)"""
     try:
-        # TODO: Add admin authentication
         # TODO: Delete from database
         
         return {
@@ -252,7 +250,8 @@ async def get_all_subscriptions(
     status: Optional[str] = Query(None),
     tier: Optional[str] = Query(None),
     limit: int = Query(50),
-    offset: int = Query(0)
+    offset: int = Query(0),
+    admin: User = Depends(get_current_admin),
 ):
     """Get all subscriptions (Admin only)"""
     try:
@@ -269,7 +268,7 @@ async def get_all_subscriptions(
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.post("/subscriptions/{subscription_id}/cancel")
-async def admin_cancel_subscription(subscription_id: str, reason: str = Body(...)):
+async def admin_cancel_subscription(subscription_id: str, reason: str = Body(...), admin: User = Depends(get_current_admin)):
     """Cancel subscription as admin"""
     try:
         # TODO: Cancel in Stripe
@@ -287,7 +286,7 @@ async def admin_cancel_subscription(subscription_id: str, reason: str = Body(...
 # SYSTEM CONFIGURATION ENDPOINTS
 
 @router.get("/config")
-async def get_system_config():
+async def get_system_config(admin: User = Depends(get_current_admin)):
     """Get system configuration (Admin only)"""
     try:
         config = {
@@ -314,7 +313,7 @@ async def get_system_config():
         raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.put("/config")
-async def update_system_config(config_updates: Dict[str, Any] = Body(...)):
+async def update_system_config(config_updates: Dict[str, Any] = Body(...), admin: User = Depends(get_current_admin)):
     """Update system configuration (Super Admin only)"""
     try:
         # TODO: Update configuration
@@ -336,7 +335,8 @@ async def get_audit_log(
     user_id: Optional[str] = Query(None),
     date_from: Optional[str] = Query(None),
     date_to: Optional[str] = Query(None),
-    limit: int = Query(100)
+    limit: int = Query(100),
+    admin: User = Depends(get_current_admin),
 ):
     """Get audit log (Admin only)"""
     try:

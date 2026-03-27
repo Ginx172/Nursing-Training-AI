@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import SystemHealth from '../components/SystemHealth';
 import VideoAnalysis from '../components/VideoAnalysis';
 import StudyZone from '../components/StudyZone';
 import KnowledgeGraph from '../components/KnowledgeGraph';
 import InterviewMode from '../components/InterviewMode';
+import ProtectedRoute from '../components/ProtectedRoute';
+import { useAuth } from '../context/AuthContext';
 import {
     LayoutDashboard,
     BookOpen,
@@ -24,6 +27,8 @@ import {
 } from 'lucide-react';
 
 export default function Dashboard() {
+    const { user, logout } = useAuth();
+    const router = useRouter();
     const [greeting, setGreeting] = useState('Good Morning');
 
     useEffect(() => {
@@ -32,7 +37,15 @@ export default function Dashboard() {
         else if (hour >= 17) setGreeting('Good Evening');
     }, []);
 
+    const handleLogout = () => {
+        logout();
+        router.push('/login');
+    };
+
+    const displayName = user ? `${user.first_name} ${user.last_name}` : 'User';
+
     return (
+        <ProtectedRoute>
         <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
             <Head>
                 <title>Dashboard | Nursing Training AI</title>
@@ -69,7 +82,7 @@ export default function Dashboard() {
                 </div>
 
                 <div className="mt-auto p-6 border-t border-slate-100">
-                    <button className="flex items-center gap-3 w-full px-4 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-50 rounded-xl transition-all duration-200 font-medium">
+                    <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-50 rounded-xl transition-all duration-200 font-medium">
                         <LogOut className="w-5 h-5" />
                         Sign Out
                     </button>
@@ -97,7 +110,7 @@ export default function Dashboard() {
                         <div className="h-8 w-px bg-slate-200"></div>
                         <div className="flex items-center gap-3">
                             <div className="text-right hidden sm:block">
-                                <p className="text-sm font-bold text-slate-700">Dr. Sarah Jenkins</p>
+                                <p className="text-sm font-bold text-slate-700">{displayName}</p>
                                 <p className="text-xs text-slate-500">Clinical Supervisor</p>
                             </div>
                             <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-indigo-100 to-purple-100 border-2 border-white shadow-sm flex items-center justify-center text-indigo-700 font-bold">
@@ -119,7 +132,7 @@ export default function Dashboard() {
                                 <span>AI Systems Operational</span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                                {greeting}, Sarah! <br />
+                                {greeting}, {user?.first_name || 'there'}! <br />
                                 <span className="text-indigo-200">Ready to train the next generation?</span>
                             </h2>
                             <p className="text-indigo-100 text-lg mb-8 max-w-xl leading-relaxed">
@@ -226,6 +239,7 @@ export default function Dashboard() {
                 </div>
             </main>
         </div>
+        </ProtectedRoute>
     );
 }
 

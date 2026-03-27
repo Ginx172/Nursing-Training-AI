@@ -14,8 +14,9 @@ class MCPRAGConfig:
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
         self.gemini_api_key = os.getenv("GEMINI_API_KEY")
         self.gemini_model = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
-        self.knowledge_base_path = os.getenv("KNOWLEDGE_BASE_PATH", "J:/_Proiect_Nursing_training_AI/Healthcare_Knowledge_Base")
-        self.rag_engine_path = os.getenv("RAG_ENGINE_PATH", "J:/_Proiect_Nursing_training_AI/Nursing_Interviews_AI_model/rag_engine")
+        _project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+        self.knowledge_base_path = os.getenv("KNOWLEDGE_BASE_PATH", os.path.join(_project_root, "Healthcare_Knowledge_Base"))
+        self.rag_engine_path = os.getenv("RAG_ENGINE_PATH", os.path.join(_project_root, "Nursing_Interviews_AI_model", "rag_engine"))
         
         # Configurații pentru diferite specialități
         self.specialty_configs = {

@@ -2,7 +2,8 @@
 👤 User Models pentru Nursing Training AI
 """
 
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text, Enum
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text, Enum, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from core.database import Base
 import enum
@@ -75,6 +76,10 @@ class User(Base):
     preferred_language = Column(String(10), default="en")
     timezone = Column(String(50), default="UTC")
     
+    # Relationships
+    progress = relationship("UserProgress", back_populates="user", cascade="all, delete-orphan")
+    sessions = relationship("UserSession", back_populates="user", cascade="all, delete-orphan")
+
     def __repr__(self):
         return f"<User(id={self.id}, email='{self.email}', band='{self.nhs_band}')>"
 
@@ -82,9 +87,9 @@ class User(Base):
 class UserProgress(Base):
     """Modelul pentru progresul utilizatorului"""
     __tablename__ = "user_progress"
-    
+
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     
     # Progres pe band
     current_band = Column(Enum(NHSBand), nullable=False)
@@ -103,7 +108,10 @@ class UserProgress(Base):
     # Timestamps
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
-    
+
+    # Relationship
+    user = relationship("User", back_populates="progress")
+
     def __repr__(self):
         return f"<UserProgress(user_id={self.user_id}, band='{self.current_band}')>"
 
@@ -111,9 +119,9 @@ class UserProgress(Base):
 class UserSession(Base):
     """Modelul pentru sesiunile utilizatorilor"""
     __tablename__ = "user_sessions"
-    
+
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     session_token = Column(String(255), unique=True, index=True, nullable=False)
     
     # Informații sesiune
@@ -128,6 +136,9 @@ class UserSession(Base):
     # Timestamps
     created_at = Column(DateTime, default=func.now())
     last_activity = Column(DateTime, default=func.now())
-    
+
+    # Relationship
+    user = relationship("User", back_populates="sessions")
+
     def __repr__(self):
         return f"<UserSession(user_id={self.user_id}, active={self.is_active})>"

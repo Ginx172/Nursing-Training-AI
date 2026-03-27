@@ -67,6 +67,6 @@ Nursing_Training_AI_App/backend/data/vectordb/
 Nursing_Interviews_AI_model/
 API.txt
 
-# Self-learning runtime data
-models/
+# Self-learning runtime data (only root-level models dir, not backend/models)
+/models/
 .....New_GH_Copilot_Plan.txt

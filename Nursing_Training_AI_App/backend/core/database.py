@@ -3,14 +3,15 @@ Enterprise Database Configuration
 Connection pooling, read replicas, and optimizations
 """
 
-from sqlalchemy import create_engine, event
+from sqlalchemy import create_engine, event, text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import QueuePool
 from typing import Generator
 import os
 from contextlib import contextmanager
-
+from dotenv import load_dotenv
+load_dotenv()
 # Database URLs
 PRIMARY_DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost/nursing_ai")
 READ_REPLICA_URLS = os.getenv("READ_REPLICA_URLS", "").split(",") if os.getenv("READ_REPLICA_URLS") else []
@@ -107,7 +108,7 @@ def get_pool_status() -> dict:
     """Get connection pool status for monitoring"""
     try:
         pool = primary_engine.pool
-        
+
         return {
             "size": pool.size(),
             "checked_in": pool.checkedin(),
@@ -132,12 +133,11 @@ def get_pool_status() -> dict:
 def set_connection_pragmas(dbapi_conn, connection_record):
     """Set connection-level optimizations"""
     cursor = dbapi_conn.cursor()
-    
+
     # PostgreSQL optimizations
-    cursor.execute("SET SESSION synchronous_commit = OFF")  # Faster writes
     cursor.execute("SET SESSION work_mem = '256MB'")        # More memory for sorts
     cursor.execute("SET SESSION maintenance_work_mem = '512MB'")
-    
+
     cursor.close()
 
 # ========================================
@@ -146,16 +146,16 @@ def set_connection_pragmas(dbapi_conn, connection_record):
 
 class ReadReplicaRouter:
     """Smart routing for read queries to replicas"""
-    
+
     def __init__(self):
         self.current_replica = 0
         self.replica_count = len(read_replica_engines)
-    
+
     def get_read_engine(self):
         """Get next read replica in round-robin fashion"""
         if not read_replica_engines:
             return primary_engine
-        
+
         engine = read_replica_engines[self.current_replica]
         self.current_replica = (self.current_replica + 1) % self.replica_count
         return engine
@@ -171,14 +171,11 @@ async def check_database_health() -> dict:
     try:
         with get_db_context() as db:
             # Test query
-            result = db.execute("SELECT 1").scalar()
-            
+            result = db.execute(text("SELECT 1")).scalar()
+
             # Check connection pool
             pool_status = get_pool_status()
-            
-            # Check query performance
-            # TODO: Check slow query log
-            
+
             health = {
                 "status": "healthy" if result == 1 else "unhealthy",
                 "primary_connected": result == 1,
@@ -186,7 +183,7 @@ async def check_database_health() -> dict:
                 "pool_status": pool_status,
                 "avg_query_time_ms": None  # TODO: Calculate from metrics
             }
-            
+
             return health
     except Exception as e:
         return {
@@ -202,15 +199,15 @@ def wait_for_db(max_retries=5, delay=5):
     """Wait for database to become available"""
     import time
     from sqlalchemy.exc import OperationalError
-    
+
     print("⏳ Waiting for database connection...")
-    
+
     retries = 0
     while retries < max_retries:
         try:
             # Try to connect
             with primary_engine.connect() as conn:
-                conn.execute("SELECT 1")
+                conn.execute(text("SELECT 1"))
             print("✅ Database connection established")
             return True
         except OperationalError as e:
@@ -220,7 +217,7 @@ def wait_for_db(max_retries=5, delay=5):
         except Exception as e:
             print(f"❌ Unexpected error connecting to database: {str(e)}")
             return False
-            
+
     print("❌ Could not connect to database after multiple attempts")
     return False
 

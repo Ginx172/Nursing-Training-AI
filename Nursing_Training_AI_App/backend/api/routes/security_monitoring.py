@@ -39,7 +39,10 @@ def verify_admin_token(credentials: HTTPAuthorizationCredentials = Depends(secur
     """Verify admin token for security operations"""
     try:
         token = credentials.credentials
-        payload = jwt.decode(token, os.getenv("JWT_SECRET", "default_secret"), algorithms=["HS256"])
+        jwt_secret = os.getenv("JWT_SECRET")
+        if not jwt_secret:
+            raise HTTPException(status_code=500, detail="JWT_SECRET environment variable is not configured")
+        payload = jwt.decode(token, jwt_secret, algorithms=["HS256"])
         if payload.get("role") != "admin":
             raise HTTPException(status_code=403, detail="Admin access required")
         return payload
@@ -76,7 +79,7 @@ async def get_security_dashboard(admin: dict = Depends(verify_admin_token)):
                             event_time = datetime.fromisoformat(event["timestamp"])
                             if datetime.now() - event_time < timedelta(hours=24):
                                 recent_events.append(event)
-                        except:
+                        except (json.JSONDecodeError, KeyError, ValueError):
                             continue
         
         # Get threat statistics
@@ -167,7 +170,7 @@ async def get_recent_threats(admin: dict = Depends(verify_admin_token)):
                             event = json.loads(line.strip())
                             if event.get("severity") in ["HIGH", "CRITICAL"]:
                                 recent_threats.append(event)
-                        except:
+                        except (json.JSONDecodeError, KeyError, ValueError):
                             continue
         
         return {"threats": recent_threats[-50:]}  # Last 50 high-risk events
@@ -208,7 +211,7 @@ async def get_hourly_stats(admin: dict = Depends(verify_admin_token)):
                             event_type = event.get("event_type", "UNKNOWN")
                             hourly_stats[hour]["threat_types"][event_type] = \
                                 hourly_stats[hour]["threat_types"].get(event_type, 0) + 1
-                        except:
+                        except (json.JSONDecodeError, KeyError, ValueError):
                             continue
         
         # Convert sets to counts

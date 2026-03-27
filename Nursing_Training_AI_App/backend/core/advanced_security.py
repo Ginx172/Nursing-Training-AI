@@ -83,6 +83,7 @@ class ThreatDetector:
         self.suspicious_ips = {}
         self.failed_attempts = {}
         self.anomaly_scores = {}
+        self.blocked_ips = set()
         self.geo_db_path = os.getenv("GEOIP_DB_PATH", "GeoLite2-Country.mmdb")
         
     def detect_sql_injection(self, input_text: str) -> bool:
@@ -140,7 +141,7 @@ class ThreatDetector:
             country = self._get_country_from_ip(source_ip)
             if country in SECURITY_CONFIG["geo_blocked_countries"]:
                 score += 40.0
-        except:
+        except (geoip2.errors.GeoIP2Error, FileNotFoundError, ValueError):
             pass
         
         # Input analysis
@@ -179,7 +180,7 @@ class ThreatDetector:
             with geoip2.database.Reader(self.geo_db_path) as reader:
                 response = reader.country(ip)
                 return response.country.iso_code
-        except:
+        except (geoip2.errors.GeoIP2Error, FileNotFoundError, ValueError):
             return None
     
     def record_security_event(self, event: SecurityEvent):
@@ -362,9 +363,9 @@ class AdvancedSecurityMiddleware:
                     sanitized_data = self.input_sanitizer.sanitize_json(json_data)
                     # Re-encode the sanitized data
                     request._body = json.dumps(sanitized_data).encode()
-                except:
-                    # If not JSON, sanitize as string
-                    sanitized_body = self.input_sanitizer.sanitize_string(body.decode())
+                except (json.JSONDecodeError, UnicodeDecodeError):
+                    # Daca nu e JSON, sanitizam ca string
+                    sanitized_body = self.input_sanitizer.sanitize_string(body.decode(errors="ignore"))
                     request._body = sanitized_body.encode()
         
         response = await call_next(request)

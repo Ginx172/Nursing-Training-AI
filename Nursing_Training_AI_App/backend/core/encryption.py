@@ -21,9 +21,15 @@ class EncryptionService:
         # Master encryption key (should be stored in KMS in production)
         self.master_key = os.getenv("ENCRYPTION_MASTER_KEY", "")
         if not self.master_key:
-            print("WARNING: ENCRYPTION_MASTER_KEY not set. Using default (INSECURE for production)")
+            environment = os.getenv("ENVIRONMENT", "development")
+            if environment == "production":
+                raise ValueError(
+                    "ENCRYPTION_MASTER_KEY is required in production. "
+                    "Generate one with: python -c \"from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())\""
+                )
+            print("WARNING: ENCRYPTION_MASTER_KEY not set. Generating temporary key for development.")
             self.master_key = Fernet.generate_key().decode()
-        
+
         self.fernet = Fernet(self.master_key.encode() if isinstance(self.master_key, str) else self.master_key)
     
     # ========================================

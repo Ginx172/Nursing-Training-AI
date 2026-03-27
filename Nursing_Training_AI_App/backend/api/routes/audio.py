@@ -21,9 +21,13 @@ async def speech_to_text(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail=f"Unsupported content type: {file.content_type}")
 
     # If OPENAI_API_KEY present, use Whisper API; otherwise return stub
+    # Limita dimensiune fisier (10MB)
+    max_size = 10 * 1024 * 1024
     data = await file.read()
     if not data:
         raise HTTPException(status_code=400, detail="Empty audio file")
+    if len(data) > max_size:
+        raise HTTPException(status_code=413, detail="File too large. Maximum 10MB allowed.")
 
     if not OPENAI_API_KEY:
         # Safe stub
@@ -42,13 +46,13 @@ async def speech_to_text(file: UploadFile = File(...)):
         async with httpx.AsyncClient(timeout=60) as client:
             resp = await client.post(api_url, headers=headers, files=files)
             if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail=f"STT provider error: {resp.text}")
+                raise HTTPException(status_code=502, detail="STT provider returned an error. Check server logs.")
             payload = resp.json()
             return {"text": payload.get("text", "")}
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"STT failed: {str(e)}")
+        raise HTTPException(status_code=500, detail="STT processing failed.")
 
 @router.post("/tts")
 async def text_to_speech(req: TTSRequest):
@@ -86,10 +90,10 @@ async def text_to_speech(req: TTSRequest):
         async with httpx.AsyncClient(timeout=60) as client:
             resp = await client.post(api_url, headers=headers, json=payload)
             if resp.status_code != 200:
-                raise HTTPException(status_code=502, detail=f"TTS provider error: {resp.text}")
+                raise HTTPException(status_code=502, detail="TTS provider returned an error. Check server logs.")
             media_type = f"audio/{audio_format}"
             return Response(content=resp.content, media_type=media_type)
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"TTS failed: {str(e)}")
+        raise HTTPException(status_code=500, detail="TTS processing failed.")

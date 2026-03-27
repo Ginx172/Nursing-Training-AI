@@ -29,10 +29,11 @@ from services.audit_service import audit_service, AuditAction, AuditSeverity
 
 class TenantManager:
     """Manages tenant creation, isolation, and lifecycle"""
-    
+
     def __init__(self):
         self.default_schema = "public"
         self.tenant_schemas = {}  # Cache of tenant schemas
+        self._db_user = os.getenv("DB_USER", "nursing_user")
     
     # ========================================
     # TENANT CREATION
@@ -67,9 +68,10 @@ class TenantManager:
                 # Grant permissions — individual statements required; quoted_name provides
                 # DDL-safe quoting and _sanitize_schema_name() guarantees the identifier
                 # contains only [a-z0-9_] so no additional escaping is needed.
-                conn.execute(text(f"GRANT ALL ON SCHEMA {qname} TO nursing_user"))
-                conn.execute(text(f"GRANT ALL ON ALL TABLES IN SCHEMA {qname} TO nursing_user"))
-                conn.execute(text(f"ALTER DEFAULT PRIVILEGES IN SCHEMA {qname} GRANT ALL ON TABLES TO nursing_user"))
+                db_user = quoted_name(self._db_user, quote=True)
+                conn.execute(text(f"GRANT ALL ON SCHEMA {qname} TO {db_user}"))
+                conn.execute(text(f"GRANT ALL ON ALL TABLES IN SCHEMA {qname} TO {db_user}"))
+                conn.execute(text(f"ALTER DEFAULT PRIVILEGES IN SCHEMA {qname} GRANT ALL ON TABLES TO {db_user}"))
                 
                 conn.commit()
             

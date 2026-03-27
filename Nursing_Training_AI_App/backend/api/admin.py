@@ -87,7 +87,7 @@ async def search_users(
             "offset": offset
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.get("/users/{user_id}")
 async def get_user_details(user_id: str):
@@ -138,7 +138,7 @@ async def get_user_details(user_id: str):
             "user": user_details
         }
     except Exception as e:
-        raise HTTPException(status_code=404, detail=str(e))
+        raise HTTPException(status_code=404, detail="User not found or server error.")
 
 @router.put("/users/{user_id}")
 async def update_user(user_id: str, updates: Dict[str, Any] = Body(...)):
@@ -154,7 +154,7 @@ async def update_user(user_id: str, updates: Dict[str, Any] = Body(...)):
             "updated_fields": list(updates.keys())
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.delete("/users/{user_id}")
 async def delete_user(user_id: str):
@@ -170,7 +170,7 @@ async def delete_user(user_id: str):
             "user_id": user_id
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 # CONTENT MANAGEMENT ENDPOINTS
 
@@ -198,7 +198,7 @@ async def search_questions(
             "offset": offset
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.post("/questions/create")
 async def create_question(question: CreateQuestionRequest):
@@ -213,7 +213,7 @@ async def create_question(question: CreateQuestionRequest):
             "question_id": "q_new_001"
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.put("/questions/{question_id}")
 async def update_question(question_id: str, updates: Dict[str, Any] = Body(...)):
@@ -228,7 +228,7 @@ async def update_question(question_id: str, updates: Dict[str, Any] = Body(...))
             "question_id": question_id
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.delete("/questions/{question_id}")
 async def delete_question(question_id: str):
@@ -243,7 +243,7 @@ async def delete_question(question_id: str):
             "question_id": question_id
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 # SUBSCRIPTION MANAGEMENT ENDPOINTS
 
@@ -266,7 +266,7 @@ async def get_all_subscriptions(
             "total": len(subscriptions)
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.post("/subscriptions/{subscription_id}/cancel")
 async def admin_cancel_subscription(subscription_id: str, reason: str = Body(...)):
@@ -282,7 +282,7 @@ async def admin_cancel_subscription(subscription_id: str, reason: str = Body(...
             "subscription_id": subscription_id
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 # SYSTEM CONFIGURATION ENDPOINTS
 
@@ -311,7 +311,7 @@ async def get_system_config():
             "config": config
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 @router.put("/config")
 async def update_system_config(config_updates: Dict[str, Any] = Body(...)):
@@ -326,7 +326,7 @@ async def update_system_config(config_updates: Dict[str, Any] = Body(...)):
             "updated_keys": list(config_updates.keys())
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 
 # AUDIT LOG ENDPOINTS
 
@@ -361,5 +361,5 @@ async def get_audit_log(
             "total": len(logs)
         }
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail="Operation failed. Check server logs for details.")
 

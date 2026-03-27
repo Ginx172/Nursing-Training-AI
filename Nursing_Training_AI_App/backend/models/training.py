@@ -72,7 +72,7 @@ class UserAnswer(Base):
     __tablename__ = "user_answers"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     question_id = Column(Integer, ForeignKey("questions.id"), nullable=False)
     
     # Răspuns
@@ -102,8 +102,8 @@ class TrainingSession(Base):
     __tablename__ = "training_sessions"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, nullable=False, index=True)
-    
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+
     # Configurare sesiune
     session_name = Column(String(200), nullable=True)
     nhs_band = Column(String(20), nullable=False)
@@ -165,7 +165,7 @@ class UserLearningPath(Base):
     __tablename__ = "user_learning_paths"
     
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, nullable=False, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     learning_path_id = Column(Integer, ForeignKey("learning_paths.id"), nullable=False)
     
     # Progres

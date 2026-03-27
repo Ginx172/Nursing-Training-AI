@@ -4,9 +4,11 @@ Handles subscriptions, payments, and billing
 """
 
 import stripe
+import asyncio
 import os
 from typing import Dict, Optional, List
 from datetime import datetime
+from functools import partial
 from config.stripe_config import (
     STRIPE_SECRET_KEY,
     SUBSCRIPTION_PLANS,
@@ -27,7 +29,8 @@ class StripeService:
     ) -> stripe.Customer:
         """Create a new Stripe customer"""
         try:
-            customer = stripe.Customer.create(
+            customer = await asyncio.to_thread(
+                stripe.Customer.create,
                 email=email,
                 name=name,
                 metadata=metadata or {}
@@ -45,7 +48,8 @@ class StripeService:
     ) -> stripe.Subscription:
         """Create a new subscription for a customer"""
         try:
-            subscription = stripe.Subscription.create(
+            subscription = await asyncio.to_thread(
+                stripe.Subscription.create,
                 customer=customer_id,
                 items=[{"price": price_id}],
                 trial_period_days=trial_days,
@@ -67,7 +71,8 @@ class StripeService:
     ) -> stripe.checkout.Session:
         """Create a Checkout Session for subscription"""
         try:
-            session = stripe.checkout.Session.create(
+            session = await asyncio.to_thread(
+                stripe.checkout.Session.create,
                 customer=customer_id,
                 payment_method_types=['card'],
                 line_items=[{
@@ -92,7 +97,9 @@ class StripeService:
     async def get_subscription(subscription_id: str) -> stripe.Subscription:
         """Get subscription details"""
         try:
-            subscription = stripe.Subscription.retrieve(subscription_id)
+            subscription = await asyncio.to_thread(
+                stripe.Subscription.retrieve, subscription_id
+            )
             return subscription
         except stripe.StripeError as e:
             print(f"Error retrieving subscription: {e}")
@@ -105,9 +112,11 @@ class StripeService:
     ) -> stripe.Subscription:
         """Update subscription (upgrade/downgrade)"""
         try:
-            subscription = stripe.Subscription.retrieve(subscription_id)
-            
-            subscription = stripe.Subscription.modify(
+            subscription = await asyncio.to_thread(
+                stripe.Subscription.retrieve, subscription_id
+            )
+            subscription = await asyncio.to_thread(
+                stripe.Subscription.modify,
                 subscription_id,
                 items=[{
                     'id': subscription['items']['data'][0].id,
@@ -128,13 +137,15 @@ class StripeService:
         """Cancel a subscription"""
         try:
             if at_period_end:
-                subscription = stripe.Subscription.modify(
+                subscription = await asyncio.to_thread(
+                    stripe.Subscription.modify,
                     subscription_id,
                     cancel_at_period_end=True
                 )
             else:
-                subscription = stripe.Subscription.delete(subscription_id)
-            
+                subscription = await asyncio.to_thread(
+                    stripe.Subscription.delete, subscription_id
+                )
             return subscription
         except stripe.StripeError as e:
             print(f"Error cancelling subscription: {e}")

@@ -16,6 +16,8 @@ import {
     Send,
     Clock,
     Activity,
+    Volume2,
+    VolumeX,
 } from 'lucide-react';
 
 const API_URL =
@@ -116,11 +118,51 @@ export default function InterviewPage() {
     const [elapsed, setElapsed] = useState(0);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    // Speech recognition
+    // Speech recognition (STT)
     const recognitionRef = useRef<any>(null);
     const [isListening, setIsListening] = useState(false);
     const canListen = typeof window !== 'undefined' &&
-        !!(window as any).SpeechRecognition || !!(window as any).webkitSpeechRecognition;
+        (!!(window as any).SpeechRecognition || !!(window as any).webkitSpeechRecognition);
+
+    // Text-to-Speech (TTS) - AI citeste intrebarile cu voce
+    const [isSpeaking, setIsSpeaking] = useState(false);
+    const [ttsEnabled, setTtsEnabled] = useState(true);
+    const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+    const speakQuestion = useCallback((text: string) => {
+        if (typeof window === 'undefined' || !window.speechSynthesis || !ttsEnabled) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-GB';
+        utterance.rate = 0.95;
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
+        // Selecteaza o voce engleza daca e disponibila
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice = voices.find(v => v.lang.startsWith('en-GB')) || voices.find(v => v.lang.startsWith('en'));
+        if (enVoice) utterance.voice = enVoice;
+        utterance.onstart = () => setIsSpeaking(true);
+        utterance.onend = () => setIsSpeaking(false);
+        utterance.onerror = () => setIsSpeaking(false);
+        utteranceRef.current = utterance;
+        window.speechSynthesis.speak(utterance);
+    }, [ttsEnabled]);
+
+    const stopSpeaking = useCallback(() => {
+        if (typeof window !== 'undefined' && window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+        }
+        setIsSpeaking(false);
+    }, []);
+
+    // Cleanup TTS la unmount
+    useEffect(() => {
+        return () => {
+            if (typeof window !== 'undefined' && window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+        };
+    }, []);
 
     // Results state
     const [submitting, setSubmitting] = useState(false);
@@ -193,6 +235,17 @@ export default function InterviewPage() {
     // ── Answer helpers ─────────────────────────────────────────────────────
     const currentQuestion = bank?.questions[currentIndex];
     const totalQuestions = bank?.questions.length ?? 0;
+
+    // ── Auto-speak question when it changes ────────────────────────────
+    useEffect(() => {
+        if (step === 'questions' && currentQuestion && ttsEnabled) {
+            // Delay scurt pentru a lasa UI-ul sa se actualizeze
+            const timeout = setTimeout(() => {
+                speakQuestion(currentQuestion.question_text);
+            }, 400);
+            return () => clearTimeout(timeout);
+        }
+    }, [currentIndex, step, currentQuestion, ttsEnabled, speakQuestion]);
     const answeredCount = Object.values(answers).filter(a => a.trim()).length;
     const allAnswered = answeredCount === totalQuestions;
 
@@ -337,6 +390,8 @@ export default function InterviewPage() {
                         canListen={canListen}
                         submitting={submitting}
                         submitError={submitError}
+                        isSpeaking={isSpeaking}
+                        ttsEnabled={ttsEnabled}
                         onAnswer={setAnswer}
                         onNext={goNext}
                         onPrev={goPrev}
@@ -344,6 +399,9 @@ export default function InterviewPage() {
                         onStopListening={stopListening}
                         onSubmit={submitAnswers}
                         onJumpTo={setCurrentIndex}
+                        onSpeak={speakQuestion}
+                        onStopSpeaking={stopSpeaking}
+                        onToggleTts={setTtsEnabled}
                     />
                 )}
 
@@ -487,7 +545,9 @@ function SetupStep({
 function QuestionsStep({
     bank, currentIndex, currentQuestion, answers, allAnswered,
     answeredCount, isListening, canListen, submitting, submitError,
+    isSpeaking, ttsEnabled,
     onAnswer, onNext, onPrev, onStartListening, onStopListening, onSubmit, onJumpTo,
+    onSpeak, onStopSpeaking, onToggleTts,
 }: {
     bank: QuestionBank;
     currentIndex: number;
@@ -499,11 +559,16 @@ function QuestionsStep({
     canListen: boolean;
     submitting: boolean;
     submitError: string;
+    isSpeaking: boolean;
+    ttsEnabled: boolean;
     onAnswer: (id: number, value: string) => void;
     onNext: () => void;
     onPrev: () => void;
     onStartListening: () => void;
     onStopListening: () => void;
+    onSpeak: (text: string) => void;
+    onStopSpeaking: () => void;
+    onToggleTts: (enabled: boolean) => void;
     onSubmit: () => void;
     onJumpTo: (index: number) => void;
 }) {
@@ -571,6 +636,33 @@ function QuestionsStep({
                     <p className="text-slate-700 text-base leading-relaxed">
                         {currentQuestion.question_text}
                     </p>
+
+                    {/* TTS Controls */}
+                    <div className="flex items-center gap-3">
+                        <button
+                            onClick={() => isSpeaking ? onStopSpeaking() : onSpeak(currentQuestion.question_text)}
+                            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                                isSpeaking
+                                    ? 'bg-red-50 text-red-600 hover:bg-red-100'
+                                    : 'bg-blue-50 text-blue-600 hover:bg-blue-100'
+                            }`}
+                        >
+                            {isSpeaking ? (
+                                <><VolumeX className="w-4 h-4" /> Stop Reading</>
+                            ) : (
+                                <><Volume2 className="w-4 h-4" /> Read Aloud</>
+                            )}
+                        </button>
+                        <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                checked={ttsEnabled}
+                                onChange={(e) => onToggleTts(e.target.checked)}
+                                className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                            />
+                            Auto-read questions
+                        </label>
+                    </div>
 
                     {/* Answer input */}
                     {isMultipleChoice ? (

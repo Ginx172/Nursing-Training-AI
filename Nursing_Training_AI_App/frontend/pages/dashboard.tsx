@@ -30,11 +30,25 @@ export default function Dashboard() {
     const { user, logout } = useAuth();
     const router = useRouter();
     const [greeting, setGreeting] = useState('Good Morning');
+    const [stats, setStats] = useState<any>(null);
 
     useEffect(() => {
         const hour = new Date().getHours();
         if (hour >= 12 && hour < 17) setGreeting('Good Afternoon');
         else if (hour >= 17) setGreeting('Good Evening');
+    }, []);
+
+    useEffect(() => {
+        const fetchStats = async () => {
+            try {
+                const { default: api } = await import('../lib/api');
+                const res = await api.get('/api/dashboard/stats');
+                setStats(res.data);
+            } catch {
+                // Stats optional - dashboard functioneaza si fara
+            }
+        };
+        fetchStats();
     }, []);
 
     const handleLogout = () => {
@@ -136,8 +150,10 @@ export default function Dashboard() {
                                 <span className="text-indigo-200">Ready to train the next generation?</span>
                             </h2>
                             <p className="text-indigo-100 text-lg mb-8 max-w-xl leading-relaxed">
-                                Your students have completed 142 assessments today.
-                                The AI has flagged 3 critical interventions in recent video submissions.
+                                {stats?.platform?.sessions_today
+                                    ? `${stats.platform.sessions_today} training sessions completed today.`
+                                    : 'Your training platform is ready.'}
+                                {' '}Start a new session to improve your clinical skills.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <button className="bg-white text-indigo-700 px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl hover:bg-slate-50 transition transform hover:-translate-y-0.5 active:translate-y-0">
@@ -169,36 +185,37 @@ export default function Dashboard() {
                     </Link>
 
                     {/* Stats Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">                        <StatCard
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <StatCard
                             icon={<Users className="text-blue-600" />}
-                            label="Active Students"
-                            value="1,248"
-                            trend="+12%"
+                            label="Active Users"
+                            value={stats?.platform?.active_users?.toLocaleString() ?? '...'}
+                            trend="live"
                             trendUp
                             color="bg-blue-50"
                         />
                         <StatCard
                             icon={<Trophy className="text-amber-600" />}
                             label="Avg. Competency"
-                            value="87.4%"
-                            trend="+2.1%"
+                            value={stats?.platform?.avg_competency != null ? `${stats.platform.avg_competency}%` : '...'}
+                            trend="platform"
                             trendUp
                             color="bg-amber-50"
                         />
                         <StatCard
                             icon={<MessageSquare className="text-emerald-600" />}
                             label="Questions Answered"
-                            value="84.3k"
-                            trend="+5.4k"
+                            value={stats?.platform?.total_questions_answered?.toLocaleString() ?? '...'}
+                            trend="total"
                             trendUp
                             color="bg-emerald-50"
                         />
                         <StatCard
-                            icon={<Activity className="text-red-500" />}
-                            label="Pending Reviews"
-                            value="14"
-                            trend="Urgent"
-                            color="bg-red-50"
+                            icon={<Activity className="text-indigo-600" />}
+                            label="My Accuracy"
+                            value={stats?.personal?.accuracy != null ? `${stats.personal.accuracy}%` : '...'}
+                            trend="personal"
+                            color="bg-indigo-50"
                         />
                     </div>
 

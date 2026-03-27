@@ -44,6 +44,7 @@ _EXTRA_ROUTES = [
     ("api.routes.auto_presentation", "router", "/api/auto-presentation"),
     ("api.routes.banks_catalog", "router", "/api/banks"),
     ("api.routes.security_monitoring", "router", "/api/security-monitoring"),
+    ("api.routes.dashboard", "router", "/api/dashboard"),
     ("api.routes.compliance", "router", "/api/compliance"),
     ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
 ]
@@ -213,10 +214,14 @@ async def health_check():
     """
     from services.monitoring_service import monitoring_service
     health = monitoring_service.get_comprehensive_health_check()
-    if health["overall_status"] == "healthy":
-        return JSONResponse(status_code=status.HTTP_200_OK, content=health)
-    else:
-        return JSONResponse(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, content=health)
+
+    # Flatten DB status la top-level pentru compatibilitate cu frontend
+    db_health = health.get("components", {}).get("database", {})
+    health["primary_connected"] = db_health.get("primary_connected", False)
+    health["status"] = health.get("overall_status", "unknown")
+
+    status_code_val = status.HTTP_200_OK if health["primary_connected"] else status.HTTP_503_SERVICE_UNAVAILABLE
+    return JSONResponse(status_code=status_code_val, content=health)
 
 @app.get("/api/version", tags=["health"], summary="Get API version information")
 async def get_version():

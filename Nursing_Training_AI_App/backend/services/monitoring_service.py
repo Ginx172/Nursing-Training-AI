@@ -78,39 +78,35 @@ class MonitoringService:
     def check_database_health(self) -> Dict:
         """Check database connectivity and performance"""
         try:
-            # TODO: Implement actual database health check
-            
-            health = {
-                "status": "healthy",
-                "connections_active": 12,
-                "connections_max": 100,
-                "avg_query_time_ms": 23,
-                "slow_queries_count": 2,
-                "last_backup": "2025-10-18T00:00:00"
+            from core.database import primary_engine, get_pool_status
+            from sqlalchemy import text
+
+            with primary_engine.connect() as conn:
+                result = conn.execute(text("SELECT 1")).scalar()
+
+            pool = get_pool_status()
+
+            return {
+                "status": "healthy" if result == 1 else "unhealthy",
+                "primary_connected": result == 1,
+                "pool_status": pool,
             }
-            
-            return health
         except Exception as e:
-            print(f"Error checking database health: {e}")
-            return {"status": "error", "error": str(e)}
+            return {"status": "unhealthy", "primary_connected": False, "error": str(e)}
     
     def check_redis_health(self) -> Dict:
         """Check Redis cache health"""
         try:
-            # TODO: Implement actual Redis health check
-            
-            health = {
+            import redis
+            r = redis.Redis.from_url("redis://localhost:6379/0", socket_timeout=2)
+            r.ping()
+            info = r.info("memory")
+            return {
                 "status": "healthy",
-                "memory_used_mb": 256,
-                "memory_max_mb": 1024,
-                "hit_rate_percent": 87.5,
-                "keys_count": 4567
+                "memory_used_mb": round(info.get("used_memory", 0) / (1024 * 1024), 1),
             }
-            
-            return health
-        except Exception as e:
-            print(f"Error checking Redis health: {e}")
-            return {"status": "error", "error": str(e)}
+        except Exception:
+            return {"status": "unavailable", "note": "Redis not running (optional for core features)"}
     
     def get_comprehensive_health_check(self) -> Dict:
         """Get comprehensive system health check"""

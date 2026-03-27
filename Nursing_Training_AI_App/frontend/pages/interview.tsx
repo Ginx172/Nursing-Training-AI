@@ -351,24 +351,24 @@ export default function InterviewPage() {
     // ─── Render ────────────────────────────────────────────────────────────
 
     return (
-        <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 font-sans">
             <Head>
                 <title>Interview | Nursing Training AI</title>
             </Head>
 
             {/* Top Navigation */}
-            <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200/60 px-6 py-4 flex items-center gap-4 shadow-sm">
+            <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-indigo-100 px-6 py-4 flex items-center gap-4 shadow-md shadow-indigo-50">
                 <Link href="/dashboard" className="flex items-center gap-2 text-slate-500 hover:text-indigo-600 transition font-medium text-sm">
                     <LayoutDashboard className="w-4 h-4" />
                     Dashboard
                 </Link>
                 <ChevronRight className="w-4 h-4 text-slate-300" />
-                <span className="text-slate-800 font-semibold text-sm flex items-center gap-2">
-                    <Mic className="w-4 h-4 text-teal-600" />
+                <span className="text-indigo-700 font-bold text-sm flex items-center gap-2">
+                    <Mic className="w-4 h-4 text-indigo-500" />
                     Interview Practice
                 </span>
                 {step === 'questions' && (
-                    <div className="ml-auto flex items-center gap-2 text-slate-500 text-sm font-medium">
+                    <div className="ml-auto flex items-center gap-2 bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-full text-sm font-bold">
                         <Clock className="w-4 h-4" />
                         {formatTime(elapsed)}
                     </div>
@@ -459,16 +459,18 @@ function SetupStep({
     return (
         <div className="space-y-8">
             {/* Hero */}
-            <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-teal-500 rounded-2xl p-8 text-white shadow-xl">
+            <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-3xl p-10 text-white shadow-2xl">
                 <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+                <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-pink-400/10 rounded-full blur-2xl pointer-events-none" />
                 <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-white/20 rounded-xl backdrop-blur-sm">
-                            <BookOpen className="w-6 h-6" />
+                    <div className="flex items-center gap-4 mb-4">
+                        <div className="p-3 bg-white/20 rounded-2xl backdrop-blur-sm border border-white/10 shadow-lg">
+                            <BookOpen className="w-7 h-7" />
                         </div>
-                        <h1 className="text-2xl font-bold">Clinical Interview Practice</h1>
+                        <h1 className="text-3xl font-black tracking-tight">Clinical Interview Practice</h1>
                     </div>
-                    <p className="text-blue-100 max-w-xl">
+                    <p className="text-blue-100 max-w-xl text-base leading-relaxed">
                         Select your NHS band and specialty to begin an AI-powered clinical interview.
                         Questions are tailored to your level and read aloud by the AI interviewer.
                     </p>
@@ -476,15 +478,15 @@ function SetupStep({
             </div>
 
             {/* Selection Card */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 space-y-6">
+            <div className="bg-white rounded-2xl shadow-lg shadow-indigo-50 border border-indigo-100 p-8 space-y-8">
                 {loading && (
                     <div className="flex items-center gap-3 text-slate-500">
-                        <Loader2 className="w-5 h-5 animate-spin text-teal-600" />
+                        <Loader2 className="w-5 h-5 animate-spin text-indigo-600" />
                         <span>Loading configuration...</span>
                     </div>
                 )}
                 {error && (
-                    <div className="flex items-center gap-3 text-red-600 bg-red-50 rounded-xl p-4">
+                    <div className="flex items-center gap-3 text-red-700 bg-red-50 rounded-xl p-4 border border-red-200">
                         <AlertCircle className="w-5 h-5 flex-shrink-0" />
                         <span>{error}</span>
                     </div>
@@ -493,69 +495,72 @@ function SetupStep({
                 {!loading && !error && (
                     <>
                         {/* Band Selection - Card Grid */}
-                        <div className="space-y-3">
-                            <label className="text-sm font-semibold text-slate-700 block">
-                                NHS Band Level
+                        <div className="space-y-4">
+                            <label className="text-base font-bold text-slate-800 block">
+                                Select Your NHS Band
                             </label>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                                 {bands.map(b => (
                                     <button
                                         key={b.id}
                                         onClick={() => onBandChange(b.id)}
-                                        className={`text-left px-4 py-3 rounded-xl border-2 transition-all duration-150 shadow-sm hover:shadow-md ${
+                                        className={`text-left px-5 py-4 rounded-xl border-2 transition-all duration-200 hover:scale-[1.03] ${
                                             selectedBand === b.id
-                                                ? 'border-blue-500 bg-blue-50 text-blue-800 ring-2 ring-blue-200'
-                                                : 'border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50/50'
+                                                ? 'border-indigo-500 bg-indigo-50 ring-2 ring-indigo-500 shadow-lg shadow-indigo-100'
+                                                : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:shadow-lg'
                                         }`}
                                     >
-                                        <div className="font-semibold text-sm">{b.name}</div>
-                                        <div className="text-xs text-slate-500 mt-0.5">{b.description}</div>
+                                        <div className="font-bold text-sm">{b.name}</div>
+                                        <div className="text-xs text-slate-500 mt-1">{b.description}</div>
                                     </button>
                                 ))}
                             </div>
                         </div>
 
                         {/* Specialty Selection - Card Grid */}
-                        <div className="space-y-3">
-                            <label className="text-sm font-semibold text-slate-700 block">
-                                Clinical Specialty
+                        <div className="space-y-4">
+                            <label className="text-base font-bold text-slate-800 block">
+                                Select Your Specialty
                             </label>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                 {specialties.map(s => (
                                     <button
                                         key={s.id}
                                         onClick={() => onSpecialtyChange(s.id)}
-                                        className={`text-left px-4 py-3 rounded-xl border-2 transition-all duration-150 shadow-sm hover:shadow-md ${
+                                        className={`text-left px-5 py-4 rounded-xl border-2 transition-all duration-200 hover:scale-[1.03] ${
                                             selectedSpecialty === s.id
-                                                ? 'border-teal-500 bg-teal-50 text-teal-800 ring-2 ring-teal-200'
-                                                : 'border-slate-200 bg-white text-slate-700 hover:border-teal-300 hover:bg-teal-50/50'
+                                                ? 'border-indigo-500 bg-indigo-50 ring-2 ring-indigo-500 shadow-lg shadow-indigo-100'
+                                                : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:shadow-lg'
                                         }`}
                                     >
-                                        <div className="font-semibold text-sm">{s.name}</div>
-                                        <div className="text-xs text-slate-500 mt-0.5">{s.description}</div>
+                                        <div className="font-bold text-sm">{s.name}</div>
+                                        <div className="text-xs text-slate-500 mt-1">{s.description}</div>
                                     </button>
                                 ))}
                             </div>
                         </div>
 
                         {bankError && (
-                            <div className="flex items-center gap-3 text-red-600 bg-red-50 rounded-xl p-4">
+                            <div className="flex items-center gap-3 text-red-700 bg-red-50 rounded-xl p-4 border border-red-200">
                                 <AlertCircle className="w-5 h-5 flex-shrink-0" />
                                 <span>Could not load questions: {bankError}. Try a different band/specialty combination.</span>
                             </div>
                         )}
 
-                        <button
-                            onClick={onStart}
-                            disabled={!selectedBand || !selectedSpecialty || bankLoading}
-                            className="w-full bg-gradient-to-r from-indigo-600 via-blue-600 to-teal-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-100 hover:shadow-xl hover:from-indigo-500 hover:via-blue-500 hover:to-teal-400 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-                        >
-                            {bankLoading ? (
-                                <><Loader2 className="w-5 h-5 animate-spin" /> Loading Questions...</>
-                            ) : (
-                                <><Mic className="w-5 h-5" /> Start Interview</>
-                            )}
-                        </button>
+                        <div className="flex flex-col items-center">
+                            <button
+                                onClick={onStart}
+                                disabled={!selectedBand || !selectedSpecialty || bankLoading}
+                                className="w-full max-w-md bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-3"
+                            >
+                                {bankLoading ? (
+                                    <><Loader2 className="w-5 h-5 animate-spin" /> Loading Questions...</>
+                                ) : (
+                                    <>Begin Interview <ChevronRight className="w-5 h-5" /></>
+                                )}
+                            </button>
+                            <p className="text-xs text-slate-400 mt-3">15 randomized questions tailored to your level</p>
+                        </div>
                     </>
                 )}
             </div>
@@ -605,14 +610,14 @@ function QuestionsStep({
     return (
         <div className="space-y-6">
             {/* Progress header */}
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
-                <div className="flex items-center justify-between text-sm font-medium text-slate-600">
+            <div className="bg-white rounded-2xl border border-indigo-100 shadow-lg shadow-indigo-50 p-6 space-y-4">
+                <div className="flex items-center justify-between text-sm font-semibold text-slate-700">
                     <span>Question {currentIndex + 1} of {total}</span>
-                    <span>{answeredCount}/{total} answered</span>
+                    <span className="text-indigo-600">{answeredCount}/{total} answered</span>
                 </div>
-                <div className="w-full bg-slate-100 rounded-full h-2.5">
+                <div className="w-full bg-slate-100 rounded-full h-3">
                     <div
-                        className="bg-gradient-to-r from-teal-500 to-emerald-500 h-2.5 rounded-full transition-all duration-500"
+                        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500 shadow-sm"
                         style={{ width: `${progress}%` }}
                     />
                 </div>
@@ -623,11 +628,11 @@ function QuestionsStep({
                             key={q.id}
                             onClick={() => onJumpTo(idx)}
                             title={`Question ${idx + 1}`}
-                            className={`w-6 h-6 rounded-full text-xs font-bold transition-all ${
+                            className={`w-7 h-7 rounded-full text-xs font-bold transition-all ${
                                 idx === currentIndex
-                                    ? 'bg-teal-600 text-white scale-110'
+                                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200 scale-110'
                                     : answers[q.id]?.trim()
-                                    ? 'bg-emerald-200 text-emerald-800 hover:bg-emerald-300'
+                                    ? 'bg-emerald-400 text-white hover:bg-emerald-500'
                                     : 'bg-slate-200 text-slate-500 hover:bg-slate-300'
                             }`}
                         >
@@ -638,18 +643,18 @@ function QuestionsStep({
             </div>
 
             {/* Question card */}
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-2xl border border-indigo-100 shadow-lg shadow-indigo-50 overflow-hidden">
                 {/* Question header */}
-                <div className="bg-gradient-to-r from-teal-600 to-emerald-600 px-6 py-5 text-white">
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 px-6 py-6 text-white">
                     <div className="flex items-start justify-between gap-4">
                         <div>
-                            <div className="text-teal-100 text-xs font-semibold uppercase tracking-wider mb-1">
+                            <div className="text-indigo-200 text-xs font-semibold uppercase tracking-wider mb-1.5">
                                 {currentQuestion.question_type === 'multiple_choice' ? 'Multiple Choice' : 'Scenario / Open-ended'}
                             </div>
                             <h2 className="text-xl font-bold">{currentQuestion.title}</h2>
                         </div>
                         {currentQuestion.difficulty && (
-                            <span className={`text-xs font-bold px-3 py-1 rounded-full flex-shrink-0 ${difficultyColor(currentQuestion.difficulty)}`}>
+                            <span className={`text-sm font-bold px-4 py-1.5 rounded-full flex-shrink-0 border border-white/20 ${difficultyColor(currentQuestion.difficulty)}`}>
                                 {currentQuestion.difficulty}
                             </span>
                         )}
@@ -658,18 +663,18 @@ function QuestionsStep({
 
                 <div className="p-6 space-y-6">
                     {/* Question text */}
-                    <p className="text-slate-700 text-base leading-relaxed">
+                    <p className="text-slate-700 text-lg leading-relaxed border-l-4 border-indigo-300 pl-4">
                         {currentQuestion.question_text}
                     </p>
 
                     {/* TTS Controls */}
-                    <div className="flex flex-wrap items-center gap-3 p-3 bg-slate-50 rounded-xl">
+                    <div className="flex flex-wrap items-center gap-3 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100">
                         <button
                             onClick={() => isSpeaking ? onStopSpeaking() : onSpeak(currentQuestion.question_text)}
-                            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm ${
                                 isSpeaking
-                                    ? 'bg-red-100 text-red-600 hover:bg-red-200'
-                                    : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
+                                    ? 'bg-red-500 text-white hover:bg-red-600'
+                                    : 'bg-indigo-600 text-white hover:bg-indigo-700'
                             }`}
                         >
                             {isSpeaking ? (
@@ -680,20 +685,20 @@ function QuestionsStep({
                         </button>
                         <button
                             onClick={() => onSpeak(currentQuestion.question_text)}
-                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition-all"
+                            className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold bg-purple-100 text-purple-700 hover:bg-purple-200 transition-all"
                         >
                             <RotateCcw className="w-3.5 h-3.5" /> Repeat
                         </button>
-                        <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer ml-auto">
+                        <label className="flex items-center gap-2 text-xs text-slate-600 cursor-pointer ml-auto">
                             <input
                                 type="checkbox"
                                 checked={ttsEnabled}
                                 onChange={(e) => onToggleTts(e.target.checked)}
-                                className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                                className="rounded border-indigo-300 text-indigo-600 focus:ring-indigo-500"
                             />
                             Auto-read
                         </label>
-                        <div className="flex items-center gap-2 text-xs text-slate-500">
+                        <div className="flex items-center gap-2 text-xs text-slate-600">
                             <span>Speed:</span>
                             <input
                                 type="range"
@@ -702,9 +707,9 @@ function QuestionsStep({
                                 step="0.1"
                                 value={speechRate}
                                 onChange={(e) => onSpeechRateChange(parseFloat(e.target.value))}
-                                className="w-20 h-1.5 accent-blue-600"
+                                className="w-20 h-1.5 accent-indigo-600"
                             />
-                            <span className="font-medium text-slate-700 w-8">{speechRate}x</span>
+                            <span className="font-semibold text-indigo-700 w-8">{speechRate}x</span>
                         </div>
                     </div>
 
@@ -714,10 +719,10 @@ function QuestionsStep({
                             {currentQuestion.options!.map((opt, i) => (
                                 <label
                                     key={i}
-                                    className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${
+                                    className={`flex items-center gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
                                         currentAnswer === opt
-                                            ? 'border-teal-500 bg-teal-50'
-                                            : 'border-slate-200 hover:border-teal-300 hover:bg-slate-50'
+                                            ? 'border-indigo-500 bg-indigo-50 shadow-md shadow-indigo-50'
+                                            : 'border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/50'
                                     }`}
                                 >
                                     <input
@@ -726,7 +731,7 @@ function QuestionsStep({
                                         value={opt}
                                         checked={currentAnswer === opt}
                                         onChange={() => onAnswer(currentQuestion.id, opt)}
-                                        className="accent-teal-600 w-4 h-4"
+                                        className="accent-indigo-600 w-4 h-4"
                                     />
                                     <span className="text-slate-700 text-sm">{opt}</span>
                                 </label>
@@ -737,18 +742,18 @@ function QuestionsStep({
                             <textarea
                                 value={currentAnswer}
                                 onChange={e => onAnswer(currentQuestion.id, e.target.value)}
-                                placeholder="Type your answer here, or use voice input below…"
+                                placeholder="Type your answer here, or use voice input below..."
                                 rows={5}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-700 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none transition resize-none text-sm leading-relaxed"
+                                className="w-full border-2 border-indigo-200 rounded-xl px-4 py-3 text-slate-700 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none transition resize-none text-sm leading-relaxed min-h-[120px]"
                             />
                             {canListen && (
                                 <button
                                     type="button"
                                     onClick={isListening ? onStopListening : onStartListening}
-                                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all ${
+                                    className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all shadow-sm ${
                                         isListening
-                                            ? 'bg-red-100 text-red-600 border-2 border-red-300 animate-pulse'
-                                            : 'bg-teal-50 text-teal-700 border-2 border-teal-200 hover:bg-teal-100'
+                                            ? 'bg-red-500 text-white border-2 border-red-400 animate-pulse shadow-red-100'
+                                            : 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:from-teal-600 hover:to-emerald-600 shadow-teal-100'
                                     }`}
                                 >
                                     {isListening ? (
@@ -763,7 +768,7 @@ function QuestionsStep({
                                     type="button"
                                     onClick={currentIndex < bank.questions.length - 1 ? onNext : undefined}
                                     disabled={!currentAnswer.trim()}
-                                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-sm hover:bg-emerald-700 transition shadow-sm"
+                                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-sm hover:from-emerald-600 hover:to-teal-600 transition shadow-md shadow-emerald-100"
                                 >
                                     <Send className="w-4 h-4" />
                                     {currentIndex < bank.questions.length - 1 ? 'Confirm & Next' : 'Answer Saved'}
@@ -789,7 +794,7 @@ function QuestionsStep({
                 <button
                     onClick={onPrev}
                     disabled={currentIndex === 0}
-                    className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-slate-200 text-slate-600 font-semibold text-sm hover:border-slate-300 hover:bg-slate-50 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="flex items-center gap-2 px-5 py-3 rounded-xl border-2 border-indigo-200 text-indigo-700 font-semibold text-sm hover:bg-indigo-50 transition disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                     <ChevronLeft className="w-4 h-4" /> Previous
                 </button>
@@ -797,7 +802,7 @@ function QuestionsStep({
                 {currentIndex < bank.questions.length - 1 ? (
                     <button
                         onClick={onNext}
-                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-teal-600 text-white font-semibold text-sm hover:bg-teal-700 transition shadow-sm shadow-teal-100"
+                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-sm hover:from-indigo-700 hover:to-purple-700 transition shadow-lg shadow-indigo-100"
                     >
                         Next <ChevronRight className="w-4 h-4" />
                     </button>
@@ -805,12 +810,12 @@ function QuestionsStep({
                     <button
                         onClick={onSubmit}
                         disabled={submitting}
-                        className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold text-sm hover:from-indigo-500 hover:to-violet-500 transition shadow-lg shadow-indigo-100 disabled:opacity-40 disabled:cursor-not-allowed"
+                        className="flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white font-black text-base hover:from-emerald-500 hover:via-teal-500 hover:to-cyan-500 transition shadow-xl shadow-emerald-100 disabled:opacity-40 disabled:cursor-not-allowed"
                     >
                         {submitting ? (
-                            <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>
+                            <><Loader2 className="w-5 h-5 animate-spin" /> Submitting...</>
                         ) : (
-                            <><Send className="w-4 h-4" /> Submit &amp; Get Results</>
+                            <><Send className="w-5 h-5" /> Submit &amp; Get Results</>
                         )}
                     </button>
                 )}
@@ -851,24 +856,29 @@ function ResultsStep({
     return (
         <div className="space-y-6">
             {/* Score summary */}
-            <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 rounded-3xl p-8 text-white shadow-xl shadow-indigo-100">
+            <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-10 text-white shadow-2xl shadow-indigo-200">
                 <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+                <div className="absolute top-1/3 left-1/2 w-36 h-36 bg-white/5 rounded-full blur-xl pointer-events-none" />
+                <div className="absolute bottom-4 right-16 w-20 h-20 bg-white/10 rounded-full blur-lg pointer-events-none" />
                 <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <div>
-                        <div className="flex items-center gap-2 mb-2">
-                            <Trophy className="w-5 h-5 text-yellow-300" />
-                            <span className="text-indigo-200 text-sm font-semibold uppercase tracking-wider">Interview Complete</span>
+                        <div className="flex items-center gap-2 mb-3">
+                            <Trophy className="w-6 h-6 text-yellow-300" />
+                            <span className="text-purple-200 text-sm font-bold uppercase tracking-wider">Interview Complete</span>
                         </div>
-                        <h2 className="text-3xl font-bold mb-1">
+                        <h2 className="text-3xl font-black mb-2">
                             {results.correct}/{results.total_questions} Correct
                         </h2>
-                        <p className="text-indigo-200">
+                        <p className="text-purple-200 text-base">
                             {bank.specialty.toUpperCase()} · {bank.band.replaceAll('_', ' ').toUpperCase()}
                         </p>
                     </div>
                     <div className="text-center">
-                        <div className={`text-6xl font-black ${scoreColor} bg-white/10 rounded-2xl px-6 py-4`}>
-                            {results.score_percentage}%
+                        <div className="w-32 h-32 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center shadow-lg shadow-white/10 border border-white/20">
+                            <span className={`text-7xl font-black ${scoreColor}`}>
+                                {results.score_percentage}<span className="text-3xl">%</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -877,16 +887,16 @@ function ResultsStep({
             {/* Per-question detailed feedback */}
             <div className="space-y-4">
                 <div className="flex items-center gap-2 px-1">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
+                    <CheckCircle className="w-5 h-5 text-indigo-600" />
                     <h3 className="font-bold text-slate-800 text-lg">Detailed Feedback per Question</h3>
                 </div>
                 {results.per_question.map((r, idx) => (
-                    <div key={r.question_id} className={`bg-white rounded-2xl border-2 shadow-sm overflow-hidden ${
-                        r.is_correct ? 'border-emerald-200' : 'border-red-200'
+                    <div key={r.question_id} className={`bg-white rounded-2xl shadow-md overflow-hidden ${
+                        r.is_correct ? 'border-l-4 border-emerald-500' : 'border-l-4 border-red-400'
                     }`}>
                         {/* Question header with score */}
                         <div className={`px-6 py-4 flex items-center justify-between ${
-                            r.is_correct ? 'bg-emerald-50' : 'bg-red-50'
+                            r.is_correct ? 'bg-gradient-to-r from-emerald-50 to-green-50' : 'bg-gradient-to-r from-red-50 to-orange-50'
                         }`}>
                             <div className="flex items-center gap-3">
                                 {r.is_correct ? (
@@ -899,10 +909,10 @@ function ResultsStep({
                                     <p className="text-xs text-slate-500 mt-0.5">{r.question_text}</p>
                                 </div>
                             </div>
-                            <div className={`text-2xl font-black px-3 py-1 rounded-xl ${
-                                r.score >= 8 ? 'bg-emerald-100 text-emerald-700' :
-                                r.score >= 5 ? 'bg-amber-100 text-amber-700' :
-                                'bg-red-100 text-red-600'
+                            <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-black ${
+                                r.score >= 8 ? 'bg-gradient-to-br from-emerald-400 to-green-500 text-white' :
+                                r.score >= 5 ? 'bg-gradient-to-br from-amber-400 to-orange-500 text-white' :
+                                'bg-gradient-to-br from-red-400 to-rose-500 text-white'
                             }`}>
                                 {r.score}/{r.max_score}
                             </div>
@@ -910,21 +920,21 @@ function ResultsStep({
 
                         <div className="p-6 space-y-4">
                             {/* AI Feedback */}
-                            <div className="p-3 bg-blue-50 rounded-xl">
+                            <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
                                 <p className="text-sm text-blue-800 font-medium">{r.feedback}</p>
                             </div>
 
                             {/* Your answer */}
                             <div>
-                                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Your Answer</h4>
-                                <p className="text-sm text-slate-700 bg-slate-50 rounded-lg p-3">{r.user_answer}</p>
+                                <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5">Your Answer</h4>
+                                <p className="text-sm text-slate-700 bg-slate-50 rounded-lg p-3 border-l-4 border-slate-300">{r.user_answer}</p>
                             </div>
 
                             {/* Strengths */}
                             {r.strengths && r.strengths.length > 0 && (
-                                <div>
-                                    <h4 className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">What you did well</h4>
-                                    <ul className="space-y-1">
+                                <div className="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                                    <h4 className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">What you did well</h4>
+                                    <ul className="space-y-1.5">
                                         {r.strengths.map((s, i) => (
                                             <li key={i} className="text-sm text-emerald-700 flex items-start gap-2">
                                                 <CheckCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" /> {s}
@@ -936,9 +946,9 @@ function ResultsStep({
 
                             {/* Weaknesses */}
                             {r.weaknesses && r.weaknesses.length > 0 && (
-                                <div>
-                                    <h4 className="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Areas to improve</h4>
-                                    <ul className="space-y-1">
+                                <div className="bg-red-50 rounded-xl p-4 border border-red-100">
+                                    <h4 className="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Areas to improve</h4>
+                                    <ul className="space-y-1.5">
                                         {r.weaknesses.map((w, i) => (
                                             <li key={i} className="text-sm text-red-600 flex items-start gap-2">
                                                 <AlertCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" /> {w}
@@ -951,8 +961,10 @@ function ResultsStep({
                             {/* Ideal answer */}
                             {r.ideal_answer && (
                                 <div className="border-t border-slate-100 pt-4">
-                                    <h4 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1">Model / Ideal Answer</h4>
-                                    <p className="text-sm text-slate-600 bg-indigo-50 rounded-lg p-3 leading-relaxed">{r.ideal_answer}</p>
+                                    <h4 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                                        <BookOpen className="w-3.5 h-3.5" /> Model / Ideal Answer
+                                    </h4>
+                                    <p className="text-sm text-indigo-800 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-4 leading-relaxed border border-indigo-100">{r.ideal_answer}</p>
                                 </div>
                             )}
                         </div>
@@ -962,19 +974,19 @@ function ResultsStep({
 
             {/* Study plan */}
             {results.study_plan?.length > 0 && (
-                <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
-                    <div className="px-6 py-4 border-b border-slate-100 flex items-center gap-2">
+                <div className="bg-white rounded-2xl border border-indigo-100 shadow-lg shadow-indigo-50 overflow-hidden">
+                    <div className="px-6 py-4 border-b border-indigo-100 flex items-center gap-2 bg-gradient-to-r from-indigo-50 to-purple-50">
                         <BookOpen className="w-5 h-5 text-indigo-600" />
-                        <h3 className="font-bold text-slate-800">Study Plan</h3>
+                        <h3 className="font-bold text-indigo-800">Study Plan</h3>
                     </div>
                     <div className="p-6 space-y-4">
                         {results.study_plan.map((s, i) => (
                             <div key={i}>
                                 <h4 className="font-semibold text-slate-700 text-sm mb-2">{s.title}</h4>
-                                <ul className="space-y-1">
+                                <ul className="space-y-1.5">
                                     {s.items.map((item, j) => (
                                         <li key={j} className="text-sm text-slate-600 flex items-start gap-2">
-                                            <span className="text-teal-500 mt-0.5">•</span>
+                                            <span className="text-indigo-500 mt-0.5 font-bold">*</span>
                                             {item}
                                         </li>
                                     ))}
@@ -982,7 +994,7 @@ function ResultsStep({
                             </div>
                         ))}
                         {results.next_steps && (
-                            <div className="mt-4 p-4 bg-indigo-50 rounded-xl text-sm text-indigo-700">
+                            <div className="mt-4 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl text-sm text-indigo-700 border border-indigo-100">
                                 <strong>Next steps:</strong> {results.next_steps}
                             </div>
                         )}
@@ -994,15 +1006,15 @@ function ResultsStep({
             <div className="flex flex-col sm:flex-row gap-4">
                 <button
                     onClick={onTryAgain}
-                    className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl border-2 border-teal-200 text-teal-700 font-bold hover:bg-teal-50 transition"
+                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl border-2 border-indigo-300 text-indigo-700 font-bold text-base hover:bg-indigo-50 hover:border-indigo-400 transition-all"
                 >
-                    <RotateCcw className="w-4 h-4" /> Try Again
+                    <RotateCcw className="w-5 h-5" /> Try Again
                 </button>
                 <Link
                     href="/dashboard"
-                    className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold hover:from-indigo-500 hover:to-violet-500 transition shadow-lg shadow-indigo-100"
+                    className="flex-1 flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-base hover:from-indigo-500 hover:to-purple-500 transition-all shadow-lg shadow-indigo-200"
                 >
-                    <Activity className="w-4 h-4" /> Back to Dashboard
+                    <Activity className="w-5 h-5" /> Back to Dashboard
                 </Link>
             </div>
         </div>

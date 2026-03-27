@@ -15,7 +15,7 @@ class UserRegister(BaseModel):
     """Schema pentru inregistrare utilizator nou"""
     email: EmailStr
     username: str = Field(..., min_length=3, max_length=100, pattern=r"^[a-zA-Z0-9_-]+$")
-    password: str = Field(..., min_length=8, max_length=128)
+    password: str = Field(..., min_length=12, max_length=128, description="Min 12 chars, 1 uppercase, 1 lowercase, 1 digit (NHS DSPT policy)")
     first_name: str = Field(..., min_length=1, max_length=100)
     last_name: str = Field(..., min_length=1, max_length=100)
     nhs_band: Optional[str] = None
@@ -36,7 +36,7 @@ class RefreshTokenRequest(BaseModel):
 class ChangePasswordRequest(BaseModel):
     """Schema pentru schimbare parola"""
     current_password: str
-    new_password: str = Field(..., min_length=8, max_length=128)
+    new_password: str = Field(..., min_length=12, max_length=128)
 
 
 class PasswordResetRequest(BaseModel):
@@ -47,7 +47,7 @@ class PasswordResetRequest(BaseModel):
 class PasswordResetConfirm(BaseModel):
     """Schema pentru confirmare reset parola"""
     token: str
-    new_password: str = Field(..., min_length=8, max_length=128)
+    new_password: str = Field(..., min_length=12, max_length=128)
 
 
 # ========================================

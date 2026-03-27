@@ -44,6 +44,7 @@ _EXTRA_ROUTES = [
     ("api.routes.auto_presentation", "router", "/api/auto-presentation"),
     ("api.routes.banks_catalog", "router", "/api/banks"),
     ("api.routes.security_monitoring", "router", "/api/security-monitoring"),
+    ("api.routes.compliance", "router", "/api/compliance"),
     ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
 ]
 _extra_routers = []

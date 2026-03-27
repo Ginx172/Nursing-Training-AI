@@ -10,6 +10,7 @@ from sqlalchemy.exc import IntegrityError
 from core.database import get_db
 from core.auth import hash_password, verify_password, create_access_token, create_refresh_token, verify_token
 from core.config import settings
+from core.nhs_compliance import NHSPasswordPolicy
 from models.user import User, UserRole, NHSBand, SubscriptionTier
 from api.schemas.auth import (
     UserRegister, UserLogin, RefreshTokenRequest,
@@ -50,12 +51,10 @@ async def ping():
 async def register(data: UserRegister, db: Session = Depends(get_db)):
     """Inregistreaza un utilizator nou si returneaza token-uri JWT"""
 
-    # Validare parola (minim o litera mare, o cifra)
-    if not any(c.isupper() for c in data.password) or not any(c.isdigit() for c in data.password):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Password must contain at least one uppercase letter and one digit",
-        )
+    # Validare parola conform NHS DSPT password policy
+    password_error = NHSPasswordPolicy.validate(data.password, email=data.email, username=data.username)
+    if password_error:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=password_error)
 
     # Validare NHS band daca e furnizat
     nhs_band = None
@@ -209,11 +208,9 @@ async def change_password(
             detail="Current password is incorrect",
         )
 
-    if not any(c.isupper() for c in data.new_password) or not any(c.isdigit() for c in data.new_password):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="New password must contain at least one uppercase letter and one digit",
-        )
+    password_error = NHSPasswordPolicy.validate(data.new_password, email=user.email, username=user.username)
+    if password_error:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=password_error)
 
     user.hashed_password = hash_password(data.new_password)
     db.commit()

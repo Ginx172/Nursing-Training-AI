@@ -3,12 +3,19 @@ User profile and progress routes
 """
 
 from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from core.database import get_db
 from models.user import User, NHSBand, UserProgress
 from api.schemas.auth import UserResponse, UserProfileUpdate, MessageResponse
 from api.dependencies import get_current_active_user
+from services.gdpr_service import gdpr_service
+
+
+class GDPRDeleteRequest(BaseModel):
+    confirm: bool = False
 
 router = APIRouter()
 
@@ -143,3 +150,53 @@ async def delete_own_account(
     user.is_active = False
     db.commit()
     return MessageResponse(success=True, message="Account deactivated successfully")
+
+
+# ========================================
+# GDPR - DATA EXPORT (Article 15)
+# ========================================
+
+@router.get("/me/data-export")
+async def gdpr_data_export(
+    user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db),
+):
+    """
+    GDPR Article 15 - Right of access.
+    Exporta TOATE datele personale ale utilizatorului intr-un singur JSON.
+    """
+    data = gdpr_service.collect_all_user_data(user, db)
+    return JSONResponse(
+        content={"success": True, "gdpr_export": data},
+        headers={"Content-Disposition": "attachment; filename=gdpr_data_export.json"},
+    )
+
+
+# ========================================
+# GDPR - DATA DELETION (Article 17)
+# ========================================
+
+@router.delete("/me/data")
+async def gdpr_delete_all_data(
+    body: GDPRDeleteRequest,
+    user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db),
+):
+    """
+    GDPR Article 17 - Right to erasure (Right to be forgotten).
+    Sterge PERMANENT toate datele utilizatorului. IREVERSIBIL.
+    Necesita confirm=true in body.
+    """
+    if not body.confirm:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="You must send {\"confirm\": true} to permanently delete all your data. This action is IRREVERSIBLE.",
+        )
+
+    result = gdpr_service.delete_all_user_data(user, db)
+
+    return {
+        "success": True,
+        "message": "All your data has been permanently deleted per GDPR Article 17.",
+        "deletion_details": result,
+    }

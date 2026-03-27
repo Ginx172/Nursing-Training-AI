@@ -12,7 +12,7 @@ from services.rag_service import rag_service, RAGQuery, SearchResult
 from services.mcp_service import mcp_service, MCPRequest, MCPResponse, ContextType
 from services.knowledge_base_service import knowledge_base_service, DocumentInfo
 from services.ai_integration_service import ai_integration_service, AIEvaluationRequest, AIEvaluationResponse
-from core.security import get_current_user
+from api.dependencies import get_current_active_user as get_current_user
 
 logger = logging.getLogger(__name__)
 router = APIRouter()

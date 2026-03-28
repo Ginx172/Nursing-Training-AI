@@ -14,8 +14,11 @@ interface User {
   role: string;
   nhs_band: string | null;
   specialization: string | null;
+  years_experience: number | null;
   subscription_tier: string;
   is_active: boolean;
+  is_verified: boolean;
+  created_at: string | null;
 }
 
 interface AuthContextType {

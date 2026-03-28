@@ -66,6 +66,11 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     is_verified = Column(Boolean, default=False)
     role = Column(Enum(UserRole), default=UserRole.STUDENT)
+
+    # Two-Factor Authentication (2FA / TOTP)
+    totp_secret = Column(String(64), nullable=True)
+    totp_enabled = Column(Boolean, default=False)
+    backup_codes = Column(Text, nullable=True)  # JSON array of hashed backup codes
     
     # Timestamps
     created_at = Column(DateTime, default=func.now())

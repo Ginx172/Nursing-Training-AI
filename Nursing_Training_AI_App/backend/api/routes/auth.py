@@ -139,6 +139,21 @@ async def login(
             detail="Account is deactivated. Contact support.",
         )
 
+    # Verificare 2FA daca e activat
+    if user.totp_enabled:
+        if not data.totp_code:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="2FA code required. Please provide your authenticator code.",
+                headers={"X-2FA-Required": "true"},
+            )
+        from core.totp import verify_totp_code
+        if not verify_totp_code(user.totp_secret, data.totp_code):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid 2FA code.",
+            )
+
     # Actualizare last_login
     user.last_login = datetime.now(timezone.utc)
     db.commit()

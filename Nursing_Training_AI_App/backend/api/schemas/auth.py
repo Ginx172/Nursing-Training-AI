@@ -26,6 +26,7 @@ class UserLogin(BaseModel):
     """Schema pentru login"""
     email: EmailStr
     password: str
+    totp_code: Optional[str] = None  # Required when 2FA is enabled
 
 
 class RefreshTokenRequest(BaseModel):

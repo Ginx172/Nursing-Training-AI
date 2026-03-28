@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '../context/AuthContext'
 import api from '../lib/api'
@@ -55,13 +55,14 @@ export default function DemoPage() {
   const [batchSummary, setBatchSummary] = useState<BatchSummary | null>(null)
 
   // Speech Recognition (Web Speech API)
-  const SpeechRecognitionImpl = useMemo(() => {
-    if (typeof window === 'undefined') return null
-    const w = window as any
-    return w.SpeechRecognition || w.webkitSpeechRecognition || null
-  }, [])
+  const [SpeechRecognitionImpl, setSpeechRecognitionImpl] = useState<any>(null)
   const recognitionRef = useRef<any>(null)
   const [listeningForId, setListeningForId] = useState<number | null>(null)
+
+  useEffect(() => {
+    const w = window as any
+    setSpeechRecognitionImpl(() => w.SpeechRecognition || w.webkitSpeechRecognition || null)
+  }, [])
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -80,8 +81,13 @@ export default function DemoPage() {
     fetchQuestions()
   }, [])
 
-  const canSpeak = useMemo(() => typeof window !== 'undefined' && 'speechSynthesis' in window, [])
-  const canListen = useMemo(() => !!SpeechRecognitionImpl, [SpeechRecognitionImpl])
+  const [canSpeak, setCanSpeak] = useState(false)
+  const [canListen, setCanListen] = useState(false)
+
+  useEffect(() => {
+    setCanSpeak(typeof window !== 'undefined' && 'speechSynthesis' in window)
+    setCanListen(!!SpeechRecognitionImpl)
+  }, [SpeechRecognitionImpl])
 
   const speak = (text: string, id: number) => {
     if (!canSpeak) return

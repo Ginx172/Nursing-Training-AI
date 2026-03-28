@@ -4,7 +4,11 @@
  */
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+// When accessed via ngrok/external URL, use relative paths (Next.js rewrites proxy to backend).
+// When running locally, use direct backend URL for faster response.
+const isServer = typeof window === 'undefined';
+const isExternalAccess = !isServer && !window.location.hostname.match(/^(localhost|127\.0\.0\.1)$/);
+const API_URL = isExternalAccess ? '' : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000');
 
 const api = axios.create({
   baseURL: API_URL,

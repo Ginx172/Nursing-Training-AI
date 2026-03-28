@@ -16,13 +16,19 @@ import os
 
 from core.config import settings
 
-# Import routers
-from api import (
-    analytics,
-    admin,
-    payments,
-    sso
-)
+# Import routers - cu fallback pentru deploy-uri fara toate dependentele
+from api import analytics, admin
+
+try:
+    from api import payments
+except ImportError as _e:
+    print(f"Warning: payments module unavailable (missing stripe): {_e}")
+    payments = None
+try:
+    from api import sso
+except ImportError as _e:
+    print(f"Warning: sso module unavailable: {_e}")
+    sso = None
 
 # Import critical routers with graceful fallback
 try:
@@ -67,13 +73,15 @@ for _module_path, _attr, _prefix in _EXTRA_ROUTES:
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
 
-# Initialize Sentry for error tracking
-sentry_sdk.init(
-    dsn=os.getenv("SENTRY_DSN", ""),
-    integrations=[FastApiIntegration()],
-    traces_sample_rate=0.1 if settings.ENVIRONMENT == "production" else 1.0,
-    environment=settings.ENVIRONMENT
-)
+# Initialize Sentry for error tracking (optional)
+_sentry_dsn = os.getenv("SENTRY_DSN", "")
+if _sentry_dsn:
+    sentry_sdk.init(
+        dsn=_sentry_dsn,
+        integrations=[FastApiIntegration()],
+        traces_sample_rate=0.1 if settings.ENVIRONMENT == "production" else 1.0,
+        environment=settings.ENVIRONMENT
+    )
 
 # Lifespan events
 @asynccontextmanager
@@ -223,8 +231,10 @@ async def track_requests(request: Request, call_next):
 
 app.include_router(analytics.router)
 app.include_router(admin.router)
-app.include_router(payments.router)
-app.include_router(sso.router)
+if payments:
+    app.include_router(payments.router)
+if sso:
+    app.include_router(sso.router)
 if questions_router:
     app.include_router(questions_router, prefix="/api/questions")
 if security_router:

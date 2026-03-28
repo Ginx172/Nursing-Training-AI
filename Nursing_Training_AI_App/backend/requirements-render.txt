@@ -1,0 +1,32 @@
+# Core FastAPI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic[email]==2.5.0
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+psycopg2-binary==2.9.9
+
+# AI (Google Gemini - lightweight)
+google-generativeai>=0.3.0
+
+# Auth & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+PyJWT==2.8.0
+cryptography==41.0.7
+pyotp==2.9.0
+qrcode[pil]==7.4.2
+
+# Utilities
+python-dotenv>=1.0.0
+python-multipart==0.0.6
+httpx==0.25.2
+aiofiles==23.2.1
+email-validator
+
+# Monitoring
+psutil==5.9.6
+sentry-sdk[fastapi]==1.39.1

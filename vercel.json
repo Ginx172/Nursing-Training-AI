@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "rootDirectory": "Nursing_Training_AI_App/frontend",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
+}

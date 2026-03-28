@@ -1,0 +1,32 @@
+databases:
+  - name: nursing-training-db
+    plan: free
+    databaseName: nursing_training_ai
+    user: nursing_user
+
+services:
+  - type: web
+    name: nursing-training-api
+    plan: free
+    runtime: python
+    rootDir: Nursing_Training_AI_App/backend
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nursing-training-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.0"

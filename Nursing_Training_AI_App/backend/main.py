@@ -151,6 +151,38 @@ app.add_middleware(
 # GZIP Compression
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
+# Rate limiting middleware (global, path-based)
+from core.rate_limiter import rate_limiter
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    path = request.url.path.lower()
+    client_ip = request.client.host if request.client else "unknown"
+
+    # Configuratie rate limits per path
+    limits = {
+        "/api/auth/login": (5, 300),       # 5 per 5 min
+        "/api/auth/register": (3, 300),    # 3 per 5 min
+        "/api/auth/refresh": (10, 60),     # 10 per min
+        "/api/questions/submit": (10, 60), # 10 per min
+        "/api/questions/evaluate": (20, 60),  # 20 per min
+    }
+
+    for limit_path, (max_req, window) in limits.items():
+        if path.startswith(limit_path):
+            key = f"rl:{limit_path}:{client_ip}"
+            allowed, _ = rate_limiter.check(key, max_req, window)
+            if not allowed:
+                from fastapi.responses import JSONResponse
+                return JSONResponse(
+                    status_code=429,
+                    content={"detail": f"Too many requests. Try again in {window} seconds."},
+                    headers={"Retry-After": str(window)},
+                )
+            break
+
+    return await call_next(request)
+
 # Security Headers middleware
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):

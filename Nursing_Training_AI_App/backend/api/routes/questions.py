@@ -82,7 +82,7 @@ def _load_bank(relative_path: str) -> QuestionBank:
 
 
 @router.get("/amu/band5", response_model=QuestionBank)
-async def get_amu_band5():
+async def get_amu_band5(user: User = Depends(get_current_active_user)):
     return _load_bank('amu_band_5_bank_01.json')
 
 

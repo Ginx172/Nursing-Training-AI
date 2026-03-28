@@ -37,7 +37,7 @@ function AnimatedStat({ value, suffix = '', active }: { value: number; suffix?: 
    ================================================================= */
 const STATS = {
   questionBanks: 2140, totalQuestions: 42800, specialties: 33,
-  nhsBands: 10, sectors: 5, securityScore: 92, penTestVectors: 50,
+  nhsBands: 10, sectors: 5, securityScore: 84, penTestVectors: 50,
   penTestPass: 42, penTestFail: 0, apiEndpoints: 72,
 };
 
@@ -264,7 +264,7 @@ export default function PresentationPage() {
             <div className="flex items-center gap-8 mt-14 text-sm text-slate-500">
               <span className="flex items-center gap-2"><BookOpen className="w-4 h-4 text-teal-500" /> 42,800+ Questions</span>
               <span className="flex items-center gap-2"><Stethoscope className="w-4 h-4 text-teal-500" /> 33 Specialties</span>
-              <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-teal-500" /> 92/100 Security</span>
+              <span className="flex items-center gap-2"><Shield className="w-4 h-4 text-teal-500" /> 84/100 Security</span>
             </div>
           </Reveal>
         </div>
@@ -382,7 +382,7 @@ export default function PresentationPage() {
                     ['Accessibility', 'Text-only modules', 'Native British English TTS'],
                     ['Personalisation', 'One-size-fits-all', 'Band-adaptive (Band 2 to 8d)'],
                     ['Content Refresh', 'Manual (takes months)', 'AI reads new guidelines instantly'],
-                    ['Security', 'Basic login', '2FA, JWT, DSPT, pen-tested (92/100)'],
+                    ['Security', 'Basic login', '2FA, JWT, DSPT, pen-tested (84/100)'],
                     ['Data Sovereignty', 'Cloud-dependent', 'On-premise capable, zero data leak'],
                   ].map(([f, old, ours], i) => (
                     <tr key={i} className="border-b border-white/[0.04] hover:bg-white/[0.03] transition">
@@ -410,10 +410,10 @@ export default function PresentationPage() {
                 <h3 className="text-xl font-bold mb-6 text-slate-300">Automated Penetration Test</h3>
                 <div className="flex items-end gap-4 mb-8">
                   <span className="text-8xl font-black text-teal-300 leading-none tabular-nums">
-                    <AnimatedStat value={92} active={vis(5)} />
+                    <AnimatedStat value={84} active={vis(5)} />
                   </span>
                   <span className="text-2xl text-slate-500 mb-2">/100</span>
-                  <span className="ml-auto px-4 py-2 bg-teal-500/15 text-teal-300 rounded-full font-bold text-sm tracking-wide">EXCELLENT</span>
+                  <span className="ml-auto px-4 py-2 bg-teal-500/15 text-teal-300 rounded-full font-bold text-sm tracking-wide">GOOD</span>
                 </div>
                 <div className="grid grid-cols-3 gap-3 text-center">
                   <div className="bg-emerald-500/10 rounded-2xl p-4">
@@ -605,7 +605,7 @@ export default function PresentationPage() {
               <div className="flex items-center justify-center gap-8 mt-12 text-sm text-slate-500">
                 <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 42,800+ questions</span>
                 <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 33 specialties</span>
-                <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 92/100 security</span>
+                <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 84/100 security</span>
               </div>
             </Reveal>
             <Reveal active={vis(9)} delay={900}>

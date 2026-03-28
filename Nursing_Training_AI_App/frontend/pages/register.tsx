@@ -38,7 +38,7 @@ export default function RegisterPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   React.useEffect(() => {
-    if (isAuthenticated) router.replace('/dashboard');
+    if (isAuthenticated && !router.query.demo) router.replace('/dashboard');
   }, [isAuthenticated, router]);
 
   const set = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>

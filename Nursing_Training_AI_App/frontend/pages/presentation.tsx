@@ -486,7 +486,7 @@ export default function PresentationPage() {
             {[
               { label: 'Dashboard', path: '/dashboard', icon: BarChart3, desc: 'Real-time analytics from database' },
               { label: 'Interview Practice', path: '/interview', icon: Brain, desc: '15 AI questions + voice TTS' },
-              { label: 'Registration Flow', path: '/register', icon: Users, desc: 'NHS password policy enforced' },
+              { label: 'Registration Flow', path: '/register?demo=1', icon: Users, desc: 'NHS password policy enforced' },
               { label: 'Training History', path: '/history', icon: Clock, desc: 'Session results and progress' },
               { label: 'Settings & 2FA', path: '/settings', icon: Lock, desc: 'Profile, security, TOTP setup' },
               { label: 'Password Reset', path: '/forgot-password', icon: Shield, desc: 'Secure JWT-based email flow' },

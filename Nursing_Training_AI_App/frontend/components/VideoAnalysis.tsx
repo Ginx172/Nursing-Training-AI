@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../../lib/api';
 import { Video, Play, Loader2, AlertTriangle, CheckCircle, Smartphone } from 'lucide-react';
 
 const VideoAnalysis = () => {
@@ -18,7 +18,7 @@ const VideoAnalysis = () => {
         setResult(null);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/ai/video/analyze', {
+            const response = await api.post('/api/ai/video/analyze', {
                 video_url: videoUrl,
                 context: context
             });

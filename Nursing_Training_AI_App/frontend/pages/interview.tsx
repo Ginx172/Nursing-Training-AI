@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
 import {
     ChevronRight,
     ChevronLeft,
@@ -21,11 +22,6 @@ import {
     Volume2,
     VolumeX,
 } from 'lucide-react';
-
-const API_URL =
-    typeof window !== 'undefined'
-        ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
-        : 'http://localhost:8000';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -108,12 +104,6 @@ function difficultyColor(d?: string | null) {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-function getAuthHeader(): Record<string, string> {
-    if (typeof window === 'undefined') return {};
-    const token = localStorage.getItem('access_token');
-    return token ? { Authorization: `Bearer ${token}` } : {};
-}
-
 export default function InterviewPage() {
     const [step, setStep] = useState<Step>('setup');
 
@@ -194,15 +184,12 @@ export default function InterviewPage() {
             setSetupLoading(true);
             setSetupError('');
             try {
-                const headers = getAuthHeader();
                 const [bRes, sRes] = await Promise.all([
-                    fetch(`${API_URL}/api/questions/bands`, { headers }),
-                    fetch(`${API_URL}/api/questions/specialties`, { headers }),
+                    api.get('/api/questions/bands'),
+                    api.get('/api/questions/specialties'),
                 ]);
-                if (!bRes.ok) throw new Error(`Bands fetch failed: HTTP ${bRes.status}`);
-                if (!sRes.ok) throw new Error(`Specialties fetch failed: HTTP ${sRes.status}`);
-                setBands(await bRes.json());
-                setSpecialties(await sRes.json());
+                setBands(bRes.data);
+                setSpecialties(sRes.data);
             } catch (e: any) {
                 setSetupError(e?.message || 'Failed to load setup data');
             } finally {
@@ -234,12 +221,8 @@ export default function InterviewPage() {
         setBankLoading(true);
         setBankError('');
         try {
-            const res = await fetch(
-                `${API_URL}/api/questions/bank/${selectedSpecialty}/${selectedBand}`,
-                { headers: getAuthHeader() }
-            );
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const data: QuestionBank = await res.json();
+            const res = await api.get(`/api/questions/bank/${selectedSpecialty}/${selectedBand}`);
+            const data: QuestionBank = res.data;
             if (!data.questions?.length) throw new Error('No questions in bank');
             setBank(data);
             setAnswers({});
@@ -331,13 +314,8 @@ export default function InterviewPage() {
                     expected_points: q.expected_points ?? [],
                 })),
             };
-            const res = await fetch(`${API_URL}/api/questions/submit-interview`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
-                body: JSON.stringify(payload),
-            });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const data: BatchResult = await res.json();
+            const res = await api.post('/api/questions/submit-interview', payload);
+            const data: BatchResult = res.data;
             setResults(data);
             setStep('results');
         } catch (e: any) {

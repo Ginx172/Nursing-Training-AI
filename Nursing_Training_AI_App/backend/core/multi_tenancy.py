@@ -11,12 +11,17 @@ _VALID_SCHEMA_RE = re.compile(r"^[a-z0-9_]+$")
 _MAX_SCHEMA_LENGTH = 63
 
 
+_VALID_ORG_ID_RE = re.compile(r"^[a-zA-Z0-9_-]+$")
+
+
 def _sanitize_schema_name(organization_id: str) -> str:
+    if not organization_id or not _VALID_ORG_ID_RE.match(organization_id):
+        raise ValueError("Invalid organization_id: only letters, digits, hyphens, and underscores allowed")
     schema_name = f"tenant_{organization_id}".lower().replace("-", "_")
     if len(schema_name) > _MAX_SCHEMA_LENGTH:
         raise ValueError(f"Schema name too long ({len(schema_name)} chars, max {_MAX_SCHEMA_LENGTH})")
     if not _VALID_SCHEMA_RE.match(schema_name):
-        raise ValueError(f"Invalid organization_id: only lowercase letters, digits, hyphens, and underscores allowed")
+        raise ValueError(f"Invalid organization_id: contains disallowed characters after sanitization")
     return schema_name
 from sqlalchemy import create_engine, text
 from sqlalchemy.sql import quoted_name

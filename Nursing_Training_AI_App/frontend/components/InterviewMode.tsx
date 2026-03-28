@@ -1,10 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Mic, Loader2, Volume2, User, Bot, RotateCcw, Send, Keyboard, Pause } from 'lucide-react';
-
-const API_URL =
-    typeof window !== 'undefined'
-        ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
-        : 'http://localhost:8000';
+import api from '../../lib/api';
 
 const DEMO_QUESTION_ID = 1;
 
@@ -137,27 +133,22 @@ const InterviewMode = () => {
         setTranscript(prev => [...prev, { role: 'user', text: userResponse }]);
 
         try {
-            const res = await fetch(`${API_URL}/api/demo/submit`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ question_id: DEMO_QUESTION_ID, user_answer: userResponse }),
+            const res = await api.post('/api/demo/submit', {
+                question_id: DEMO_QUESTION_ID,
+                user_answer: userResponse,
             });
 
-            if (res.ok) {
-                const data = await res.json();
-                const nextQuestion = data.feedback
-                    ? "Thank you for your answer. " + (data.is_correct ? "Well done! " : "") + data.feedback
-                    : "Thank you. Let's continue — can you describe a situation where you had to escalate a patient concern to a senior colleague?";
+            const data = res.data;
+            const nextQuestion = data.feedback
+                ? "Thank you for your answer. " + (data.is_correct ? "Well done! " : "") + data.feedback
+                : "Thank you. Let's continue — can you describe a situation where you had to escalate a patient concern to a senior colleague?";
 
-                setTranscript(prev => [...prev, { role: 'ai', text: nextQuestion }]);
-                setFeedback({
-                    score: data.is_correct ? SCORE_CORRECT : SCORE_INCORRECT,
-                    tips: data.feedback || "Good response. Consider adding more clinical detail.",
-                });
-                speakText(nextQuestion);
-            } else {
-                throw new Error(`HTTP ${res.status}`);
-            }
+            setTranscript(prev => [...prev, { role: 'ai', text: nextQuestion }]);
+            setFeedback({
+                score: data.is_correct ? SCORE_CORRECT : SCORE_INCORRECT,
+                tips: data.feedback || "Good response. Consider adding more clinical detail.",
+            });
+            speakText(nextQuestion);
         } catch {
             // Fallback if API unreachable
             const fallback = "Thank you for your response. Let's continue — can you describe a situation where you had to escalate a patient concern to a senior colleague?";

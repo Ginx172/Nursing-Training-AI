@@ -94,6 +94,9 @@ class Settings(BaseSettings):
     # Geolocation
     GEOIP_DB_PATH: str = "./data/GeoLite2-Country.mmdb"
 
+    # Frontend URL (for email links)
+    FRONTEND_URL: str = "http://localhost:3000"
+
     # Environment
     ENVIRONMENT: str = "development"
 

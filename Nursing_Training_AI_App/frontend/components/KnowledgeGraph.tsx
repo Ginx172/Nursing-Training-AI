@@ -13,7 +13,7 @@ import ReactFlow, {
     MarkerType,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import axios from 'axios';
+import api from '../../lib/api';
 import { Loader2 } from 'lucide-react';
 
 const initialNodes: Node[] = [];
@@ -30,7 +30,7 @@ const KnowledgeGraph = () => {
             setLoading(true);
             setError(null);
             // In a real scenario, use the actual backend URL
-            const response = await axios.get('http://localhost:8000/graph/data');
+            const response = await api.get('/graph/data');
 
             const { nodes: backendNodes, edges: backendEdges } = response.data;
 

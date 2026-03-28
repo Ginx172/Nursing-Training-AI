@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from '../context/AuthContext'
+import api from '../lib/api'
 
 interface DemoQuestion {
   id: number
@@ -41,8 +42,6 @@ interface BatchSummary {
   next_steps: string
 }
 
-const API_URL = (typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') : 'http://localhost:8000')
-
 export default function DemoPage() {
   const { isAuthenticated, user } = useAuth()
   const [loading, setLoading] = useState(false)
@@ -69,9 +68,8 @@ export default function DemoPage() {
       setLoading(true)
       setError('')
       try {
-        const res = await fetch(`${API_URL}/api/demo/questions`)
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        const data: DemoQuestion[] = await res.json()
+        const res = await api.get('/api/demo/questions')
+        const data: DemoQuestion[] = res.data
         setQuestions(data)
       } catch (e: any) {
         setError(`Error loading questions: ${e?.message || e}`)
@@ -115,13 +113,8 @@ export default function DemoPage() {
       return
     }
     try {
-      const res = await fetch(`${API_URL}/api/demo/submit`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question_id: qid, user_answer })
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const data: SubmitResult = await res.json()
+      const res = await api.post('/api/demo/submit', { question_id: qid, user_answer })
+      const data: SubmitResult = res.data
       setResults(prev => ({ ...prev, [qid]: data }))
     } catch (e: any) {
       alert(`Error submitting answer: ${e?.message || e}`)
@@ -140,13 +133,8 @@ export default function DemoPage() {
       return
     }
     try {
-      const res = await fetch(`${API_URL}/api/demo/submit-batch`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const data: BatchSummary = await res.json()
+      const res = await api.post('/api/demo/submit-batch', payload)
+      const data: BatchSummary = res.data
       setBatchSummary(data)
       // stop any speaking
       stopSpeak()

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../lib/api';
 import { Activity, Database, Server, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 interface HealthStatus {
@@ -18,7 +18,7 @@ const SystemHealth = () => {
     try {
       setLoading(true);
       // Assuming backend is proxy-ed or CORS allows localhost:8000
-      const response = await axios.get('http://localhost:8000/api/health');
+      const response = await api.get('/api/health');
       setHealth(response.data);
       setError('');
     } catch (err) {

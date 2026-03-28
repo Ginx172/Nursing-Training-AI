@@ -64,6 +64,12 @@ async def update_profile(
 
     update_data = data.model_dump(exclude_unset=True)
 
+    # Whitelist de campuri permise pentru update profil
+    ALLOWED_PROFILE_FIELDS = {
+        "first_name", "last_name", "nhs_band", "specialization",
+        "years_experience", "preferred_language", "timezone",
+    }
+
     # Validare NHS band daca e inclus
     if "nhs_band" in update_data and update_data["nhs_band"] is not None:
         try:
@@ -75,6 +81,8 @@ async def update_profile(
             )
 
     for field, value in update_data.items():
+        if field not in ALLOWED_PROFILE_FIELDS:
+            continue
         setattr(user, field, value)
 
     db.commit()

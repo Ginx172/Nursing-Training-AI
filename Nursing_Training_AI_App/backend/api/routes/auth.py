@@ -9,14 +9,18 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
 from core.database import get_db
-from core.auth import hash_password, verify_password, create_access_token, create_refresh_token, verify_token
+from core.auth import (
+    hash_password, verify_password, create_access_token, create_refresh_token,
+    verify_token, create_password_reset_token, create_email_verification_token,
+)
 from core.config import settings
 from core.nhs_compliance import NHSPasswordPolicy
 from core.rate_limiter import rate_limit
 from models.user import User, UserRole, NHSBand, SubscriptionTier
 from api.schemas.auth import (
     UserRegister, UserLogin, RefreshTokenRequest,
-    ChangePasswordRequest, TokenResponse, UserResponse, MessageResponse,
+    ChangePasswordRequest, PasswordResetRequest, PasswordResetConfirm,
+    TokenResponse, UserResponse, MessageResponse,
 )
 from api.dependencies import get_current_active_user
 
@@ -102,7 +106,7 @@ async def register(
         db.rollback()
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail="Registration failed. Please try a different email or username.",
+            detail="Registration could not be completed. Please try again.",
         )
 
     return _build_token_response(user)
@@ -254,3 +258,156 @@ async def change_password(
     db.commit()
 
     return MessageResponse(success=True, message="Password changed successfully")
+
+
+# ========================================
+# FORGOT PASSWORD / RESET PASSWORD
+# ========================================
+
+@router.post("/forgot-password", response_model=MessageResponse)
+async def forgot_password(
+    data: PasswordResetRequest,
+    db: Session = Depends(get_db),
+    _rl=Depends(rate_limit(3, 300, "forgot_password")),
+):
+    """Trimite email cu link de reset parola. Raspuns identic indiferent daca email-ul exista."""
+    user = db.query(User).filter(User.email == data.email.lower()).first()
+
+    if user and user.is_active:
+        token = create_password_reset_token({"sub": str(user.id), "email": user.email})
+        frontend_url = settings.FRONTEND_URL if hasattr(settings, "FRONTEND_URL") else "http://localhost:3000"
+        reset_link = f"{frontend_url}/reset-password?token={token}"
+
+        from services.email_service import email_service
+        await email_service.send_email(
+            to_email=user.email,
+            subject="Password Reset - Nursing Training AI",
+            html_content=f"""
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #4F46E5;">Password Reset Request</h2>
+                <p>Hello {user.first_name},</p>
+                <p>We received a request to reset your password. Click the button below to set a new password:</p>
+                <p style="text-align: center; margin: 30px 0;">
+                    <a href="{reset_link}"
+                       style="background: #4F46E5; color: white; padding: 12px 32px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                        Reset Password
+                    </a>
+                </p>
+                <p style="color: #6B7280; font-size: 14px;">This link expires in 1 hour. If you did not request this, please ignore this email.</p>
+                <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 24px 0;">
+                <p style="color: #9CA3AF; font-size: 12px;">Nursing Training AI - NHS Healthcare Training Platform</p>
+            </div>
+            """,
+        )
+
+    # Raspuns identic pentru a preveni account enumeration
+    return MessageResponse(
+        success=True,
+        message="If an account with this email exists, a password reset link has been sent.",
+    )
+
+
+@router.post("/reset-password", response_model=MessageResponse)
+async def reset_password(
+    data: PasswordResetConfirm,
+    db: Session = Depends(get_db),
+    _rl=Depends(rate_limit(5, 300, "reset_password")),
+):
+    """Reseteaza parola folosind un token valid din email"""
+    payload = verify_token(data.token, expected_type="password_reset")
+    if payload is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid or expired reset token. Please request a new one.",
+        )
+
+    user_id = payload.get("sub")
+    user = db.query(User).filter(User.id == int(user_id)).first()
+
+    if user is None or not user.is_active:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid or expired reset token. Please request a new one.",
+        )
+
+    password_error = NHSPasswordPolicy.validate(data.new_password, email=user.email, username=user.username)
+    if password_error:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=password_error)
+
+    user.hashed_password = hash_password(data.new_password)
+    db.commit()
+
+    return MessageResponse(success=True, message="Password has been reset successfully. You can now log in.")
+
+
+# ========================================
+# EMAIL VERIFICATION
+# ========================================
+
+@router.post("/send-verification", response_model=MessageResponse)
+async def send_verification_email(
+    user: User = Depends(get_current_active_user),
+    _rl=Depends(rate_limit(2, 300, "send_verification")),
+):
+    """Trimite email de verificare utilizatorului autentificat"""
+    if user.is_verified:
+        return MessageResponse(success=True, message="Email is already verified.")
+
+    token = create_email_verification_token({"sub": str(user.id), "email": user.email})
+    frontend_url = settings.FRONTEND_URL if hasattr(settings, "FRONTEND_URL") else "http://localhost:3000"
+    verify_link = f"{frontend_url}/verify-email?token={token}"
+
+    from services.email_service import email_service
+    await email_service.send_email(
+        to_email=user.email,
+        subject="Verify Your Email - Nursing Training AI",
+        html_content=f"""
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #4F46E5;">Verify Your Email Address</h2>
+            <p>Hello {user.first_name},</p>
+            <p>Please verify your email address by clicking the button below:</p>
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="{verify_link}"
+                   style="background: #4F46E5; color: white; padding: 12px 32px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                    Verify Email
+                </a>
+            </p>
+            <p style="color: #6B7280; font-size: 14px;">This link expires in 24 hours.</p>
+            <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 24px 0;">
+            <p style="color: #9CA3AF; font-size: 12px;">Nursing Training AI - NHS Healthcare Training Platform</p>
+        </div>
+        """,
+    )
+
+    return MessageResponse(success=True, message="Verification email sent. Please check your inbox.")
+
+
+@router.post("/verify-email", response_model=MessageResponse)
+async def verify_email(
+    token: str,
+    db: Session = Depends(get_db),
+):
+    """Verifica email-ul utilizatorului folosind token-ul din link"""
+    payload = verify_token(token, expected_type="email_verification")
+    if payload is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid or expired verification token.",
+        )
+
+    user_id = payload.get("sub")
+    user = db.query(User).filter(User.id == int(user_id)).first()
+
+    if user is None:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid verification token.",
+        )
+
+    if user.is_verified:
+        return MessageResponse(success=True, message="Email is already verified.")
+
+    user.is_verified = True
+    db.commit()
+
+    return MessageResponse(success=True, message="Email verified successfully!")

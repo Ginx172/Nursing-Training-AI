@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../lib/api';
 import { BookOpen, GraduationCap, ChevronRight, FileText, CheckCircle, Brain, AlertCircle, Loader2 } from 'lucide-react';
 
 interface Question {
@@ -34,7 +34,7 @@ const StudyZone = () => {
     const fetchTopics = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:8000/study/topics');
+            const response = await api.get('/study/topics');
             setTopics(response.data);
         } catch (err) {
             console.error("Error fetching topics:", err);
@@ -58,7 +58,7 @@ const StudyZone = () => {
         if (!selectedTopic) return;
         try {
             setGeneratingQuiz(true);
-            const response = await axios.post('http://localhost:8000/study/quiz', {
+            const response = await api.post('/study/quiz', {
                 topic: selectedTopic,
                 difficulty: 'medium',
                 question_count: 5

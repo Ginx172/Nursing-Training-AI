@@ -49,6 +49,22 @@ def create_refresh_token(data: Dict[str, Any], expires_delta: Optional[timedelta
     return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
 
+def create_password_reset_token(data: Dict[str, Any]) -> str:
+    """Genereaza un token JWT pentru resetare parola (expira in 1 ora)"""
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + timedelta(hours=1)
+    to_encode.update({"exp": expire, "type": "password_reset"})
+    return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
+
+
+def create_email_verification_token(data: Dict[str, Any]) -> str:
+    """Genereaza un token JWT pentru verificare email (expira in 24 ore)"""
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + timedelta(hours=24)
+    to_encode.update({"exp": expire, "type": "email_verification"})
+    return jwt.encode(to_encode, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
+
+
 def verify_token(token: str, expected_type: str = "access") -> Optional[Dict[str, Any]]:
     """
     Verifica si decodeaza un token JWT.

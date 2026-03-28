@@ -5,7 +5,7 @@ import {
   ChevronLeft, ChevronRight, Maximize, Minimize, Brain, Shield, WifiOff,
   Volume2, BarChart3, Users, BookOpen, Award, Clock, CheckCircle, XCircle,
   Stethoscope, GraduationCap, TrendingUp, Zap, Lock, Globe, ArrowRight,
-  Sparkles, Target, HeartPulse, MonitorSmartphone,
+  Sparkles, Target, HeartPulse, MonitorSmartphone, Video, Timer,
 } from 'lucide-react';
 
 /* =================================================================
@@ -167,7 +167,7 @@ export default function PresentationPage() {
   const router = useRouter();
   const [current, setCurrent] = useState(0);
   const [fs, setFs] = useState(false);
-  const total = 9;
+  const total = 10;
 
   const go = useCallback((dir: 1 | -1) => setCurrent((c) => Math.max(0, Math.min(total - 1, c + dir))), []);
   const toggleFs = useCallback(() => {
@@ -506,11 +506,82 @@ export default function PresentationPage() {
           </div>
         </div>
 
-        {/* ============ SLIDE 8: CTA ============ */}
+        {/* ============ SLIDE 8: ROADMAP ============ */}
         <div className={sc(8)}>
+          <Reveal active={vis(8)} delay={0}>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-3 text-center">
+              Development <span className="text-teal-300">Roadmap</span>
+            </h2>
+          </Reveal>
+          <Reveal active={vis(8)} delay={100}>
+            <p className="text-lg text-slate-400 text-center mb-12">What's coming next to the platform</p>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl w-full">
+            {[
+              {
+                icon: Video,
+                title: 'Video Clinical Scenarios',
+                desc: 'Short video clips presenting real ward situations. "You walk into the bay and find this patient \u2014 what do you do?" AI evaluates the response against the correct protocol.',
+                phase: 'Phase 1',
+                color: 'from-rose-500/10 to-rose-700/10 border-rose-400/15',
+                phaseColor: 'bg-rose-500/20 text-rose-300',
+              },
+              {
+                icon: BarChart3,
+                title: 'AI Peer Benchmarking',
+                desc: 'Anonymous performance dashboard showing how you compare to peers at the same Band and Specialty. Identify Trust-wide knowledge gaps in real time.',
+                phase: 'Phase 2',
+                color: 'from-blue-500/10 to-blue-700/10 border-blue-400/15',
+                phaseColor: 'bg-blue-500/20 text-blue-300',
+              },
+              {
+                icon: Users,
+                title: 'Mentor Matching & Digital Preceptorship',
+                desc: 'Connect Band 5/6 nurses with Band 7/8 mentors within the Trust. Digital competency sign-off replaces paper-based supervision logs.',
+                phase: 'Phase 2',
+                color: 'from-purple-500/10 to-purple-700/10 border-purple-400/15',
+                phaseColor: 'bg-purple-500/20 text-purple-300',
+              },
+              {
+                icon: Shield,
+                title: 'Incident Debrief Simulator',
+                desc: 'Train on anonymised Datix-style incident reports. Walk through root cause analysis, Duty of Candour, and correct escalation pathways.',
+                phase: 'Phase 3',
+                color: 'from-amber-500/10 to-amber-700/10 border-amber-400/15',
+                phaseColor: 'bg-amber-500/20 text-amber-300',
+              },
+              {
+                icon: Timer,
+                title: 'Shift-Ready Micro-Learning',
+                desc: '60-second modules before each shift. "Today\'s focus: recognising sepsis in elderly patients." AI-selected topics based on season and epidemiology.',
+                phase: 'Phase 3',
+                color: 'from-teal-500/10 to-teal-700/10 border-teal-400/15',
+                phaseColor: 'bg-teal-500/20 text-teal-300',
+              },
+            ].map((item, i) => (
+              <Reveal key={i} active={vis(8)} delay={200 + i * 150}>
+                <div className={`bg-gradient-to-br ${item.color} backdrop-blur-md rounded-3xl p-6 border transition-all duration-300 hover:scale-[1.03] h-full shadow-xl flex flex-col`}>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 rounded-2xl bg-white/[0.06] flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase ${item.phaseColor}`}>
+                      {item.phase}
+                    </span>
+                  </div>
+                  <h3 className="text-[15px] font-bold mb-2 leading-snug">{item.title}</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed flex-1">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        {/* ============ SLIDE 9: CTA ============ */}
+        <div className={sc(9)}>
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(15,118,110,0.12) 0%, transparent 60%)' }} />
           <div className="relative z-10 text-center max-w-3xl">
-            <Reveal active={vis(8)} delay={0}>
+            <Reveal active={vis(9)} delay={0}>
               <div className="relative inline-flex items-center justify-center w-24 h-24 mb-10">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-400 to-cyan-400 blur-2xl opacity-30" />
                 <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center shadow-2xl">
@@ -518,26 +589,26 @@ export default function PresentationPage() {
                 </div>
               </div>
             </Reveal>
-            <Reveal active={vis(8)} delay={200}>
+            <Reveal active={vis(9)} delay={200}>
               <h2 className="text-5xl md:text-7xl font-black leading-tight">
                 Ready to Transform<br />
                 <span className="bg-gradient-to-r from-teal-300 to-cyan-300 bg-clip-text text-transparent">Clinical Education?</span>
               </h2>
             </Reveal>
-            <Reveal active={vis(8)} delay={400}>
+            <Reveal active={vis(9)} delay={400}>
               <p className="text-xl text-slate-400 mt-8 leading-relaxed font-light">
                 A Band 8 mentor in every nurse's pocket.<br />
                 Secure. Offline-ready. DSPT-aligned. Production-ready.
               </p>
             </Reveal>
-            <Reveal active={vis(8)} delay={600}>
+            <Reveal active={vis(9)} delay={600}>
               <div className="flex items-center justify-center gap-8 mt-12 text-sm text-slate-500">
                 <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 42,800+ questions</span>
                 <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 33 specialties</span>
                 <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-teal-400" /> 92/100 security</span>
               </div>
             </Reveal>
-            <Reveal active={vis(8)} delay={900}>
+            <Reveal active={vis(9)} delay={900}>
               <div className="mt-14 text-xs text-slate-600">
                 <kbd className="px-2 py-1 bg-white/[0.06] rounded-md border border-white/[0.08] text-slate-500">F</kbd> fullscreen
                 <span className="mx-3 text-slate-700">&middot;</span>

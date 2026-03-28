@@ -24,6 +24,9 @@ from models.training import Question, UserAnswer, TrainingSession, LearningPath,
 # NEW models (Phase 2)
 from models.nursing import Speciality, Band, QuestionCategory, Trust, TrustQuestion, InterviewSession, InterviewAnswer
 
+# Security models (Sprint 2)
+from models.security import AuditLog, SecurityEvent, TokenBlacklist
+
 target_metadata = Base.metadata
 
 # Get DATABASE_URL from environment

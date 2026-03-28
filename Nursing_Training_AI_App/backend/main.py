@@ -72,6 +72,7 @@ for _module_path, _attr, _prefix in _EXTRA_ROUTES:
 # Import services
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
+import models.security  # noqa: F401 - registreaza tabelele de securitate in Base.metadata
 
 # Initialize Sentry for error tracking (optional)
 _sentry_dsn = os.getenv("SENTRY_DSN", "")
@@ -90,6 +91,21 @@ async def lifespan(app: FastAPI):
     init_db()
     health = await check_database_health()
     print(f"Database Health: {health['status']}")
+
+    # Restore security state from DB
+    try:
+        from services.audit_service import audit_service
+        await audit_service.initialize()
+    except Exception as e:
+        print(f"Warning: audit service init failed: {e}")
+
+    try:
+        from api.routes.auth import load_blacklist_from_db, cleanup_expired_tokens
+        load_blacklist_from_db()
+        cleanup_expired_tokens()
+    except Exception as e:
+        print(f"Warning: token blacklist init failed: {e}")
+
     yield
     print("Shutting down Nursing Training AI API...")
 

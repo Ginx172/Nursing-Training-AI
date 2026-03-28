@@ -2,13 +2,14 @@
 Authentication routes - register, login, token refresh, logout, profile
 """
 
+import hashlib
 import threading
 from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
-from core.database import get_db
+from core.database import get_db, SessionLocal
 from core.auth import (
     hash_password, verify_password, create_access_token, create_refresh_token,
     verify_token, create_password_reset_token, create_email_verification_token,
@@ -27,9 +28,51 @@ from api.dependencies import get_current_active_user
 # Dummy hash pentru timing-safe login (previne timing attacks)
 _DUMMY_HASH = hash_password("dummy-password-for-timing-safety")
 
-# Token blacklist (in-memory, se pierde la restart - productie: foloseste Redis)
-_blacklisted_tokens: set = set()
+# Token blacklist - in-memory set ca hot cache, backed by PostgreSQL
+_blacklisted_tokens: set = set()  # stocheaza token_hash (SHA-256)
 _blacklist_lock = threading.Lock()
+
+
+def _hash_token(token: str) -> str:
+    """SHA-256 hash al JWT-ului pentru stocare sigura"""
+    return hashlib.sha256(token.encode()).hexdigest()
+
+
+def load_blacklist_from_db():
+    """Incarca token-urile revocate din DB la startup"""
+    try:
+        db = SessionLocal()
+        try:
+            from models.security import TokenBlacklist
+            active = db.query(TokenBlacklist.token_hash).filter(
+                TokenBlacklist.expires_at > datetime.now(timezone.utc)
+            ).all()
+            with _blacklist_lock:
+                for (th,) in active:
+                    _blacklisted_tokens.add(th)
+            print(f"Loaded {len(active)} blacklisted tokens from DB")
+        finally:
+            db.close()
+    except Exception as e:
+        print(f"Warning: could not load token blacklist from DB: {e}")
+
+
+def cleanup_expired_tokens():
+    """Sterge token-urile expirate din DB si din cache"""
+    try:
+        db = SessionLocal()
+        try:
+            from models.security import TokenBlacklist
+            deleted = db.query(TokenBlacklist).filter(
+                TokenBlacklist.expires_at <= datetime.now(timezone.utc)
+            ).delete()
+            db.commit()
+            if deleted:
+                print(f"Cleaned up {deleted} expired blacklisted tokens")
+        finally:
+            db.close()
+    except Exception:
+        pass
 
 router = APIRouter()
 
@@ -198,12 +241,42 @@ async def refresh_token(data: RefreshTokenRequest, db: Session = Depends(get_db)
 
 @router.post("/logout", response_model=MessageResponse)
 async def logout(request: Request, user: User = Depends(get_current_active_user)):
-    """Logout - invalideaza token-ul curent prin blacklist."""
+    """Logout - invalideaza token-ul curent prin blacklist persistent."""
     auth_header = request.headers.get("authorization", "")
     if auth_header.startswith("Bearer "):
         token = auth_header[7:]
+        token_hash = _hash_token(token)
+
+        # Persist in DB
+        try:
+            payload = verify_token(token, expected_type="access")
+            exp_timestamp = payload.get("exp") if payload else None
+            if exp_timestamp:
+                expires_at = datetime.fromtimestamp(exp_timestamp, tz=timezone.utc)
+            else:
+                expires_at = datetime.now(timezone.utc)
+
+            db = SessionLocal()
+            try:
+                from models.security import TokenBlacklist
+                record = TokenBlacklist(
+                    token_hash=token_hash,
+                    user_id=user.id,
+                    expires_at=expires_at,
+                )
+                db.add(record)
+                db.commit()
+            except IntegrityError:
+                db.rollback()  # token deja in blacklist
+            finally:
+                db.close()
+        except Exception:
+            pass  # DB write failed, in-memory cache still works
+
+        # Hot cache update
         with _blacklist_lock:
-            _blacklisted_tokens.add(token)
+            _blacklisted_tokens.add(token_hash)
+
     return MessageResponse(success=True, message="Logged out successfully")
 
 

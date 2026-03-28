@@ -24,9 +24,10 @@ async def get_current_user(
     token = credentials.credentials
 
     # Verificare blacklist (token-uri invalidate prin logout)
-    from api.routes.auth import _blacklisted_tokens, _blacklist_lock
+    from api.routes.auth import _blacklisted_tokens, _blacklist_lock, _hash_token
+    token_hash = _hash_token(token)
     with _blacklist_lock:
-        if token in _blacklisted_tokens:
+        if token_hash in _blacklisted_tokens:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Token has been revoked",

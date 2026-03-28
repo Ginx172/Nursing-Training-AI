@@ -75,12 +75,36 @@ class AuditSeverity(str, Enum):
     SECURITY = "security"
 
 class AuditService:
-    """Service for creating immutable audit logs"""
-    
+    """Service for creating immutable audit logs with DB persistence"""
+
     def __init__(self):
-        self.logs = []  # In production, this would be a database
+        self.logs = []  # In-memory cache (fallback)
         self.previous_hash = "0" * 64  # Genesis hash
-    
+        self._db_available = False
+
+    def _get_db_session(self):
+        try:
+            from core.database import SessionLocal
+            return SessionLocal()
+        except Exception:
+            return None
+
+    async def initialize(self):
+        """Incarca ultimul hash din DB la startup pentru continuitate chain"""
+        db = self._get_db_session()
+        if db:
+            try:
+                from models.security import AuditLog
+                last = db.query(AuditLog).order_by(AuditLog.id.desc()).first()
+                if last:
+                    self.previous_hash = last.hash
+                    print(f"Audit chain restored from DB (last hash: {last.hash[:16]}...)")
+                self._db_available = True
+            except Exception as e:
+                print(f"Warning: audit DB init failed: {e}")
+            finally:
+                db.close()
+
     async def log(
         self,
         action: AuditAction,
@@ -93,9 +117,8 @@ class AuditService:
         user_agent: Optional[str] = None,
         severity: AuditSeverity = AuditSeverity.INFO
     ) -> Dict:
-        """Create immutable audit log entry"""
+        """Create immutable audit log entry with DB persistence"""
         try:
-            # Create log entry
             log_entry = {
                 "id": str(uuid.uuid4()),
                 "timestamp": datetime.utcnow().isoformat() + "Z",
@@ -110,20 +133,45 @@ class AuditService:
                 "user_agent": user_agent,
                 "previous_hash": self.previous_hash
             }
-            
-            # Calculate hash for integrity (blockchain-style)
+
             log_entry["hash"] = self._calculate_hash(log_entry)
             self.previous_hash = log_entry["hash"]
-            
-            # Store log (in production: append-only database or log service)
-            # TODO: Save to PostgreSQL audit table
-            # TODO: Also send to external log service (Splunk, Sumo Logic)
+
+            # Persist in DB (primary storage)
+            if self._db_available:
+                db = self._get_db_session()
+                if db:
+                    try:
+                        from models.security import AuditLog
+                        record = AuditLog(
+                            entry_id=log_entry["id"],
+                            timestamp=datetime.fromisoformat(log_entry["timestamp"].rstrip("Z")),
+                            action=log_entry["action"],
+                            severity=log_entry["severity"],
+                            user_id=log_entry["user_id"],
+                            organization_id=log_entry["organization_id"],
+                            resource_type=log_entry["resource_type"],
+                            resource_id=log_entry["resource_id"],
+                            ip_address=log_entry["ip_address"],
+                            user_agent=log_entry["user_agent"],
+                            details=log_entry["details"],
+                            previous_hash=log_entry["previous_hash"],
+                            hash=log_entry["hash"],
+                        )
+                        db.add(record)
+                        db.commit()
+                    except Exception as e:
+                        db.rollback()
+                        print(f"DB audit write failed, keeping in-memory: {e}")
+                    finally:
+                        db.close()
+
+            # In-memory fallback cache
             self.logs.append(log_entry)
-            
-            # For critical events, also alert
+
             if severity in [AuditSeverity.CRITICAL, AuditSeverity.SECURITY]:
                 await self._alert_security_team(log_entry)
-            
+
             return log_entry
         except Exception as e:
             print(f"Error creating audit log: {e}")
@@ -206,32 +254,57 @@ class AuditService:
         limit: int = 100,
         offset: int = 0
     ) -> List[Dict]:
-        """Query audit logs with filters"""
-        try:
-            # TODO: Implement database query
-            filtered_logs = self.logs
-            
-            # Apply filters
-            if user_id:
-                filtered_logs = [l for l in filtered_logs if l.get("user_id") == user_id]
-            
-            if organization_id:
-                filtered_logs = [l for l in filtered_logs if l.get("organization_id") == organization_id]
-            
-            if action:
-                filtered_logs = [l for l in filtered_logs if l.get("action") == action.value]
-            
-            if severity:
-                filtered_logs = [l for l in filtered_logs if l.get("severity") == severity.value]
-            
-            # Sort by timestamp (newest first)
-            filtered_logs.sort(key=lambda x: x["timestamp"], reverse=True)
-            
-            # Apply pagination
-            return filtered_logs[offset:offset + limit]
-        except Exception as e:
-            print(f"Error querying audit logs: {e}")
-            raise
+        """Query audit logs from DB with in-memory fallback"""
+        if self._db_available:
+            db = self._get_db_session()
+            if db:
+                try:
+                    from models.security import AuditLog
+                    query = db.query(AuditLog)
+
+                    if user_id:
+                        query = query.filter(AuditLog.user_id == user_id)
+                    if organization_id:
+                        query = query.filter(AuditLog.organization_id == organization_id)
+                    if action:
+                        query = query.filter(AuditLog.action == action.value)
+                    if severity:
+                        query = query.filter(AuditLog.severity == severity.value)
+                    if date_from:
+                        query = query.filter(AuditLog.timestamp >= date_from)
+                    if date_to:
+                        query = query.filter(AuditLog.timestamp <= date_to)
+
+                    rows = query.order_by(AuditLog.timestamp.desc()).offset(offset).limit(limit).all()
+                    return [
+                        {
+                            "id": r.entry_id, "timestamp": r.timestamp.isoformat() + "Z",
+                            "action": r.action, "severity": r.severity,
+                            "user_id": r.user_id, "organization_id": r.organization_id,
+                            "resource_type": r.resource_type, "resource_id": r.resource_id,
+                            "ip_address": r.ip_address, "user_agent": r.user_agent,
+                            "details": r.details or {}, "previous_hash": r.previous_hash,
+                            "hash": r.hash,
+                        }
+                        for r in rows
+                    ]
+                except Exception as e:
+                    print(f"DB audit query failed, falling back to in-memory: {e}")
+                finally:
+                    db.close()
+
+        # Fallback: in-memory
+        filtered_logs = self.logs
+        if user_id:
+            filtered_logs = [l for l in filtered_logs if l.get("user_id") == user_id]
+        if organization_id:
+            filtered_logs = [l for l in filtered_logs if l.get("organization_id") == organization_id]
+        if action:
+            filtered_logs = [l for l in filtered_logs if l.get("action") == action.value]
+        if severity:
+            filtered_logs = [l for l in filtered_logs if l.get("severity") == severity.value]
+        filtered_logs.sort(key=lambda x: x["timestamp"], reverse=True)
+        return filtered_logs[offset:offset + limit]
     
     async def get_user_activity_timeline(
         self,

@@ -184,23 +184,56 @@ class ThreatDetector:
             return None
     
     def record_security_event(self, event: SecurityEvent):
-        """Record security event for analysis"""
+        """Record security event - in-memory + JSONL + DB"""
         # Store in memory for real-time analysis
         if event.source_ip not in self.suspicious_ips:
             self.suspicious_ips[event.source_ip] = []
         self.suspicious_ips[event.source_ip].append(event)
-        
-        # Log to file
+
+        # Log to JSONL file (backup/archive)
         self._log_security_event(event)
-    
+
+        # Persist to DB
+        self._persist_event_to_db(event)
+
+    def _persist_event_to_db(self, event: SecurityEvent):
+        """Persist security event to PostgreSQL"""
+        try:
+            from core.database import SessionLocal
+            from models.security import SecurityEvent as SecurityEventModel
+            db = SessionLocal()
+            try:
+                ts = event.timestamp
+                if isinstance(ts, str):
+                    ts = datetime.fromisoformat(ts)
+
+                record = SecurityEventModel(
+                    timestamp=ts,
+                    event_type=event.event_type,
+                    severity=event.severity,
+                    source_ip=event.source_ip,
+                    user_agent=event.user_agent,
+                    endpoint=event.endpoint,
+                    details=event.details,
+                    risk_score=event.risk_score,
+                )
+                db.add(record)
+                db.commit()
+            except Exception as e:
+                db.rollback()
+                print(f"DB security event write failed: {e}")
+            finally:
+                db.close()
+        except Exception:
+            pass
+
     def _log_security_event(self, event: SecurityEvent):
-        """Log security event to file"""
-        # Handle both datetime and string timestamps
+        """Log security event to JSONL file (backup)"""
         if isinstance(event.timestamp, str):
             timestamp_str = event.timestamp
         else:
             timestamp_str = event.timestamp.isoformat()
-            
+
         log_entry = {
             "timestamp": timestamp_str,
             "event_type": event.event_type,
@@ -211,12 +244,14 @@ class ThreatDetector:
             "details": event.details,
             "risk_score": event.risk_score
         }
-        
-        log_file = f"logs/security/security_{datetime.now().strftime('%Y-%m-%d')}.jsonl"
-        os.makedirs(os.path.dirname(log_file), exist_ok=True)
-        
-        with open(log_file, "a", encoding="utf-8") as f:
-            f.write(json.dumps(log_entry) + "\n")
+
+        try:
+            log_file = f"logs/security/security_{datetime.now().strftime('%Y-%m-%d')}.jsonl"
+            os.makedirs(os.path.dirname(log_file), exist_ok=True)
+            with open(log_file, "a", encoding="utf-8") as f:
+                f.write(json.dumps(log_entry) + "\n")
+        except Exception:
+            pass
 
 class InputSanitizer:
     """Advanced input sanitization"""

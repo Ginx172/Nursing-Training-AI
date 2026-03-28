@@ -1,9 +1,11 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Depends
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 import os
 import json
 import re
+from api.dependencies import get_current_active_user
+from models.user import User
 
 router = APIRouter()
 
@@ -32,7 +34,8 @@ async def list_banks(
     specialty: Optional[str] = Query(None, description='Filter by specialty id (e.g., amu, cardiology, mental_health)'),
     band: Optional[str] = Query(None, description='Filter by band id (e.g., band_5)'),
     page: int = Query(1, ge=1),
-    page_size: int = Query(25, ge=1, le=200)
+    page_size: int = Query(25, ge=1, le=200),
+    user: User = Depends(get_current_active_user),
 ):
     if not os.path.isdir(DATA_DIR):
         raise HTTPException(status_code=500, detail='Question banks directory not found')
@@ -74,7 +77,7 @@ class CuratedItem(BaseModel):
     filename: str
 
 @router.get('/curated', response_model=List[CuratedItem])
-async def list_curated():
+async def list_curated(user: User = Depends(get_current_active_user)):
     if not os.path.isdir(CURATED_DIR):
         return []
     items: List[CuratedItem] = []

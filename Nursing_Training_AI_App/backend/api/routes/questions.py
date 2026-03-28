@@ -1,10 +1,13 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends, Request
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
 import json
 import os
 import random
 from core.ai_evaluation import ai_evaluation_service, EvaluationResult
+from api.dependencies import get_current_active_user
+from core.rate_limiter import rate_limit
+from models.user import User
 
 
 router = APIRouter()
@@ -53,6 +56,13 @@ class EvaluationResponse(BaseModel):
 def _load_bank(relative_path: str) -> QuestionBank:
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     data_path = os.path.join(base_dir, 'data', 'question_banks', relative_path)
+
+    # Path traversal protection
+    real_base = os.path.realpath(os.path.join(base_dir, 'data', 'question_banks'))
+    real_path = os.path.realpath(data_path)
+    if not real_path.startswith(real_base):
+        raise HTTPException(status_code=400, detail="Invalid file path")
+
     if not os.path.exists(data_path):
         raise HTTPException(status_code=404, detail=f"Question bank not found: {relative_path}")
     with open(data_path, 'r', encoding='utf-8') as f:
@@ -202,7 +212,7 @@ def _collect_questions_from_banks(data_dir: str, prefix: str, seen_texts: set) -
 
 
 @router.get("/bank/{specialty}/{band}", response_model=QuestionBank)
-async def get_question_bank(specialty: str, band: str):
+async def get_question_bank(specialty: str, band: str, user: User = Depends(get_current_active_user)):
     """Load a diverse set of questions: primary specialty + cross-specialty + NHS core topics.
 
     Strategy:
@@ -289,7 +299,7 @@ async def get_question_bank(specialty: str, band: str):
 
 
 @router.post("/evaluate", response_model=EvaluationResponse)
-async def evaluate_answer(request: EvaluationRequest):
+async def evaluate_answer(request: EvaluationRequest, user: User = Depends(get_current_active_user)):
     """Evaluează un răspuns folosind AI, MCP și RAG pentru orice band și specialitate"""
     try:
         result = await ai_evaluation_service.evaluate_answer(
@@ -332,7 +342,7 @@ class SubmitBatchRequest(BaseModel):
 
 
 @router.post("/submit-interview")
-async def submit_interview(payload: SubmitBatchRequest):
+async def submit_interview(payload: SubmitBatchRequest, user: User = Depends(get_current_active_user), _rl=Depends(rate_limit(10, 60, "submit"))):
     """Submit all interview answers and get detailed feedback per question.
 
     For each question, provides:

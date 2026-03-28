@@ -32,9 +32,24 @@ async def stripe_webhook(request: Request, stripe_signature: str = Header(None, 
     if not secret:
         raise HTTPException(status_code=500, detail="Stripe secret not configured")
     payload = await request.body()
-    # Simplified signature check (for full security use stripe SDK verify)
-    expected = hmac.new(secret.encode(), payload, hashlib.sha256).hexdigest()
-    if not stripe_signature or expected not in stripe_signature:
+    # Parse Stripe-Signature header (format: t=timestamp,v1=signature)
+    if not stripe_signature:
+        audit.log(actor="stripe", action="webhook.reject", resource="payments", details={"reason": "missing signature"})
+        raise HTTPException(status_code=400, detail="Invalid signature")
+
+    sig_parts = dict(pair.split("=", 1) for pair in stripe_signature.split(",") if "=" in pair)
+    timestamp = sig_parts.get("t", "")
+    received_sig = sig_parts.get("v1", "")
+
+    if not timestamp or not received_sig:
+        audit.log(actor="stripe", action="webhook.reject", resource="payments", details={"reason": "malformed signature header"})
+        raise HTTPException(status_code=400, detail="Invalid signature")
+
+    # Compute expected signature using Stripe's signed-payload scheme
+    signed_payload = f"{timestamp}.".encode() + payload
+    expected = hmac.new(secret.encode(), signed_payload, hashlib.sha256).hexdigest()
+
+    if not hmac.compare_digest(expected, received_sig):
         audit.log(actor="stripe", action="webhook.reject", resource="payments", details={"reason": "bad signature"})
         raise HTTPException(status_code=400, detail="Invalid signature")
     audit.log(actor="stripe", action="webhook.accept", resource="payments", details={"bytes": len(payload)})

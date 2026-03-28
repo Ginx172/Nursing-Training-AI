@@ -19,9 +19,21 @@ async def get_current_user(
 ) -> User:
     """
     Dependinta FastAPI care extrage si valideaza utilizatorul curent din JWT token.
-    Folosire: user = Depends(get_current_user)
+    Verifica si blacklist-ul de token-uri (logout).
     """
-    payload = verify_token(credentials.credentials, expected_type="access")
+    token = credentials.credentials
+
+    # Verificare blacklist (token-uri invalidate prin logout)
+    from api.routes.auth import _blacklisted_tokens, _blacklist_lock
+    with _blacklist_lock:
+        if token in _blacklisted_tokens:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Token has been revoked",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+    payload = verify_token(token, expected_type="access")
     if payload is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

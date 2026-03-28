@@ -2,8 +2,9 @@
 Authentication routes - register, login, token refresh, logout, profile
 """
 
+import threading
 from datetime import datetime, timezone
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
@@ -11,12 +12,20 @@ from core.database import get_db
 from core.auth import hash_password, verify_password, create_access_token, create_refresh_token, verify_token
 from core.config import settings
 from core.nhs_compliance import NHSPasswordPolicy
+from core.rate_limiter import rate_limit
 from models.user import User, UserRole, NHSBand, SubscriptionTier
 from api.schemas.auth import (
     UserRegister, UserLogin, RefreshTokenRequest,
     ChangePasswordRequest, TokenResponse, UserResponse, MessageResponse,
 )
 from api.dependencies import get_current_active_user
+
+# Dummy hash pentru timing-safe login (previne timing attacks)
+_DUMMY_HASH = hash_password("dummy-password-for-timing-safety")
+
+# Token blacklist (in-memory, se pierde la restart - productie: foloseste Redis)
+_blacklisted_tokens: set = set()
+_blacklist_lock = threading.Lock()
 
 router = APIRouter()
 
@@ -48,7 +57,11 @@ async def ping():
 # ========================================
 
 @router.post("/register", response_model=TokenResponse, status_code=status.HTTP_201_CREATED)
-async def register(data: UserRegister, db: Session = Depends(get_db)):
+async def register(
+    data: UserRegister,
+    db: Session = Depends(get_db),
+    _rl=Depends(rate_limit(3, 300, "register")),
+):
     """Inregistreaza un utilizator nou si returneaza token-uri JWT"""
 
     # Validare parola conform NHS DSPT password policy
@@ -89,7 +102,7 @@ async def register(data: UserRegister, db: Session = Depends(get_db)):
         db.rollback()
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail="Email or username already registered",
+            detail="Registration failed. Please try a different email or username.",
         )
 
     return _build_token_response(user)
@@ -100,12 +113,21 @@ async def register(data: UserRegister, db: Session = Depends(get_db)):
 # ========================================
 
 @router.post("/login", response_model=TokenResponse)
-async def login(data: UserLogin, db: Session = Depends(get_db)):
+async def login(
+    data: UserLogin,
+    db: Session = Depends(get_db),
+    _rl=Depends(rate_limit(5, 300, "login")),
+):
     """Autentifica un utilizator si returneaza token-uri JWT"""
 
     user = db.query(User).filter(User.email == data.email.lower()).first()
 
-    if user is None or not verify_password(data.password, user.hashed_password):
+    # Timing-safe: ruleaza INTOTDEAUNA bcrypt, chiar daca user nu exista.
+    # Previne timing attacks care dezvaluie daca email-ul exista.
+    stored_hash = user.hashed_password if user else _DUMMY_HASH
+    password_valid = verify_password(data.password, stored_hash)
+
+    if user is None or not password_valid:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid email or password",
@@ -156,12 +178,13 @@ async def refresh_token(data: RefreshTokenRequest, db: Session = Depends(get_db)
 # ========================================
 
 @router.post("/logout", response_model=MessageResponse)
-async def logout(user: User = Depends(get_current_active_user)):
-    """
-    Logout - invalideaza sesiunea curenta.
-    Nota: Cu JWT stateless, clientul sterge token-ul local.
-    Pentru blacklist server-side, e necesara integrare Redis.
-    """
+async def logout(request: Request, user: User = Depends(get_current_active_user)):
+    """Logout - invalideaza token-ul curent prin blacklist."""
+    auth_header = request.headers.get("authorization", "")
+    if auth_header.startswith("Bearer "):
+        token = auth_header[7:]
+        with _blacklist_lock:
+            _blacklisted_tokens.add(token)
     return MessageResponse(success=True, message="Logged out successfully")
 
 

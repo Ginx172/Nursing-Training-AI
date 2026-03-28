@@ -12,6 +12,8 @@ import time
 import threading
 
 from services.sso_service import sso_service
+from api.dependencies import get_current_admin
+from models.user import User
 
 router = APIRouter(prefix="/api/sso", tags=["sso"])
 
@@ -190,10 +192,9 @@ async def get_saml_metadata():
 # ========================================
 
 @router.post("/organizations/{org_id}/configure")
-async def configure_organization_sso(org_id: str, config: SSOConfigRequest):
+async def configure_organization_sso(org_id: str, config: SSOConfigRequest, admin: User = Depends(get_current_admin)):
     """Configure SSO for an organization (Admin only)"""
     try:
-        # TODO: Verify admin permissions
         
         sso_config = await sso_service.configure_organization_sso(
             organization_id=org_id,
@@ -211,7 +212,7 @@ async def configure_organization_sso(org_id: str, config: SSOConfigRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 @router.get("/organizations/{org_id}/config")
-async def get_organization_sso_config(org_id: str):
+async def get_organization_sso_config(org_id: str, admin: User = Depends(get_current_admin)):
     """Get SSO configuration for organization"""
     try:
         config = await sso_service.get_organization_sso_config(org_id)
@@ -241,10 +242,9 @@ async def get_organization_sso_config(org_id: str):
         raise HTTPException(status_code=400, detail=str(e))
 
 @router.delete("/organizations/{org_id}/sso")
-async def disable_organization_sso(org_id: str):
+async def disable_organization_sso(org_id: str, admin: User = Depends(get_current_admin)):
     """Disable SSO for organization (Admin only)"""
     try:
-        # TODO: Verify admin permissions
         # TODO: Disable in database
         
         return {

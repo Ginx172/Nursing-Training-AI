@@ -1,0 +1,11 @@
+{
+  "name": "nursing-training-ai",
+  "private": true,
+  "scripts": {
+    "build": "cd Nursing_Training_AI_App/frontend && npm install && npm run build",
+    "dev": "cd Nursing_Training_AI_App/frontend && npm run dev"
+  },
+  "dependencies": {
+    "next": "14.2.33"
+  }
+}

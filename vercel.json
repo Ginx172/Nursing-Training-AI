@@ -1,6 +1,5 @@
 {
-  "framework": "nextjs",
-  "installCommand": "cd Nursing_Training_AI_App/frontend && npm install",
+  "installCommand": "npm install && cd Nursing_Training_AI_App/frontend && npm install",
   "buildCommand": "cd Nursing_Training_AI_App/frontend && npm run build",
   "outputDirectory": "Nursing_Training_AI_App/frontend/.next"
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import ProtectedRoute from '../components/ProtectedRoute';
+import { useAuth } from '../context/AuthContext';
 import {
     ChevronRight,
     ChevronLeft,
@@ -106,6 +108,12 @@ function difficultyColor(d?: string | null) {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
+function getAuthHeader(): Record<string, string> {
+    if (typeof window === 'undefined') return {};
+    const token = localStorage.getItem('access_token');
+    return token ? { Authorization: `Bearer ${token}` } : {};
+}
+
 export default function InterviewPage() {
     const [step, setStep] = useState<Step>('setup');
 
@@ -186,9 +194,10 @@ export default function InterviewPage() {
             setSetupLoading(true);
             setSetupError('');
             try {
+                const headers = getAuthHeader();
                 const [bRes, sRes] = await Promise.all([
-                    fetch(`${API_URL}/api/questions/bands`),
-                    fetch(`${API_URL}/api/questions/specialties`),
+                    fetch(`${API_URL}/api/questions/bands`, { headers }),
+                    fetch(`${API_URL}/api/questions/specialties`, { headers }),
                 ]);
                 if (!bRes.ok) throw new Error(`Bands fetch failed: HTTP ${bRes.status}`);
                 if (!sRes.ok) throw new Error(`Specialties fetch failed: HTTP ${sRes.status}`);
@@ -226,7 +235,8 @@ export default function InterviewPage() {
         setBankError('');
         try {
             const res = await fetch(
-                `${API_URL}/api/questions/bank/${selectedSpecialty}/${selectedBand}`
+                `${API_URL}/api/questions/bank/${selectedSpecialty}/${selectedBand}`,
+                { headers: getAuthHeader() }
             );
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data: QuestionBank = await res.json();
@@ -323,7 +333,7 @@ export default function InterviewPage() {
             };
             const res = await fetch(`${API_URL}/api/questions/submit-interview`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
                 body: JSON.stringify(payload),
             });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -351,6 +361,7 @@ export default function InterviewPage() {
     // ─── Render ────────────────────────────────────────────────────────────
 
     return (
+        <ProtectedRoute>
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 font-sans">
             <Head>
                 <title>Interview | Nursing Training AI</title>
@@ -434,6 +445,7 @@ export default function InterviewPage() {
                 )}
             </main>
         </div>
+        </ProtectedRoute>
     );
 }
 

@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import Link from 'next/link'
+import { useAuth } from '../context/AuthContext'
 
 interface DemoQuestion {
   id: number
@@ -42,6 +44,7 @@ interface BatchSummary {
 const API_URL = (typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') : 'http://localhost:8000')
 
 export default function DemoPage() {
+  const { isAuthenticated, user } = useAuth()
   const [loading, setLoading] = useState(false)
   const [questions, setQuestions] = useState<DemoQuestion[]>([])
   const [error, setError] = useState<string>('')
@@ -71,7 +74,7 @@ export default function DemoPage() {
         const data: DemoQuestion[] = await res.json()
         setQuestions(data)
       } catch (e: any) {
-        setError(`Eroare la încărcarea întrebărilor: ${e?.message || e}`)
+        setError(`Error loading questions: ${e?.message || e}`)
       } finally {
         setLoading(false)
       }
@@ -108,7 +111,7 @@ export default function DemoPage() {
   const submitAnswer = async (qid: number) => {
     const user_answer = (answers[qid] ?? '').trim()
     if (!user_answer) {
-      alert('Introdu un răspuns înainte de a trimite.')
+      alert('Enter an answer before submitting.')
       return
     }
     try {
@@ -121,7 +124,7 @@ export default function DemoPage() {
       const data: SubmitResult = await res.json()
       setResults(prev => ({ ...prev, [qid]: data }))
     } catch (e: any) {
-      alert(`Eroare la trimiterea răspunsului: ${e?.message || e}`)
+      alert(`Error submitting answer: ${e?.message || e}`)
     }
   }
 
@@ -133,7 +136,7 @@ export default function DemoPage() {
     // Validate that every answer exists
     const missing = payload.answers.filter(a => !a.user_answer)
     if (missing.length > 0) {
-      alert('Completează toate răspunsurile înainte de finalizare.')
+      alert('Answer all questions before submitting.')
       return
     }
     try {
@@ -150,7 +153,7 @@ export default function DemoPage() {
       // stop recognition if running
       stopListening()
     } catch (e: any) {
-      alert(`Eroare la finalizare: ${e?.message || e}`)
+      alert(`Error submitting batch: ${e?.message || e}`)
     }
   }
 
@@ -196,9 +199,27 @@ export default function DemoPage() {
   }
 
   return (
-    <div style={{ maxWidth: 900, margin: '40px auto', padding: '0 16px', fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' }}>
-      <h1 style={{ fontSize: 28, marginBottom: 8 }}>Nursing Training AI — Demo</h1>
-      <p style={{ color: '#555', marginBottom: 24 }}>Întrebări text + opțional Audio (TTS) și răspuns oral (Speech Recognition). Feedback-ul în modul Interviu apare doar la final.</p>
+    <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 16px', fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' }}>
+      {/* Navigation bar */}
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 0', borderBottom: '1px solid #e2e8f0', marginBottom: 24 }}>
+        <span style={{ fontWeight: 'bold', fontSize: 18, color: '#4338ca' }}>Nursing Training AI</span>
+        <div style={{ display: 'flex', gap: 12 }}>
+          {isAuthenticated ? (
+            <>
+              <Link href="/dashboard" style={{ padding: '8px 16px', background: '#4338ca', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Dashboard</Link>
+              <Link href="/interview" style={{ padding: '8px 16px', background: '#0d9488', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Interview Practice</Link>
+            </>
+          ) : (
+            <>
+              <Link href="/login" style={{ padding: '8px 16px', background: '#4338ca', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Sign In</Link>
+              <Link href="/register" style={{ padding: '8px 16px', border: '2px solid #4338ca', color: '#4338ca', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Register</Link>
+            </>
+          )}
+        </div>
+      </nav>
+
+      <h1 style={{ fontSize: 28, marginBottom: 8 }}>Nursing Training AI — Quick Demo</h1>
+      <p style={{ color: '#555', marginBottom: 24 }}>Try a few sample questions with Text-to-Speech and voice answers. For the full interview experience, <Link href="/login" style={{ color: '#4338ca', fontWeight: 600 }}>sign in</Link> or <Link href="/register" style={{ color: '#4338ca', fontWeight: 600 }}>create an account</Link>.</p>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 16, flexWrap: 'wrap' }}>
         <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -208,7 +229,7 @@ export default function DemoPage() {
             onChange={(e) => setAudioEnabled(e.target.checked)}
             disabled={!canSpeak}
           />
-          <span>Activează Audio (TTS local)</span>
+          <span>Enable Audio (TTS)</span>
         </label>
         <label style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <input
@@ -220,17 +241,17 @@ export default function DemoPage() {
               setResults({})
             }}
           />
-          <span>Mod Interviu (feedback doar la final)</span>
+          <span>Interview Mode (feedback at the end)</span>
         </label>
         {!canSpeak && (
-          <span style={{ color: '#a00' }}>Browserul nu suportă Web Speech Synthesis</span>
+          <span style={{ color: '#a00' }}>Browser does not support Text-to-Speech</span>
         )}
         {interviewMode && !canListen && (
-          <span style={{ color: '#a00' }}>Browserul nu suportă Speech Recognition</span>
+          <span style={{ color: '#a00' }}>Browser does not support Speech Recognition</span>
         )}
       </div>
 
-      {loading && <div>Se încarcă întrebările...</div>}
+      {loading && <div>Loading questions...</div>}
       {error && (
         <div style={{ background: '#fee', border: '1px solid #f99', padding: 12, borderRadius: 8, marginBottom: 16 }}>
           {error}
@@ -251,11 +272,11 @@ export default function DemoPage() {
                 <div>
                   {!isSpeaking ? (
                     <button onClick={() => speak(`${q.title}. ${q.question_text}`, q.id)} style={{ padding: '8px 12px' }}>
-                      🔊 Redă întrebarea
+                      Read Question
                     </button>
                   ) : (
                     <button onClick={stopSpeak} style={{ padding: '8px 12px' }}>
-                      ⏹ Oprește
+                      Stop
                     </button>
                   )}
                 </div>
@@ -281,7 +302,7 @@ export default function DemoPage() {
               ) : (
                 <input
                   type="text"
-                  placeholder={interviewMode ? 'Răspuns (poți dicta)...' : 'Răspunsul tău...'}
+                  placeholder={interviewMode ? 'Your answer (you can use voice)...' : 'Your answer...'}
                   value={answers[q.id] || ''}
                   onChange={(e) => handleAnswerChange(q.id, e.target.value)}
                   style={{ flex: '1 1 300px', padding: 10, border: '1px solid #ccc', borderRadius: 8 }}
@@ -291,11 +312,11 @@ export default function DemoPage() {
               {interviewMode && canListen && (
                 !isListening ? (
                   <button onClick={() => startListening(q.id)} style={{ padding: '8px 12px' }}>
-                    🎙️ Răspunde vocal
+                    Voice Answer
                   </button>
                 ) : (
                   <button onClick={stopListening} style={{ padding: '8px 12px' }}>
-                    ⏹ Oprește dictarea
+                    Stop Recording
                   </button>
                 )
               )}
@@ -303,18 +324,18 @@ export default function DemoPage() {
 
             {!interviewMode && (
               <div style={{ marginTop: 12, display: 'flex', gap: 10 }}>
-                <button onClick={() => submitAnswer(q.id)} style={{ padding: '8px 12px' }}>Trimite răspuns</button>
-                {/* Feedback per întrebare rămâne disponibil doar în Text Mode */}
+                <button onClick={() => submitAnswer(q.id)} style={{ padding: '8px 12px' }}>Submit Answer</button>
+                {/* Per-question feedback is only available in Text Mode */}
               </div>
             )}
 
             {!interviewMode && results[q.id] && (
               <div style={{ marginTop: 14, padding: 12, borderRadius: 8, background: results[q.id].is_correct ? '#ecfdf5' : '#fef2f2', border: `1px solid ${results[q.id].is_correct ? '#10b981' : '#ef4444'}` }}>
-                <div style={{ fontWeight: 700, marginBottom: 6 }}>{results[q.id].is_correct ? 'Corect ✅' : 'Incorect ❌'}</div>
+                <div style={{ fontWeight: 700, marginBottom: 6 }}>{results[q.id].is_correct ? 'Correct' : 'Incorrect'}</div>
                 <div style={{ whiteSpace: 'pre-wrap' }}>{results[q.id].feedback}</div>
                 {results[q.id].recommendations?.length > 0 && (
                   <div style={{ marginTop: 10 }}>
-                    <div style={{ fontWeight: 700, marginBottom: 6 }}>Recomandări de studiu:</div>
+                    <div style={{ fontWeight: 700, marginBottom: 6 }}>Study Recommendations:</div>
                     <ul style={{ paddingLeft: 18 }}>
                       {results[q.id].recommendations.map((r, i) => (
                         <li key={i} style={{ marginBottom: 6 }}>
@@ -322,7 +343,7 @@ export default function DemoPage() {
                           <div style={{ color: '#333' }}>{r.summary}</div>
                           {r.url && (
                             <div>
-                              <a href={r.url} target="_blank" rel="noreferrer">Deschide resursă</a>
+                              <a href={r.url} target="_blank" rel="noreferrer">Open Resource</a>
                             </div>
                           )}
                         </li>
@@ -339,23 +360,23 @@ export default function DemoPage() {
       {interviewMode && questions.length > 0 && (
         <div style={{ position: 'sticky', bottom: 0, background: '#fff', padding: 12, borderTop: '1px solid #eee', display: 'flex', gap: 12, justifyContent: 'flex-end' }}>
           <button onClick={submitBatch} style={{ padding: '10px 14px', fontWeight: 600 }}>
-            ✅ Finalizare și feedback
+            Submit All & Get Feedback
           </button>
         </div>
       )}
 
       {batchSummary && (
         <div style={{ marginTop: 20, padding: 16, borderRadius: 10, border: '1px solid #ddd', background: '#fafafa' }}>
-          <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>Rezultate finale</div>
-          <div style={{ marginBottom: 6 }}>Întrebări: {batchSummary.total_questions}</div>
-          <div style={{ marginBottom: 6 }}>Corecte: {batchSummary.correct}</div>
-          <div style={{ marginBottom: 12 }}>Scor: {batchSummary.score_percentage}%</div>
+          <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>Final Results</div>
+          <div style={{ marginBottom: 6 }}>Questions: {batchSummary.total_questions}</div>
+          <div style={{ marginBottom: 6 }}>Correct: {batchSummary.correct}</div>
+          <div style={{ marginBottom: 12 }}>Score: {batchSummary.score_percentage}%</div>
 
-          <div style={{ fontWeight: 700, marginBottom: 6 }}>Detalii pe întrebare</div>
+          <div style={{ fontWeight: 700, marginBottom: 6 }}>Per-question Details</div>
           <ul style={{ paddingLeft: 18, marginBottom: 12 }}>
             {batchSummary.per_question.map((r) => (
               <li key={r.question_id} style={{ marginBottom: 8 }}>
-                <div><strong>Q{r.question_id}:</strong> {r.is_correct ? 'Corect ✅' : 'Incorect ❌'}</div>
+                <div><strong>Q{r.question_id}:</strong> {r.is_correct ? 'Correct' : 'Incorrect'}</div>
                 <div>{r.feedback}</div>
                 {r.recommendations?.length > 0 && (
                   <ul style={{ paddingLeft: 18, marginTop: 4 }}>
@@ -370,7 +391,7 @@ export default function DemoPage() {
             ))}
           </ul>
 
-          <div style={{ fontWeight: 700, marginBottom: 6 }}>Plan de studiu</div>
+          <div style={{ fontWeight: 700, marginBottom: 6 }}>Study Plan</div>
           <ul style={{ paddingLeft: 18, marginBottom: 12 }}>
             {batchSummary.study_plan.map((s, i) => (
               <li key={i} style={{ marginBottom: 6 }}>
@@ -382,7 +403,7 @@ export default function DemoPage() {
             ))}
           </ul>
 
-          <div><strong>Pași următori:</strong> {batchSummary.next_steps}</div>
+          <div><strong>Next Steps:</strong> {batchSummary.next_steps}</div>
         </div>
       )}
     </div>

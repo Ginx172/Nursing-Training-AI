@@ -12,9 +12,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, func
 
 from core.database import get_db
+from core.rbac import Permission
 from models.user import User, UserRole, NHSBand, SubscriptionTier, UserProgress
 from models.training import Question, QuestionType, DifficultyLevel, TrainingSession, UserAnswer
-from api.dependencies import get_current_admin
+from api.dependencies import get_current_admin, require_permission
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 
@@ -91,7 +92,7 @@ async def search_users(
     status: Optional[str] = Query(None),
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Search and filter users"""
@@ -140,7 +141,7 @@ async def search_users(
 @router.get("/users/{user_id}")
 async def get_user_details(
     user_id: int,
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Get detailed user information"""
@@ -188,7 +189,7 @@ async def get_user_details(
 async def update_user(
     user_id: int,
     updates: Dict[str, Any] = Body(...),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Update user information"""
@@ -242,7 +243,7 @@ async def update_user(
 @router.delete("/users/{user_id}")
 async def delete_user(
     user_id: int,
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Soft-delete user account (deactivate)"""
@@ -276,7 +277,7 @@ async def search_questions(
     search_term: Optional[str] = Query(None),
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Search questions with filters"""
@@ -317,7 +318,7 @@ async def search_questions(
 @router.post("/questions/create", status_code=201)
 async def create_question(
     data: CreateQuestionRequest,
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Create a new question"""
@@ -367,7 +368,7 @@ async def create_question(
 async def update_question(
     question_id: int,
     updates: Dict[str, Any] = Body(...),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Update a question"""
@@ -403,7 +404,7 @@ async def update_question(
 @router.delete("/questions/{question_id}")
 async def delete_question(
     question_id: int,
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Soft-delete a question (deactivate)"""
@@ -431,7 +432,7 @@ async def get_all_subscriptions(
     tier: Optional[str] = Query(None),
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Get all users with subscription info"""
@@ -474,7 +475,7 @@ async def get_all_subscriptions(
 async def admin_cancel_subscription(
     user_id: int,
     reason: str = Body(..., embed=True),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Cancel user subscription (downgrade to demo)"""
@@ -501,7 +502,7 @@ async def admin_cancel_subscription(
 
 @router.get("/stats")
 async def get_platform_stats(
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
     db: Session = Depends(get_db),
 ):
     """Get platform-wide statistics"""
@@ -546,7 +547,7 @@ async def get_platform_stats(
 # ========================================
 
 @router.get("/config")
-async def get_system_config(admin: User = Depends(get_current_admin)):
+async def get_system_config(admin: User = Depends(require_permission(Permission.ADMIN_SYSTEM))):
     """Get system configuration"""
     from core.config import settings
 
@@ -574,7 +575,7 @@ async def get_system_config(admin: User = Depends(get_current_admin)):
 @router.put("/config")
 async def update_system_config(
     config_updates: Dict[str, Any] = Body(...),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
 ):
     """Update system configuration (runtime only, does not persist to .env)"""
     # Nota: configuratia reala vine din env vars si nu poate fi
@@ -598,7 +599,7 @@ async def get_audit_log(
     date_from: Optional[str] = Query(None),
     date_to: Optional[str] = Query(None),
     limit: int = Query(100, ge=1, le=500),
-    admin: User = Depends(get_current_admin),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
 ):
     """Get audit log entries from security log files"""
     import json

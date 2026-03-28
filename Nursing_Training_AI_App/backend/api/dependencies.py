@@ -70,10 +70,47 @@ async def get_current_active_user(user: User = Depends(get_current_user)) -> Use
 
 
 async def get_current_admin(user: User = Depends(get_current_active_user)) -> User:
-    """Verifica ca utilizatorul este admin"""
+    """Verifica ca utilizatorul este admin (backward compatible)"""
     if user.role.value not in ("admin",):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Admin access required",
         )
     return user
+
+
+def require_permission(permission):
+    """Factory dependency: verifica permisiunea RBAC pe baza rolului userului.
+
+    Utilizare:
+        @router.get("/endpoint")
+        async def handler(user: User = Depends(require_permission(Permission.ADMIN_USERS))):
+            ...
+    """
+    from core.rbac import check_user_permission
+
+    async def _check(user: User = Depends(get_current_active_user)) -> User:
+        if not check_user_permission(user.role.value, permission):
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"Permission denied: {permission.value} required",
+            )
+        return user
+
+    return _check
+
+
+def require_any_permissions(*permissions):
+    """Factory dependency: verifica oricare din permisiunile listate."""
+    from core.rbac import check_user_permission
+
+    async def _check(user: User = Depends(get_current_active_user)) -> User:
+        for perm in permissions:
+            if check_user_permission(user.role.value, perm):
+                return user
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Permission denied: insufficient privileges",
+        )
+
+    return _check

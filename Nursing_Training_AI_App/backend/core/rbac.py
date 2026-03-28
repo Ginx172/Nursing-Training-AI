@@ -345,32 +345,72 @@ class RBACService:
 # Singleton instance
 rbac_service = RBACService()
 
-# FastAPI Dependency for permission checking
-def require_permission(permission: Permission):
-    """FastAPI dependency to require specific permission"""
-    async def permission_checker(user_roles: List[Role] = Depends(get_current_user_roles)):
-        if not rbac_service.has_permission(user_roles, permission):
-            raise HTTPException(
-                status_code=403,
-                detail=f"Permission denied: {permission.value} required"
-            )
-        return True
-    return permission_checker
 
-def require_any_permission(permissions: List[Permission]):
-    """FastAPI dependency to require any of the specified permissions"""
-    async def permission_checker(user_roles: List[Role] = Depends(get_current_user_roles)):
-        if not rbac_service.has_any_permission(user_roles, permissions):
-            raise HTTPException(
-                status_code=403,
-                detail="Permission denied: insufficient privileges"
-            )
-        return True
-    return permission_checker
+# ========================================
+# PRAGMATIC MAPPING: UserRole -> RBAC Permissions
+# Mapeaza cele 4 roluri existente la permisiuni RBAC
+# fara a schimba schema DB
+# ========================================
 
-# TODO: Implement get_current_user_roles dependency
-async def get_current_user_roles():
-    """Get current user's roles from JWT token"""
-    # TODO: Implement
-    return [Role.USER]
+# Mapping UserRole string values -> RBAC Role
+USER_ROLE_MAPPING: Dict[str, Role] = {
+    "demo": Role.USER,
+    "student": Role.USER,
+    "trainer": Role.CONTENT_ADMIN,
+    "admin": Role.ADMIN,
+}
+
+# Permisiuni suplimentare per UserRole (peste cele din ROLE_PERMISSIONS)
+USER_ROLE_EXTRA_PERMISSIONS: Dict[str, Set[Permission]] = {
+    "demo": {
+        Permission.QUESTION_READ,
+        Permission.ANALYTICS_VIEW_OWN,
+    },
+    "student": {
+        Permission.USER_READ,
+        Permission.QUESTION_READ,
+        Permission.ANALYTICS_VIEW_OWN,
+        Permission.SUBSCRIPTION_VIEW,
+    },
+    "trainer": {
+        Permission.USER_READ,
+        Permission.USER_WRITE,
+        Permission.QUESTION_READ,
+        Permission.QUESTION_WRITE,
+        Permission.ANALYTICS_VIEW_OWN,
+        Permission.ANALYTICS_VIEW_TEAM,
+        Permission.ANALYTICS_EXPORT,
+        Permission.CONTENT_CREATE,
+        Permission.CONTENT_EDIT,
+    },
+    "admin": set(Permission),  # toate permisiunile
+}
+
+
+def get_permissions_for_user_role(role_value: str) -> Set[Permission]:
+    """Returneaza toate permisiunile pentru un UserRole (string value)"""
+    # Admin are toate permisiunile
+    if role_value == "admin":
+        return set(Permission)
+
+    permissions = set()
+
+    # Permisiuni din RBAC Role mapping
+    rbac_role = USER_ROLE_MAPPING.get(role_value)
+    if rbac_role:
+        permissions.update(ROLE_PERMISSIONS.get(rbac_role, set()))
+
+    # Permisiuni extra per UserRole
+    extras = USER_ROLE_EXTRA_PERMISSIONS.get(role_value, set())
+    permissions.update(extras)
+
+    return permissions
+
+
+def check_user_permission(user_role_value: str, required_permission: Permission) -> bool:
+    """Verifica daca un user cu rolul dat are permisiunea ceruta"""
+    if user_role_value == "admin":
+        return True
+    permissions = get_permissions_for_user_role(user_role_value)
+    return required_permission in permissions
 

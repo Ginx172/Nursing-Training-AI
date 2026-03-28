@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../lib/api';
+import api from '../lib/api';
 import { Activity, Database, Server, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 interface HealthStatus {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import api from '../../lib/api';
+import api from '../lib/api';
 import { Video, Play, Loader2, AlertTriangle, CheckCircle, Smartphone } from 'lucide-react';
 
 const VideoAnalysis = () => {

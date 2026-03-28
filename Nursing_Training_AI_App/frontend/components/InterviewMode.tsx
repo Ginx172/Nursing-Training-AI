@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Mic, Loader2, Volume2, User, Bot, RotateCcw, Send, Keyboard, Pause } from 'lucide-react';
-import api from '../../lib/api';
+import api from '../lib/api';
 
 const DEMO_QUESTION_ID = 1;
 

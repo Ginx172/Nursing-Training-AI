@@ -13,7 +13,7 @@ import ReactFlow, {
     MarkerType,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import api from '../../lib/api';
+import api from '../lib/api';
 import { Loader2 } from 'lucide-react';
 
 const initialNodes: Node[] = [];

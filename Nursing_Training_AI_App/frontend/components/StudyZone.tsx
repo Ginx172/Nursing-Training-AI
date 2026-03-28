@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../lib/api';
+import api from '../lib/api';
 import { BookOpen, GraduationCap, ChevronRight, FileText, CheckCircle, Brain, AlertCircle, Loader2 } from 'lucide-react';
 
 interface Question {

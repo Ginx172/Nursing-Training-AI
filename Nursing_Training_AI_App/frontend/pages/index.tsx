@@ -202,6 +202,9 @@ export default function DemoPage() {
             <>
               <Link href="/dashboard" style={{ padding: '8px 16px', background: '#4338ca', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Dashboard</Link>
               <Link href="/interview" style={{ padding: '8px 16px', background: '#0d9488', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Interview Practice</Link>
+              {user?.role === 'admin' && (
+                <Link href="/admin" style={{ padding: '8px 16px', background: '#7c3aed', color: 'white', borderRadius: 8, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>Admin</Link>
+              )}
             </>
           ) : (
             <>

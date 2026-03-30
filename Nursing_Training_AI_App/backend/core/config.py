@@ -80,6 +80,12 @@ class Settings(BaseSettings):
     STRIPE_SECRET_KEY: Optional[str] = None
     STRIPE_WEBHOOK_SECRET: Optional[str] = None
 
+    # Ollama (local AI orchestrator)
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    OLLAMA_MODEL: str = "qwen3:8b"
+    OLLAMA_ENABLED: bool = True
+    OLLAMA_TIMEOUT: int = 300
+
     # Knowledge Base
     KNOWLEDGE_BASE_PATH: str = "./data/knowledge_base"
 

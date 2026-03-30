@@ -5,11 +5,14 @@ All endpoints require admin JWT authentication.
 """
 
 from fastapi import APIRouter, HTTPException, Depends, Query, Body
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, EmailStr
 from typing import Optional, List, Dict, Any
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from sqlalchemy.orm import Session
-from sqlalchemy import or_, func
+from sqlalchemy import or_, func, case, cast, Date, Integer
+import io
+import csv
 
 from core.database import get_db
 from core.rbac import Permission
@@ -633,3 +636,409 @@ async def get_audit_log(
         "logs": entries[:limit],
         "total": len(entries),
     }
+
+
+# ========================================
+# ANALYTICS DASHBOARD (Sprint 3 Faza 2)
+# ========================================
+
+
+def _kpi_with_trend(current: float, previous: float) -> dict:
+    """Helper: calculeaza trend procentual intre doua perioade."""
+    trend = round((current - previous) / max(previous, 1) * 100, 1) if previous else 0.0
+    return {"value": current, "previous": previous, "trend_pct": trend}
+
+
+@router.get("/analytics/overview")
+async def get_analytics_overview(
+    days: int = Query(30, ge=7, le=365),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """KPI-uri cu trend (current vs previous period)"""
+    now = datetime.now(timezone.utc)
+    start_current = now - timedelta(days=days)
+    start_previous = start_current - timedelta(days=days)
+
+    # Total users
+    users_current = db.query(func.count(User.id)).filter(
+        User.created_at >= start_current
+    ).scalar() or 0
+    users_previous = db.query(func.count(User.id)).filter(
+        User.created_at >= start_previous, User.created_at < start_current
+    ).scalar() or 0
+
+    # Active users (au raspuns la cel putin o intrebare in perioada)
+    active_current = db.query(func.count(func.distinct(UserAnswer.user_id))).filter(
+        UserAnswer.answered_at >= start_current
+    ).scalar() or 0
+    active_previous = db.query(func.count(func.distinct(UserAnswer.user_id))).filter(
+        UserAnswer.answered_at >= start_previous, UserAnswer.answered_at < start_current
+    ).scalar() or 0
+
+    # Questions answered
+    answers_current = db.query(func.count(UserAnswer.id)).filter(
+        UserAnswer.answered_at >= start_current
+    ).scalar() or 0
+    answers_previous = db.query(func.count(UserAnswer.id)).filter(
+        UserAnswer.answered_at >= start_previous, UserAnswer.answered_at < start_current
+    ).scalar() or 0
+
+    # Average accuracy
+    correct_current = db.query(func.count(UserAnswer.id)).filter(
+        UserAnswer.answered_at >= start_current, UserAnswer.is_correct == True
+    ).scalar() or 0
+    correct_previous = db.query(func.count(UserAnswer.id)).filter(
+        UserAnswer.answered_at >= start_previous, UserAnswer.answered_at < start_current,
+        UserAnswer.is_correct == True
+    ).scalar() or 0
+    acc_current = round(correct_current / max(answers_current, 1) * 100, 1)
+    acc_previous = round(correct_previous / max(answers_previous, 1) * 100, 1)
+
+    # Training sessions
+    sessions_current = db.query(func.count(TrainingSession.id)).filter(
+        TrainingSession.started_at >= start_current
+    ).scalar() or 0
+    sessions_previous = db.query(func.count(TrainingSession.id)).filter(
+        TrainingSession.started_at >= start_previous, TrainingSession.started_at < start_current
+    ).scalar() or 0
+
+    # Avg session score
+    score_current = db.query(func.avg(TrainingSession.score_percentage)).filter(
+        TrainingSession.started_at >= start_current, TrainingSession.is_completed == True
+    ).scalar() or 0
+    score_previous = db.query(func.avg(TrainingSession.score_percentage)).filter(
+        TrainingSession.started_at >= start_previous, TrainingSession.started_at < start_current,
+        TrainingSession.is_completed == True
+    ).scalar() or 0
+
+    return {
+        "success": True,
+        "period_days": days,
+        "kpis": {
+            "new_users": _kpi_with_trend(users_current, users_previous),
+            "active_users": _kpi_with_trend(active_current, active_previous),
+            "questions_answered": _kpi_with_trend(answers_current, answers_previous),
+            "avg_accuracy_pct": _kpi_with_trend(acc_current, acc_previous),
+            "training_sessions": _kpi_with_trend(sessions_current, sessions_previous),
+            "avg_session_score": _kpi_with_trend(round(float(score_current), 1), round(float(score_previous), 1)),
+        },
+    }
+
+
+@router.get("/analytics/activity-over-time")
+async def get_activity_over_time(
+    days: int = Query(30, ge=7, le=365),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """Date zilnice pentru line chart: answers, sessions, new users"""
+    now = datetime.now(timezone.utc)
+    start_date = now - timedelta(days=days)
+
+    # Answers per day
+    daily_answers = db.query(
+        cast(UserAnswer.answered_at, Date).label("date"),
+        func.count(UserAnswer.id).label("total"),
+        func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct"),
+    ).filter(
+        UserAnswer.answered_at >= start_date
+    ).group_by(
+        cast(UserAnswer.answered_at, Date)
+    ).all()
+
+    # Sessions per day
+    daily_sessions = db.query(
+        cast(TrainingSession.started_at, Date).label("date"),
+        func.count(TrainingSession.id).label("count"),
+    ).filter(
+        TrainingSession.started_at >= start_date
+    ).group_by(
+        cast(TrainingSession.started_at, Date)
+    ).all()
+
+    # New users per day
+    daily_users = db.query(
+        cast(User.created_at, Date).label("date"),
+        func.count(User.id).label("count"),
+    ).filter(
+        User.created_at >= start_date
+    ).group_by(
+        cast(User.created_at, Date)
+    ).all()
+
+    # Gap-fill: toate zilele din range, chiar daca au zero
+    answers_map = {str(row.date): {"total": row.total, "correct": int(row.correct or 0)} for row in daily_answers}
+    sessions_map = {str(row.date): row.count for row in daily_sessions}
+    users_map = {str(row.date): row.count for row in daily_users}
+
+    data = []
+    for i in range(days):
+        d = (start_date + timedelta(days=i)).strftime("%Y-%m-%d")
+        ans = answers_map.get(d, {"total": 0, "correct": 0})
+        total = ans["total"]
+        correct = ans["correct"]
+        data.append({
+            "date": d,
+            "answers": total,
+            "correct_answers": correct,
+            "accuracy_pct": round(correct / max(total, 1) * 100, 1),
+            "sessions": sessions_map.get(d, 0),
+            "new_users": users_map.get(d, 0),
+        })
+
+    return {"success": True, "period_days": days, "data": data}
+
+
+@router.get("/analytics/performance-by-band")
+async def get_performance_by_band(
+    days: int = Query(30, ge=7, le=365),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """Accuracy si volum per NHS band"""
+    start_date = datetime.now(timezone.utc) - timedelta(days=days)
+
+    band_stats = db.query(
+        Question.nhs_band,
+        func.count(UserAnswer.id).label("total_answers"),
+        func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct_answers"),
+        func.avg(UserAnswer.time_taken_seconds).label("avg_time"),
+    ).join(
+        Question, UserAnswer.question_id == Question.id
+    ).filter(
+        UserAnswer.answered_at >= start_date
+    ).group_by(
+        Question.nhs_band
+    ).order_by(
+        Question.nhs_band
+    ).all()
+
+    session_stats = db.query(
+        TrainingSession.nhs_band,
+        func.count(TrainingSession.id).label("sessions"),
+        func.avg(TrainingSession.score_percentage).label("avg_score"),
+    ).filter(
+        TrainingSession.started_at >= start_date,
+        TrainingSession.is_completed == True,
+    ).group_by(
+        TrainingSession.nhs_band
+    ).all()
+    session_map = {row.nhs_band: {"sessions": row.sessions, "avg_score": round(float(row.avg_score or 0), 1)} for row in session_stats}
+
+    data = []
+    for row in band_stats:
+        total = row.total_answers or 0
+        correct = int(row.correct_answers or 0)
+        sess = session_map.get(row.nhs_band, {"sessions": 0, "avg_score": 0})
+        data.append({
+            "band": row.nhs_band,
+            "total_answers": total,
+            "correct_answers": correct,
+            "accuracy_pct": round(correct / max(total, 1) * 100, 1),
+            "avg_time_seconds": round(float(row.avg_time or 0), 1),
+            "sessions_completed": sess["sessions"],
+            "avg_session_score": sess["avg_score"],
+        })
+
+    return {"success": True, "data": data}
+
+
+@router.get("/analytics/performance-by-specialty")
+async def get_performance_by_specialty(
+    days: int = Query(30, ge=7, le=365),
+    limit: int = Query(15, ge=5, le=50),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """Accuracy per specialitate, top N"""
+    start_date = datetime.now(timezone.utc) - timedelta(days=days)
+
+    rows = db.query(
+        Question.specialization,
+        func.count(UserAnswer.id).label("total_answers"),
+        func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct_answers"),
+        func.avg(UserAnswer.time_taken_seconds).label("avg_time"),
+    ).join(
+        Question, UserAnswer.question_id == Question.id
+    ).filter(
+        UserAnswer.answered_at >= start_date,
+        Question.specialization.isnot(None),
+        Question.specialization != "",
+    ).group_by(
+        Question.specialization
+    ).order_by(
+        func.count(UserAnswer.id).desc()
+    ).limit(limit).all()
+
+    data = []
+    for row in rows:
+        total = row.total_answers or 0
+        correct = int(row.correct_answers or 0)
+        data.append({
+            "specialty": row.specialization,
+            "total_answers": total,
+            "correct_answers": correct,
+            "accuracy_pct": round(correct / max(total, 1) * 100, 1),
+            "avg_time_seconds": round(float(row.avg_time or 0), 1),
+        })
+
+    return {"success": True, "data": data}
+
+
+@router.get("/analytics/question-difficulty")
+async def get_question_difficulty_stats(
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """Distributie intrebari per tip, dificultate, si subscriptii per tier"""
+    # Per question type
+    by_type = db.query(
+        Question.question_type, func.count(Question.id).label("count")
+    ).filter(Question.is_active == True).group_by(Question.question_type).all()
+
+    # Per difficulty + accuracy
+    by_diff = db.query(
+        Question.difficulty_level,
+        func.count(func.distinct(Question.id)).label("q_count"),
+    ).filter(Question.is_active == True).group_by(Question.difficulty_level).all()
+
+    diff_accuracy = db.query(
+        Question.difficulty_level,
+        func.count(UserAnswer.id).label("total"),
+        func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct"),
+    ).join(Question, UserAnswer.question_id == Question.id).group_by(
+        Question.difficulty_level
+    ).all()
+    diff_acc_map = {
+        row.difficulty_level.value if row.difficulty_level else "unknown": {
+            "total": row.total or 0,
+            "correct": int(row.correct or 0),
+        }
+        for row in diff_accuracy
+    }
+
+    # Subscription distribution
+    tier_dist = db.query(
+        User.subscription_tier, func.count(User.id).label("count")
+    ).filter(User.is_active == True).group_by(User.subscription_tier).all()
+
+    return {
+        "success": True,
+        "by_type": [
+            {"type": row.question_type.value if row.question_type else "unknown", "count": row.count}
+            for row in by_type
+        ],
+        "by_difficulty": [
+            {
+                "difficulty": row.difficulty_level.value if row.difficulty_level else "unknown",
+                "count": row.q_count,
+                "total_attempts": diff_acc_map.get(row.difficulty_level.value if row.difficulty_level else "unknown", {}).get("total", 0),
+                "accuracy_pct": round(
+                    diff_acc_map.get(row.difficulty_level.value if row.difficulty_level else "unknown", {}).get("correct", 0)
+                    / max(diff_acc_map.get(row.difficulty_level.value if row.difficulty_level else "unknown", {}).get("total", 0), 1)
+                    * 100, 1
+                ),
+            }
+            for row in by_diff
+        ],
+        "subscription_distribution": [
+            {"tier": row.subscription_tier.value if row.subscription_tier else "demo", "count": row.count}
+            for row in tier_dist
+        ],
+    }
+
+
+@router.get("/analytics/export/csv")
+async def export_analytics_csv(
+    days: int = Query(30, ge=7, le=365),
+    data_type: str = Query("activity"),
+    admin: User = Depends(require_permission(Permission.ADMIN_USERS)),
+    db: Session = Depends(get_db),
+):
+    """Export CSV: activity, users, or performance"""
+    if data_type not in ("activity", "users", "performance"):
+        raise HTTPException(status_code=400, detail="data_type must be activity, users, or performance")
+
+    start_date = datetime.now(timezone.utc) - timedelta(days=days)
+    output = io.StringIO()
+    writer = csv.writer(output)
+
+    if data_type == "activity":
+        writer.writerow(["Date", "Answers", "Correct", "Accuracy %", "Sessions", "New Users"])
+        daily_answers = db.query(
+            cast(UserAnswer.answered_at, Date).label("date"),
+            func.count(UserAnswer.id).label("total"),
+            func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct"),
+        ).filter(UserAnswer.answered_at >= start_date).group_by(cast(UserAnswer.answered_at, Date)).all()
+        daily_sessions = db.query(
+            cast(TrainingSession.started_at, Date).label("date"),
+            func.count(TrainingSession.id).label("count"),
+        ).filter(TrainingSession.started_at >= start_date).group_by(cast(TrainingSession.started_at, Date)).all()
+        daily_users = db.query(
+            cast(User.created_at, Date).label("date"),
+            func.count(User.id).label("count"),
+        ).filter(User.created_at >= start_date).group_by(cast(User.created_at, Date)).all()
+
+        ans_map = {str(r.date): {"t": r.total, "c": int(r.correct or 0)} for r in daily_answers}
+        sess_map = {str(r.date): r.count for r in daily_sessions}
+        usr_map = {str(r.date): r.count for r in daily_users}
+
+        for i in range(days):
+            d = (start_date + timedelta(days=i)).strftime("%Y-%m-%d")
+            a = ans_map.get(d, {"t": 0, "c": 0})
+            writer.writerow([d, a["t"], a["c"], round(a["c"] / max(a["t"], 1) * 100, 1), sess_map.get(d, 0), usr_map.get(d, 0)])
+
+    elif data_type == "users":
+        writer.writerow(["Email", "Name", "Band", "Tier", "Role", "Questions Answered", "Correct", "Accuracy %", "Study Minutes", "Last Login"])
+        users = db.query(User).filter(User.is_active == True).order_by(User.created_at.desc()).limit(500).all()
+        for u in users:
+            progress = db.query(UserProgress).filter(UserProgress.user_id == u.id).all()
+            total_q = sum(p.total_questions_answered for p in progress)
+            total_c = sum(p.correct_answers for p in progress)
+            total_m = sum(p.total_study_time_minutes for p in progress)
+            writer.writerow([
+                u.email,
+                f"{u.first_name or ''} {u.last_name or ''}".strip(),
+                u.nhs_band.value if u.nhs_band else "",
+                u.subscription_tier.value if u.subscription_tier else "demo",
+                u.role.value if u.role else "",
+                total_q, total_c,
+                round(total_c / max(total_q, 1) * 100, 1),
+                total_m,
+                u.last_login.isoformat() if u.last_login else "",
+            ])
+
+    elif data_type == "performance":
+        writer.writerow(["Band", "Total Answers", "Correct", "Accuracy %", "Avg Time (s)", "Sessions", "Avg Score %"])
+        band_stats = db.query(
+            Question.nhs_band,
+            func.count(UserAnswer.id).label("total"),
+            func.sum(case((UserAnswer.is_correct == True, 1), else_=0)).label("correct"),
+            func.avg(UserAnswer.time_taken_seconds).label("avg_time"),
+        ).join(Question, UserAnswer.question_id == Question.id).filter(
+            UserAnswer.answered_at >= start_date
+        ).group_by(Question.nhs_band).order_by(Question.nhs_band).all()
+
+        sess_stats = db.query(
+            TrainingSession.nhs_band,
+            func.count(TrainingSession.id).label("sessions"),
+            func.avg(TrainingSession.score_percentage).label("avg_score"),
+        ).filter(
+            TrainingSession.started_at >= start_date, TrainingSession.is_completed == True
+        ).group_by(TrainingSession.nhs_band).all()
+        sess_map = {r.nhs_band: {"s": r.sessions, "sc": round(float(r.avg_score or 0), 1)} for r in sess_stats}
+
+        for row in band_stats:
+            t = row.total or 0
+            c = int(row.correct or 0)
+            s = sess_map.get(row.nhs_band, {"s": 0, "sc": 0})
+            writer.writerow([row.nhs_band, t, c, round(c / max(t, 1) * 100, 1), round(float(row.avg_time or 0), 1), s["s"], s["sc"]])
+
+    output.seek(0)
+    filename = f"analytics_{data_type}_{datetime.now().strftime('%Y-%m-%d')}.csv"
+    return StreamingResponse(
+        output,
+        media_type="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={filename}"},
+    )

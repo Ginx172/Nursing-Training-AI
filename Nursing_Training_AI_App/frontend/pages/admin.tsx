@@ -1,10 +1,30 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { useAuth } from '../context/AuthContext';
 import api from '../lib/api';
+import type {
+  OverviewData, ActivityDataPoint, BandPerformance, SpecialtyPerformance, DistributionItem,
+} from '../components/AnalyticsCharts';
+
+const AnalyticsCharts = dynamic(() => import('../components/AnalyticsCharts').then((mod) => ({
+  default: () => null,
+  KPICard: mod.KPICard,
+  DateRangeSelector: mod.DateRangeSelector,
+  ActivityLineChart: mod.ActivityLineChart,
+  PerformanceBarChart: mod.PerformanceBarChart,
+  DistributionPieChart: mod.DistributionPieChart,
+})), { ssr: false }) as any;
+
+// Lazy load chart components (recharts needs browser APIs)
+const KPICard = dynamic(() => import('../components/AnalyticsCharts').then((m) => m.KPICard), { ssr: false });
+const DateRangeSelector = dynamic(() => import('../components/AnalyticsCharts').then((m) => m.DateRangeSelector), { ssr: false });
+const ActivityLineChart = dynamic(() => import('../components/AnalyticsCharts').then((m) => m.ActivityLineChart), { ssr: false });
+const PerformanceBarChart = dynamic(() => import('../components/AnalyticsCharts').then((m) => m.PerformanceBarChart), { ssr: false });
+const DistributionPieChart = dynamic(() => import('../components/AnalyticsCharts').then((m) => m.DistributionPieChart), { ssr: false });
 
 interface PlatformStats {
   total_users: number;
@@ -49,7 +69,7 @@ interface AuditEntry {
   details: any;
 }
 
-type Tab = 'overview' | 'users' | 'questions' | 'audit';
+type Tab = 'overview' | 'users' | 'questions' | 'audit' | 'analytics' | 'ai-insights';
 
 function AdminContent() {
   const { user, logout } = useAuth();
@@ -75,6 +95,23 @@ function AdminContent() {
   // Audit
   const [auditLogs, setAuditLogs] = useState<AuditEntry[]>([]);
   const [auditLoading, setAuditLoading] = useState(false);
+
+  // Analytics
+  const [analyticsDays, setAnalyticsDays] = useState(30);
+  const [analyticsOverview, setAnalyticsOverview] = useState<OverviewData | null>(null);
+  const [activityData, setActivityData] = useState<ActivityDataPoint[]>([]);
+  const [bandPerformance, setBandPerformance] = useState<BandPerformance[]>([]);
+  const [specialtyPerformance, setSpecialtyPerformance] = useState<SpecialtyPerformance[]>([]);
+  const [questionDistribution, setQuestionDistribution] = useState<any>(null);
+  const [analyticsLoading, setAnalyticsLoading] = useState(false);
+  const [exportLoading, setExportLoading] = useState(false);
+
+  // AI Insights
+  const [ollamaHealth, setOllamaHealth] = useState<any>(null);
+  const [aiInsights, setAiInsights] = useState<any[]>([]);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiRunning, setAiRunning] = useState(false);
+  const [expandedInsight, setExpandedInsight] = useState<number | null>(null);
 
   // Messages
   const [msg, setMsg] = useState('');
@@ -105,6 +142,16 @@ function AdminContent() {
   // Load audit
   useEffect(() => {
     if (tab === 'audit') loadAudit();
+  }, [tab]);
+
+  // Load analytics
+  useEffect(() => {
+    if (tab === 'analytics') loadAnalytics();
+  }, [tab, analyticsDays]);
+
+  // Load AI Insights
+  useEffect(() => {
+    if (tab === 'ai-insights') { loadOllamaHealth(); loadAiInsights(); }
   }, [tab]);
 
   async function loadStats() {
@@ -165,6 +212,82 @@ function AdminContent() {
       setMsg('Role updated');
       loadUsers();
     } catch { setErr('Failed to update role'); }
+  }
+
+  async function loadAnalytics() {
+    setAnalyticsLoading(true);
+    setErr('');
+    try {
+      const params = { days: analyticsDays };
+      const [overviewRes, activityRes, bandRes, specialtyRes, distRes] = await Promise.all([
+        api.get('/api/admin/analytics/overview', { params }),
+        api.get('/api/admin/analytics/activity-over-time', { params }),
+        api.get('/api/admin/analytics/performance-by-band', { params }),
+        api.get('/api/admin/analytics/performance-by-specialty', { params }),
+        api.get('/api/admin/analytics/question-difficulty'),
+      ]);
+      setAnalyticsOverview(overviewRes.data);
+      setActivityData(activityRes.data.data || []);
+      setBandPerformance(bandRes.data.data || []);
+      setSpecialtyPerformance(specialtyRes.data.data || []);
+      setQuestionDistribution(distRes.data);
+    } catch {
+      setErr('Failed to load analytics data');
+    }
+    setAnalyticsLoading(false);
+  }
+
+  async function handleExportCSV(dataType: string) {
+    setExportLoading(true);
+    try {
+      const res = await api.get('/api/admin/analytics/export/csv', {
+        params: { days: analyticsDays, data_type: dataType },
+        responseType: 'blob',
+      });
+      const url = window.URL.createObjectURL(new Blob([res.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `analytics_${dataType}_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(url);
+    } catch {
+      setErr('Failed to export CSV');
+    }
+    setExportLoading(false);
+  }
+
+  async function loadOllamaHealth() {
+    try {
+      const res = await api.get('/api/ai-brain/health');
+      setOllamaHealth(res.data);
+    } catch { setOllamaHealth({ status: 'error', message: 'Cannot reach API' }); }
+  }
+
+  async function loadAiInsights() {
+    setAiLoading(true);
+    try {
+      const res = await api.get('/api/ai-brain/insights', { params: { limit: 20 } });
+      setAiInsights(res.data.insights || []);
+    } catch { setErr('Failed to load AI insights'); }
+    setAiLoading(false);
+  }
+
+  async function runAiAnalysis(days: number) {
+    setAiRunning(true); setErr(''); setMsg('');
+    try {
+      const res = await api.post(`/api/ai-brain/run-analysis?days=${days}`);
+      if (res.data.success) {
+        setMsg(`Analysis completed in ${res.data.generation_time_seconds}s - ${res.data.insights_count} insights generated`);
+        loadAiInsights();
+      } else {
+        setErr(`Analysis failed: ${res.data.error || 'Unknown error'}`);
+      }
+    } catch (e: any) {
+      setErr(e?.response?.data?.detail || 'Failed to run AI analysis');
+    }
+    setAiRunning(false);
   }
 
   const tabStyle = (t: Tab) => ({
@@ -228,6 +351,8 @@ function AdminContent() {
         <button style={tabStyle('users')} onClick={() => setTab('users')}>Users</button>
         <button style={tabStyle('questions')} onClick={() => setTab('questions')}>Questions</button>
         <button style={tabStyle('audit')} onClick={() => setTab('audit')}>Audit Log</button>
+        <button style={tabStyle('analytics')} onClick={() => setTab('analytics')}>Analytics</button>
+        <button style={tabStyle('ai-insights')} onClick={() => setTab('ai-insights')}>AI Insights</button>
       </div>
 
       {/* ============ OVERVIEW TAB ============ */}
@@ -484,6 +609,324 @@ function AdminContent() {
                 </tbody>
               </table>
             </div>
+          )}
+        </div>
+      )}
+
+      {/* ============ ANALYTICS TAB ============ */}
+      {tab === 'analytics' && (
+        <div>
+          {/* Header: date range + export */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+            <DateRangeSelector value={analyticsDays} onChange={setAnalyticsDays} />
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                onClick={() => handleExportCSV('activity')}
+                disabled={exportLoading}
+                style={{ ...btnSmall, padding: '8px 14px', background: '#0d9488', color: '#fff', border: 'none' }}
+              >
+                Export Activity CSV
+              </button>
+              <button
+                onClick={() => handleExportCSV('users')}
+                disabled={exportLoading}
+                style={{ ...btnSmall, padding: '8px 14px', background: '#7c3aed', color: '#fff', border: 'none' }}
+              >
+                Export Users CSV
+              </button>
+              <button
+                onClick={() => handleExportCSV('performance')}
+                disabled={exportLoading}
+                style={{ ...btnSmall, padding: '8px 14px', background: '#4338ca', color: '#fff', border: 'none' }}
+              >
+                Export Performance CSV
+              </button>
+            </div>
+          </div>
+
+          {analyticsLoading ? <p>Loading analytics...</p> : (
+            <>
+              {/* KPI Cards */}
+              {analyticsOverview?.kpis && (
+                <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+                  <KPICard label="New Users" kpi={analyticsOverview.kpis.new_users} />
+                  <KPICard label="Active Users" kpi={analyticsOverview.kpis.active_users} />
+                  <KPICard label="Questions Answered" kpi={analyticsOverview.kpis.questions_answered} />
+                  <KPICard label="Avg Accuracy" kpi={analyticsOverview.kpis.avg_accuracy_pct} suffix="%" />
+                  <KPICard label="Training Sessions" kpi={analyticsOverview.kpis.training_sessions} />
+                  <KPICard label="Avg Session Score" kpi={analyticsOverview.kpis.avg_session_score} suffix="%" />
+                </div>
+              )}
+
+              {/* Line Chart: Activity over time */}
+              {activityData.length > 0 && (
+                <div style={{ marginBottom: 24 }}>
+                  <ActivityLineChart data={activityData} />
+                </div>
+              )}
+
+              {/* Bar Charts row */}
+              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 24 }}>
+                {bandPerformance.length > 0 && (
+                  <PerformanceBarChart
+                    data={bandPerformance}
+                    dataKey="accuracy_pct"
+                    nameKey="band"
+                    title="Performance by NHS Band"
+                  />
+                )}
+                {specialtyPerformance.length > 0 && (
+                  <PerformanceBarChart
+                    data={specialtyPerformance}
+                    dataKey="accuracy_pct"
+                    nameKey="specialty"
+                    title="Performance by Specialty"
+                  />
+                )}
+              </div>
+
+              {/* Pie Charts row */}
+              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 24 }}>
+                {questionDistribution?.by_type && (
+                  <DistributionPieChart
+                    data={questionDistribution.by_type.map((d: any) => ({ name: d.type, value: d.count }))}
+                    title="Questions by Type"
+                  />
+                )}
+                {questionDistribution?.subscription_distribution && (
+                  <DistributionPieChart
+                    data={questionDistribution.subscription_distribution.map((d: any) => ({ name: d.tier, value: d.count }))}
+                    title="Subscriptions by Tier"
+                  />
+                )}
+              </div>
+
+              {/* Difficulty stats table */}
+              {questionDistribution?.by_difficulty && (
+                <div style={{ ...cardStyle, marginBottom: 24 }}>
+                  <h3 style={{ margin: '0 0 12px', fontSize: 16, color: '#334155' }}>Performance by Difficulty</h3>
+                  <table style={tableStyle}>
+                    <thead>
+                      <tr>
+                        <th style={thStyle}>Difficulty</th>
+                        <th style={thStyle}>Questions</th>
+                        <th style={thStyle}>Total Attempts</th>
+                        <th style={thStyle}>Accuracy %</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {questionDistribution.by_difficulty.map((d: any) => (
+                        <tr key={d.difficulty}>
+                          <td style={tdStyle}>
+                            <span style={{
+                              padding: '2px 8px', borderRadius: 12, fontSize: 11, fontWeight: 600, textTransform: 'capitalize',
+                              background: d.difficulty === 'expert' ? '#fef2f2' : d.difficulty === 'advanced' ? '#fefce8' : '#f0fdf4',
+                              color: d.difficulty === 'expert' ? '#991b1b' : d.difficulty === 'advanced' ? '#854d0e' : '#166534',
+                            }}>
+                              {d.difficulty}
+                            </span>
+                          </td>
+                          <td style={tdStyle}>{d.count}</td>
+                          <td style={tdStyle}>{d.total_attempts.toLocaleString()}</td>
+                          <td style={tdStyle}>
+                            <span style={{ fontWeight: 700, color: d.accuracy_pct >= 70 ? '#10b981' : d.accuracy_pct >= 50 ? '#f59e0b' : '#ef4444' }}>
+                              {d.accuracy_pct}%
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Empty state */}
+              {!analyticsOverview && !analyticsLoading && (
+                <div style={{ textAlign: 'center', padding: 40, color: '#94a3b8' }}>
+                  No analytics data available. Users need to answer questions to generate analytics.
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
+      {/* ============ AI INSIGHTS TAB ============ */}
+      {tab === 'ai-insights' && (
+        <div>
+          {/* Ollama Status + Actions */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{
+                width: 10, height: 10, borderRadius: '50%', display: 'inline-block',
+                background: ollamaHealth?.status === 'online' ? '#10b981'
+                  : ollamaHealth?.status === 'disabled' ? '#94a3b8'
+                  : '#ef4444',
+              }} />
+              <span style={{ fontSize: 14, color: '#334155' }}>
+                Ollama: <strong>{ollamaHealth?.status || 'checking...'}</strong>
+                {ollamaHealth?.target_model && ` (${ollamaHealth.target_model})`}
+              </span>
+              {ollamaHealth?.status === 'offline' && (
+                <span style={{ fontSize: 12, color: '#94a3b8' }}>Run: ollama serve</span>
+              )}
+            </div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                onClick={() => runAiAnalysis(7)}
+                disabled={aiRunning || ollamaHealth?.status !== 'online'}
+                style={{
+                  ...btnSmall, padding: '8px 16px',
+                  background: aiRunning ? '#94a3b8' : '#4338ca', color: '#fff', border: 'none',
+                  opacity: (aiRunning || ollamaHealth?.status !== 'online') ? 0.6 : 1,
+                }}
+              >
+                {aiRunning ? 'Running...' : 'Analyze Last 7 Days'}
+              </button>
+              <button
+                onClick={() => runAiAnalysis(14)}
+                disabled={aiRunning || ollamaHealth?.status !== 'online'}
+                style={{
+                  ...btnSmall, padding: '8px 16px',
+                  background: aiRunning ? '#94a3b8' : '#0d9488', color: '#fff', border: 'none',
+                  opacity: (aiRunning || ollamaHealth?.status !== 'online') ? 0.6 : 1,
+                }}
+              >
+                {aiRunning ? 'Running...' : 'Analyze Last 14 Days'}
+              </button>
+              <button
+                onClick={() => { loadOllamaHealth(); loadAiInsights(); }}
+                style={{ ...btnSmall, padding: '8px 16px' }}
+              >
+                Refresh
+              </button>
+            </div>
+          </div>
+
+          {aiRunning && (
+            <div style={{ background: '#eff6ff', border: '1px solid #3b82f6', padding: 12, borderRadius: 8, marginBottom: 16, color: '#1e40af', fontSize: 14 }}>
+              AI analysis in progress... This may take 1-5 minutes depending on data volume and model speed.
+            </div>
+          )}
+
+          {aiLoading ? <p>Loading insights...</p> : (
+            <>
+              {aiInsights.length === 0 && !aiLoading && (
+                <div style={{ textAlign: 'center', padding: 40, color: '#94a3b8' }}>
+                  No AI insights generated yet. Click "Analyze" to generate the first report.
+                </div>
+              )}
+
+              {aiInsights.map((insight) => (
+                <div key={insight.id} style={{
+                  background: '#f8fafc', borderRadius: 12, padding: 16, border: '1px solid #e2e8f0', marginBottom: 12,
+                }}>
+                  {/* Header */}
+                  <div
+                    style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
+                    onClick={() => setExpandedInsight(expandedInsight === insight.id ? null : insight.id)}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <span style={{
+                        padding: '3px 10px', borderRadius: 12, fontSize: 11, fontWeight: 600,
+                        background: insight.status === 'completed' ? '#ecfdf5' : insight.status === 'failed' ? '#fef2f2' : '#eff6ff',
+                        color: insight.status === 'completed' ? '#065f46' : insight.status === 'failed' ? '#991b1b' : '#1e40af',
+                      }}>
+                        {insight.status}
+                      </span>
+                      <span style={{ fontSize: 14, fontWeight: 600, color: '#334155' }}>
+                        {insight.report_type.replace(/_/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())}
+                      </span>
+                      <span style={{ fontSize: 12, color: '#94a3b8' }}>
+                        {insight.generated_at ? new Date(insight.generated_at).toLocaleString() : ''}
+                      </span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      {insight.generation_time_seconds && (
+                        <span style={{ fontSize: 11, color: '#94a3b8' }}>{insight.generation_time_seconds}s</span>
+                      )}
+                      <span style={{ fontSize: 12, color: '#64748b' }}>{expandedInsight === insight.id ? '\u25B2' : '\u25BC'}</span>
+                    </div>
+                  </div>
+
+                  {/* Expanded content */}
+                  {expandedInsight === insight.id && insight.status === 'completed' && (
+                    <div style={{ marginTop: 16 }}>
+                      {/* Summary */}
+                      {insight.insights?.find((i: any) => i.category === 'summary' || i.finding) && (
+                        <div style={{ background: '#fff', borderRadius: 8, padding: 12, marginBottom: 12, border: '1px solid #e2e8f0' }}>
+                          <div style={{ fontSize: 13, fontWeight: 600, color: '#334155', marginBottom: 6 }}>Summary</div>
+                          {/* Try to find summary from raw insights */}
+                        </div>
+                      )}
+
+                      {/* Insights */}
+                      {insight.insights && insight.insights.length > 0 && (
+                        <div style={{ marginBottom: 12 }}>
+                          <div style={{ fontSize: 13, fontWeight: 600, color: '#334155', marginBottom: 8 }}>Insights</div>
+                          {insight.insights.map((ins: any, idx: number) => (
+                            <div key={idx} style={{
+                              display: 'flex', gap: 8, alignItems: 'flex-start', padding: '8px 12px',
+                              background: '#fff', borderRadius: 6, marginBottom: 4, border: '1px solid #f1f5f9',
+                            }}>
+                              <span style={{
+                                padding: '2px 6px', borderRadius: 8, fontSize: 10, fontWeight: 600, flexShrink: 0,
+                                background: ins.severity === 'critical' ? '#fef2f2' : ins.severity === 'warning' ? '#fefce8' : '#f0fdf4',
+                                color: ins.severity === 'critical' ? '#991b1b' : ins.severity === 'warning' ? '#854d0e' : '#166534',
+                              }}>
+                                {ins.severity}
+                              </span>
+                              <span style={{
+                                padding: '2px 6px', borderRadius: 8, fontSize: 10, fontWeight: 600, flexShrink: 0,
+                                background: '#eff6ff', color: '#1e40af',
+                              }}>
+                                {ins.category}
+                              </span>
+                              <span style={{ fontSize: 13, color: '#475569' }}>{ins.finding}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Recommendations */}
+                      {insight.recommendations && insight.recommendations.length > 0 && (
+                        <div>
+                          <div style={{ fontSize: 13, fontWeight: 600, color: '#334155', marginBottom: 8 }}>Recommendations</div>
+                          {insight.recommendations.map((rec: any, idx: number) => (
+                            <div key={idx} style={{
+                              display: 'flex', gap: 8, alignItems: 'flex-start', padding: '8px 12px',
+                              background: '#fff', borderRadius: 6, marginBottom: 4, border: '1px solid #f1f5f9',
+                            }}>
+                              <span style={{
+                                padding: '2px 6px', borderRadius: 8, fontSize: 10, fontWeight: 700, flexShrink: 0,
+                                background: rec.priority === 'high' ? '#fef2f2' : rec.priority === 'medium' ? '#fefce8' : '#f0fdf4',
+                                color: rec.priority === 'high' ? '#991b1b' : rec.priority === 'medium' ? '#854d0e' : '#166534',
+                              }}>
+                                {rec.priority}
+                              </span>
+                              <span style={{
+                                padding: '2px 6px', borderRadius: 8, fontSize: 10, fontWeight: 600, flexShrink: 0,
+                                background: '#f5f3ff', color: '#6d28d9',
+                              }}>
+                                {rec.category}
+                              </span>
+                              <span style={{ fontSize: 13, color: '#475569' }}>{rec.action}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Error message */}
+                  {expandedInsight === insight.id && insight.status === 'failed' && (
+                    <div style={{ marginTop: 12, padding: 10, background: '#fef2f2', borderRadius: 6, fontSize: 13, color: '#991b1b' }}>
+                      {insight.error_message || 'Unknown error'}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </>
           )}
         </div>
       )}

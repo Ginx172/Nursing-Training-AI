@@ -59,6 +59,7 @@ _EXTRA_ROUTES = [
     ("api.routes.dashboard", "router", "/api/dashboard"),
     ("api.routes.compliance", "router", "/api/compliance"),
     ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
+    ("api.routes.ai_brain", "router", "/api/ai-brain"),
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:
@@ -73,6 +74,7 @@ for _module_path, _attr, _prefix in _EXTRA_ROUTES:
 from services.monitoring_service import monitoring_service
 from core.database import init_db, check_database_health
 import models.security  # noqa: F401 - registreaza tabelele de securitate in Base.metadata
+import models.ai_insights  # noqa: F401 - registreaza tabelul ai_insights in Base.metadata
 
 # Initialize Sentry for error tracking (optional)
 _sentry_dsn = os.getenv("SENTRY_DSN", "")

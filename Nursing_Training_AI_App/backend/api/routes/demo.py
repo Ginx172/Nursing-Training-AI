@@ -106,7 +106,9 @@ def _is_correct(user_answer: str, correct_answer: str) -> bool:
 
 async def _gemini_evaluate(question: DemoQuestion, user_answer: str, is_correct: bool) -> Optional[dict]:
     """Apeleaza Gemini pentru feedback personalizat."""
-    if not GEMINI_API_KEY:
+    api_key = os.getenv("GEMINI_API_KEY", "")
+    if not api_key:
+        print("GEMINI: No API key found")
         return None
 
     prompt = f"""You are a UK NHS nursing clinical educator. A student answered a clinical question.
@@ -128,9 +130,10 @@ Provide feedback in JSON format:
 
 Be encouraging but clinically precise. Reference NHS guidelines where relevant. Respond ONLY with valid JSON."""
 
+    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
     gemini_url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+        f"{model}:generateContent?key={api_key}"
     )
     try:
         async with httpx.AsyncClient() as client:
@@ -142,6 +145,9 @@ Be encouraging but clinically precise. Reference NHS guidelines where relevant. 
                 },
                 timeout=15.0
             )
+            print(f"GEMINI: status={response.status_code}, model={model}")
+            if response.status_code != 200:
+                print(f"GEMINI error: {response.text[:200]}")
             if response.status_code == 200:
                 data = response.json()
                 content = data["candidates"][0]["content"]["parts"][0]["text"].strip()

@@ -245,7 +245,7 @@ class LearningTrackerService:
         event = LearningEvent(
             user_id=user_id,
             event_type=event_type,
-            metadata=metadata,
+            extra_data=metadata,
         )
         db.add(event)
         db.commit()

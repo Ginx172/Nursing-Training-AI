@@ -52,7 +52,7 @@ def upgrade() -> None:
         sa.Column('question_id', sa.Integer(), nullable=True),
         sa.Column('is_correct', sa.Boolean(), nullable=True),
         sa.Column('time_taken_seconds', sa.Integer(), nullable=True),
-        sa.Column('metadata', JSON, nullable=True),
+        sa.Column('extra_data', JSON, nullable=True),
         sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.func.now()),
     )
     op.create_index('ix_le_user_id', 'learning_events', ['user_id'])

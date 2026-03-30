@@ -11,6 +11,7 @@ from core.database import Base
 class UserLearningProfile(Base):
     """Profil agregat de invatare per user - baseline, trend, strengths/weaknesses"""
     __tablename__ = "user_learning_profiles"
+    __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, unique=True, index=True)
@@ -63,11 +64,12 @@ class LearningEvent(Base):
     is_correct = Column(Boolean, nullable=True)
     time_taken_seconds = Column(Integer, nullable=True)
 
-    metadata = Column(JSON, nullable=True)
+    extra_data = Column(JSON, nullable=True)
 
     created_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
 
     __table_args__ = (
         Index('ix_learning_events_user_type', 'user_id', 'event_type'),
         Index('ix_learning_events_user_date', 'user_id', 'created_at'),
+        {'extend_existing': True},
     )

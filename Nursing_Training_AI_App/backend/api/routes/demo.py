@@ -156,9 +156,11 @@ Be encouraging but clinically precise. Reference NHS guidelines where relevant. 
                     if content.startswith("json"):
                         content = content[4:]
                     content = content.rsplit("```", 1)[0]
-                return json.loads(content.strip())
-    except Exception:
-        pass
+                parsed = json.loads(content.strip())
+                print(f"GEMINI: parsed OK, feedback length={len(parsed.get('feedback',''))}")
+                return parsed
+    except Exception as e:
+        print(f"GEMINI parse error: {e}")
     return None
 
 

@@ -232,10 +232,68 @@ def main():
         print("No chunks to index. Exiting.")
         return
 
-    # Generate embeddings
+    # Filter out invalid chunks (non-string, empty, too short, non-printable)
+    valid_chunks = []
+    for c in all_chunks:
+        t = c.get("text", "")
+        if not isinstance(t, str) or len(t.strip()) < 20:
+            continue
+        # Remove non-printable characters and ensure valid UTF-8
+        clean = "".join(ch for ch in t if ch.isprintable() or ch in '\n\t ')
+        clean = clean.strip()
+        if len(clean) < 20:
+            continue
+        # Ensure it's actually text (not binary junk)
+        alpha_ratio = sum(1 for ch in clean if ch.isalpha()) / max(len(clean), 1)
+        if alpha_ratio < 0.3:
+            continue
+        c["text"] = clean
+        valid_chunks.append(c)
+    all_chunks = valid_chunks
+    print(f"Valid chunks after filtering: {len(all_chunks)}")
+
+    if not all_chunks:
+        print("No valid chunks. Exiting.")
+        return
+
+    # Generate embeddings in safe batches
     print(f"\nGenerating embeddings ({len(all_chunks)} chunks, batch_size={BATCH_SIZE})...")
     texts = [c["text"] for c in all_chunks]
-    embeddings = model.encode(texts, batch_size=BATCH_SIZE, show_progress_bar=True)
+    all_embeddings = []
+    embed_errors = 0
+    for batch_start in range(0, len(texts), BATCH_SIZE):
+        batch_texts = texts[batch_start:batch_start + BATCH_SIZE]
+        try:
+            batch_emb = model.encode(batch_texts, show_progress_bar=False)
+            all_embeddings.append(batch_emb)
+        except Exception as e:
+            # Skip this batch, fill with zeros
+            print(f"  WARN: Embedding batch {batch_start} failed: {e}")
+            embed_errors += 1
+            # Remove failed chunks
+            for i in range(len(batch_texts)):
+                idx = batch_start + i
+                if idx < len(all_chunks):
+                    all_chunks[idx] = None
+            continue
+        if (batch_start // BATCH_SIZE) % 50 == 0:
+            done = batch_start + len(batch_texts)
+            print(f"  [{done}/{len(texts)}] embedded...")
+
+    # Remove None chunks (failed batches)
+    all_chunks = [c for c in all_chunks if c is not None]
+
+    if not all_embeddings:
+        print("No embeddings generated. Exiting.")
+        return
+
+    embeddings = np.vstack(all_embeddings)
+    # Ensure chunk count matches embedding count
+    if len(all_chunks) != embeddings.shape[0]:
+        min_len = min(len(all_chunks), embeddings.shape[0])
+        all_chunks = all_chunks[:min_len]
+        embeddings = embeddings[:min_len]
+    print(f"Embeddings: {embeddings.shape[0]} vectors (dim={embeddings.shape[1]}), {embed_errors} batch errors")
     embeddings = np.array(embeddings).astype("float32")
 
     # Normalize for cosine similarity

@@ -266,6 +266,16 @@ class OllamaBrainService:
             data["security_events"] = 0
             data["high_severity_events"] = 0
 
+        # --- RAG Hub stats ---
+        try:
+            from services.rag_hub import rag_hub
+            rag_stats = rag_hub.get_stats()
+            data["rag_faiss_available"] = rag_stats.get("faiss", {}).get("available", False)
+            data["rag_questions_indexed"] = rag_stats.get("chromadb", {}).get("questions_indexed", 0)
+        except Exception:
+            data["rag_faiss_available"] = False
+            data["rag_questions_indexed"] = 0
+
         return data
 
     def _build_analysis_prompt(self, data: Dict[str, Any], days: int) -> str:
@@ -320,6 +330,10 @@ PERFORMANCE BY SPECIALTY:
 
 PERFORMANCE BY NHS BAND:
 {band_text}
+
+KNOWLEDGE BASE & RAG:
+- FAISS index available: {data.get('rag_faiss_available', False)}
+- Questions indexed in ChromaDB: {data.get('rag_questions_indexed', 0)}
 
 SECURITY:
 - Security events: {data.get('security_events', 0)}

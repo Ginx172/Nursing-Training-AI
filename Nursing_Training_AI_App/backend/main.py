@@ -62,6 +62,7 @@ _EXTRA_ROUTES = [
     ("api.routes.ai_brain", "router", "/api/ai-brain"),
     ("api.routes.learning_tracker", "router", "/api/learning-tracker"),
     ("api.knowledge_graph", "router", None),  # has built-in /graph prefix
+    ("api.routes.rag_hub", "router", "/api/rag"),
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:

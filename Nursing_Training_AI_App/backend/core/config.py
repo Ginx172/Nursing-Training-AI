@@ -80,6 +80,11 @@ class Settings(BaseSettings):
     STRIPE_SECRET_KEY: Optional[str] = None
     STRIPE_WEBHOOK_SECRET: Optional[str] = None
 
+    # RAG Hub (unified search)
+    RAG_CHROMADB_PATH: str = "./data/vectordb"
+    RAG_REINDEX_ON_STARTUP: bool = False
+    RAG_QUESTIONS_COLLECTION: str = "nursing_questions"
+
     # Ollama (local AI orchestrator)
     OLLAMA_BASE_URL: str = "http://localhost:11434"
     OLLAMA_MODEL: str = "qwen3:8b"

@@ -1,0 +1,93 @@
+The Nursing AI platform uses a Retrieval‑Augmented Generation (RAG) architecture to provide accurate, context‑aware answers, training materials, and clinical guidance. 
+Below is a detailed explanation of each layer in the pipeline.
+
+📄 Document Ingestion Layer
+This layer is responsible for loading and preparing the raw knowledge sources used by the AI.
+Components:
+
+
+Filesystem Knowledge Base
+Stores all nursing‑related documents (PDF, DOCX, TXT, HTML, etc.) organised by speciality and band.
+
+
+DocumentReader
+Extracts text from multiple file formats and converts them into plain text that can be processed by the AI.
+
+
+Text Normalizer
+Cleans and standardises the extracted text (removing noise, extra whitespace, formatting artefacts, and irrelevant characters).
+
+
+Chunker (sentence‑aware)
+Splits long documents into smaller, meaningful sections (“chunks”) that are easier to embed and retrieve.
+
+
+Metadata Enrichment
+Adds structured metadata such as speciality, band, topic, file source, and document type to each chunk.
+
+
+
+🧠 Embedding & Indexing Layer
+This stage transforms human‑readable text into numerical vectors and stores them in high‑performance vector indexes.
+Components:
+
+
+Embedding Model (MiniLM / InstructorXL)
+Converts text chunks into semantic embeddings that capture contextual meaning.
+
+
+Index Router
+Determines which index should receive each chunk (general index, speciality-specific index, band‑specific index, etc.).
+
+
+FAISS Index
+A fast, CPU-optimised similarity search index used to retrieve the most relevant chunks.
+
+
+ChromaDB Index
+A persistent vector database used as an alternative indexing backend, also supporting metadata‑driven filtering.
+
+
+
+🔍 Query Pipeline
+This layer handles user questions and retrieves the most relevant information from the knowledge base.
+Components:
+
+
+User Query
+The question or prompt submitted by the user (nurse, student, educator, etc.).
+
+
+Query Embedding
+The query is encoded using the same embedding model as the documents, ensuring consistent vector representations.
+
+
+Hybrid Search Router
+Performs semantic search across multiple indexes (FAISS, ChromaDB) to guarantee the best possible recall.
+
+
+Raw Results
+The initial list of matching chunks is returned by the indexes.
+
+
+Reranking Layer
+Reorders the retrieved chunks based on additional relevance scoring, ensuring the most meaningful context is selected.
+
+
+
+📘 Context Building & LLM Generation
+This is the final stage where retrieved information is combined and fed into the large language model.
+Components:
+
+
+Context Builder (top‑k merged)
+Aggregates the top relevant chunks into a clean, coherent context block suitable for model input.
+
+
+LLM Generator (Ollama / GPT / Gemini)
+Uses the prepared context to generate high‑quality answers, explanations, recommendations, or training outputs.
+
+
+Final Answer / Insights
+The final AI response is enriched with an accurate medical context extracted from the knowledge base.
+

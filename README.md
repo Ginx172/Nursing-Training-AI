@@ -1,6 +1,6 @@
 # 🏥 Nursing Training AI - Complete UK Healthcare Training Platform
 
-AI-Powered professional development platform for UK healthcare workers across all sectors with comprehensive question banks, personalized learning, and CPD certification.
+AI-Powered professional development platform for UK healthcare workers across all sectors with comprehensive question banks, personalised learning, and CPD certification.
 
 [![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success)](https://github.com/Ginx172/Nursing-Training-AI)
 [![License](https://img.shields.io/badge/License-Proprietary-blue)](LICENSE)
@@ -20,7 +20,7 @@ AI-Powered professional development platform for UK healthcare workers across al
 ### 📚 Comprehensive Content
 - **2,140+ Question Banks** covering all UK healthcare sectors
 - **42,800+ Questions** across all NHS bands (2-8d)
-- **33 Specialties** including NHS, private, care home, community, and primary care
+- **33 Specialities** including NHS, private, care home, community, and primary care
 - **6 Question Types**: Multiple Choice, Scenario, Calculation, Case Study, Leadership, Governance
 - **Progressive Difficulty**: Band 2 (10-12 questions) → Band 8d (28-39 questions)
 
@@ -38,31 +38,31 @@ AI-Powered professional development platform for UK healthcare workers across al
 
 ### 🌐 All UK Healthcare Sectors
 
-**NHS Hospitals** (9 specialties)
+**NHS Hospitals** (9 specialities)
 - AMU/MAU, Emergency/A&E, ICU/Critical Care
 - Maternity, Mental Health, Pediatrics
 - Cardiology, Neurology, Oncology
 
-**Private Healthcare** (6 specialties)
+**Private Healthcare** (6 specialities)
 - Theatre, Recovery, Ward, Endoscopy
 - Cosmetic, Pre-Assessment
 
-**Care Homes** (4 specialties)
+**Care Homes** (4 specialities)
 - Residential Care, Nursing Home
 - Dementia Care, Palliative Care
 
-**Community Healthcare** (5 specialties)
+**Community Healthcare** (5 specialities)
 - District Nursing, Health Visiting
 - Community Mental Health, School Nursing
 - Community Matron
 
-**Primary Care** (5 specialties)
+**Primary Care** (5 specialities)
 - Practice Nursing, Advanced Practitioner
 - HCA Primary Care, Chronic Disease
 - Immunizations
 
 ### 🤖 AI-Powered Features
-- Personalized learning recommendations
+- Personalised learning recommendations
 - Progress tracking and band progression
 - AI-powered feedback on answers
 - Adaptive difficulty based on performance
@@ -188,7 +188,7 @@ npm start
 
 ### For Production
 
-See [DEPLOYMENT.md](Nursing_Training_AI_App/DEPLOYMENT.md) for complete deployment guide.
+See [DEPLOYMENT.md](Nursing_Training_AI_App/DEPLOYMENT.md) for the complete deployment guide.
 
 ```bash
 cd Nursing_Training_AI_App
@@ -275,9 +275,9 @@ docker-compose up -d
 
 ## 📞 Support
 
-- **Email**: support@nursingtrainingai.com
-- **Website**: https://nursingtrainingai.com
-- **Documentation**: https://docs.nursingtrainingai.com
+- **Email**: eugdum3@gmail.com
+- **Website**: https://nursingtrainingai.com (example)
+- **Documentation**: https://docs.nursingtrainingai.com (example)
 - **GitHub Issues**: [Create an issue](https://github.com/Ginx172/Nursing-Training-AI/issues)
 
 ## 👨‍💻 Development Team
@@ -291,24 +291,14 @@ Proprietary - All rights reserved
 
 ---
 
-## 🎯 Development Phases Summary
 
-| Phase | Duration | Status | Key Deliverables |
-|-------|----------|--------|------------------|
-| 1 | 2-3 weeks | ✅ | RAG Service, MCP Service, Knowledge Base |
-| 2 | 2-3 weeks | ✅ | 2,140 banks, All UK sectors, Band-specific |
-| 3 | 2-3 weeks | ✅ | Mobile app, Audio, Offline, Notifications |
-| 4 | 1-2 weeks | ✅ | Stripe, 4 plans, Payment processing |
-| 5 | 2-3 weeks | ✅ | Analytics, Admin, Collaboration, Monitoring |
-| 6 | 1-2 weeks | ✅ | Optimization, CI/CD, Production ready |
-
-**Total Development Time**: 10-14 weeks  
-**Status**: ✅ **PRODUCTION READY**
+**Total Development Time**: 110-140 weeks  
+**Status**: ✅ **Work In progress**
 
 ---
 
 Built with ❤️ for UK Healthcare Professionals
 
-**Last Updated**: October 2025  
+**Last Updated**: March 2026
 **Version**: 1.0.0
 

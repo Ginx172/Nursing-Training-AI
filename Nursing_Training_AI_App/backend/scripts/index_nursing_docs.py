@@ -16,6 +16,14 @@ import argparse
 from pathlib import Path
 from typing import List, Dict, Optional
 
+# Suppress non-critical warnings
+import warnings
+warnings.filterwarnings("ignore")
+import logging
+logging.disable(logging.WARNING)
+# Force unbuffered output
+sys.stdout.reconfigure(line_buffering=True) if hasattr(sys.stdout, 'reconfigure') else None
+
 # Add backend to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -38,15 +46,25 @@ def extract_text_pdf(filepath: str) -> str:
     """Extrage text dintr-un PDF"""
     try:
         import pypdf
+        import warnings
+        warnings.filterwarnings("ignore")
+        # Skip files > 100MB
+        if os.path.getsize(filepath) > 100 * 1024 * 1024:
+            return ""
         reader = pypdf.PdfReader(filepath)
+        # Skip PDFs with > 500 pages
+        if len(reader.pages) > 500:
+            return ""
         text_parts = []
-        for page in reader.pages:
-            t = page.extract_text()
-            if t:
-                text_parts.append(t)
+        for page in reader.pages[:200]:  # Max 200 pages
+            try:
+                t = page.extract_text()
+                if t:
+                    text_parts.append(t)
+            except Exception:
+                continue
         return "\n".join(text_parts)
     except Exception as e:
-        print(f"  WARN: PDF failed {Path(filepath).name}: {e}")
         return ""
 
 

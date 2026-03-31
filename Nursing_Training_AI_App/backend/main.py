@@ -64,6 +64,7 @@ _EXTRA_ROUTES = [
     ("api.knowledge_graph", "router", None),  # has built-in /graph prefix
     ("api.routes.rag_hub", "router", "/api/rag"),
     ("api.routes.question_quality", "router", "/api/admin/question-quality"),
+    ("api.routes.spaced_repetition", "router", "/api/study"),
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:

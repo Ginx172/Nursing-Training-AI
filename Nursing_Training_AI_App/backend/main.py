@@ -230,6 +230,73 @@ async def rate_limit_middleware(request: Request, call_next):
 
     return await call_next(request)
 
+# Input Threat Detection middleware - blocks SQL injection, XSS, command injection
+@app.middleware("http")
+async def input_threat_detection(request: Request, call_next):
+    # Skip health check and static files
+    path = request.url.path.lower()
+    if path in ("/api/health", "/api/version", "/docs", "/redoc", "/openapi.json"):
+        return await call_next(request)
+
+    from core.advanced_security import threat_detector
+
+    # Check query parameters
+    threat_found = None
+    for param_name, param_value in request.query_params.items():
+        if threat_detector.detect_sql_injection(param_value):
+            threat_found = "SQL injection"
+        elif threat_detector.detect_xss(param_value):
+            threat_found = "XSS"
+        elif threat_detector.detect_command_injection(param_value):
+            threat_found = "Command injection"
+        elif threat_detector.detect_path_traversal(param_value):
+            threat_found = "Path traversal"
+        if threat_found:
+            break
+
+    # Check URL path itself
+    if not threat_found:
+        if threat_detector.detect_path_traversal(path):
+            threat_found = "Path traversal"
+        elif threat_detector.detect_command_injection(path):
+            threat_found = "Command injection"
+
+    # Check common headers
+    if not threat_found:
+        for header_name in ("x-forwarded-for", "referer", "origin"):
+            header_val = request.headers.get(header_name, "")
+            if header_val and (threat_detector.detect_sql_injection(header_val) or
+                               threat_detector.detect_xss(header_val)):
+                threat_found = "Header injection"
+                break
+
+    if threat_found:
+        client_ip = request.client.host if request.client else "unknown"
+        print(f"BLOCKED: {threat_found} attempt from {client_ip} on {path}")
+        # Log security event
+        try:
+            from core.advanced_security import SecurityEvent
+            from datetime import datetime
+            event = SecurityEvent(
+                timestamp=datetime.now(),
+                event_type=f"BLOCKED_{threat_found.upper().replace(' ', '_')}",
+                severity="HIGH",
+                source_ip=client_ip,
+                user_agent=request.headers.get("user-agent", ""),
+                endpoint=path,
+                details={"threat_type": threat_found, "method": request.method},
+                risk_score=80.0,
+            )
+            threat_detector.record_security_event(event)
+        except Exception:
+            pass
+        return JSONResponse(
+            status_code=403,
+            content={"detail": f"Request blocked: malicious input detected ({threat_found})"},
+        )
+
+    return await call_next(request)
+
 # Security Headers middleware
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):

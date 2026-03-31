@@ -69,7 +69,7 @@ interface AuditEntry {
   details: any;
 }
 
-type Tab = 'overview' | 'users' | 'questions' | 'audit' | 'analytics' | 'ai-insights';
+type Tab = 'overview' | 'users' | 'questions' | 'audit' | 'analytics' | 'ai-insights' | 'quality';
 
 function AdminContent() {
   const { user, logout } = useAuth();
@@ -105,6 +105,12 @@ function AdminContent() {
   const [questionDistribution, setQuestionDistribution] = useState<any>(null);
   const [analyticsLoading, setAnalyticsLoading] = useState(false);
   const [exportLoading, setExportLoading] = useState(false);
+
+  // Question Quality
+  const [qualityReport, setQualityReport] = useState<any>(null);
+  const [qualityLoading, setQualityLoading] = useState(false);
+  const [dedupRunning, setDedupRunning] = useState(false);
+  const [improveRunning, setImproveRunning] = useState(false);
 
   // AI Insights
   const [ollamaHealth, setOllamaHealth] = useState<any>(null);
@@ -148,6 +154,11 @@ function AdminContent() {
   useEffect(() => {
     if (tab === 'analytics') loadAnalytics();
   }, [tab, analyticsDays]);
+
+  // Load Question Quality
+  useEffect(() => {
+    if (tab === 'quality') loadQualityReport();
+  }, [tab]);
 
   // Load AI Insights
   useEffect(() => {
@@ -258,6 +269,35 @@ function AdminContent() {
     setExportLoading(false);
   }
 
+  async function loadQualityReport() {
+    setQualityLoading(true);
+    try {
+      const res = await api.get('/api/admin/question-quality/quality-report');
+      setQualityReport(res.data);
+    } catch { setErr('Failed to load quality report'); }
+    setQualityLoading(false);
+  }
+
+  async function runDeduplication() {
+    setDedupRunning(true); setMsg(''); setErr('');
+    try {
+      const res = await api.post('/api/admin/question-quality/deduplicate');
+      setMsg(`Deduplication complete: ${res.data.deactivated} duplicates removed, ${res.data.remaining_active} questions remaining`);
+      loadQualityReport();
+    } catch { setErr('Deduplication failed'); }
+    setDedupRunning(false);
+  }
+
+  async function runImproveBatch(target: string, batchSize: number) {
+    setImproveRunning(true); setMsg(''); setErr('');
+    try {
+      const res = await api.post(`/api/admin/question-quality/improve-batch?batch_size=${batchSize}&target=${target}`);
+      setMsg(`AI Improvement: ${res.data.improved} improved, ${res.data.failed} failed out of ${res.data.processed}`);
+      loadQualityReport();
+    } catch { setErr('AI improvement failed'); }
+    setImproveRunning(false);
+  }
+
   async function loadOllamaHealth() {
     try {
       const res = await api.get('/api/ai-brain/health');
@@ -353,6 +393,7 @@ function AdminContent() {
         <button style={tabStyle('audit')} onClick={() => setTab('audit')}>Audit Log</button>
         <button style={tabStyle('analytics')} onClick={() => setTab('analytics')}>Analytics</button>
         <button style={tabStyle('ai-insights')} onClick={() => setTab('ai-insights')}>AI Insights</button>
+        <button style={tabStyle('quality')} onClick={() => setTab('quality')}>Quality</button>
       </div>
 
       {/* ============ OVERVIEW TAB ============ */}
@@ -744,6 +785,104 @@ function AdminContent() {
               {!analyticsOverview && !analyticsLoading && (
                 <div style={{ textAlign: 'center', padding: 40, color: '#94a3b8' }}>
                   No analytics data available. Users need to answer questions to generate analytics.
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
+      {/* ============ QUALITY TAB ============ */}
+      {tab === 'quality' && (
+        <div>
+          {/* Actions */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+            <h3 style={{ margin: 0, fontSize: 16, color: '#334155' }}>Question Quality Management</h3>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                onClick={runDeduplication}
+                disabled={dedupRunning}
+                style={{ ...btnSmall, padding: '8px 16px', background: dedupRunning ? '#94a3b8' : '#ef4444', color: '#fff', border: 'none' }}
+              >
+                {dedupRunning ? 'Running...' : 'Remove Duplicates'}
+              </button>
+              <button
+                onClick={() => runImproveBatch('generic', 10)}
+                disabled={improveRunning}
+                style={{ ...btnSmall, padding: '8px 16px', background: improveRunning ? '#94a3b8' : '#4338ca', color: '#fff', border: 'none' }}
+              >
+                {improveRunning ? 'Improving...' : 'AI Improve (10 generic)'}
+              </button>
+              <button
+                onClick={() => runImproveBatch('short', 10)}
+                disabled={improveRunning}
+                style={{ ...btnSmall, padding: '8px 16px', background: improveRunning ? '#94a3b8' : '#0d9488', color: '#fff', border: 'none' }}
+              >
+                {improveRunning ? 'Improving...' : 'AI Improve (10 short)'}
+              </button>
+              <button onClick={loadQualityReport} style={{ ...btnSmall, padding: '8px 16px' }}>Refresh</button>
+            </div>
+          </div>
+
+          {qualityLoading ? <p>Loading quality report...</p> : qualityReport && (
+            <>
+              {/* KPI Cards */}
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+                <div style={{ ...kpiStyle }}>
+                  <div style={{ fontSize: 28, fontWeight: 800, color: '#4338ca' }}>{qualityReport.total_active?.toLocaleString()}</div>
+                  <div style={{ color: '#64748b', fontSize: 13 }}>Active Questions</div>
+                </div>
+                <div style={{ ...kpiStyle }}>
+                  <div style={{ fontSize: 28, fontWeight: 800, color: '#94a3b8' }}>{qualityReport.total_inactive?.toLocaleString()}</div>
+                  <div style={{ color: '#64748b', fontSize: 13 }}>Inactive (deduped)</div>
+                </div>
+                <div style={{ ...kpiStyle }}>
+                  <div style={{ fontSize: 28, fontWeight: 800, color: '#ef4444' }}>{qualityReport.generic_answers?.toLocaleString()}</div>
+                  <div style={{ color: '#64748b', fontSize: 13 }}>Generic Answers ({qualityReport.generic_pct}%)</div>
+                </div>
+                <div style={{ ...kpiStyle }}>
+                  <div style={{ fontSize: 28, fontWeight: 800, color: '#10b981' }}>{qualityReport.good_answers?.toLocaleString()}</div>
+                  <div style={{ color: '#64748b', fontSize: 13 }}>Good Answers ({qualityReport.good_pct}%)</div>
+                </div>
+              </div>
+
+              {/* Distribution */}
+              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 24 }}>
+                <div style={{ ...cardStyle, flex: '1 1 300px' }}>
+                  <h3 style={{ margin: '0 0 12px', fontSize: 16, color: '#334155' }}>By Band</h3>
+                  {qualityReport.by_band?.map((b: any) => (
+                    <div key={b.band} style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #f1f5f9' }}>
+                      <span style={{ fontSize: 13 }}>{b.band}</span>
+                      <span style={{ fontWeight: 700, fontSize: 13 }}>{b.count}</span>
+                    </div>
+                  ))}
+                </div>
+                <div style={{ ...cardStyle, flex: '1 1 300px' }}>
+                  <h3 style={{ margin: '0 0 12px', fontSize: 16, color: '#334155' }}>By Specialty</h3>
+                  {qualityReport.by_specialty?.map((s: any) => (
+                    <div key={s.specialty} style={{ display: 'flex', justifyContent: 'space-between', padding: '4px 0', borderBottom: '1px solid #f1f5f9' }}>
+                      <span style={{ fontSize: 13, textTransform: 'capitalize' }}>{s.specialty}</span>
+                      <span style={{ fontWeight: 700, fontSize: 13 }}>{s.count}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Generic samples */}
+              {qualityReport.generic_samples?.length > 0 && (
+                <div style={{ ...cardStyle }}>
+                  <h3 style={{ margin: '0 0 12px', fontSize: 16, color: '#334155' }}>Sample Generic Answers (need improvement)</h3>
+                  {qualityReport.generic_samples.map((q: any) => (
+                    <div key={q.id} style={{ padding: '8px 0', borderBottom: '1px solid #f1f5f9' }}>
+                      <div style={{ display: 'flex', gap: 8, marginBottom: 4 }}>
+                        <span style={{ fontSize: 12, color: '#94a3b8' }}>#{q.id}</span>
+                        <span style={{ fontSize: 13, fontWeight: 600 }}>{q.title}</span>
+                        <span style={{ padding: '1px 6px', borderRadius: 8, fontSize: 10, background: '#f1f5f9', color: '#64748b' }}>{q.band}</span>
+                        <span style={{ padding: '1px 6px', borderRadius: 8, fontSize: 10, background: '#eff6ff', color: '#1e40af' }}>{q.specialty}</span>
+                      </div>
+                      <div style={{ fontSize: 12, color: '#ef4444', fontStyle: 'italic' }}>{q.answer_preview}</div>
+                    </div>
+                  ))}
                 </div>
               )}
             </>

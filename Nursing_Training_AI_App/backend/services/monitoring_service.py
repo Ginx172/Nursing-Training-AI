@@ -22,55 +22,93 @@ class MonitoringService:
         """Track API request metrics"""
         self.request_count += 1
         self.response_times.append(duration_ms)
-        
+        # Limiteaza dimensiunea listei (pastreaza ultimele 10000)
+        if len(self.response_times) > 10000:
+            self.response_times = self.response_times[-5000:]
+
         if status_code >= 400:
             self.error_count += 1
-        
-        # TODO: Log to monitoring service (Sentry, DataDog, etc.)
-        
-        if duration_ms > 2000:  # Alert if response > 2s
-            print(f"⚠️ Slow request: {method} {endpoint} took {duration_ms}ms")
+
+        if duration_ms > 2000:
+            print(f"Slow request: {method} {endpoint} took {duration_ms}ms")
     
-    def get_system_health(self) -> Dict:
-        """Get current system health metrics"""
+    def _collect_system_metrics(self) -> Dict:
+        """Colecteaza metrici sistem (blocking - ruleaza in thread pool)"""
+        cpu_percent = psutil.cpu_percent(interval=0.1)
+        memory = psutil.virtual_memory()
+        disk = psutil.disk_usage('/')
+        return {
+            "cpu_percent": cpu_percent,
+            "memory_percent": memory.percent,
+            "memory_available_gb": round(memory.available / (1024**3), 2),
+            "disk_percent": disk.percent,
+            "disk_free_gb": round(disk.free / (1024**3), 2),
+        }
+
+    async def get_system_health_async(self) -> Dict:
+        """Get system health without blocking event loop"""
         try:
-            cpu_percent = psutil.cpu_percent(interval=1)
-            memory = psutil.virtual_memory()
-            disk = psutil.disk_usage('/')
-            
+            system = await asyncio.to_thread(self._collect_system_metrics)
             uptime = (datetime.now() - self.start_time).total_seconds()
-            
             avg_response_time = (
-                sum(self.response_times) / len(self.response_times) 
+                sum(self.response_times[-1000:]) / len(self.response_times[-1000:])
                 if self.response_times else 0
             )
-            
             error_rate = (
-                (self.error_count / self.request_count * 100) 
+                (self.error_count / self.request_count * 100)
                 if self.request_count > 0 else 0
             )
-            
-            health = {
+            return {
+                "status": "healthy" if system["cpu_percent"] < 80 and system["memory_percent"] < 85 else "warning",
+                "timestamp": datetime.now().isoformat(),
+                "uptime_seconds": uptime,
+                "system": system,
+                "application": {
+                    "requests_total": self.request_count,
+                    "errors_total": self.error_count,
+                    "error_rate_percent": round(error_rate, 2),
+                    "avg_response_time_ms": round(avg_response_time, 2),
+                    "requests_per_second": round(self.request_count / uptime, 2) if uptime > 0 else 0
+                }
+            }
+        except Exception as e:
+            print(f"Error getting system health: {e}")
+            return {"status": "error", "error": str(e)}
+
+    def get_system_health(self) -> Dict:
+        """Sync version (backward compatible) - uses non-blocking cpu_percent"""
+        try:
+            cpu_percent = psutil.cpu_percent(interval=0)
+            memory = psutil.virtual_memory()
+            disk = psutil.disk_usage('/')
+            uptime = (datetime.now() - self.start_time).total_seconds()
+            avg_response_time = (
+                sum(self.response_times[-1000:]) / len(self.response_times[-1000:])
+                if self.response_times else 0
+            )
+            error_rate = (
+                (self.error_count / self.request_count * 100)
+                if self.request_count > 0 else 0
+            )
+            return {
                 "status": "healthy" if cpu_percent < 80 and memory.percent < 85 else "warning",
                 "timestamp": datetime.now().isoformat(),
                 "uptime_seconds": uptime,
                 "system": {
                     "cpu_percent": cpu_percent,
                     "memory_percent": memory.percent,
-                    "memory_available_gb": memory.available / (1024**3),
+                    "memory_available_gb": round(memory.available / (1024**3), 2),
                     "disk_percent": disk.percent,
-                    "disk_free_gb": disk.free / (1024**3)
+                    "disk_free_gb": round(disk.free / (1024**3), 2)
                 },
                 "application": {
                     "requests_total": self.request_count,
                     "errors_total": self.error_count,
                     "error_rate_percent": round(error_rate, 2),
                     "avg_response_time_ms": round(avg_response_time, 2),
-                    "requests_per_second": self.request_count / uptime if uptime > 0 else 0
+                    "requests_per_second": round(self.request_count / uptime, 2) if uptime > 0 else 0
                 }
             }
-            
-            return health
         except Exception as e:
             print(f"Error getting system health: {e}")
             return {"status": "error", "error": str(e)}

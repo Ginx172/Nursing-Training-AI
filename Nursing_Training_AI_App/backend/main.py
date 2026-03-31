@@ -61,6 +61,7 @@ _EXTRA_ROUTES = [
     ("api.routes.learning_insights", "router", None),  # has built-in /api/learning prefix
     ("api.routes.ai_brain", "router", "/api/ai-brain"),
     ("api.routes.learning_tracker", "router", "/api/learning-tracker"),
+    ("api.knowledge_graph", "router", None),  # has built-in /graph prefix
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:
@@ -282,7 +283,16 @@ async def health_check():
     Returns health status of API server, Database, Cache, System resources.
     """
     from services.monitoring_service import monitoring_service
-    health = monitoring_service.get_comprehensive_health_check()
+    system_health = await monitoring_service.get_system_health_async()
+    health = {
+        "timestamp": system_health.get("timestamp"),
+        "overall_status": system_health.get("status", "healthy"),
+        "components": {
+            "api": system_health,
+            "database": monitoring_service.check_database_health(),
+            "cache": monitoring_service.check_redis_health(),
+        }
+    }
 
     # Flatten DB status la top-level pentru compatibilitate cu frontend
     db_health = health.get("components", {}).get("database", {})

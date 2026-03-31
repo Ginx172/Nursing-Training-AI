@@ -77,10 +77,18 @@ class AuditSeverity(str, Enum):
 class AuditService:
     """Service for creating immutable audit logs with DB persistence"""
 
+    # Hardening constants
+    MAX_DETAILS_SIZE = 5120  # 5 KB max per details dict
+    MAX_STRING_FIELD = 500  # Max chars for string fields
+    MAX_IN_MEMORY_LOGS = 1000  # Log rotation: keep last N in memory
+    RATE_LIMIT_WINDOW = 60  # seconds
+    RATE_LIMIT_MAX = 100  # max log entries per user per window
+
     def __init__(self):
         self.logs = []  # In-memory cache (fallback)
         self.previous_hash = "0" * 64  # Genesis hash
         self._db_available = False
+        self._rate_tracker: Dict[str, list] = {}  # user_id -> [timestamps]
 
     def _get_db_session(self):
         try:
@@ -105,6 +113,61 @@ class AuditService:
             finally:
                 db.close()
 
+    def _sanitize_string(self, value: Optional[str], max_len: int = 0) -> Optional[str]:
+        """Sanitizeaza string-uri: strip control chars, limiteaza lungimea"""
+        if value is None:
+            return None
+        if not isinstance(value, str):
+            value = str(value)
+        max_len = max_len or self.MAX_STRING_FIELD
+        # Elimina control characters (except newline, tab)
+        value = "".join(c for c in value if c >= ' ' or c in '\n\t')
+        return value[:max_len]
+
+    def _sanitize_details(self, details: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+        """Sanitizeaza details dict: limiteaza dimensiunea, elimina date sensibile"""
+        if not details:
+            return {}
+        # Serializeaza si verifica dimensiunea
+        try:
+            serialized = json.dumps(details, default=str)
+        except (TypeError, ValueError):
+            return {"_error": "non-serializable details"}
+        if len(serialized) > self.MAX_DETAILS_SIZE:
+            return {"_truncated": True, "_original_size": len(serialized),
+                    "summary": serialized[:self.MAX_DETAILS_SIZE]}
+        # Elimina campuri sensibile
+        sensitive_keys = {"password", "token", "secret", "api_key", "authorization",
+                         "cookie", "session_token", "hashed_password", "totp_secret"}
+        cleaned = {}
+        for k, v in details.items():
+            if k.lower() in sensitive_keys:
+                cleaned[k] = "[REDACTED]"
+            elif isinstance(v, str) and len(v) > self.MAX_STRING_FIELD:
+                cleaned[k] = v[:self.MAX_STRING_FIELD] + "...[truncated]"
+            else:
+                cleaned[k] = v
+        return cleaned
+
+    def _check_rate_limit(self, user_id: Optional[str]) -> bool:
+        """Verifica rate limit per user. Returneaza True daca e OK, False daca e depasit."""
+        key = user_id or "_anonymous"
+        now = datetime.utcnow().timestamp()
+        if key not in self._rate_tracker:
+            self._rate_tracker[key] = []
+        # Curata entries vechi
+        cutoff = now - self.RATE_LIMIT_WINDOW
+        self._rate_tracker[key] = [t for t in self._rate_tracker[key] if t > cutoff]
+        if len(self._rate_tracker[key]) >= self.RATE_LIMIT_MAX:
+            return False
+        self._rate_tracker[key].append(now)
+        return True
+
+    def _rotate_in_memory_logs(self):
+        """Pastreaza doar ultimele N loguri in memorie"""
+        if len(self.logs) > self.MAX_IN_MEMORY_LOGS:
+            self.logs = self.logs[-self.MAX_IN_MEMORY_LOGS:]
+
     async def log(
         self,
         action: AuditAction,
@@ -119,18 +182,23 @@ class AuditService:
     ) -> Dict:
         """Create immutable audit log entry with DB persistence"""
         try:
+            # Rate limiting
+            if not self._check_rate_limit(user_id):
+                return {"rate_limited": True, "action": action.value}
+
+            # Sanitizare
             log_entry = {
                 "id": str(uuid.uuid4()),
                 "timestamp": datetime.utcnow().isoformat() + "Z",
                 "action": action.value,
                 "severity": severity.value,
-                "user_id": user_id,
-                "organization_id": organization_id,
-                "resource_type": resource_type,
-                "resource_id": resource_id,
-                "details": details or {},
-                "ip_address": ip_address,
-                "user_agent": user_agent,
+                "user_id": self._sanitize_string(user_id, 50),
+                "organization_id": self._sanitize_string(organization_id, 50),
+                "resource_type": self._sanitize_string(resource_type, 100),
+                "resource_id": self._sanitize_string(resource_id, 100),
+                "details": self._sanitize_details(details),
+                "ip_address": self._sanitize_string(ip_address, 45),
+                "user_agent": self._sanitize_string(user_agent, 300),
                 "previous_hash": self.previous_hash
             }
 
@@ -166,8 +234,9 @@ class AuditService:
                     finally:
                         db.close()
 
-            # In-memory fallback cache
+            # In-memory fallback cache + rotation
             self.logs.append(log_entry)
+            self._rotate_in_memory_logs()
 
             if severity in [AuditSeverity.CRITICAL, AuditSeverity.SECURITY]:
                 await self._alert_security_team(log_entry)

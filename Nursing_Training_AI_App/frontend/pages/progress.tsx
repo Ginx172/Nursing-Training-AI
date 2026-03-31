@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import ProtectedRoute from '../components/ProtectedRoute';
 import { useAuth } from '../context/AuthContext';
 import api from '../lib/api';
-
-const ActivityLineChart = dynamic(
-  () => import('../components/AnalyticsCharts').then((m) => m.ActivityLineChart),
-  { ssr: false }
-);
 
 interface LearningProfile {
   exists: boolean;
@@ -51,8 +45,8 @@ function ProgressContent() {
   const [err, setErr] = useState('');
 
   useEffect(() => {
-    loadAll();
-  }, []);
+    if (user) loadAll();
+  }, [user]);
 
   async function loadAll() {
     setLoading(true);

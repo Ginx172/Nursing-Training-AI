@@ -37,13 +37,12 @@ class RAGHub:
         self._questions_collection = None
         self._questions_indexed_count = 0
 
-        # Init FAISS (via existing rag_service)
+        # Init FAISS (via existing rag_service - initialized at startup in main.py lifespan)
         try:
             from services.rag_service import rag_service
             self._rag_service = rag_service
             self._faiss_available = rag_service.is_initialized
-            if self._faiss_available:
-                logger.info("RAG Hub: FAISS engine available")
+            logger.info(f"RAG Hub: FAISS engine {'available' if self._faiss_available else 'loaded (pending init)'}")
         except Exception as e:
             logger.warning(f"RAG Hub: FAISS unavailable: {e}")
             self._rag_service = None
@@ -77,30 +76,22 @@ class RAGHub:
         results = []
 
         # FAISS search (PDF knowledge)
-        if source_filter in (None, "pdf") and self._faiss_available:
+        if source_filter in (None, "pdf") and self._rag_service:
             try:
-                from services.rag_service import RAGQuery
-                faiss_query = RAGQuery(query=query, top_k=k, min_score=0.5)
-                if specialty:
-                    faiss_query.specialty = specialty
-                import asyncio
-                loop = asyncio.get_event_loop()
-                if loop.is_running():
-                    # Suntem deja in async context - nu putem folosi run_until_complete
-                    # FAISS search e sync intern, apelam direct
+                # Check if initialized (done at startup in main.py)
+                if not self._faiss_available:
+                    self._faiss_available = self._rag_service.is_initialized
+
+                if self._faiss_available:
                     faiss_results = self._search_faiss_sync(query, k, specialty)
-                else:
-                    faiss_results = loop.run_until_complete(
-                        self._rag_service.search(faiss_query)
-                    )
-                for r in faiss_results:
-                    results.append({
-                        "content": r.content if hasattr(r, "content") else r.get("content", ""),
-                        "score": r.score if hasattr(r, "score") else r.get("score", 0),
-                        "source": r.source if hasattr(r, "source") else r.get("source", ""),
-                        "source_type": "pdf",
-                        "metadata": r.metadata if hasattr(r, "metadata") else r.get("metadata", {}),
-                    })
+                    for r in faiss_results:
+                        results.append({
+                            "content": r.get("content", ""),
+                            "score": r.get("score", 0),
+                            "source": r.get("source", ""),
+                            "source_type": "pdf",
+                            "metadata": r.get("metadata", {}),
+                        })
             except Exception as e:
                 logger.warning(f"RAG Hub: FAISS search failed: {e}")
 
@@ -128,29 +119,34 @@ class RAGHub:
         if not self._rag_service or not self._rag_service.is_initialized:
             return []
         try:
-            # Acces direct la indexul FAISS fara async wrapper
             if not _embed_available or _embedder is None:
                 return []
             query_embedding = _embedder.encode([query])[0]
+            import numpy as np
+            query_vec = np.array([query_embedding]).astype("float32")
             all_results = []
-            for index_name, index_data in self._rag_service.indexes.items():
-                faiss_index = index_data.get("index")
-                chunks = index_data.get("chunks", [])
+
+            faiss_indexes = getattr(self._rag_service, "faiss_indexes", {})
+            chunks_data = getattr(self._rag_service, "chunks_data", {})
+
+            for index_name, faiss_index in faiss_indexes.items():
+                chunks = chunks_data.get(index_name, [])
                 if faiss_index is None or not chunks:
                     continue
-                import numpy as np
-                query_vec = np.array([query_embedding]).astype("float32")
-                distances, indices = faiss_index.search(query_vec, min(k, len(chunks)))
-                for dist, idx in zip(distances[0], indices[0]):
+                n_search = min(k, faiss_index.ntotal)
+                if n_search == 0:
+                    continue
+                scores, indices = faiss_index.search(query_vec, n_search)
+                for score_val, idx in zip(scores[0], indices[0]):
                     if idx < 0 or idx >= len(chunks):
                         continue
                     chunk = chunks[idx]
-                    score = max(0, 1 - dist / 2)
+                    # faiss IndexFlatIP returns cosine similarity (higher = better)
                     all_results.append({
-                        "content": chunk.get("content", ""),
-                        "score": float(score),
+                        "content": chunk.get("text", chunk.get("content", "")),
+                        "score": float(max(0, score_val)),
                         "source": chunk.get("source", index_name),
-                        "metadata": chunk.get("metadata", {}),
+                        "metadata": chunk.get("metadata", {"index": index_name}),
                     })
             return sorted(all_results, key=lambda x: x["score"], reverse=True)[:k]
         except Exception as e:
@@ -296,9 +292,12 @@ class RAGHub:
             },
         }
 
-        if self._faiss_available and self._rag_service:
-            for name, data in getattr(self._rag_service, "indexes", {}).items():
-                chunks = data.get("chunks", [])
+        if self._rag_service and self._rag_service.is_initialized:
+            stats["faiss"]["available"] = True
+            chunks_data = getattr(self._rag_service, "chunks_data", {})
+            faiss_indexes = getattr(self._rag_service, "faiss_indexes", {})
+            for name in faiss_indexes:
+                chunks = chunks_data.get(name, [])
                 stats["faiss"]["indexes"][name] = {"chunks": len(chunks)}
 
         return stats

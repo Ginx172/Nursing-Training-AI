@@ -112,6 +112,14 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         print(f"Warning: token blacklist init failed: {e}")
 
+    # Initialize RAG services
+    try:
+        from services.rag_service import rag_service
+        await rag_service.initialize()
+        print(f"RAG FAISS initialized: {rag_service.is_initialized}")
+    except Exception as e:
+        print(f"Warning: RAG FAISS init failed: {e}")
+
     yield
     print("Shutting down Nursing Training AI API...")
 

@@ -65,6 +65,7 @@ _EXTRA_ROUTES = [
     ("api.routes.rag_hub", "router", "/api/rag"),
     ("api.routes.question_quality", "router", "/api/admin/question-quality"),
     ("api.routes.spaced_repetition", "router", "/api/study"),
+    ("api.routes.organizations", "router", "/api/organizations"),
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:
@@ -81,6 +82,7 @@ from core.database import init_db, check_database_health
 import models.security  # noqa: F401 - registreaza tabelele de securitate in Base.metadata
 import models.ai_insights  # noqa: F401 - registreaza tabelul ai_insights in Base.metadata
 import models.learning_profile  # noqa: F401 - registreaza tabelele learning_profile in Base.metadata
+import models.organization  # noqa: F401 - registreaza tabelele organization in Base.metadata
 
 # Initialize Sentry for error tracking (optional)
 _sentry_dsn = os.getenv("SENTRY_DSN", "")

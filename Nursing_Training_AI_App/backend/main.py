@@ -66,6 +66,7 @@ _EXTRA_ROUTES = [
     ("api.routes.question_quality", "router", "/api/admin/question-quality"),
     ("api.routes.spaced_repetition", "router", "/api/study"),
     ("api.routes.organizations", "router", "/api/organizations"),
+    ("api.routes.question_generator", "router", "/api/admin/question-generator"),
 ]
 _extra_routers = []
 for _module_path, _attr, _prefix in _EXTRA_ROUTES:

@@ -162,6 +162,7 @@ class RAGService:
                     ("band5", "Band5_materials"),
                     ("band6", "Band6_materials"),
                     ("june25_full", "june25_full"),
+                    # nursing_docs_full excluded - 178MB index, loaded lazily by RAG Hub
                 ]
                 
                 for index_name, file_prefix in general_indexes:
@@ -235,6 +236,7 @@ class RAGService:
                     ("band5", "Band5_chunks"),
                     ("band6", "Band6_chunks"),
                     ("june25_full", "june25_full_chunks"),
+                    # nursing_docs_full excluded - 595MB chunks, loaded lazily by RAG Hub
                 ]
                 
                 for chunk_name, file_name in general_chunks:

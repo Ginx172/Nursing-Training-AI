@@ -115,11 +115,13 @@ class ThreatDetector:
         """Detect command injection attempts"""
         cmd_patterns = [
             r";\s*rm\s+", r";\s*del\s+", r";\s*cat\s+", r";\s*ls\s+",
-            r"|\s*rm\s+", r"|\s*del\s+", r"|\s*cat\s+", r"|\s*ls\s+",
-            r"`.*`", r"\$\(.*\)", r"&&\s*", r"\|\|\s*"
+            r"\|\s*rm\s+", r"\|\s*del\s+", r"\|\s*cat\s+", r"\|\s*ls\s+",
+            r"`[^`]+`",  # Backtick execution (must have content)
+            r"\$\([^)]+\)",  # $(cmd) execution (must have content)
+            r"&&\s*(rm|del|cat|ls|wget|curl|sh|bash|chmod|kill)\s",  # && followed by dangerous command
+            r"\|\|\s*(rm|del|cat|ls|wget|curl|sh|bash|chmod|kill)\s",  # || followed by dangerous command
         ]
-        # Don't match normal words containing these patterns
-        if re.search(r'^normal\s+command$', input_text, re.IGNORECASE):
+        if not input_text or len(input_text) < 3:
             return False
         return any(re.search(pattern, input_text, re.IGNORECASE) for pattern in cmd_patterns)
     

@@ -65,6 +65,11 @@ class RAGHub:
         except Exception as e:
             logger.warning(f"RAG Hub: ChromaDB unavailable: {e}")
 
+        # nursing_docs_full FAISS index (lazy loaded - 178MB)
+        self._docs_faiss_index = None
+        self._docs_faiss_chunks = None
+        self._docs_index_loaded = False
+
     def search(
         self,
         query: str,
@@ -94,6 +99,14 @@ class RAGHub:
                         })
             except Exception as e:
                 logger.warning(f"RAG Hub: FAISS search failed: {e}")
+
+        # Nursing docs FAISS search (books - 121k chunks)
+        if source_filter in (None, "pdf", "books"):
+            try:
+                docs_results = self._search_docs_faiss(query, k)
+                results.extend(docs_results)
+            except Exception as e:
+                logger.warning(f"RAG Hub: Docs FAISS search failed: {e}")
 
         # ChromaDB search (DB questions)
         if source_filter in (None, "questions") and self._chroma_available and self._questions_collection:
@@ -188,6 +201,71 @@ class RAGHub:
                 })
 
         return results
+
+    def _load_docs_index(self):
+        """Lazy load nursing_docs_full FAISS index (178MB + 595MB chunks)"""
+        if self._docs_index_loaded:
+            return
+        try:
+            import faiss as _faiss
+            import pickle
+            from pathlib import Path
+
+            base = Path(settings.KNOWLEDGE_BASE_PATH) if hasattr(settings, 'KNOWLEDGE_BASE_PATH') else Path("../Healthcare_Knowledge_Base")
+            # Cauta in mai multe locatii
+            for search_path in [
+                base / "FAISS_Indexes",
+                Path("../Healthcare_Knowledge_Base/FAISS_Indexes"),
+                Path("../../Healthcare_Knowledge_Base/FAISS_Indexes"),
+                Path("../Nursing_Training_AI_App/Healthcare_Knowledge_Base/FAISS_Indexes"),
+            ]:
+                idx_file = search_path / "nursing_docs_full.index"
+                chunks_file = search_path / "nursing_docs_full_chunks.pkl"
+                if idx_file.exists() and chunks_file.exists():
+                    logger.info(f"RAG Hub: Loading nursing_docs_full from {search_path}...")
+                    self._docs_faiss_index = _faiss.read_index(str(idx_file))
+                    with open(chunks_file, "rb") as f:
+                        self._docs_faiss_chunks = pickle.load(f)
+                    self._docs_index_loaded = True
+                    logger.info(f"RAG Hub: nursing_docs_full loaded ({len(self._docs_faiss_chunks)} chunks)")
+                    return
+            logger.warning("RAG Hub: nursing_docs_full index not found")
+        except Exception as e:
+            logger.warning(f"RAG Hub: Failed to load nursing_docs_full: {e}")
+
+    def _search_docs_faiss(self, query: str, k: int) -> List[Dict]:
+        """Search in nursing_docs_full FAISS index"""
+        if not self._docs_index_loaded:
+            self._load_docs_index()
+        if not self._docs_faiss_index or not self._docs_faiss_chunks:
+            return []
+        try:
+            if not _embed_available or _embedder is None:
+                return []
+            import numpy as np
+            query_embedding = _embedder.encode([query])[0]
+            query_vec = np.array([query_embedding]).astype("float32")
+            import faiss as _faiss
+            _faiss.normalize_L2(query_vec)
+
+            n_search = min(k, self._docs_faiss_index.ntotal)
+            scores, indices = self._docs_faiss_index.search(query_vec, n_search)
+            results = []
+            for score_val, idx in zip(scores[0], indices[0]):
+                if idx < 0 or idx >= len(self._docs_faiss_chunks):
+                    continue
+                chunk = self._docs_faiss_chunks[idx]
+                results.append({
+                    "content": chunk.get("text", ""),
+                    "score": float(max(0, score_val)),
+                    "source": chunk.get("source", "nursing_docs"),
+                    "source_type": "book",
+                    "metadata": chunk.get("metadata", {}),
+                })
+            return results
+        except Exception as e:
+            logger.warning(f"RAG Hub: docs FAISS search failed: {e}")
+            return []
 
     def build_context(self, query: str, specialty: Optional[str] = None, band: Optional[str] = None) -> str:
         """Construieste context text din rezultatele RAG pentru AI evaluation"""
@@ -299,6 +377,12 @@ class RAGHub:
             for name in faiss_indexes:
                 chunks = chunks_data.get(name, [])
                 stats["faiss"]["indexes"][name] = {"chunks": len(chunks)}
+
+        # nursing_docs_full stats
+        stats["nursing_docs"] = {
+            "loaded": self._docs_index_loaded,
+            "chunks": len(self._docs_faiss_chunks) if self._docs_faiss_chunks else 0,
+        }
 
         return stats
 
